@@ -1,0 +1,78 @@
+bank:
+  admin:
+    description: admin příkaz pro ostrovní banku
+    give:
+      parameters: <hráč> <množství>
+      description: přidat částku na hráčův ostrovní účet
+      success: <green> Úspěch! Zůstatek ostrovní banky [name] je nyní [number].
+    take:
+      parameters: <hráč> <množství>
+      description: vezměte částku z hráčova ostrova
+    balance:
+      parameters: <hráč>
+      description: zobrazit zůstatek ostrovního účtu hráče
+    set:
+      parameters: <hráč> <množství>
+      description: nastavit částku na hráčově ostrovním účtu
+      success: <green> Účet uživatele [name] byl nastaven na [number].
+    statement:
+      parameters: <hráč>
+      description: zobrazit výpis z banky pro hráče
+  balance:
+    description: ukazuje zůstatek vaší ostrovní banky
+    island-balance: <green> Zůstatek na ostrovní bance je [number].
+  baltop:
+    description: zobrazit hodnocení zůstatku
+    description-syntax: <light_purple> [number]
+    highest: Řadit podle nejvyššího
+    lowest: Řadit podle nejnižší
+    name-syntax: <light_purple> [name]
+    title: Nejlepší zůstatky
+  deposit:
+    description: vložte částku na svůj ostrovní účet
+    parameters: <množství>
+    success: <green> Úspěch! Váš nový zůstatek na ostrovní bance je [number].
+  errors:
+    bank-error: <red> Chyba při načítání informací o bankovním účtu - zkuste to znovu
+      později
+    low-balance: <red> Váš zůstatek na ostrovní bance není dostatečně vysoký!
+    too-low: <red> Rovnováha na ostrově je příliš nízká.
+    must-be-a-number: <red> Částka musí být číslo
+    no-rank: <red> Vaše pozice není dostatečně vysoká, abyste mohli banku používat.
+    too-much: <red> Tuto částku nemáte k uložení.
+    value-must-be-positive: <red> Částka musí být kladná.
+    scientific: <red> Vědecká notace není podporována.
+    too-long: <red> Hodnota musí být menší než 10 číslic
+  statement:
+    balance:
+      name: '<blue> Zůstatek:'
+      description: <gold> [number]
+    deposit: Vklad
+    description: ukažte historii své ostrovní banky
+    give: Správce dát
+    interest: Zájem
+    latest: Řadit podle nejnovějších
+    oldest: Řadit podle nejstarších
+    set: Sada správce
+    syntax: |-
+      <blue> [date]
+      <blue> [time]
+      <gray> [name]
+      <gold> [number]
+    take: Admin Vezměte
+    title: Historie účtu
+    unknown: Neznámý typ
+    withdrawal: Vybrání
+  user:
+    description: příkaz ostrovní banky
+  withdraw:
+    description: vybrat částku ze svého ostrovního účtu
+    parameters: <množství>
+    success: <green> Úspěch! Váš nový zůstatek na ostrovní bance je [number].
+protection:
+  flags:
+    BANK_ACCESS:
+      description: |-
+        <white> Povolit přístup k
+        <white> a ostrovní banka
+      name: Přístup na ostrovní banku

@@ -1,0 +1,3 @@
+scoreboard players add @s ct_jail 1
+execute at @s run playsound minecraft:block.anvil.land master @s ~ ~ ~ 1.0 0.8
+tellraw @s [{"text":"🔒 [TRONG TÙ] ","color":"red","bold":true},{"text":"Chưa đổ ra số đôi (","color":"gray"},{"score":{"name":"@s","objective":"ct_dice1"},"color":"white"},{"text":" vs ","color":"gray"},{"score":{"name":"@s","objective":"ct_dice2"},"color":"white"},{"text":")! Bạn vẫn phải ở trong tù hoặc gõ ","color":"gray"},{"text":"/trigger pay_jail","color":"yellow","bold":true,"clickEvent":{"action":"run_command","value":"/trigger pay_jail"},"hoverEvent":{"action":"show_text","contents":[{"text":"Bấm để nộp phạt $50,000 xu ra tù tức thì","color":"yellow"}]}},{"text":" để nộp $50,000 xu ra tù!","color":"gray"}]

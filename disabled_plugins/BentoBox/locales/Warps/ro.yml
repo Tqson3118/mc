@@ -1,0 +1,60 @@
+warp:
+  help:
+    description: teleportare la semnul de warp al jucătorului
+    parameters: <numele jucătorului>
+warps:
+  deactivate: <red>Semnul de warp vechi a fost dezactivat!</red>
+  error:
+    does-not-exist: <red>Acel warp nu mai există!</red>
+    no-permission: <red>Nu ai permisiunea să faci asta!</red>
+    no-remove: <red>Nu poți elimina acel semn!</red>
+    no-warps-yet: <red>Nu există warps disponibile încă</red>
+    not-enough-level: <red>Nivelul insulei tale nu este suficient de ridicat!</red>
+    not-on-island: <red>Trebuie să fii pe insula ta pentru a face asta!</red>
+    not-safe: <red>Acel warp nu este sigur!</red>
+    your-level-is: <red>Nivelul insulei tale este doar [level] și trebuie să fie mai
+      mare decât [required]. Rulează comanda de nivel.</red>
+    not-correct-rank: <red>Nu ai rangul corect pentru a seta un warp!</red>
+  help:
+    description: deschide panoul de warps
+  player-warped: <dark_green>[name] s-a teleportat la semnul tău de warp [gamemode]!</dark_green>
+  sign-removed: <red>Semnul de warp a fost eliminat!</red>
+  success: <green>Succes!</green>
+  warpTip: <gold>Plasează un semn de warp cu [text] în partea de sus</gold>
+  warpToPlayersSign: <gold>Teleportare la semnul lui [player]</gold>
+  gui:
+    titles:
+      warp-title: <black><bold>Semne Warp</bold></black>
+    buttons:
+      previous:
+        name: <white><bold>Pagina Anterioară</bold></white>
+        description: <gray>Treci la pagina [number]</gray>
+      next:
+        name: <white><bold>Pagina Următoare</bold></white>
+        description: <gray>Treci la pagina [number]</gray>
+      warp:
+        name: <white><bold>[name]</bold></white>
+        description: '[sign_text]'
+      random:
+        name: <white><bold>Warp Aleatoriu</bold></white>
+        description: <gray>Hmm, unde voi apărea?</gray>
+    tips:
+      click-to-previous: <yellow>Apasă </yellow><gray>pentru a vedea pagina anterioară.</gray>
+      click-to-next: <yellow>Apasă </yellow><gray>pentru a vedea pagina următoare.</gray>
+      click-to-warp: <yellow>Apasă </yellow><gray>pentru teleportare.</gray>
+  conversations:
+    prefix: '<gold><bold>[BentoBox]: </bold></gold><reset>'
+togglewarp:
+  help:
+    description: comută semnul de warp
+  enabled: <green>Warp-ul tău este acum vizibil!</green>
+  disabled: <red>Warp-ul tău este acum ascuns!</red>
+  error:
+    no-permission: <red>Nu ai permisiunea să faci asta!</red>
+    generic: <red>A apărut o eroare la comutarea warp-ului tău.</red>
+    no-warp: <red>Nu ai un warp de comutat!</red>
+protection:
+  flags:
+    PLACE_WARP:
+      name: Plasează Warp
+      description: Permite plasarea unui semn de warp

@@ -1,0 +1,61 @@
+{
+  "uniqueId": "bskyblock_nether_generator_biome",
+  "friendlyName": "&r&lNether Generator II",
+  "description": [
+    "&7 A generator that works in all Nether biomes.",
+    "&7 Note: Height range is 0-256 in all dimensions"
+  ],
+  "generatorIcon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: GILDED_BLACKSTONE\n",
+  "lockedIcon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: BARRIER\n",
+  "generatorType": "BASALT",
+  "defaultGenerator": false,
+  "priority": 1,
+  "requiredMinIslandLevel": 100,
+  "requiredBiomes": [
+    "CRIMSON_FOREST",
+    "NETHER_WASTES",
+    "SOUL_SAND_VALLEY",
+    "WARPED_FOREST",
+    "BASALT_DELTAS"
+  ],
+  "requiredPermissions": [],
+  "generatorTierCost": 5.0,
+  "activationCost": 0.0,
+  "deployed": true,
+  "blockChanceMap": {
+    "45.0": "NETHERRACK",
+    "65.0": "BASALT",
+    "85.0": "BLACKSTONE",
+    "95.0": "SOUL_SOIL",
+    "100.0": "MAGMA_BLOCK"
+  },
+  "treasureChanceMap": {},
+  "treasureItemChanceMap": {},
+  "treasureChance": 0.0,
+  "maxTreasureAmount": 1,
+  "minHeight": 0,
+  "maxHeight": 256,
+  "materialHeightMap": {
+    "NETHERRACK": [
+      0,
+      256
+    ],
+    "SOUL_SOIL": [
+      0,
+      64
+    ],
+    "BASALT": [
+      0,
+      128
+    ],
+    "MAGMA_BLOCK": [
+      0,
+      32
+    ],
+    "BLACKSTONE": [
+      0,
+      128
+    ]
+  },
+  "blockHeightRanges": {}
+}

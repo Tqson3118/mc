@@ -1,0 +1,71 @@
+# ##########################################################################################
+# This is a YML file. Be careful when editing. Check your edits in a YAML checker like    #
+# the one at http://yaml-online-parser.appspot.com                                        #
+# ##########################################################################################
+
+warp:
+  help:
+    description: warp to the player's warp sign
+    parameters: <player name>
+warps:
+  deactivate: <red>Old warp sign deactivated!</red>
+  error:
+    does-not-exist: <red>Oh snap! That warp no longer exists!</red>
+    no-permission: <red>You do not have permission to do that!</red>
+    no-remove: <red>You cannot remove that sign!</red>
+    no-warps-yet: <red>There are no warps available yet</red>
+    not-enough-level: <red>Your island level is not high enough!</red>
+    not-on-island: <red>You must be on your island to do that!</red>
+    not-safe: <red>That warp is not safe!</red>
+    your-level-is: <red>Your island level is only [level] and must be higher than
+      [required]. Run the level command.</red>
+    not-correct-rank: <red>You do not have the correct rank to set a warp!</red>
+  help:
+    description: open the warps panel
+  player-warped: <dark_green>[name] warped to your [gamemode] warp sign!</dark_green>
+  sign-removed: <red>Warp sign removed!</red>
+  success: <green>Success!</green>
+  warpTip: <gold>Place a warp sign with [text] on the top</gold>
+  warpToPlayersSign: <gold>Warping to [player]'s sign</gold>
+  
+  gui:
+    titles:
+      # The title of warp panel
+      warp-title: <black><bold>Warp Signs</bold></black>
+    buttons:
+      # Button that is used in multi-page GUIs which allows to return to previous page.
+      previous:
+        name: <white><bold>Previous Page</bold></white>
+        description: <gray>Switch to [number] page</gray> # Button that is used in multi-page GUIs which allows to go to next page.
+      next:
+        name: <white><bold>Next Page</bold></white>
+        description: <gray>Switch to [number] page</gray> # Button for a warp
+      warp:
+        name: <white><bold>[name]</bold></white>
+        description: '[sign_text]' # Button for a random warp
+      random:
+        name: <white><bold>Random Warp</bold></white>
+        description: <gray>Hmm, where will I appear?</gray>
+    tips:
+      click-to-previous: <yellow>Click </yellow><gray>to view previous page.</gray>
+      click-to-next: <yellow>Click </yellow><gray>to view next page.</gray>
+      click-to-warp: <yellow>Click </yellow><gray>to warp.</gray>
+  conversations:
+    # Prefix for messages that are send from server.
+    prefix: '<gold><bold>[BentoBox]: </bold></gold><reset>'
+
+togglewarp:
+  help:
+    description: toggle the warp sign
+  enabled: <green>Your warp is now visible!</green>
+  disabled: <red>Your warp is now hidden!</red>
+  error:
+    no-permission: <red>You do not have permission to do that!</red>
+    generic: <red>An error occurred while toggling your warp.</red>
+    no-warp: <red>You do not have a warp to toggle!</red>
+
+protection:
+  flags:
+    PLACE_WARP:
+      name: Place Warp
+      description: Allow placing warp sign

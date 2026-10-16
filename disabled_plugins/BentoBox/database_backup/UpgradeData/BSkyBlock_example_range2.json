@@ -1,0 +1,11 @@
+{
+  "uniqueId": "BSkyBlock_example_range2",
+  "world": "BSkyBlock",
+  "name": "Border Expansion II",
+  "description": [
+    "Example: requires island level 100 and costs $2000. Up to 3 times."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: IRON_BARS\n",
+  "order": 2,
+  "active": true
+}

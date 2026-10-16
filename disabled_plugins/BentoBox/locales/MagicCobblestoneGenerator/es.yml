@@ -1,0 +1,979 @@
+stone-generator:
+  commands:
+    admin:
+      main:
+        description: Comando de administrador principal para el complemento Magic
+          Cobblestone Generator
+      import:
+        description: Comando que permite importar generadores mágicos al complemento
+          del modo de juego
+        confirmation: Confirme que desea eliminar los generadores existentes de [modo
+          de juego] e importar los generadores de la plantilla
+      why:
+        parameters: <jugador>
+        description: alternar mensajes de depuración sobre Magic Cobblestone Generator.
+      database:
+        description: Comando de la base de datos principal
+      import-database:
+        parameters: <file>
+        description: importa el archivo de base de datos de generadores mágicos
+        confirmation: Esto eliminará los generadores existentes para [modo de juego]
+          y los generadores de importación del archivo de la base de datos. Confirme.
+      export:
+        parameters: <archivo>
+        description: Exportar la base de datos de generadores mágicos desde el modo
+          de juego a un archivo
+    player:
+      main:
+        description: Comando del jugador principal que abre la GUI con la selección
+          del generador
+      view:
+        description: Comando del reproductor que abre la GUI con información detallada
+          sobre el generador solicitado
+        parameters: '<generator_id>: id del generador'
+      buy:
+        description: Compra el generador solicitado
+        parameters: <generator-id>
+      activate:
+        description: Activar / desactivar el generador solicitado
+        parameters: <generator-id> <verdadero / falso>
+  gui:
+    titles:
+      player-panel: <black><bold>Generadores</bold></black>
+      view-generator: '<black><bold>Generador: </bold></black> [generador]'
+      admin-panel: <black><bold>Panel de administración</bold></black>
+      select-biome: <black><bold>Seleccionar biomas</bold></black>
+      select-block: <black><bold>Seleccionar bloque</bold></black>
+      select-bundle: <black><bold>Seleccionar paquete</bold></black>
+      select-type: <black><bold>Seleccione el tipo de generador</bold></black>
+      view-bundle: 'Paquete <black><bold>: </bold></black> [paquete]'
+      manage-bundles: <black><bold>Gestionar paquetes</bold></black>
+      manage-generators: <black><bold>Gestionar generadores</bold></black>
+      view-island: '<black><bold>Isla: [isla]</bold></black>'
+      manage-islands: <black><bold>Administrar datos de la isla</bold></black>
+      library: <black><bold>Biblioteca</bold></black>
+      settings: <black><bold>Configuración</bold></black>
+      configure-material-height: <black><bold>Configurar Altura del Material</bold></black>
+      height-range-config: '<black><bold>Rango de altura: [material]</bold></black>'
+    buttons:
+      default:
+        name: Generador predeterminado
+        description: |-
+          <gray>Los generadores predeterminados son siempre
+          </gray><gray>activo.</gray>
+        enabled: <aqua>Este es el </aqua><green>un generador </green><aqua>predeterminado.</aqua>
+        disabled: <aqua>Este </aqua><red>no es el generador </red><aqua>predeterminado.</aqua>
+      priority:
+        name: Prioridad del generador
+        description: |-
+          Generadores con mayor
+          número de prioridad será
+          ser preferido si es múltiple
+          se puede aplicar a la
+          mismo lugar
+        value: '<aqua>Prioridad: </aqua><gray>[número]</gray>'
+      type:
+        name: Tipo de generador
+        description: |-
+          <gray>Define qué tipo de generador
+          </gray><gray>se aplicará a la corriente
+          </gray><gray>generador.</gray>
+        value: '<aqua>Tipo: </aqua><gray>[tipo]</gray>'
+      required_min_level:
+        name: Nivel de isla requerido
+        description: Nivel mínimo de isla
+        value: '<aqua>Nivel mínimo requerido: [número]</aqua>'
+      required_permissions:
+        name: Permisos requeridos
+        description: |-
+          <gray>Lista de permisos que
+          </gray><gray>son necesarios para desbloquear
+          </gray><gray>este generador.</gray>
+        list: <aqua>Permisos necesarios:</aqua>
+        value: <aqua>- [permiso]</aqua>
+        none: <aqua>- ninguno</aqua>
+      purchase_cost:
+        name: Costo de la compra
+        description: |-
+          Cantidad de créditos que
+          necesita ser pagado una vez por
+          desbloqueando este generador
+        value: '<aqua>Costo: [número]</aqua>'
+      activation_cost:
+        name: Costo de activación
+        description: |-
+          Cantidad de créditos que
+          necesita ser pagado cada vez
+          por activar esto
+          generador
+        value: '<aqua>Costo: [número]</aqua>'
+      biomes:
+        name: Biomas operativos
+        description: |-
+          Lista de biomas donde
+          este generador
+          trabajo
+        list: <aqua>Biomas:</aqua>
+        value: <aqua>- [bioma]</aqua>
+        any: <aqua>- cualquiera</aqua>
+      treasure_amount:
+        name: Monto del tesoro
+        description: |-
+          Cantidad de tesoros
+          que se dejará caer.
+        value: '<aqua>Cantidad: [número]</aqua>'
+      treasure_chance:
+        name: Probabilidad del tesoro
+        description: |-
+          Posibilidad de conseguir un tesoro
+          ser abandonado.
+        value: '<aqua>Probabilidad: [número]</aqua>'
+      info:
+        name: Información general
+        description: |-
+          Muestra información general
+          sobre el generador
+      blocks:
+        name: Lista de bloqueos
+        description: |-
+          Muestra lista de bloques
+          y sus posibilidades de
+          generar
+      treasures:
+        name: Lista de tesoros
+        description: |-
+          Muestra la lista de tesoros
+          y sus posibilidades de
+          ser abandonado.
+          Los tesoros se caen
+          en la generación de bloques
+        drag-and-drop: |-
+          <gray>Admite arrastrar y soltar
+          </gray><gray>elementos a los espacios vacíos.</gray>
+      block-icon:
+        name: '[material]'
+        description: 'Posibilidad de generar: [#. ##]'
+        actual: '<aqua>Valor de la base de datos: [número]</aqua>'
+        height-range: |-
+          <gray>Rango de Altura:
+          </gray><gray>Mínima: </gray><aqua>[MIN_HEIGHT]
+          </aqua><gray>Máxima: </gray><aqua>[MAX_HEIGHT]</aqua>
+        no-height-range: |-
+          <gray>Sin rango de altura específico.
+          </gray><gray>Usando el rango predeterminado del generador.</gray>
+      treasure-icon:
+        name: '[material]'
+        description: 'Posibilidad de caer: [#. ####]'
+        actual: '<aqua>Valor de la base de datos: [número]</aqua>'
+      show_cobblestone:
+        name: Generadores de adoquines
+        description: |-
+          Muestra solo adoquines
+          generadores
+      show_stone:
+        name: Generadores de piedra
+        description: |-
+          Muestra solo piedra
+          generadores
+      show_basalt:
+        name: Generadores de basalto
+        description: |-
+          Muestra solo basalto
+          generadores
+      toggle_visibility:
+        name: Solo desbloqueado
+        description: |-
+          Muestra solo desbloqueado
+          generadores
+      show_active:
+        name: Solo activo
+        description: |-
+          Muestra solo activo
+          generadores
+      return:
+        name: Regreso
+        description: |-
+          Vuelve al anterior
+          menú o sale de la GUI
+      previous:
+        name: Pagina anterior
+        description: Cambiar a la página anterior
+      next:
+        name: Siguiente página
+        description: Cambiar a la página siguiente
+      manage_users:
+        name: <white><bold>Administrar datos de la isla</bold></white>
+        description: |-
+          <gray>Gestionar datos de la isla
+          </gray><gray>en el modo de juego actual.</gray>
+      manage_generator_tiers:
+        name: <white><bold>Gestionar generadores</bold></white>
+        description: |-
+          <gray>Gestionar generadores
+          </gray><gray>en el modo de juego actual.</gray>
+      manage_generator_bundles:
+        name: <white><bold>Gestionar paquetes</bold></white>
+        description: |-
+          <gray>Gestionar paquetes
+          </gray><gray>en el modo de juego actual.</gray>
+      settings:
+        name: <white><bold>Configuración</bold></white>
+        description: |-
+          <gray>Comprobar y cambiar
+          </gray><gray>configuraciones de complementos.</gray>
+      import_template:
+        name: <white><bold>Plantilla de importación</bold></white>
+        description: |-
+          <gray>Importar plantilla
+          </gray><gray>archivo ubicado dentro del
+          </gray><gray>directorio de complementos.</gray>
+      web_library:
+        name: <white><bold>Biblioteca web</bold></white>
+        description: |-
+          <gray>Acceder a la web
+          </gray><gray>biblioteca que contiene
+          </gray><gray>generadores compartidos.</gray>
+      export_from_database:
+        name: <white><bold>Exportar base de datos</bold></white>
+        description: |-
+          <gray>Exportar la base de datos
+          </gray><gray>en un solo archivo ubicado en
+          </gray><gray>el directorio de complementos.</gray>
+      import_to_database:
+        name: <white><bold>Importar base de datos</bold></white>
+        description: |-
+          <gray>Importar una base de datos desde
+          </gray><gray>un archivo ubicado en el complemento
+          </gray><gray>directorio.</gray>
+      wipe_user_data:
+        name: <white><bold>Borrar la base de datos de usuarios</bold></white>
+        description: |-
+          <gray>Borrar datos de usuario para
+          </gray><gray>cada isla en el
+          </gray><gray>modo de juego actual.</gray>
+      wipe_generator_data:
+        name: <white><bold>Borrar la base de datos del generador</bold></white>
+        description: |-
+          <gray>Generador claro y paquete
+          </gray><gray>datos en el modo de juego actual.</gray>
+      bundle_name:
+        name: <white><bold>Nombre del paquete</bold></white>
+        description: <gray>Cambie el nombre del paquete.</gray>
+        value: '<aqua>Nombre: </aqua> [paquete]'
+      bundle_icon:
+        name: <white><bold>Bundle Icon</bold></white>
+        description: <gray>Cambie el icono del paquete.</gray>
+      bundle_description:
+        name: <white><bold>Descripción del paquete</bold></white>
+      bundle_info:
+        name: <white><bold>Información general</bold></white>
+        description: |-
+          <gray>Mostrar información general
+          </gray><gray>sobre este paquete.</gray>
+      bundle_generators:
+        name: <white><bold>Generadores</bold></white>
+        description: |-
+          <gray>Mostrar una lista de generadores
+          </gray><gray>asignado a este paquete.</gray>
+      add_generator:
+        name: <white><bold>Agregar generador</bold></white>
+        description: |-
+          <gray>Asignar un generador
+          </gray><gray>a este paquete.</gray>
+        list: <aqua>Generadores seleccionados:</aqua>
+        value: <aqua>- [generador]</aqua>
+      remove_generator:
+        name: <white><bold>Quitar generador</bold></white>
+        description: |-
+          <gray>Retirar un generador
+          </gray><gray>de este paquete.</gray>
+        list: <aqua>Generadores seleccionados:</aqua>
+        value: <aqua>- [generador]</aqua>
+      create_bundle:
+        name: <white><bold>Crear paquete</bold></white>
+        description: |-
+          <gray>Crea un nuevo paquete
+          </gray><gray>para este modo de juego.</gray>
+      delete_bundle:
+        name: <white><bold>Eliminar paquete</bold></white>
+        description: |-
+          <gray>Retirar un paquete de
+          </gray><gray>este modo de juego por completo.</gray>
+        list: <aqua>Paquetes seleccionados:</aqua>
+        value: <aqua>- [paquete]</aqua>
+      name:
+        name: Nombre del generador
+        description: |-
+          <gray>Título de este generador.
+          </gray><gray>Admite códigos de color.</gray>
+        value: '<aqua>Nombre: </aqua> [generador]'
+      icon:
+        name: Icono de generador
+        description: |-
+          <gray>Elemento utilizado para mostrar este
+          </gray><gray>generador en todas las GUI.</gray>
+      locked_icon:
+        name: <white><bold>Icono de bloqueo</bold></white>
+        description: |-
+          <gray>Elemento utilizado para mostrar este
+          </gray><gray>generador en todas las GUI si
+          </gray><gray>está bloqueado.</gray>
+      description:
+        name: Descripción del generador
+        description: |-
+          <gray>Texto para generador que
+          </gray><gray>estar escrito bajo el título.</gray>
+        value: <aqua>Descripción:</aqua>
+      deployed:
+        name: Desplegada
+        description: |-
+          <gray>Los generadores desplegados son visibles
+          </gray><gray>ay accesible a los jugadores.
+          </gray><gray>Los generadores no desplegados no
+          </gray><gray>generar bloques.</gray>
+        enabled: <aqua>Este generador está </aqua><green>desplegado.</green>
+        disabled: <aqua>Este generador </aqua><red>no está implementado.</red>
+      add_material:
+        name: <white><bold>Agregar material</bold></white>
+        description: |-
+          <gray>Agregue material nuevo al
+          </gray><gray>lista de materiales actual.</gray>
+      remove_material:
+        name: <white><bold>Quitar materiales</bold></white>
+        description: |-
+          <gray>Eliminar seleccionados
+          </gray><gray>materiales de la lista.</gray>
+        selected-materials: <gray>Materiales seleccionados:</gray>
+        list-value: <gray>- [número] x [valor]</gray>
+      create_generator:
+        name: <white><bold>Crear generador</bold></white>
+        description: |-
+          <gray>Crear un nuevo
+          </gray><gray>generador para
+          </gray><gray>el modo de juego.</gray>
+      delete_generator:
+        name: <white><bold>Quitar generador</bold></white>
+        description: |-
+          <gray>Quitar generador
+          </gray><gray>desde el modo de juego por completo.</gray>
+        list: <aqua>Generadores seleccionados:</aqua>
+        value: <aqua>- [generador]</aqua>
+      island_name:
+        name: <white><bold>[nombre]</bold></white>
+        description: |-
+          <gray>[propietario]
+          </gray><aqua>[miembros]
+          </aqua><aqua>Id. de isla: </aqua><gray>[id]</gray>
+        owner: '<aqua>Propietario: [jugador]</aqua>'
+        list: <aqua>Miembros:</aqua>
+        value: <aqua>- [jugador]</aqua>
+      island_working_range:
+        name: <white><bold>Rango de trabajo de la isla</bold></white>
+        description: |-
+          <gray>Rango de trabajo para generadores
+          </gray><gray>en la isla actual.
+          </gray><gray>0 y menos significa ilimitado
+          </gray><gray>rango.</gray>
+        value: '<aqua>Rango: [número]</aqua>'
+        overwritten: |-
+          <red>El propietario tiene un permiso que
+          </red><red>sobrescribe el rango de trabajo.</red>
+      owner_working_range:
+        name: <white><bold>Rango de trabajo del propietario</bold></white>
+        description: |-
+          <gray>Rango de trabajo para generadores
+          </gray><gray>para el propietario actual.
+          </gray><gray>'0' significa que el rango del propietario es
+          </gray><gray>ignorado.
+          </gray><gray>'-1' significa que el propietario tiene
+          </gray><gray>rango de trabajo ilimitado.
+          "</gray><gray> Permiso para que el usuario asigne:"
+          "</gray><gray> <italic>'[modo de juego]. Generador de piedras".
+          "</italic></gray><italic><gray> <italic>rango máximo. <Número> '"</italic></gray></italic>
+        value: '<aqua>Rango: [número]</aqua>'
+      island_max_generators:
+        name: <white><bold>Max Island Generadores</bold></white>
+        description: |-
+          <gray>Máximo activo
+          </gray><gray>niveles de generador permitidos
+          </gray><gray>al mismo tiempo que
+          </gray><gray>para la isla actual.
+          </gray><gray>0 y menos significa
+          </gray><gray>ilimitado.</gray>
+        value: '<aqua>Generadores máximos: [número]</aqua>'
+        overwritten: |-
+          <red>El propietario tiene un permiso que
+          </red><red>sobrescribe el recuento del generador.</red>
+      owner_max_generators:
+        name: <white><bold>Max Owner Generators</bold></white>
+        description: |-
+          <gray>Máximo activo concurrente
+          </gray><gray>niveles de generador que el
+          </gray><gray>dueño de la isla está permitido.
+          </gray><gray>'0' significa que el monto del propietario
+          </gray><gray>se ignora.
+          </gray><gray>'-1' significa que el propietario tiene
+          </gray><gray>recuento ilimitado de generadores.
+          "</gray><gray> Permiso para que el usuario asigne:"
+          "</gray><gray> <italic>'[modo de juego]. Generador de piedras".
+          "</italic></gray><italic><gray> <italic>generadores-activos. <Número> '"</italic></gray></italic>
+        value: '<aqua>Generadores máximos: [número]</aqua>'
+      island_bundle:
+        name: <white><bold>Island Bundle</bold></white>
+        description: |-
+          <gray>Paquete asignado a
+          </gray><gray>la isla actual.
+          </gray><gray>Solo generadores de este
+          </gray><gray>paquete se puede utilizar en el
+          </gray><gray>isla.</gray>
+        value: 'Paquete <aqua>: [paquete]</aqua>'
+        overwritten: |-
+          <red>El propietario tiene un permiso que
+          </red><red>sobrescribe el paquete.</red>
+      owner_bundle:
+        name: Paquete propietario <white><bold></bold></white>
+        description: |-
+          <gray>Paquete asignado a
+          </gray><gray>el actual propietario de la isla.
+          </gray><gray>Solo generadores de este
+          </gray><gray>paquete se puede utilizar en el
+          </gray><gray>isla.
+          "</gray><gray> Permiso para que el usuario asigne:"
+          "</gray><gray> <italic>'[modo de juego]. Generador de piedras".
+          "</italic></gray><italic><gray> <italic>paquete. <bundle-id> '"</italic></gray></italic>
+        value: 'Paquete <aqua>: [paquete]</aqua>'
+      island_info:
+        name: <white><bold>Información general</bold></white>
+        description: |-
+          <gray>Muestra información general
+          </gray><gray>sobre esta isla.</gray>
+      island_generators:
+        name: <white><bold>Island Generadores</bold></white>
+        description: |-
+          <gray>Muestra la lista de todos los generadores
+          </gray><gray>que están disponibles para
+          </gray><gray>isla actual.</gray>
+      reset_to_default:
+        name: <white><bold>Restablecer valores predeterminados</bold></white>
+        description: |-
+          <gray>Restablece todos los valores de la isla
+          </gray><gray>a los valores predeterminados de
+          </gray><gray>la configuración.</gray>
+      is_online:
+        name: <white><bold>Jugadores online</bold></white>
+        description: |-
+          <gray>Lista de jugadores en línea
+          Y 7 islas.</gray>
+      all_islands:
+        name: <white><bold>Todas las islas</bold></white>
+        description: <gray>Lista de todas las islas.</gray>
+      search:
+        name: <white><bold>Buscar</bold></white>
+        description: |-
+          <gray>Busque un
+          </gray><gray>isla.</gray>
+        search: '<aqua>Valor: [valor]</aqua>'
+      offline_generation:
+        name: <white><bold>Generación sin conexión</bold></white>
+        description: |-
+          <gray>Evita que los bloques se
+          </gray><gray>generado si toda la isla
+          </gray><gray>miembros están desconectados.</gray>
+        enabled: <aqua>La generación sin conexión está </aqua><green>habilitada </green><aqua>.</aqua>
+        disabled: <aqua>La generación sin conexión está </aqua><red>desactivada </red><aqua>.</aqua>
+      use_physic:
+        name: <white><bold>Usar física</bold></white>
+        description: |-
+          <gray>Usar física en bloque
+          </gray><gray>generación permite
+          </gray><gray>uso de máquinas redstone,
+          </gray><gray>sin embargo, reduce el servidor
+          </gray><gray>rendimiento un poco.</gray>
+        enabled: <aqua>La física está </aqua><green>habilitada </green><aqua>.</aqua>
+        disabled: <aqua>La física está </aqua><red>deshabilitada </red><aqua>.</aqua>
+      working_range:
+        name: <white><bold>Rango de trabajo predeterminado</bold></white>
+        description: |-
+          <gray>Distancia de los jugadores hasta
+          </gray><gray>se detendrá la generación de bloques.
+          </gray><gray>0 y menos significa ilimitado.
+          </gray><gray>La configuración requiere servidor
+          </gray><gray>reiniciar para activar.</gray>
+        value: '<aqua>Rango: [número]</aqua>'
+      active_generators:
+        name: <white><bold>Generadores activos predeterminados</bold></white>
+        description: |-
+          <gray>Cantidad máxima predeterminada de
+          </gray><gray>generadores activos en el
+          </gray><gray>al mismo tiempo.
+          </gray><gray>0 y menos significa ilimitado.</gray>
+        value: '<aqua>Count: [número]</aqua>'
+      show_filters:
+        name: <white><bold>Mostrar filtros</bold></white>
+        description: |-
+          <gray>Los filtros están en la fila superior
+          </gray><gray>GUI de jugador, que permite
+          </gray><gray>para mostrar solo generadores
+          </gray><gray>por tipo o estado.
+          </gray><gray>Esta configuración desactiva
+          </gray><gray>y los esconde.</gray>
+        enabled: <aqua>Los filtros están </aqua><green>habilitados </green><aqua>.</aqua>
+        disabled: <aqua>Los filtros están </aqua><red>desactivados </red><aqua>.</aqua>
+      border_block:
+        name: <white><bold>Bloque de borde</bold></white>
+        description: |-
+          <gray>El bloque de borde es un material
+          </gray><gray>que rodea la GUI del usuario.
+          </gray><gray>Ponerlo en aire deshabilita
+          </gray><gray>eso.</gray>
+      border_block_name:
+        name: <white><bold>Nombre del bloque de borde</bold></white>
+        description: |-
+          <gray>Nombre para mostrar de un borde
+          </gray><gray>cuadra.
+          </gray><gray>Si está configurado como vacío, entonces
+          </gray><gray>usará el nombre del bloque.
+          </gray><gray>Para configurarlo como 1 espacio vacío,
+          "</gray><gray> escribe 'vacío'."</gray>
+        value: '<aqua>Nombre: `</aqua> [nombre]  <aqua>`</aqua>'
+      unlock_notify:
+        name: <white><bold>Notificar al desbloquear</bold></white>
+        description: |-
+          <gray>Se enviará un mensaje
+          </gray><gray>a un usuario cuando desbloquea
+          </gray><gray>un generador nuevo.</gray>
+        enabled: <aqua>Notificar al desbloquear está </aqua><green>habilitado </green><aqua>.</aqua>
+        disabled: <aqua>Notificar al desbloquear está </aqua><red>desactivado </red><aqua>.</aqua>
+      disable_on_activate:
+        name: <white><bold>Desactivar al activar</bold></white>
+        description: |-
+          <gray>Desactivar el generador activo más antiguo
+          </gray><gray>si el usuario activa un nuevo
+          </gray><gray>generador.
+          </gray><gray>Útil para situaciones en las que
+          </gray><gray>solo se permite un solo generador.</gray>
+        enabled: <aqua>Desactivar al activar es </aqua><green>habilitado </green><aqua>.</aqua>
+        disabled: <aqua>Desactivar al activar está </aqua><red>desactivado </red><aqua>.</aqua>
+      library:
+        name: <white><bold>[nombre]</bold></white>
+        description: |-
+          <gray>[descripción]
+          </gray><gray>Autor: [autor]
+          </gray><gray>Creado para [modo de juego]
+          </gray><gray>Idioma: [lang]
+          </gray><gray>Versión: [versión]</gray>
+      accept_blocks:
+        name: <white><bold>Acepta los bloques</bold></white>
+        description: |-
+          <gray>Acepta bloques seleccionados
+          </gray><gray>y devoluciones.</gray>
+        selected-blocks: <gray>bloques seleccionados:</gray>
+        list-value: <gray>- [valor]</gray>
+      material-icon:
+        name: <white><bold>[material]</bold></white>
+        description: '<gray>ID del bloque: [id]</gray>'
+      search_block:
+        name: <white><bold>Buscar</bold></white>
+        description: |-
+          <gray>Busque un
+          </gray><gray>cuadra.</gray>
+        search: '<aqua>Valor: [valor]</aqua>'
+      accept_biome:
+        name: <white><bold>Acepta los biomas</bold></white>
+        description: |-
+          <gray>Acepta biomas seleccionados
+          </gray><gray>y devoluciones.</gray>
+        selected-biomes: <gray>biomas seleccionados:</gray>
+        list-value: <gray>- [valor]</gray>
+      biome-icon:
+        name: <white><bold>[bioma]</bold></white>
+      biome-groups:
+        lush:
+          name: <white><bold>Exuberante</bold></white>
+          description: <gray>Mostrar solo biomas exuberantes</gray>
+        dry:
+          name: <white><bold>Seco</bold></white>
+          description: <gray>Mostrar solo biomas secos</gray>
+        cold:
+          name: <white><bold>Frío</bold></white>
+          description: <gray>Mostrar solo biomas fríos</gray>
+        snowy:
+          name: <white><bold>Snowy</bold></white>
+          description: <gray>Mostrar solo biomas nevados</gray>
+        ocean:
+          name: <white><bold>océano</bold></white>
+          description: <gray>Mostrar solo biomas oceánicos</gray>
+        nether:
+          name: <white><bold>Nether</bold></white>
+          description: <gray>Mostrar solo biomas inferiores</gray>
+        the_end:
+          name: <white><bold>El final</bold></white>
+          description: <gray>Mostrar solo los biomas finales</gray>
+        neutral:
+          name: <white><bold>Neutral</bold></white>
+          description: <gray>Mostrar solo biomas neutrales</gray>
+        unused:
+          name: <white><bold>Sin usar</bold></white>
+          description: <gray>Mostrar solo biomas no utilizados</gray>
+        cave:
+          description: <gray>Mostrar solo biomas de cueva</gray>
+          name: <white><bold>Cueva</bold></white>
+        temperate:
+          description: <gray>Mostrar solo biomas templados</gray>
+          name: <white><bold>Templado</bold></white>
+        warm:
+          description: <gray>Mostrar solo biomas cálidos</gray>
+          name: <white><bold>Cálido</bold></white>
+      generator-types:
+        cobblestone:
+          name: <white><bold>Adoquines</bold></white>
+          description: |-
+            <gray>Funciona solo con adoquines
+            </gray><gray>generadores.</gray>
+        stone:
+          name: <white><bold>piedra</bold></white>
+          description: |-
+            <gray>Funciona solo con piedra
+            </gray><gray>generadores.</gray>
+        basalt:
+          name: <white><bold>Basalto</bold></white>
+          description: |-
+            <gray>Funciona solo con basalto
+            </gray><gray>generadores.</gray>
+        cobblestone_or_stone:
+          name: <white><bold>Adoquín o Piedra</bold></white>
+          description: |-
+            <gray>Funciona con adoquines y
+            </gray><gray>generadores de piedra.</gray>
+        basalt_or_cobblestone:
+          name: <white><bold>Basalto o adoquín</bold></white>
+          description: |-
+            <gray>Funciona con basalto y
+            </gray><gray>generadores de adoquines.</gray>
+        basalt_or_stone:
+          name: <white><bold>Basalto o Piedra</bold></white>
+          description: |-
+            <gray>Funciona con basalto y
+            </gray><gray>generadores de piedra.</gray>
+        any:
+          name: <white><bold>Cualquiera</bold></white>
+          description: <gray>Funciona con cualquier generador.</gray>
+      min_height:
+        name: <white><bold>Altura Mínima</bold></white>
+        description: |-
+          <gray>Establece la altura mínima
+          </gray><gray>para este material.
+          </gray><gray>Valor actual: </gray><aqua>[number]</aqua>
+        value: '<gray>Valor actual: </gray><aqua>[min_height]</aqua>'
+      max_height:
+        name: <white><bold>Altura Máxima</bold></white>
+        description: |-
+          <gray>Establece la altura máxima
+          </gray><gray>para este material.
+          </gray><gray>Valor actual: </gray><aqua>[number]</aqua>
+        value: '<gray>Valor actual: </gray><aqua>[max_height]</aqua>'
+      clear_height_range:
+        name: <white><bold>Eliminar Rango de Altura</bold></white>
+        description: |-
+          <gray>Elimina el rango de altura específico
+          </gray><gray>para este material.
+          </gray><gray>Usará el rango de altura
+          </gray><gray>predeterminado del generador.</gray>
+      bundle_id:
+        description: <gray>El ID del paquete actual.</gray>
+        name: <white><bold>ID del paquete</bold></white>
+        value: '<aqua>ID: </aqua> [id]'
+      clear-height-range:
+        description: |-
+          <gray>Elimina el rango de altura específico
+          </gray><gray>para este material.
+          </gray><gray>En su lugar usará el rango de altura
+          </gray><gray>predeterminado del generador.</gray>
+        name: <white><bold>Borrar rango de altura</bold></white>
+      exhaustion_limit:
+        default: '<aqua>Usa el valor global predeterminado: </aqua><white>[number]</white>'
+        description: |-
+          <gray>Máximo de bloques que este generador
+          </gray><gray>puede producir por período antes
+          </gray><gray>de entrar en enfriamiento.</gray>
+        name: <white><bold>Límite de agotamiento</bold></white>
+        unlimited: <aqua>Sin límite</aqua>
+        value: '<aqua>Límite: [number] </aqua><gray>por período</gray>'
+      height_range:
+        description: |-
+          <gray>El rango de altura en el que
+          </gray><gray>opera este generador.</gray>
+        name: <white><bold>Rango de altura</bold></white>
+        value: <aqua>De </aqua><white>[min_height] </white><aqua>a </aqua><white>[max_height]</white>
+      id:
+        description: <gray>El ID del generador actual.</gray>
+        name: <white><bold>ID del generador</bold></white>
+        value: '<aqua>ID: </aqua> [id]'
+      max-height:
+        description: |-
+          <gray>Establece la altura máxima
+          </gray><gray>para este material.
+          </gray><gray>Valor actual: </gray><aqua>[max_height]</aqua>
+        name: <white><bold>Altura máxima</bold></white>
+        value: <aqua>[max_height]</aqua>
+      min-height:
+        description: |-
+          <gray>Establece la altura mínima
+          </gray><gray>para este material.
+          </gray><gray>Valor actual: </gray><aqua>[min_height]</aqua>
+        name: <white><bold>Altura mínima</bold></white>
+        value: <aqua>[min_height]</aqua>
+      quit:
+        description: <gray>Salir del menú actual</gray>
+        name: <white><bold>Salir</bold></white>
+      use_bank:
+        description: |-
+          <gray>Usando la cuenta bancaria de la isla
+          </gray><gray>para todas las compras y
+          </gray><gray>activaciones.
+          </gray><gray>Requiere el Bank Addon.</gray>
+        disabled: <aqua>El uso del banco está </aqua><red>desactivado </red><aqua>.</aqua>
+        enabled: <aqua>El uso del banco está </aqua><green>activado </green><aqua>.</aqua>
+        name: <white><bold>Usar banco</bold></white>
+    tips:
+      click-to-previous: <yellow>Haga clic en </yellow><gray>para ver la página anterior.</gray>
+      click-to-next: <yellow>Haga clic en </yellow><gray>para ver la página siguiente.</gray>
+      click-to-cancel: <yellow>Haga clic en </yellow><gray>para cancelar.</gray>
+      click-to-choose: <yellow>Haga clic en </yellow><gray>para elegir.</gray>
+      click-to-select: <yellow>Haga clic en </yellow><gray>para seleccionar.</gray>
+      click-to-deselect: <yellow>Haga clic en </yellow><gray>para anular la selección.</gray>
+      click-to-accept: <yellow>Haga clic en </yellow><gray>para aceptar y devolver.</gray>
+      click-to-filter-enable: <yellow>Haga clic en </yellow><gray>para habilitar el
+        filtro.</gray>
+      click-to-filter-disable: <yellow>Haga clic en </yellow><gray>para deshabilitar
+        el filtro.</gray>
+      click-to-activate: <yellow>Haga clic en </yellow><gray>para activar.</gray>
+      click-to-deactivate: <yellow>Haga clic en </yellow><gray>para desactivar.</gray>
+      click-gold-to-purchase: |-
+        <yellow>Click </yellow><gray>en bloque dorado
+        </gray><gray>para comprar.</gray>
+      click-to-purchase: <yellow>Haga clic en </yellow><gray>para comprar.</gray>
+      click-to-return: <yellow>Haga clic en </yellow><gray>para volver.</gray>
+      click-to-quit: <yellow>Haga clic en </yellow><gray>para salir.</gray>
+      click-to-wipe: <yellow>Haga clic en </yellow><gray>para limpiar.</gray>
+      click-to-open: <yellow>Haga clic en </yellow><gray>para abrir.</gray>
+      click-to-export: <yellow>Haga clic en </yellow><gray>para comenzar a exportar.</gray>
+      click-to-change: <yellow>Haga clic en </yellow><gray>para cambiar.</gray>
+      click-on-item: |-
+        <yellow>Haga clic en </yellow><gray>en el elemento de su
+        </gray><gray>inventario.</gray>
+      click-to-view: <yellow>Haga clic en </yellow><gray>para ver.</gray>
+      click-to-add: <yellow>Haga clic en </yellow><gray>para agregar.</gray>
+      click-to-remove: <yellow>Haga clic en </yellow><gray>para eliminar.</gray>
+      select-before: <yellow>Seleccione </yellow><gray>antes de continuar.</gray>
+      click-to-create: <yellow>Haga clic en </yellow><gray>para crear.</gray>
+      right-click-to-select: <yellow>Haga clic con el botón derecho del ratón </yellow><gray>para
+        seleccionar.</gray>
+      right-click-to-deselect: <yellow>Haga clic derecho en </yellow><gray>para anular
+        la selección.</gray>
+      click-to-toggle: <yellow>Haga clic en </yellow><gray>para alternar.</gray>
+      left-click-to-edit: <yellow>Clic izquierdo </yellow><gray>para editar.</gray>
+      right-click-to-lock: <yellow>Clic derecho </yellow><gray>para bloquear.</gray>
+      right-click-to-unlock: <yellow>Haga clic con el botón derecho del ratón </yellow><gray>para
+        desbloquear.</gray>
+      click-to-perform: <yellow>Haga clic en </yellow><gray>para realizar.</gray>
+      click-to-edit: <yellow>Haga clic en </yellow><gray>para editar.</gray>
+      right-click-to-clear: <yellow>Haga clic con el botón derecho del ratón </yellow><gray>para
+        borrar.</gray>
+      left-click-to-view: <yellow>Haga clic con el botón izquierdo en </yellow><gray>para
+        ver.</gray>
+      left-click-to-purchase: <yellow>Clic izquierdo </yellow><gray>para comprar.</gray>
+      left-click-to-activate: <yellow>Clic izquierdo </yellow><gray>para activar.</gray>
+      left-click-to-deactivate: <yellow>Clic izquierdo </yellow><gray>para desactivar.</gray>
+      right-click-to-view: <yellow>Haga clic derecho en </yellow><gray>para ver.</gray>
+      right-click-to-purchase: <yellow>Clic derecho </yellow><gray>para comprar.</gray>
+      right-click-to-activate: <yellow>Haga clic derecho en </yellow><gray>para activar.</gray>
+      right-click-to-deactivate: <yellow>Clic derecho </yellow><gray>para desactivar.</gray>
+      shift-click-to-view: <yellow>Shift Haga clic en </yellow><gray>para ver.</gray>
+      shift-click-to-purchase: <yellow>Shift Click </yellow><gray>para comprar.</gray>
+      shift-click-to-activate: <yellow>Shift Haga clic en </yellow><gray>para activar.</gray>
+      shift-click-to-deactivate: <yellow>Shift Haga clic en </yellow><gray>para desactivar.</gray>
+      shift-click-to-reset: <yellow>Shift Haga clic en </yellow><gray>para restablecer.</gray>
+      shift-left-click-to-set-height-range: <yellow>Shift+Clic Izquierdo </yellow><gray>para
+        configurar el rango de altura.</gray>
+    descriptions:
+      generator:
+        lore: |-
+          [descripción]
+          [bloques]
+          [tesoros]
+          [escribe]
+          [requisitos]
+          [estado]
+        blocks:
+          title: <aqua>loques </aqua><gray><bold>:</bold></gray>
+          value: '<dark_gray>[material] - [#. ##]%</dark_gray>'
+        treasures:
+          title: <gray><bold>Tesoro:</bold></gray>
+          value: '<dark_gray>[material] - [#. ####]%</dark_gray>'
+        requirements:
+          description: |-
+            [biomas]
+            [nivel]
+            [permisos faltantes]
+          level: '<red><bold>Nivel requerido: </bold></red> <red>[número]</red>'
+          permission-title: <red><bold>Permisos faltantes:</bold></red>
+          permission: <red>- [permiso]</red>
+          biome-title: <gray><bold>Opera en:</bold></gray>
+          biome: <dark_gray>[bioma]</dark_gray>
+          any: <gray><bold>Opera en </bold></gray><bold><yellow><italic>todos </italic></yellow></bold>
+            <gray><bold>biomas</bold></gray>
+        status:
+          locked: <red>Bloqueado!</red>
+          undeployed: <red>¡No implementado!</red>
+          active: <dark_green>Activo</dark_green>
+          purchase-cost: '<yellow>Costo de compra: $ [número]</yellow>'
+          activation-cost: '<yellow>Costo de activación: $ [número]</yellow>'
+        type:
+          title: <gray><bold>Soporta:</bold></gray>
+          cobblestone: <dark_gray>generadores de adoquines</dark_gray>
+          stone: <dark_gray>generadores de piedra</dark_gray>
+          basalt: <dark_gray>generadores de basalto</dark_gray>
+          any: <gray><bold>Soportes </bold></gray><bold><yellow><italic>all </italic></yellow></bold>
+            <gray><bold>generadores</bold></gray>
+        height-range: '<gray>Funciona a alturas: </gray><aqua>[min_height] </aqua><gray>a
+          </gray><aqua>[max_height]</aqua>'
+      bundle-permission: |-
+        <gray>Permiso que debe ser
+        </gray><gray>asignado al jugador:
+        </gray><gray><italic>[gamemode] .stone-generator.bundle. [Id]</italic></gray>
+      generators: <gray>generadores de paquetes:</gray>
+      generator-list: <gray>- [generador]</gray>
+      selected: <yellow>Seleccionado</yellow>
+      island-owner: la isla de [jugador]
+      unknown: desconocido
+      spawn-island: <yellow><bold>Isla de aparición</bold></yellow>
+  messages:
+    generator-loaded: <green>Generator </green> '[generator]'  <green>se carga en
+      la caché local.</green>
+    bundle-loaded: <green>Bundle </green> '[bundle]'  <green>se carga en la caché
+      local.</green>
+    generator-deactivated: <gold>El generador '[generador]' </gold> <gold>está desactivado.</gold>
+    active-generators-reached: <red>Hay demasiados generadores activados. Intente
+      desactivar algunos antes de activar uno nuevo.</red>
+    generator-cannot-be-unlocked: <red>Generator </red> '[generator]'  <red>no está
+      desbloqueado.</red>
+    generator-not-unlocked: <red>Generator </red> '[generator]'  <red>no está desbloqueado.</red>
+    generator-not-purchased: <red>Generator </red> '[generator]'  <red>no se compra.</red>
+    no-credits: <red>No hay suficientes créditos para activar el generador. La activación
+      requiere [número] créditos.</red>
+    generator-activated: <gold>El generador '[generador]' </gold> <gold>está activado.</gold>
+    generator-purchased: <gold>Se compra el generador '[generador]' </gold> <gold>.</gold>
+    generator-already-purchased: <red>Generator </red> '[generator]'  <red>ya está
+      comprado.</red>
+    island-level-not-reached: <red>Generator </red> '[generator]'  <red>requiere [número]
+      nivel de isla.</red>
+    missing-permission: <red>Generator </red> '[generador]'  <red>requiere permiso
+      `[permiso]`.</red>
+    no-credits-buy: <red>No hay suficientes créditos para comprar el generador. Este
+      generador cuesta [número] créditos.</red>
+    import-count: <gold>Se importaron [número] nuevos niveles de generador.</gold>
+    start-downloading: <yellow>Inicie la descarga de la biblioteca.</yellow>
+    generator-exhausted: <red>El generador </red> '[generator]' <red>ha alcanzado
+      su límite de generación y ahora está en enfriamiento durante [number] minuto(s)
+      más.</red>
+    no-credits-bank: <red>Tu cuenta bancaria no tiene suficientes créditos para activar
+      el generador. La activación requiere [number] créditos.</red>
+    no-credits-buy-bank: <red>Tu cuenta bancaria no tiene suficientes créditos. Este
+      generador cuesta [number] créditos.</red>
+  errors:
+    no-generator-data: <red>No se pudieron encontrar datos de generador válidos</red>
+    no-island-data: <red>No se encuentran los datos de la isla.</red>
+    no-bundle-data: <red>No se pudo encontrar un paquete de datos válido</red>
+    no-library-entries: <red>¡No se pudo encontrar ninguna entrada en la biblioteca!</red>
+    no-file: <red>archivo generatorTemplate.yml no encontrado. No se puede realizar
+      la importación.</red>
+    no-load: '<red>No se pudo cargar el archivo generatorTemplate.yml. Error al leer:
+      [descripción].</red>'
+    not-a-gamemode-world: <red>World '[world]' no es un mundo de complementos de modo
+      de juego.</red>
+    file-exist: <red>El archivo `[archivo]` ya existe. Elija un nombre diferente.</red>
+    generator-tier-not-found: <red>Generador con id '[generador]' </red> <red>no encontrado
+      en [modo de juego].</red>
+    no-generators-in-world: <red>No se pudo encontrar ningún generador en [mundo]</red>
+    max-height-less-than-min: <red>¡La altura máxima ([MAX]) no puede ser menor que
+      la altura mínima ([MIN])!</red>
+    could-not-remove-money: <red>Algo salió mal al retirar el dinero.</red>
+  conversations:
+    confirm-string: verdadero, encendido, sí, confirmar, y, válido, correcto
+    deny-string: falso, desactivado, no, denegar, n, inválido, incorrecto
+    cancel-string: cancelar
+    exit-string: cancelar, salir, salir
+    cancelled: <red>¡Conversación cancelada!</red>
+    prefix: '<bold></bold><bold><gold>[BentoBox]: </gold></bold>'
+    numeric-only: <red>¡El [valor] dado no es un número!</red>
+    not-valid-value: <red>El número [valor] proporcionado no es válido. ¡Debe ser
+      mayor que [min] y menor que [max]!</red>
+    new-description: <green>una nueva descripción:</green>
+    write-search: <yellow>Escriba un valor de búsqueda. (escribe 'cancelar' para salir)</yellow>
+    search-updated: <green>un valor de búsqueda actualizado.</green>
+    confirm-island-data-deletion: <yellow>Confirme que desea eliminar todos los datos
+      de usuario de la base de datos para [modo de juego].</yellow>
+    user-data-removed: <green>¡Éxito, se eliminaron todos los datos de usuario de
+      [modo de juego]!</green>
+    confirm-generator-data-deletion: <yellow>Confirme que desea eliminar todos los
+      datos del generador de la base de datos para [modo de juego].</yellow>
+    generator-data-removed: <green>un éxito, ¡se eliminaron todos los datos del generador
+      para [modo de juego]!</green>
+    exported-file-name: <yellow>Introduzca un nombre de archivo para el archivo de
+      base de datos exportado. (escribe 'cancelar' para salir)</yellow>
+    database-export-completed: <green>Éxito, se completó la exportación de la base
+      de datos para [mundo]. Archivo [archivo] generado.</green>
+    file-name-exist: <red>Existe un archivo con el nombre '[id]'. No se puede sobrescribir.</red>
+    write-name: <yellow>Introduzca un nuevo nombre en el chat.</yellow>
+    name-changed: <green>un éxito, se actualizó el nombre.</green>
+    write-description: <yellow>Por favor ingrese una nueva descripción en el chat
+      y 'salga' en una línea para terminar.</yellow>
+    description-changed: <green>un éxito, se actualizó la descripción.</green>
+    new-object-created: <green>un éxito, se crea un nuevo objeto en [mundo].</green>
+    object-already-exists: <red>El objeto con `[id]` ya está definido en el modo de
+      juego. Elija uno diferente.</red>
+    confirm-deletion: '<yellow>Confirme que desea eliminar [número] objetos: ([valor])</yellow>'
+    data-removed: <green>un éxito, los datos fueron eliminados!</green>
+    input-number: <yellow>Introduzca un número en el chat.</yellow>
+    write-permissions: <yellow>Por favor ingrese los permisos requeridos, uno por
+      línea en el chat, y 'salga' en una línea para terminar.</yellow>
+    permissions-changed: <green>un éxito, se actualizaron los permisos del generador.</green>
+    confirm-data-replacement: <yellow>Confirme que desea reemplazar sus generadores
+      actuales por uno nuevo.</yellow>
+    new-generators-imported: <green>un éxito, se importaron nuevos generadores para
+      [modo de juego].</green>
+    click-text-to-purchase: <yellow>¡Has desbloqueado </yellow> [generador]  <yellow>!
+      Haga clic aquí para comprarlo ahora por [número].</yellow>
+    click-text-to-activate-vault: <yellow>¡Has desbloqueado </yellow> [generador]  <yellow>!
+      Haga clic aquí para activarlo ahora para [número].</yellow>
+    click-text-to-activate: <yellow>¡Has desbloqueado </yellow> [generador]  <yellow>!
+      Haga clic aquí para activarlo ahora.</yellow>
+    input-min-height: <white>Introduce la altura mínima para este material (entre
+      -64 y 320):</white>
+    input-max-height: <white>Introduce la altura máxima para este material (entre
+      -64 y 320):</white>
+  materials:
+    cobblestone: Guijarro
+    stone:
+      name: Piedra
+      description: ''
+  biomes:
+    plains: llanuras
+    flower_forest:
+      name: Bosque de flores
+      description: ''
+protection:
+  flags:
+    MAGIC_COBBLESTONE_GENERATOR:
+      name: Generador de magia
+      description: |-
+        <green>Alternar todos los generadores mágicos
+        y en toda la isla</green>
+      hint: <yellow>Los generadores mágicos están desactivados en la configuración
+        de la isla</yellow>
+    MAGIC_COBBLESTONE_GENERATOR_PERMISSION:
+      name: Permisos del generador mágico
+      description: |-
+        <green>un Switch que puede activar
+        </green><green>y desactivar generadores</green>

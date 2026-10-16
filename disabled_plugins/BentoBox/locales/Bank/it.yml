@@ -1,0 +1,80 @@
+bank:
+  admin:
+    description: comando di amministrazione per la banca dell'isola
+    give:
+      parameters: <giocatore> <importo>
+      description: aggiungi importo al conto dell'isola del giocatore
+      success: <green>Fatto! Il saldo bancario dell'isola di [name] è ora [number].
+    take:
+      parameters: <giocatore> <importo>
+      description: preleva l'importo dal conto dell'isola del giocatore
+    balance:
+      parameters: <giocatore>
+      description: visualizzare il saldo del conto dell'isola del giocatore
+    set:
+      parameters: <giocatore> <importo>
+      description: imposta l'importo nel conto dell'isola del giocatore
+      success: <green>Il bilancio di [name] è stato impostato su [number].
+    statement:
+      parameters: <giocatore>
+      description: visualizza l'estratto conto dell'isola per il giocatore
+  balance:
+    description: mostra il bilancio della tua isola
+    island-balance: <green>Il bilancio dell'isola è [number].
+  baltop:
+    description: mostra la classifica dei bilanci
+    description-syntax: <light_purple> [number]
+    highest: Ordina per più alto
+    lowest: Ordina per più basso
+    name-syntax: <light_purple> [name]
+    title: I bilanci più alti
+  deposit:
+    description: deposita l'importo nella banca dell'isola
+    parameters: <importo>
+    success: <white>Fatto! Il tuo nuovo saldo bancario sull'isola è [number].
+    alert: <green>[name] ha depositato [number] nella banca dell'isola.
+  errors:
+    bank-error: '<red> Errore durante il caricamento dei dati del conto bancario:
+      riprova più tardi'
+    low-balance: <red> Il saldo della tua isola non è abbastanza alto!
+    too-low: <red> Il saldo dell'isola è troppo basso.
+    must-be-a-number: <red> L'importo deve essere un numero
+    no-rank: <red> Il tuo grado non è sufficientemente alto per utilizzare la banca.
+    too-much: <red> Non hai quell'importo da depositare.
+    value-must-be-positive: <red> L'importo deve essere positivo.
+    scientific: <red> La notazione scientifica non è supportata.
+    too-long: <red> Il valore deve essere inferiore a 10 cifre
+  statement:
+    balance:
+      name: '<blue> Saldo:'
+      description: <gold> [number]
+    deposit: Deposito
+    description: mostra la cronologia della banca della tua isola
+    give: Regalo amministratore
+    interest: Interesse
+    latest: Ordina per più recente
+    oldest: Ordina per più vecchio
+    set: Impostazione amministratore
+    syntax: |
+      <blue> [date]
+      <blue> [time]
+      <gray> [name]
+      <gold> [number]
+    take: Presa amministrativa
+    title: Cronologia del conto
+    unknown: Tipo sconosciuto
+    withdrawal: Ritiro
+  user:
+    description: comando della banca dell'isola
+  withdraw:
+    description: prelevare l'importo dal conto dell'isola
+    parameters: <importo>
+    success: <white>Fatto! Il tuo nuovo saldo bancario sull'isola è [number].
+    alert: '&un [name] ritirò [number] dalla banca dell''isola.'
+protection:
+  flags:
+    BANK_ACCESS:
+      description: |-
+        <white> Consenti accesso a
+        <white> la banca dell'isola
+      name: Accesso alla banca dell'isola

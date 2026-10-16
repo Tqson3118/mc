@@ -1,0 +1,23 @@
+{
+  "biome": "MEADOW",
+  "deployed": true,
+  "friendlyName": "<white><bold> Meadow",
+  "description": [
+    "<gray> Rolling grasslands with goats,",
+    "<gray> wildflowers, and natural beauty.",
+    "<gray> Perfect for pastoral building",
+    "<gray> and herding."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: ALLIUM\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_meadow",
+  "unlockLevel": 40,
+  "unlockCost": 0.0,
+  "cost": 600.0,
+  "itemCost": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: GRASS_BLOCK\n  amount: 32\n"
+  ],
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

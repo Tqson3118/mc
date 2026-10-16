@@ -1,0 +1,23 @@
+{
+  "biome": "SAVANNA_PLATEAU",
+  "deployed": true,
+  "friendlyName": "<white><bold> Savanna",
+  "description": [
+    "<gray> Dry grasslands where llamas",
+    "<gray> roam freely. Perfect for",
+    "<gray> herding and acacia wood",
+    "<gray> farming."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: ACACIA_SAPLING\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_savanna",
+  "unlockLevel": 40,
+  "unlockCost": 0.0,
+  "cost": 400.0,
+  "itemCost": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: ACACIA_SAPLING\n  amount: 12\n"
+  ],
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

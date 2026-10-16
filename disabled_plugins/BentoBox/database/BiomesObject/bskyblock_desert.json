@@ -1,0 +1,23 @@
+{
+  "biome": "DESERT",
+  "deployed": true,
+  "friendlyName": "<white><bold> Desert",
+  "description": [
+    "<gray> A scorching wasteland where",
+    "<gray> no rain falls. Perfect for",
+    "<gray> building without weather",
+    "<gray> interruptions."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: SAND\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_desert",
+  "unlockLevel": 20,
+  "unlockCost": 0.0,
+  "unlockItems": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: SAND\n  amount: 32\n"
+  ],
+  "cost": 400.0,
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

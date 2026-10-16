@@ -1,0 +1,23 @@
+{
+  "biome": "FROZEN_PEAKS",
+  "deployed": true,
+  "friendlyName": "<white><bold> Frozen Peaks",
+  "description": [
+    "<gray> Ice-capped mountains where",
+    "<gray> the cold bites harder than",
+    "<gray> anywhere. Premium mountain",
+    "<gray> biome."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: PACKED_ICE\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_frozen_peaks",
+  "unlockLevel": 95,
+  "unlockCost": 0.0,
+  "cost": 1200.0,
+  "itemCost": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: SNOW_BLOCK\n  amount: 64\n"
+  ],
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

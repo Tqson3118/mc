@@ -1,0 +1,23 @@
+{
+  "biome": "FROZEN_RIVER",
+  "deployed": true,
+  "friendlyName": "<white><bold> Frozen River",
+  "description": [
+    "<gray> A river frozen in time where",
+    "<gray> ice fishing and frozen",
+    "<gray> landscapes create a winter",
+    "<gray> wonderland."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: ICE\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_frozen_river",
+  "unlockLevel": 48,
+  "unlockCost": 0.0,
+  "unlockItems": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: ICE\n  amount: 16\n"
+  ],
+  "cost": 500.0,
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

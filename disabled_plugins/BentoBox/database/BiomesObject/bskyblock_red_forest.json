@@ -1,0 +1,26 @@
+{
+  "biome": "CRIMSON_FOREST",
+  "deployed": true,
+  "friendlyName": "<white><bold> Red Forest",
+  "description": [
+    "<gray> A crimson forest where",
+    "<gray> piglins trade and hoglins",
+    "<gray> charge. Life survives",
+    "<gray> even in hell."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: CRIMSON_FUNGUS\n",
+  "order": -1,
+  "environment": "NETHER",
+  "uniqueId": "bskyblock_red_forest",
+  "unlockLevel": 225,
+  "unlockCost": 0.0,
+  "unlockItems": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: NETHERRACK\n  amount: 64\n"
+  ],
+  "cost": 1200.0,
+  "itemCost": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: CRIMSON_FUNGUS\n  amount: 3\n"
+  ],
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

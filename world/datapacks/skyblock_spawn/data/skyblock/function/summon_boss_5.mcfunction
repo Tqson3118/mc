@@ -1,0 +1,44 @@
+# ==============================================================================
+# TRIỆU HỒI BOSS CẤP 5: CỔ THẦN THÂM UYÊN (ANCIENT WARDEN MONARCH - 2500 HP)
+# Vị trí: Đấu Trường 5 (world_boss X=0, Y=75, Z=-300) / Thâm Uyên overworld (X=35, Y=111, Z=115)
+# ==============================================================================
+scoreboard players set #boss_5_alive boss_status 0
+execute in minecraft:world_boss run kill @e[tag=boss_5]
+execute in minecraft:world_boss run kill @e[tag=minion_boss_5]
+execute in minecraft:overworld run kill @e[tag=boss_5]
+execute in minecraft:overworld run kill @e[tag=minion_boss_5]
+
+# 1. Âm thanh & hạt hiệu ứng tại world_boss
+execute in minecraft:world_boss run playsound minecraft:entity.warden.emerge master @a 0 75 -300 5.0 0.8
+execute in minecraft:world_boss run playsound minecraft:entity.warden.roar master @a 0 75 -300 5.0 0.7
+execute in minecraft:world_boss run particle minecraft:sculk_soul 0 76 -300 3 2 3 0.2 200 normal
+execute in minecraft:world_boss run particle minecraft:sonic_boom 0 76 -300 0 0 0 0 1 normal
+
+# 2. Âm thanh & hạt hiệu ứng tại overworld (dự phòng)
+execute in minecraft:overworld run playsound minecraft:entity.warden.emerge master @a 35 111 115 5.0 0.8
+execute in minecraft:overworld run playsound minecraft:entity.warden.roar master @a 35 111 115 5.0 0.7
+execute in minecraft:overworld run particle minecraft:sculk_soul 35 112 115 3 2 3 0.2 200 normal
+execute in minecraft:overworld run particle minecraft:sonic_boom 35 112 115 0 0 0 0 1 normal
+
+title @a times 10 80 20
+title @a title {"text":"💠 CỔ THẦN THÂM UYÊN 💠","color":"dark_aqua","bold":true}
+title @a subtitle {"text":"MYTHIC BOSS CẤP 5 (2500 HP) ĐÃ THỨC TỈNH TẠI /WARP BOSS5!","color":"aqua"}
+tellraw @a [{"text":"[BOSS CẤP 5] ","color":"dark_aqua","bold":true},{"text":"CỔ THẦN THÂM UYÊN (2500 HP) đã trỗi dậy tại Đấu Trường 5! Hạ gục để nhận 100% TRÁI TIM THÂM UYÊN (Đột phá Tier 15) & +$35,000 Số Dư!","color":"aqua"}]
+
+# 3. Triệu hồi Boss tại world_boss (tọa độ chuẩn 0, 75, -300)
+execute in minecraft:overworld if entity @p[x=23,y=108,z=98,dx=24,dy=20,dz=34] run summon wither_skeleton 35 111 115 {Tags:["server_boss","boss_5"],CustomName:'{"text":"💠 CỔ THẦN THÂM UYÊN 💠 [2500 HP]","color":"dark_aqua","bold":true}',CustomNameVisible:1b,Glowing:1b,PersistenceRequired:1b,attributes:[{id:"minecraft:max_health",base:2500.0},{id:"minecraft:attack_damage",base:32.0},{id:"minecraft:movement_speed",base:0.38},{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:scale",base:1.45}],Health:2500f,HandItems:[{id:"minecraft:netherite_axe",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:sharpness":12}},"minecraft:custom_name":'{"text":"Búa Chiến Thâm Uyên","color":"dark_aqua","bold":true}'}},{id:"minecraft:recovery_compass",count:1,components:{"minecraft:custom_name":'{"text":"💠 Trái Tim Thâm Uyên 💠","color":"dark_aqua","bold":true,"italic":false}',"minecraft:lore":['{"text":"━━━━━━━━━━━━━━━━━━━━━","color":"dark_gray","italic":false}','{"text":"Lõi âm thanh cổ đại kết tinh từ Cổ Thần Thâm Uyên Warden.","color":"aqua","italic":true}','{"text":"⚡ Nguyên liệu ĐỘT PHÁ THẦN THOẠI cho TIER 15 VĨNH CỬU!","color":"dark_aqua","bold":true,"italic":false}','{"text":"✦ Rơi 100% khi hạ Boss 5: Cổ Thần Thâm Uyên (/boss5)","color":"yellow","italic":false}','{"text":"[Loại]: Báu Vật Thâm Uyên","color":"aqua","bold":true,"italic":false}','{"text":"━━━━━━━━━━━━━━━━━━━━━","color":"dark_gray","italic":false}'],"minecraft:enchantment_glint_override":true,"minecraft:custom_data":{ancient_mat:"warden_heart"}}}],ArmorItems:[{id:"minecraft:netherite_boots",count:1},{id:"minecraft:netherite_leggings",count:1},{id:"minecraft:netherite_chestplate",count:1},{id:"minecraft:sculk_shrieker",count:1}],HandDropChances:[0.3f,1.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}
+execute in minecraft:world_boss unless entity @e[tag=boss_5] run summon wither_skeleton 0 75 -300 {Tags:["server_boss","boss_5"],CustomName:'{"text":"💠 CỔ THẦN THÂM UYÊN 💠 [2500 HP]","color":"dark_aqua","bold":true}',CustomNameVisible:1b,Glowing:1b,PersistenceRequired:1b,attributes:[{id:"minecraft:max_health",base:2500.0},{id:"minecraft:attack_damage",base:32.0},{id:"minecraft:movement_speed",base:0.38},{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:scale",base:1.45}],Health:2500f,HandItems:[{id:"minecraft:netherite_axe",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:sharpness":12}},"minecraft:custom_name":'{"text":"Búa Chiến Thâm Uyên","color":"dark_aqua","bold":true}'}},{id:"minecraft:recovery_compass",count:1,components:{"minecraft:custom_name":'{"text":"💠 Trái Tim Thâm Uyên 💠","color":"dark_aqua","bold":true,"italic":false}',"minecraft:lore":['{"text":"━━━━━━━━━━━━━━━━━━━━━","color":"dark_gray","italic":false}','{"text":"Lõi âm thanh cổ đại kết tinh từ Cổ Thần Thâm Uyên Warden.","color":"aqua","italic":true}','{"text":"⚡ Nguyên liệu ĐỘT PHÁ THẦN THOẠI cho TIER 15 VĨNH CỬU!","color":"dark_aqua","bold":true,"italic":false}','{"text":"✦ Rơi 100% khi hạ Boss 5: Cổ Thần Thâm Uyên (/boss5)","color":"yellow","italic":false}','{"text":"[Loại]: Báu Vật Thâm Uyên","color":"aqua","bold":true,"italic":false}','{"text":"━━━━━━━━━━━━━━━━━━━━━","color":"dark_gray","italic":false}'],"minecraft:enchantment_glint_override":true,"minecraft:custom_data":{ancient_mat:"warden_heart"}}}],ArmorItems:[{id:"minecraft:netherite_boots",count:1},{id:"minecraft:netherite_leggings",count:1},{id:"minecraft:netherite_chestplate",count:1},{id:"minecraft:sculk_shrieker",count:1}],HandDropChances:[0.3f,1.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}
+execute unless entity @e[tag=boss_5] run summon wither_skeleton 0 75 -300 {Tags:["server_boss","boss_5"],CustomName:'{"text":"💠 CỔ THẦN THÂM UYÊN 💠 [2500 HP]","color":"dark_aqua","bold":true}',CustomNameVisible:1b,Glowing:1b,PersistenceRequired:1b,attributes:[{id:"minecraft:max_health",base:2500.0},{id:"minecraft:attack_damage",base:32.0},{id:"minecraft:movement_speed",base:0.38},{id:"minecraft:knockback_resistance",base:1.0},{id:"minecraft:scale",base:1.45}],Health:2500f,HandItems:[{id:"minecraft:netherite_axe",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:sharpness":12}},"minecraft:custom_name":'{"text":"Búa Chiến Thâm Uyên","color":"dark_aqua","bold":true}'}},{id:"minecraft:recovery_compass",count:1,components:{"minecraft:custom_name":'{"text":"💠 Trái Tim Thâm Uyên 💠","color":"dark_aqua","bold":true,"italic":false}',"minecraft:lore":['{"text":"━━━━━━━━━━━━━━━━━━━━━","color":"dark_gray","italic":false}','{"text":"Lõi âm thanh cổ đại kết tinh từ Cổ Thần Thâm Uyên Warden.","color":"aqua","italic":true}','{"text":"⚡ Nguyên liệu ĐỘT PHÁ THẦN THOẠI cho TIER 15 VĨNH CỬU!","color":"dark_aqua","bold":true,"italic":false}','{"text":"✦ Rơi 100% khi hạ Boss 5: Cổ Thần Thâm Uyên (/boss5)","color":"yellow","italic":false}','{"text":"[Loại]: Báu Vật Thâm Uyên","color":"aqua","bold":true,"italic":false}','{"text":"━━━━━━━━━━━━━━━━━━━━━","color":"dark_gray","italic":false}'],"minecraft:enchantment_glint_override":true,"minecraft:custom_data":{ancient_mat:"warden_heart"}}}],ArmorItems:[{id:"minecraft:netherite_boots",count:1},{id:"minecraft:netherite_leggings",count:1},{id:"minecraft:netherite_chestplate",count:1},{id:"minecraft:sculk_shrieker",count:1}],HandDropChances:[0.3f,1.0f],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f]}
+
+scoreboard players set #boss_5_alive boss_status 1
+
+# 4. Hiệu ứng bóng tối & Quái triệu hồi
+execute in minecraft:world_boss run effect give @a[x=-45,y=65,z=-345,dx=90,dy=35,dz=90] minecraft:darkness 6 0 true
+execute in minecraft:world_boss run summon phantom 0 82 -300 {Tags:["minion_boss_5"],CustomName:'{"text":"Hồn Ma Thâm Uyên","color":"aqua"}',CustomNameVisible:1b}
+execute in minecraft:world_boss run summon stray -3 75 -302 {Tags:["minion_boss_5"],CustomName:'{"text":"Xạ Thủ Thâm Uyên","color":"dark_aqua"}',CustomNameVisible:1b}
+execute in minecraft:world_boss run summon stray 3 75 -298 {Tags:["minion_boss_5"],CustomName:'{"text":"Xạ Thủ Thâm Uyên","color":"dark_aqua"}',CustomNameVisible:1b}
+
+execute in minecraft:overworld if entity @p[x=23,y=108,z=98,dx=24,dy=20,dz=34] run effect give @a[x=25,y=108,z=100,dx=22,dy=20,dz=30] minecraft:darkness 6 0 true
+execute in minecraft:overworld if entity @p[x=23,y=108,z=98,dx=24,dy=20,dz=34] run summon phantom 35 118 115 {Tags:["minion_boss_5"],CustomName:'{"text":"Hồn Ma Thâm Uyên","color":"aqua"}',CustomNameVisible:1b}
+execute in minecraft:overworld if entity @p[x=23,y=108,z=98,dx=24,dy=20,dz=34] run summon stray 32 111 113 {Tags:["minion_boss_5"],CustomName:'{"text":"Xạ Thủ Thâm Uyên","color":"dark_aqua"}',CustomNameVisible:1b}
+execute in minecraft:overworld if entity @p[x=23,y=108,z=98,dx=24,dy=20,dz=34] run summon stray 38 111 117 {Tags:["minion_boss_5"],CustomName:'{"text":"Xạ Thủ Thâm Uyên","color":"dark_aqua"}',CustomNameVisible:1b}

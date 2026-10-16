@@ -1,0 +1,23 @@
+{
+  "biome": "WARM_OCEAN",
+  "deployed": true,
+  "friendlyName": "<white><bold> Warm Ocean",
+  "description": [
+    "<gray> Tropical waters where colorful",
+    "<gray> fish and pufferfish swim.",
+    "<gray> Essential for rare fish",
+    "<gray> collection."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: TROPICAL_FISH\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_warm_ocean",
+  "unlockLevel": 10,
+  "unlockCost": 0.0,
+  "cost": 300.0,
+  "itemCost": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: TROPICAL_FISH_BUCKET\n"
+  ],
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

@@ -1,0 +1,11 @@
+{
+  "uniqueId": "BSkyBlock_example_cow",
+  "world": "BSkyBlock",
+  "name": "Cow Limit",
+  "description": [
+    "Example: pay $500 to increase your cow entity limit by 2. Up to 5 times."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: BEEF\n",
+  "order": 4,
+  "active": true
+}

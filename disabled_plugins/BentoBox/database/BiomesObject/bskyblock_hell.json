@@ -1,0 +1,19 @@
+{
+  "biome": "NETHER_WASTES",
+  "deployed": true,
+  "friendlyName": "<white><bold> Hell",
+  "description": [
+    "<gray> The classic nether wasteland",
+    "<gray> of fire and lava. Gateway",
+    "<gray> to all other nether biomes."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: NETHERRACK\n",
+  "order": -1,
+  "environment": "NETHER",
+  "uniqueId": "bskyblock_hell",
+  "unlockLevel": 220,
+  "unlockCost": 0.0,
+  "cost": 1200.0,
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

@@ -1,0 +1,151 @@
+menu_title: '&8💰 &6&lCHỢ ĐẤU GIÁ &8(&e/CHỢ, /AH&8) 💰'
+open_command:
+  - ah
+  - cho
+  - chotroi
+  - ahmenu
+size: 45
+open_requirement:
+  requirements: {}
+
+items:
+  'border':
+    material: ORANGE_STAINED_GLASS_PANE
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 26
+      - 27
+      - 35
+      - 36
+      - 37
+      - 38
+      - 39
+      - 41
+      - 42
+      - 43
+      - 44
+    display_name: ' '
+
+  'info':
+    material: GOLD_INGOT
+    slot: 4
+    display_name: '&e&l💰 SÀN ĐẤU GIÁ & CHỢ TRỜI TOÀN SERVER'
+    lore:
+      - '&8━━━━━━━━━━━━━━━━━━━━━━━━━'
+      - '&7Trung tâm giao thương tự do giữa các người chơi.'
+      - '&f • &6Số dư hiện tại: &e$%vault_balance_int% Xu'
+      - '&f • &aThời hạn niêm yết: &f48 giờ'
+      - '&f • &cThuế giao dịch: &f5% khi bán thành công (chống lạm phát)'
+      - '&8━━━━━━━━━━━━━━━━━━━━━━━━━'
+
+  'cat_all':
+    material: CHEST
+    slot: 10
+    display_name: '&a&l📦 TẤT CẢ VẬT PHẨM ĐANG BÁN'
+    lore:
+      - '&7Duyệt qua toàn bộ danh sách đồ đang được đăng bán.'
+      - ''
+      - '&a▶ Nhấp để xem danh sách!'
+    left_click_commands:
+      - '[player] chợ list all 1'
+      - '[close]'
+
+  'cat_weapon':
+    material: DIAMOND_SWORD
+    slot: 12
+    display_name: '&c&l⚔ DANH MỤC: VŨ KHÍ & CUNG NỎ'
+    lore:
+      - '&7Kiếm, cung, nỏ, đinh ba, chùy...'
+      - ''
+      - '&c▶ Nhấp để lọc Vũ Khí!'
+    left_click_commands:
+      - '[player] chợ list weapon 1'
+      - '[close]'
+
+  'cat_armor':
+    material: DIAMOND_CHESTPLATE
+    slot: 14
+    display_name: '&b&l🛡 DANH MỤC: GIÁP TRỤ & BẢO HỘ'
+    lore:
+      - '&7Mũ, áo, quần, giày, khiên...'
+      - ''
+      - '&b▶ Nhấp để lọc Giáp Trụ!'
+    left_click_commands:
+      - '[player] chợ list armor 1'
+      - '[close]'
+
+  'cat_tool':
+    material: DIAMOND_PICKAXE
+    slot: 16
+    display_name: '&3&l🛠 DANH MỤC: DỤNG CỤ LAO ĐỘNG'
+    lore:
+      - '&7Cúp, rìu, xẻng, cuốc, cần câu...'
+      - ''
+      - '&3▶ Nhấp để lọc Công Cụ!'
+    left_click_commands:
+      - '[player] chợ list tool 1'
+      - '[close]'
+
+  'cat_mining':
+    material: RAW_GOLD
+    slot: 28
+    display_name: '&e&l⛏ DANH MỤC: KHOÁNG SẢN & ĐÁ QUÝ'
+    lore:
+      - '&7Quặng thô, thỏi kim loại, kim cương, ngọc...'
+      - ''
+      - '&e▶ Nhấp để lọc Khoáng Sản!'
+    left_click_commands:
+      - '[player] chợ list mining 1'
+      - '[close]'
+
+  'cat_farming':
+    material: WHEAT
+    slot: 30
+    display_name: '&2&l🌾 DANH MỤC: NÔNG SẢN & MÙA MÀNG'
+    lore:
+      - '&7Lúa mì, cà rốt, khoai tây, mía, dưa hấu, hạt giống...'
+      - ''
+      - '&2▶ Nhấp để lọc Nông Sản!'
+    left_click_commands:
+      - '[player] chợ list farming 1'
+      - '[close]'
+
+  'sell_guide':
+    material: WRITABLE_BOOK
+    slot: 32
+    display_name: '&6&l📝 HƯỚNG DẪN ĐĂNG BÁN ĐỒ'
+    lore:
+      - '&71. Cầm vật phẩm muốn bán trên tay chính'
+      - '&72. Gõ lệnh: &e/chợ ban <giá> &7(hoặc &e/ah sell <giá>&7)'
+      - '&73. Chờ người chơi khác mua & nhận tiền tự động!'
+      - ''
+      - '&c* Lưu ý: Vật phẩm Bùa, Catalyst, Vé Vàng bị cấm bán.'
+
+  'mailbox':
+    material: ENDER_CHEST
+    slot: 34
+    display_name: '&d&l📬 HỘP THƯ VẬT PHẨM (/CHỢ MAIL)'
+    lore:
+      - '&7Nhận lại các vật phẩm hết hạn 48h hoặc bạn đã hủy bán.'
+      - ''
+      - '&d▶ Nhấp để mở Hộp Thư!'
+    left_click_commands:
+      - '[player] chợ mail'
+      - '[close]'
+
+  'close':
+    material: BARRIER
+    slot: 40
+    display_name: '&c&l✕ ĐÓNG CHỢ ĐẤU GIÁ'
+    left_click_commands:
+      - '[close]'

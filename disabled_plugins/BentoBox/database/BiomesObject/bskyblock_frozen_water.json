@@ -1,0 +1,23 @@
+{
+  "biome": "FROZEN_OCEAN",
+  "deployed": true,
+  "friendlyName": "<white><bold> Cold Ocean",
+  "description": [
+    "<gray> Frozen waters where salmon",
+    "<gray> swim and polar bears roam.",
+    "<gray> Harsh, beautiful, and",
+    "<gray> resource-rich."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: ICE\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_frozen_water",
+  "unlockLevel": 15,
+  "unlockCost": 0.0,
+  "cost": 300.0,
+  "itemCost": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: ICE\n  amount: 20\n"
+  ],
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

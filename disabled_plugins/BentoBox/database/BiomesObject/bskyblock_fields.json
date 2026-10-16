@@ -1,0 +1,18 @@
+{
+  "biome": "PLAINS",
+  "deployed": true,
+  "friendlyName": "<white><bold> Plains",
+  "description": [
+    "<gray> Peaceful grasslands where sheep,",
+    "<gray> pigs, cows, chickens, horses,",
+    "<gray> and donkeys roam freely.",
+    "<gray> Perfect for your first farm."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: GRASS_BLOCK\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_fields",
+  "cost": 100.0,
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

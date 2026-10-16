@@ -1,0 +1,1892 @@
+---
+categories:
+  Blocks:
+    item:
+      material: "GRASS_BLOCK"
+      amount: 1
+      displayName: "&9&lBlocks"
+      skullData: null
+      headData: null
+      headOwner: null
+      headOwnerUUID: null
+      model: null
+      lore: []
+      slot: 12
+    inventorySize: 54
+  Food:
+    item:
+      material: "COOKED_CHICKEN"
+      amount: 1
+      displayName: "&9&lFood"
+      skullData: null
+      headData: null
+      headOwner: null
+      headOwnerUUID: null
+      model: null
+      lore: []
+      slot: 13
+    inventorySize: 36
+  Ores:
+    item:
+      material: "GOLD_INGOT"
+      amount: 1
+      displayName: "&9&lOres"
+      skullData: null
+      headData: null
+      headOwner: null
+      headOwnerUUID: null
+      model: null
+      lore: []
+      slot: 14
+    inventorySize: 54
+  Farming:
+    item:
+      material: "WHEAT"
+      amount: 1
+      displayName: "&9&lFarming"
+      skullData: null
+      headData: null
+      headOwner: null
+      headOwnerUUID: null
+      model: null
+      lore: []
+      slot: 21
+    inventorySize: 45
+  Mob Drops:
+    item:
+      material: "SPIDER_EYE"
+      amount: 1
+      displayName: "&9&lMob Drops"
+      skullData: null
+      headData: null
+      headOwner: null
+      headOwnerUUID: null
+      model: null
+      lore: []
+      slot: 22
+    inventorySize: 45
+  Miscellaneous:
+    item:
+      material: "SADDLE"
+      amount: 1
+      displayName: "&9&lMiscellaneous"
+      skullData: null
+      headData: null
+      headOwner: null
+      headOwnerUUID: null
+      model: null
+      lore: []
+      slot: 23
+    inventorySize: 36
+  Spawners:
+    item:
+      material: "SPAWNER"
+      amount: 1
+      displayName: "&6&lSpawners & Trứng Mob"
+      skullData: null
+      headData: null
+      headOwner: null
+      headOwnerUUID: null
+      model: null
+      lore:
+      - "&7Mua các loại Lồng Sinh Quái (Spawners)"
+      - "&7và Trứng động vật để phát triển Đảo!"
+      slot: 24
+    inventorySize: 45
+items:
+  Blocks:
+  - name: "&9&lGrass Block"
+    type: "GRASS_BLOCK"
+    lore: []
+    command: null
+    defaultAmount: 1
+    slot: 10
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 10.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lDirt Block"
+    type: "DIRT"
+    lore: []
+    command: null
+    defaultAmount: 10
+    slot: 11
+    page: 1
+    buyCost:
+      money: 50.0
+      bankItems: {}
+    sellCost:
+      money: 5.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lGravel"
+    type: "GRAVEL"
+    lore: []
+    command: null
+    defaultAmount: 10
+    slot: 12
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 10.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lGranite"
+    type: "GRANITE"
+    lore: []
+    command: null
+    defaultAmount: 10
+    slot: 13
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 10.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lDiorite"
+    type: "DIORITE"
+    lore: []
+    command: null
+    defaultAmount: 10
+    slot: 14
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 10.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lAndesite"
+    type: "ANDESITE"
+    lore: []
+    command: null
+    defaultAmount: 10
+    slot: 15
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 10.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lOak Log"
+    type: "OAK_LOG"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 16
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 10.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lSpruce Log"
+    type: "SPRUCE_LOG"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 19
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 10.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lBirch Log"
+    type: "BIRCH_LOG"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 20
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 10.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lJungle Log"
+    type: "JUNGLE_LOG"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 21
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 10.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lAcacia Log"
+    type: "ACACIA_LOG"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 22
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 10.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lDark Oak Log"
+    type: "DARK_OAK_LOG"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 23
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 10.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lSnow Block"
+    type: "SNOW_BLOCK"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 24
+    page: 1
+    buyCost:
+      money: 200.0
+      bankItems: {}
+    sellCost:
+      money: 10.0
+      bankItems: {}
+    minLevel: 3
+  - name: "&9&lIce"
+    type: "ICE"
+    lore: []
+    command: null
+    defaultAmount: 8
+    slot: 25
+    page: 1
+    buyCost:
+      money: 300.0
+      bankItems: {}
+    sellCost:
+      money: 20.0
+      bankItems: {}
+    minLevel: 5
+  - name: "&9&lPacked Ice"
+    type: "PACKED_ICE"
+    lore: []
+    command: null
+    defaultAmount: 8
+    slot: 28
+    page: 1
+    buyCost:
+      money: 300.0
+      bankItems: {}
+    sellCost:
+      money: 20.0
+      bankItems: {}
+    minLevel: 5
+  - name: "&9&lSponge"
+    type: "SPONGE"
+    lore: []
+    command: null
+    defaultAmount: 4
+    slot: 29
+    page: 1
+    buyCost:
+      money: 1000.0
+      bankItems: {}
+    sellCost:
+      money: 200.0
+      bankItems: {}
+    minLevel: 20
+  - name: "&9&lSand"
+    type: "SAND"
+    lore: []
+    command: null
+    defaultAmount: 8
+    slot: 30
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 20.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lSandstone"
+    type: "SANDSTONE"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 31
+    page: 1
+    buyCost:
+      money: 80.0
+      bankItems: {}
+    sellCost:
+      money: 5.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lClay Ball"
+    type: "CLAY_BALL"
+    lore: []
+    command: null
+    defaultAmount: 32
+    slot: 32
+    page: 1
+    buyCost:
+      money: 70.0
+      bankItems: {}
+    sellCost:
+      money: 10.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lObsidian"
+    type: "OBSIDIAN"
+    lore: []
+    command: null
+    defaultAmount: 4
+    slot: 33
+    page: 1
+    buyCost:
+      money: 250.0
+      bankItems: {}
+    sellCost:
+      money: 25.0
+      bankItems: {}
+    minLevel: 10
+  - name: "&9&lGlowstone"
+    type: "GLOWSTONE"
+    lore: []
+    command: null
+    defaultAmount: 8
+    slot: 34
+    page: 1
+    buyCost:
+      money: 125.0
+      bankItems: {}
+    sellCost:
+      money: 15.0
+      bankItems: {}
+    minLevel: 7
+  - name: "&9&lEnd Stone"
+    type: "END_STONE"
+    lore: []
+    command: null
+    defaultAmount: 4
+    slot: 39
+    page: 1
+    buyCost:
+      money: 250.0
+      bankItems: {}
+    sellCost:
+      money: 25.0
+      bankItems: {}
+    minLevel: 15
+  - name: "&9&lPrismarine"
+    type: "PRISMARINE"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 40
+    page: 1
+    buyCost:
+      money: 200.0
+      bankItems: {}
+    sellCost:
+      money: 20.0
+      bankItems: {}
+    minLevel: 7
+  - name: "&9&lWool"
+    type: "WHITE_WOOL"
+    lore: []
+    command: null
+    defaultAmount: 8
+    slot: 41
+    page: 1
+    buyCost:
+      money: 50.0
+      bankItems: {}
+    sellCost:
+      money: 5.0
+      bankItems: {}
+    minLevel: 1
+  Food:
+  - name: "&9&lApple"
+    type: "APPLE"
+    lore: []
+    command: null
+    defaultAmount: 10
+    slot: 11
+    page: 1
+    buyCost:
+      money: 50.0
+      bankItems: {}
+    sellCost:
+      money: 15.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lEnchanted Golden Apple"
+    type: "ENCHANTED_GOLDEN_APPLE"
+    lore: []
+    command: null
+    defaultAmount: 3
+    slot: 12
+    page: 1
+    buyCost:
+      money: 1000.0
+      bankItems: {}
+    sellCost:
+      money: 100.0
+      bankItems: {}
+    minLevel: 15
+  - name: "&9&lCarrot"
+    type: "CARROT"
+    lore: []
+    command: null
+    defaultAmount: 10
+    slot: 13
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 25.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lBaked Potato"
+    type: "BAKED_POTATO"
+    lore: []
+    command: null
+    defaultAmount: 10
+    slot: 14
+    page: 1
+    buyCost:
+      money: 150.0
+      bankItems: {}
+    sellCost:
+      money: 10.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lBread"
+    type: "BREAD"
+    lore: []
+    command: null
+    defaultAmount: 10
+    slot: 15
+    page: 1
+    buyCost:
+      money: 50.0
+      bankItems: {}
+    sellCost:
+      money: 30.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lCookie"
+    type: "COOKIE"
+    lore: []
+    command: null
+    defaultAmount: 5
+    slot: 20
+    page: 1
+    buyCost:
+      money: 130.0
+      bankItems: {}
+    sellCost:
+      money: 5.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lCooked Porkchop"
+    type: "COOKED_PORKCHOP"
+    lore: []
+    command: null
+    defaultAmount: 10
+    slot: 21
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 15.0
+      bankItems: {}
+    minLevel: 3
+  - name: "&9&lCooked Beef"
+    type: "COOKED_BEEF"
+    lore: []
+    command: null
+    defaultAmount: 10
+    slot: 22
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 15.0
+      bankItems: {}
+    minLevel: 3
+  - name: "&9&lCooked Mutton"
+    type: "COOKED_MUTTON"
+    lore: []
+    command: null
+    defaultAmount: 10
+    slot: 23
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 20.0
+      bankItems: {}
+    minLevel: 3
+  - name: "&9&lCooked Rabbit"
+    type: "COOKED_RABBIT"
+    lore: []
+    command: null
+    defaultAmount: 10
+    slot: 24
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 25.0
+      bankItems: {}
+    minLevel: 3
+  Ores:
+  - name: "&6&lĐồng Thô (Raw Copper)"
+    type: "RAW_COPPER"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 10
+    page: 1
+    buyCost:
+      money: 80.0
+      bankItems: {}
+    sellCost:
+      money: 10.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lCoal"
+    type: "COAL"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 11
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 15.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lRedstone"
+    type: "REDSTONE"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 12
+    page: 1
+    buyCost:
+      money: 150.0
+      bankItems: {}
+    sellCost:
+      money: 7.0
+      bankItems: {}
+    minLevel: 5
+  - name: "&9&lLapis Lazuli"
+    type: "LAPIS_LAZULI"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 13
+    page: 1
+    buyCost:
+      money: 150.0
+      bankItems: {}
+    sellCost:
+      money: 10.0
+      bankItems: {}
+    minLevel: 3
+  - name: "&9&lIron Ingot"
+    type: "IRON_INGOT"
+    lore: []
+    command: null
+    defaultAmount: 8
+    slot: 14
+    page: 1
+    buyCost:
+      money: 200.0
+      bankItems: {}
+    sellCost:
+      money: 20.0
+      bankItems: {}
+    minLevel: 5
+  - name: "&9&lGold Ingot"
+    type: "GOLD_INGOT"
+    lore: []
+    command: null
+    defaultAmount: 8
+    slot: 15
+    page: 1
+    buyCost:
+      money: 200.0
+      bankItems: {}
+    sellCost:
+      money: 20.0
+      bankItems: {}
+    minLevel: 8
+  - name: "&6&lThỏi Đồng (Copper Ingot)"
+    type: "COPPER_INGOT"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 16
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 15.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&f&lSắt Thô (Raw Iron)"
+    type: "RAW_IRON"
+    lore: []
+    command: null
+    defaultAmount: 8
+    slot: 19
+    page: 1
+    buyCost:
+      money: 160.0
+      bankItems: {}
+    sellCost:
+      money: 16.0
+      bankItems: {}
+    minLevel: 3
+  - name: "&e&lVàng Thô (Raw Gold)"
+    type: "RAW_GOLD"
+    lore: []
+    command: null
+    defaultAmount: 8
+    slot: 20
+    page: 1
+    buyCost:
+      money: 160.0
+      bankItems: {}
+    sellCost:
+      money: 16.0
+      bankItems: {}
+    minLevel: 5
+  - name: "&9&lDiamond"
+    type: "DIAMOND"
+    lore: []
+    command: null
+    defaultAmount: 8
+    slot: 21
+    page: 1
+    buyCost:
+      money: 1000.0
+      bankItems: {}
+    sellCost:
+      money: 100.0
+      bankItems: {}
+    minLevel: 10
+  - name: "&9&lEmerald"
+    type: "EMERALD"
+    lore: []
+    command: null
+    defaultAmount: 8
+    slot: 22
+    page: 1
+    buyCost:
+      money: 200.0
+      bankItems: {}
+    sellCost:
+      money: 15.0
+      bankItems: {}
+    minLevel: 10
+  - name: "&9&lQuartz"
+    type: "QUARTZ"
+    lore: []
+    command: null
+    defaultAmount: 64
+    slot: 23
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 10.0
+      bankItems: {}
+    minLevel: 8
+  - name: "&6&lKhối Đồng (Copper Block)"
+    type: "COPPER_BLOCK"
+    lore: []
+    command: null
+    defaultAmount: 4
+    slot: 24
+    page: 1
+    buyCost:
+      money: 800.0
+      bankItems: {}
+    sellCost:
+      money: 135.0
+      bankItems: {}
+    minLevel: 2
+  - name: "&5&lThỏi Netherite (Netherite Ingot)"
+    type: "NETHERITE_INGOT"
+    lore: []
+    command: null
+    defaultAmount: 1
+    slot: 25
+    page: 1
+    buyCost:
+      money: 5000.0
+      bankItems: {}
+    sellCost:
+      money: 1000.0
+      bankItems: {}
+    minLevel: 12
+  - name: "&8&lKhối Than (Coal Block)"
+    type: "COAL_BLOCK"
+    lore:
+    - "&7Khối than ép chặt, nung nấu và tích trữ cực tiện."
+    command: null
+    defaultAmount: 4
+    slot: 28
+    page: 1
+    buyCost:
+      money: 900.0
+      bankItems: {}
+    sellCost:
+      money: 135.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&f&lKhối Sắt (Iron Block)"
+    type: "IRON_BLOCK"
+    lore:
+    - "&7Khối sắt nguyên chất, tích trữ và giao thương thuận lợi."
+    command: null
+    defaultAmount: 4
+    slot: 29
+    page: 1
+    buyCost:
+      money: 1800.0
+      bankItems: {}
+    sellCost:
+      money: 180.0
+      bankItems: {}
+    minLevel: 5
+  - name: "&6&lKhối Vàng (Gold Block)"
+    type: "GOLD_BLOCK"
+    lore:
+    - "&7Khối vàng lấp lánh, biểu tượng của phú quý."
+    command: null
+    defaultAmount: 4
+    slot: 30
+    page: 1
+    buyCost:
+      money: 1800.0
+      bankItems: {}
+    sellCost:
+      money: 180.0
+      bankItems: {}
+    minLevel: 8
+  - name: "&c&lKhối Đá Đỏ (Redstone Block)"
+    type: "REDSTONE_BLOCK"
+    lore:
+    - "&7Nguồn năng lượng đá đỏ vĩnh cửu."
+    command: null
+    defaultAmount: 4
+    slot: 31
+    page: 1
+    buyCost:
+      money: 1350.0
+      bankItems: {}
+    sellCost:
+      money: 63.0
+      bankItems: {}
+    minLevel: 5
+  - name: "&1&lKhối Lưu Ly (Lapis Block)"
+    type: "LAPIS_BLOCK"
+    lore:
+    - "&7Khối khoáng sản xanh thẳm của các pháp sư."
+    command: null
+    defaultAmount: 4
+    slot: 32
+    page: 1
+    buyCost:
+      money: 1350.0
+      bankItems: {}
+    sellCost:
+      money: 90.0
+      bankItems: {}
+    minLevel: 3
+  - name: "&b&lKhối Kim Cương (Diamond Block)"
+    type: "DIAMOND_BLOCK"
+    lore:
+    - "&7Khối kim cương cứng cáp, tài sản quý giá bậc nhất."
+    command: null
+    defaultAmount: 1
+    slot: 33
+    page: 1
+    buyCost:
+      money: 9000.0
+      bankItems: {}
+    sellCost:
+      money: 900.0
+      bankItems: {}
+    minLevel: 10
+  - name: "&a&lKhối Ngọc Lục Bảo (Emerald Block)"
+    type: "EMERALD_BLOCK"
+    lore:
+    - "&7Khối ngọc lục bảo tinh khiết, tiền tệ giao thương đỉnh cao."
+    command: null
+    defaultAmount: 1
+    slot: 34
+    page: 1
+    buyCost:
+      money: 1800.0
+      bankItems: {}
+    sellCost:
+      money: 135.0
+      bankItems: {}
+    minLevel: 10
+  - name: "&4&lKhối Netherite (Netherite Block)"
+    type: "NETHERITE_BLOCK"
+    lore:
+    - "&7Kho báu tối thượng từ lòng địa ngục Nether."
+    command: null
+    defaultAmount: 1
+    slot: 37
+    page: 1
+    buyCost:
+      money: 45000.0
+      bankItems: {}
+    sellCost:
+      money: 9000.0
+      bankItems: {}
+    minLevel: 15
+  - name: "&7&lKhối Sắt Thô (Raw Iron Block)"
+    type: "RAW_IRON_BLOCK"
+    lore:
+    - "&7Cục quặng sắt thô kết tụ."
+    command: null
+    defaultAmount: 4
+    slot: 38
+    page: 1
+    buyCost:
+      money: 1440.0
+      bankItems: {}
+    sellCost:
+      money: 144.0
+      bankItems: {}
+    minLevel: 3
+  - name: "&e&lKhối Vàng Thô (Raw Gold Block)"
+    type: "RAW_GOLD_BLOCK"
+    lore:
+    - "&7Cục quặng vàng thô tự nhiên."
+    command: null
+    defaultAmount: 4
+    slot: 39
+    page: 1
+    buyCost:
+      money: 1440.0
+      bankItems: {}
+    sellCost:
+      money: 144.0
+      bankItems: {}
+    minLevel: 5
+  - name: "&6&lKhối Đồng Thô (Raw Copper Block)"
+    type: "RAW_COPPER_BLOCK"
+    lore:
+    - "&7Cục quặng đồng thô tự nhiên."
+    command: null
+    defaultAmount: 4
+    slot: 40
+    page: 1
+    buyCost:
+      money: 720.0
+      bankItems: {}
+    sellCost:
+      money: 90.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&a&lBình Kinh Nghiệm (Bottle o' Enchanting)"
+    type: "EXPERIENCE_BOTTLE"
+    lore:
+    - "&7Chứa tinh hoa điểm kinh nghiệm phép thuật."
+    - "&7Dùng để phù phép trang bị hoặc lưu trữ EXP."
+    command: null
+    defaultAmount: 16
+    slot: 41
+    page: 1
+    buyCost:
+      money: 500.0
+      bankItems: {}
+    sellCost:
+      money: 100.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&6&l⚡ BÁN HẾT KHOÁNG SẢN (SELL ALL ORES) ⚡"
+    type: "HOPPER"
+    lore:
+    - "&e▶ Cách 1: Bấm nút [BÁN HẾT KHOÁNG SẢN] vừa hiện ở khung Chat!"
+    - "&e▶ Cách 2: Gõ lệnh nhanh &6/bankhoangsan &e(hoặc &6/sellores&e)"
+    - "&a▶ Bán sạch 29 loại quặng kể cả khi túi đồ đầy 100%!"
+    - "&a▶ Tự động cộng toàn bộ tiền vào Số Dư ($) tức thì!"
+    - "&b▶ An toàn tuyệt đối: Không bán ngọc & trang bị RPG!"
+    command: "sudo %player% bankhoangsan"
+    defaultAmount: 1
+    slot: 49
+    page: 1
+    buyCost:
+      money: 0.0
+      bankItems: {}
+    sellCost:
+      money: 0.0
+      bankItems: {}
+    minLevel: 1
+  Farming:
+  - name: "&9&lWheat Seeds"
+    type: "WHEAT_SEEDS"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 10
+    page: 1
+    buyCost:
+      money: 130.0
+      bankItems: {}
+    sellCost:
+      money: 2.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lPumpkin Seeds"
+    type: "PUMPKIN_SEEDS"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 11
+    page: 1
+    buyCost:
+      money: 150.0
+      bankItems: {}
+    sellCost:
+      money: 5.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lMelon Seeds"
+    type: "MELON_SEEDS"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 12
+    page: 1
+    buyCost:
+      money: 250.0
+      bankItems: {}
+    sellCost:
+      money: 5.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lNether Wart"
+    type: "NETHER_WART"
+    lore: []
+    command: null
+    defaultAmount: 4
+    slot: 13
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 5.0
+      bankItems: {}
+    minLevel: 10
+  - name: "&9&lSugar Cane"
+    type: "SUGAR_CANE"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 14
+    page: 1
+    buyCost:
+      money: 150.0
+      bankItems: {}
+    sellCost:
+      money: 5.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lWheat"
+    type: "WHEAT"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 15
+    page: 1
+    buyCost:
+      money: 50.0
+      bankItems: {}
+    sellCost:
+      money: 10.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lPumpkin"
+    type: "PUMPKIN"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 16
+    page: 1
+    buyCost:
+      money: 150.0
+      bankItems: {}
+    sellCost:
+      money: 15.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lMelon Slice"
+    type: "MELON_SLICE"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 19
+    page: 1
+    buyCost:
+      money: 150.0
+      bankItems: {}
+    sellCost:
+      money: 5.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lCactus"
+    type: "CACTUS"
+    lore: []
+    command: null
+    defaultAmount: 8
+    slot: 20
+    page: 1
+    buyCost:
+      money: 80.0
+      bankItems: {}
+    sellCost:
+      money: 2.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lOak Sapling"
+    type: "OAK_SAPLING"
+    lore: []
+    command: null
+    defaultAmount: 4
+    slot: 21
+    page: 1
+    buyCost:
+      money: 20.0
+      bankItems: {}
+    sellCost:
+      money: 2.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lSpruce Sapling"
+    type: "SPRUCE_SAPLING"
+    lore: []
+    command: null
+    defaultAmount: 4
+    slot: 22
+    page: 1
+    buyCost:
+      money: 20.0
+      bankItems: {}
+    sellCost:
+      money: 2.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lBirch Sapling"
+    type: "BIRCH_SAPLING"
+    lore: []
+    command: null
+    defaultAmount: 4
+    slot: 23
+    page: 1
+    buyCost:
+      money: 20.0
+      bankItems: {}
+    sellCost:
+      money: 2.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lJungle Sapling"
+    type: "JUNGLE_SAPLING"
+    lore: []
+    command: null
+    defaultAmount: 4
+    slot: 24
+    page: 1
+    buyCost:
+      money: 150.0
+      bankItems: {}
+    sellCost:
+      money: 4.0
+      bankItems: {}
+    minLevel: 5
+  - name: "&9&lAcacia Sapling"
+    type: "ACACIA_SAPLING"
+    lore: []
+    command: null
+    defaultAmount: 4
+    slot: 25
+    page: 1
+    buyCost:
+      money: 20.0
+      bankItems: {}
+    sellCost:
+      money: 2.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lDark Oak Sapling"
+    type: "DARK_OAK_SAPLING"
+    lore: []
+    command: null
+    defaultAmount: 4
+    slot: 30
+    page: 1
+    buyCost:
+      money: 150.0
+      bankItems: {}
+    sellCost:
+      money: 4.0
+      bankItems: {}
+    minLevel: 5
+  - name: "&9&lBrown Mushroom"
+    type: "BROWN_MUSHROOM"
+    lore: []
+    command: null
+    defaultAmount: 8
+    slot: 31
+    page: 1
+    buyCost:
+      money: 60.0
+      bankItems: {}
+    sellCost:
+      money: 6.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lRed Mushroom"
+    type: "RED_MUSHROOM"
+    lore: []
+    command: null
+    defaultAmount: 8
+    slot: 32
+    page: 1
+    buyCost:
+      money: 60.0
+      bankItems: {}
+    sellCost:
+      money: 6.0
+      bankItems: {}
+    minLevel: 1
+  Mob Drops:
+  - name: "&9&lRotten Flesh"
+    type: "ROTTEN_FLESH"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 10
+    page: 1
+    buyCost:
+      money: 20.0
+      bankItems: {}
+    sellCost:
+      money: 2.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lBone"
+    type: "BONE"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 11
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 3.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lGunpowder"
+    type: "GUNPOWDER"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 12
+    page: 1
+    buyCost:
+      money: 30.0
+      bankItems: {}
+    sellCost:
+      money: 3.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lString"
+    type: "STRING"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 13
+    page: 1
+    buyCost:
+      money: 80.0
+      bankItems: {}
+    sellCost:
+      money: 3.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lArrow"
+    type: "ARROW"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 14
+    page: 1
+    buyCost:
+      money: 75.0
+      bankItems: {}
+    sellCost:
+      money: 4.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lSpider Eye"
+    type: "SPIDER_EYE"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 15
+    page: 1
+    buyCost:
+      money: 50.0
+      bankItems: {}
+    sellCost:
+      money: 5.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lEnder Pearl"
+    type: "ENDER_PEARL"
+    lore: []
+    command: null
+    defaultAmount: 3
+    slot: 16
+    page: 1
+    buyCost:
+      money: 75.0
+      bankItems: {}
+    sellCost:
+      money: 10.0
+      bankItems: {}
+    minLevel: 10
+  - name: "&9&lSlime Ball"
+    type: "SLIME_BALL"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 19
+    page: 1
+    buyCost:
+      money: 200.0
+      bankItems: {}
+    sellCost:
+      money: 5.0
+      bankItems: {}
+    minLevel: 5
+  - name: "&9&lPrismarine Crystals"
+    type: "PRISMARINE_CRYSTALS"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 20
+    page: 1
+    buyCost:
+      money: 50.0
+      bankItems: {}
+    sellCost:
+      money: 5.0
+      bankItems: {}
+    minLevel: 8
+  - name: "&9&lPrismarine Shard"
+    type: "PRISMARINE_SHARD"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 21
+    page: 1
+    buyCost:
+      money: 50.0
+      bankItems: {}
+    sellCost:
+      money: 5.0
+      bankItems: {}
+    minLevel: 8
+  - name: "&9&lBlaze Rod"
+    type: "BLAZE_ROD"
+    lore: []
+    command: null
+    defaultAmount: 4
+    slot: 22
+    page: 1
+    buyCost:
+      money: 250.0
+      bankItems: {}
+    sellCost:
+      money: 20.0
+      bankItems: {}
+    minLevel: 10
+  - name: "&9&lMagma Cream"
+    type: "MAGMA_CREAM"
+    lore: []
+    command: null
+    defaultAmount: 4
+    slot: 23
+    page: 1
+    buyCost:
+      money: 150.0
+      bankItems: {}
+    sellCost:
+      money: 15.0
+      bankItems: {}
+    minLevel: 10
+  - name: "&9&lGhast Tear"
+    type: "GHAST_TEAR"
+    lore: []
+    command: null
+    defaultAmount: 4
+    slot: 24
+    page: 1
+    buyCost:
+      money: 200.0
+      bankItems: {}
+    sellCost:
+      money: 30.0
+      bankItems: {}
+    minLevel: 15
+  - name: "&9&lLeather"
+    type: "LEATHER"
+    lore: []
+    command: null
+    defaultAmount: 8
+    slot: 25
+    page: 1
+    buyCost:
+      money: 50.0
+      bankItems: {}
+    sellCost:
+      money: 5.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lRabbit Foot"
+    type: "RABBIT_FOOT"
+    lore: []
+    command: null
+    defaultAmount: 4
+    slot: 30
+    page: 1
+    buyCost:
+      money: 250.0
+      bankItems: {}
+    sellCost:
+      money: 30.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lInk Sack"
+    type: "INK_SAC"
+    lore: []
+    command: null
+    defaultAmount: 8
+    slot: 31
+    page: 1
+    buyCost:
+      money: 50.0
+      bankItems: {}
+    sellCost:
+      money: 5.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lFeather"
+    type: "FEATHER"
+    lore: []
+    command: null
+    defaultAmount: 16
+    slot: 32
+    page: 1
+    buyCost:
+      money: 30.0
+      bankItems: {}
+    sellCost:
+      money: 3.0
+      bankItems: {}
+    minLevel: 1
+  Miscellaneous:
+  - name: "&9&lBucket"
+    type: "BUCKET"
+    lore: []
+    command: null
+    defaultAmount: 1
+    slot: 12
+    page: 1
+    buyCost:
+      money: 100.0
+      bankItems: {}
+    sellCost:
+      money: 10.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lWater Bucket"
+    type: "WATER_BUCKET"
+    lore: []
+    command: null
+    defaultAmount: 1
+    slot: 13
+    page: 1
+    buyCost:
+      money: 200.0
+      bankItems: {}
+    sellCost:
+      money: 10.0
+      bankItems: {}
+    minLevel: 1
+  - name: "&9&lLava Bucket"
+    type: "LAVA_BUCKET"
+    lore: []
+    command: null
+    defaultAmount: 1
+    slot: 14
+    page: 1
+    buyCost:
+      money: 200.0
+      bankItems: {}
+    sellCost:
+      money: 20.0
+      bankItems: {}
+    minLevel: 5
+  - name: "&9&lName Tag"
+    type: "NAME_TAG"
+    lore: []
+    command: null
+    defaultAmount: 1
+    slot: 21
+    page: 1
+    buyCost:
+      money: 200.0
+      bankItems: {}
+    sellCost:
+      money: 30.0
+      bankItems: {}
+    minLevel: 10
+  - name: "&9&lSaddle"
+    type: "SADDLE"
+    lore: []
+    command: null
+    defaultAmount: 1
+    slot: 22
+    page: 1
+    buyCost:
+      money: 300.0
+      bankItems: {}
+    sellCost:
+      money: 30.0
+      bankItems: {}
+    minLevel: 5
+  - name: "&9&lEnd Portal Frame"
+    type: "END_PORTAL_FRAME"
+    lore: []
+    command: null
+    defaultAmount: 1
+    slot: 23
+    page: 1
+    buyCost:
+      money: 5000.0
+      bankItems: {}
+    sellCost:
+      money: 0.0
+      bankItems: {}
+    minLevel: 20
+  - name: "&a&lBình Kinh Nghiệm (Bottle o' Enchanting)"
+    type: "EXPERIENCE_BOTTLE"
+    lore:
+    - "&7Chứa tinh hoa điểm kinh nghiệm phép thuật."
+    - "&7Dùng để phù phép trang bị hoặc lưu trữ EXP."
+    command: null
+    defaultAmount: 16
+    slot: 15
+    page: 1
+    buyCost:
+      money: 500.0
+      bankItems: {}
+    sellCost:
+      money: 100.0
+      bankItems: {}
+    minLevel: 1
+  Spawners:
+  - name: "&e&lTrứng Bò (Cow Spawn Egg)"
+    type: "COW_SPAWN_EGG"
+    lore:
+    - "&7Dùng để nhân giống và tạo đàn bò trên đảo."
+    command: null
+    defaultAmount: 1
+    slot: 10
+    page: 1
+    buyCost:
+      money: 1500.0
+      bankItems: {}
+    sellCost:
+      money: 300.0
+      bankItems: {}
+    minLevel: 2
+  - name: "&e&lTrứng Gà (Chicken Spawn Egg)"
+    type: "CHICKEN_SPAWN_EGG"
+    lore:
+    - "&7Dùng để nuôi gà lấy thịt, lông và trứng."
+    command: null
+    defaultAmount: 1
+    slot: 11
+    page: 1
+    buyCost:
+      money: 1000.0
+      bankItems: {}
+    sellCost:
+      money: 200.0
+      bankItems: {}
+    minLevel: 2
+  - name: "&e&lTrứng Cừu (Sheep Spawn Egg)"
+    type: "SHEEP_SPAWN_EGG"
+    lore:
+    - "&7Dùng để nuôi cừu lấy len và thịt cừu."
+    command: null
+    defaultAmount: 1
+    slot: 12
+    page: 1
+    buyCost:
+      money: 1500.0
+      bankItems: {}
+    sellCost:
+      money: 300.0
+      bankItems: {}
+    minLevel: 2
+  - name: "&e&lTrứng Heo (Pig Spawn Egg)"
+    type: "PIG_SPAWN_EGG"
+    lore:
+    - "&7Dùng để nuôi heo lấy thịt tươi."
+    command: null
+    defaultAmount: 1
+    slot: 13
+    page: 1
+    buyCost:
+      money: 1200.0
+      bankItems: {}
+    sellCost:
+      money: 250.0
+      bankItems: {}
+    minLevel: 2
+  - name: "&e&lTrứng Sói (Wolf Spawn Egg)"
+    type: "WOLF_SPAWN_EGG"
+    lore:
+    - "&7Thuần hóa làm thú cưng bảo vệ đảo."
+    command: null
+    defaultAmount: 1
+    slot: 14
+    page: 1
+    buyCost:
+      money: 5000.0
+      bankItems: {}
+    sellCost:
+      money: 800.0
+      bankItems: {}
+    minLevel: 4
+  - name: "&e&lTrứng Mèo (Cat Spawn Egg)"
+    type: "CAT_SPAWN_EGG"
+    lore:
+    - "&7Xua đuổi Creeper và Phantom quấy phá."
+    command: null
+    defaultAmount: 1
+    slot: 15
+    page: 1
+    buyCost:
+      money: 5000.0
+      bankItems: {}
+    sellCost:
+      money: 800.0
+      bankItems: {}
+    minLevel: 4
+  - name: "&e&lTrứng Ngựa (Horse Spawn Egg)"
+    type: "HORSE_SPAWN_EGG"
+    lore:
+    - "&7Thú cưỡi di chuyển nhanh chóng quanh đảo."
+    command: null
+    defaultAmount: 1
+    slot: 16
+    page: 1
+    buyCost:
+      money: 8000.0
+      bankItems: {}
+    sellCost:
+      money: 1200.0
+      bankItems: {}
+    minLevel: 5
+  - name: "&e&lTrứng Ong (Bee Spawn Egg)"
+    type: "BEE_SPAWN_EGG"
+    lore:
+    - "&7Thu hoạch mật ong và thụ phấn cây trồng."
+    command: null
+    defaultAmount: 1
+    slot: 20
+    page: 1
+    buyCost:
+      money: 10000.0
+      bankItems: {}
+    sellCost:
+      money: 1500.0
+      bankItems: {}
+    minLevel: 6
+  - name: "&e&lTrứng Zombie (Zombie Spawn Egg)"
+    type: "ZOMBIE_SPAWN_EGG"
+    lore:
+    - "&7Dùng để nhân giống hoặc chuột phải vào Lồng"
+    - "&7để biến thành Lồng Zombie!"
+    command: null
+    defaultAmount: 1
+    slot: 19
+    page: 1
+    buyCost:
+      money: 15000.0
+      bankItems: {}
+    sellCost:
+      money: 3000.0
+      bankItems: {}
+    minLevel: 8
+  - name: "&e&lTrứng Bộ Xương (Skeleton Spawn Egg)"
+    type: "SKELETON_SPAWN_EGG"
+    lore:
+    - "&7Dùng để kích hoạt hoặc chuột phải vào Lồng"
+    - "&7để biến thành Lồng Skeleton (Bắn cung & farm xương)!"
+    command: null
+    defaultAmount: 1
+    slot: 21
+    page: 1
+    buyCost:
+      money: 20000.0
+      bankItems: {}
+    sellCost:
+      money: 4000.0
+      bankItems: {}
+    minLevel: 10
+  - name: "&d&lPig Spawner (Lồng Heo)"
+    type: "SPAWNER"
+    lore:
+    - "&7Tự động sinh Heo liên tục."
+    - "&a👉 Đặt lồng xuống đất rồi chuột phải Trứng Heo vào lồng!"
+    - "&eCần Cấp Đảo tối thiểu: 10"
+    command: "give %player% spawner 1"
+    defaultAmount: 1
+    slot: 22
+    page: 1
+    buyCost:
+      money: 60000.0
+      bankItems: {}
+    sellCost:
+      money: 30000.0
+      bankItems: {}
+    minLevel: 10
+  - name: "&2&lZombie Spawner (Lồng Zombie)"
+    type: "SPAWNER"
+    lore:
+    - "&7Tự động sinh Zombie farm EXP và Thịt thối."
+    - "&a👉 Đặt lồng xuống đất rồi chuột phải Trứng Zombie vào lồng!"
+    - "&eCần Cấp Đảo tối thiểu: 10"
+    command: "give %player% spawner 1"
+    defaultAmount: 1
+    slot: 23
+    page: 1
+    buyCost:
+      money: 60000.0
+      bankItems: {}
+    sellCost:
+      money: 30000.0
+      bankItems: {}
+    minLevel: 10
+  - name: "&7&lSkeleton Spawner (Lồng Bộ Xương)"
+    type: "SPAWNER"
+    lore:
+    - "&7Tự động sinh Skeleton farm Xương và Cung tên."
+    - "&a👉 Đặt lồng xuống đất rồi chuột phải Trứng Skeleton vào lồng!"
+    - "&eCần Cấp Đảo tối thiểu: 12"
+    command: "give %player% spawner 1"
+    defaultAmount: 1
+    slot: 24
+    page: 1
+    buyCost:
+      money: 100000.0
+      bankItems: {}
+    sellCost:
+      money: 50000.0
+      bankItems: {}
+    minLevel: 12
+  - name: "&e&lTrứng Nhện (Spider Spawn Egg)"
+    type: "SPIDER_SPAWN_EGG"
+    lore:
+    - "&7Chuột phải vào Lồng để kích hoạt Lồng Nhện!"
+    command: null
+    defaultAmount: 1
+    slot: 25
+    page: 1
+    buyCost:
+      money: 15000.0
+      bankItems: {}
+    sellCost:
+      money: 3000.0
+      bankItems: {}
+    minLevel: 8
+  - name: "&e&lTrứng Quỷ Lửa (Blaze Spawn Egg)"
+    type: "BLAZE_SPAWN_EGG"
+    lore:
+    - "&7Chuột phải vào Lồng để kích hoạt Lồng Blaze!"
+    command: null
+    defaultAmount: 1
+    slot: 28
+    page: 1
+    buyCost:
+      money: 50000.0
+      bankItems: {}
+    sellCost:
+      money: 10000.0
+      bankItems: {}
+    minLevel: 15
+  - name: "&e&lTrứng Slime (Slime Spawn Egg)"
+    type: "SLIME_SPAWN_EGG"
+    lore:
+    - "&7Chuột phải vào Lồng để kích hoạt Lồng Slime!"
+    command: null
+    defaultAmount: 1
+    slot: 29
+    page: 1
+    buyCost:
+      money: 20000.0
+      bankItems: {}
+    sellCost:
+      money: 4000.0
+      bankItems: {}
+    minLevel: 8
+  - name: "&8&lSpider Spawner (Lồng Nhện)"
+    type: "SPAWNER"
+    lore:
+    - "&7Tự động sinh Nhện farm Tơ nhện và Mắt nhện."
+    - "&a👉 Đặt lồng xuống đất rồi chuột phải Trứng Nhện vào lồng!"
+    - "&eCần Cấp Đảo tối thiểu: 12"
+    command: "give %player% spawner 1"
+    defaultAmount: 1
+    slot: 30
+    page: 1
+    buyCost:
+      money: 100000.0
+      bankItems: {}
+    sellCost:
+      money: 50000.0
+      bankItems: {}
+    minLevel: 12
+  - name: "&6&lBlaze Spawner (Lồng Quỷ Lửa)"
+    type: "SPAWNER"
+    lore:
+    - "&7Tự động sinh Blaze farm Que lửa giá trị cao!"
+    - "&a👉 Đặt lồng xuống đất rồi chuột phải Trứng Blaze vào lồng!"
+    - "&eCần Cấp Đảo tối thiểu: 18"
+    command: "give %player% spawner 1"
+    defaultAmount: 1
+    slot: 31
+    page: 1
+    buyCost:
+      money: 300000.0
+      bankItems: {}
+    sellCost:
+      money: 150000.0
+      bankItems: {}
+    minLevel: 18
+  - name: "&b&lIron Golem Spawner (Lồng Người Sắt)"
+    type: "SPAWNER"
+    lore:
+    - "&7Tự động sinh Iron Golem farm Phôi Sắt vô hạn!"
+    - "&eCần Cấp Đảo tối thiểu: 25"
+    command: "give %player% spawner 1"
+    defaultAmount: 1
+    slot: 32
+    page: 1
+    buyCost:
+      money: 1000000.0
+      bankItems: {}
+    sellCost:
+      money: 500000.0
+      bankItems: {}
+    minLevel: 25
+  - name: "&e&lTrứng Creeper (Creeper Spawn Egg)"
+    type: "CREEPER_SPAWN_EGG"
+    lore:
+    - "&7Chuột phải vào Lồng để kích hoạt Lồng Creeper!"
+    command: null
+    defaultAmount: 1
+    slot: 33
+    page: 1
+    buyCost:
+      money: 30000.0
+      bankItems: {}
+    sellCost:
+      money: 6000.0
+      bankItems: {}
+    minLevel: 12
+  - name: "&e&lTrứng Enderman (Enderman Spawn Egg)"
+    type: "ENDERMAN_SPAWN_EGG"
+    lore:
+    - "&7Chuột phải vào Lồng để kích hoạt Lồng Enderman!"
+    command: null
+    defaultAmount: 1
+    slot: 34
+    page: 1
+    buyCost:
+      money: 50000.0
+      bankItems: {}
+    sellCost:
+      money: 10000.0
+      bankItems: {}
+    minLevel: 15
+buyPriceLore: "&aBuy Price: $%vault_cost%"
+sellRewardLore: "&cSelling Reward: $%vault_reward%"
+notPurchasableLore: "&cThis item cannot be purchased!"
+notSellableLore: "&cThis item cannot be sold!"
+levelRequirementLore: "&9[!] &7Must be level %minLevel% to purchase"
+abbreviatePrices: true
+dropItemWhenFull: true
+failSound: "block.anvil.land"
+successSound: "entity.player.levelup"
+shopItemLore:
+- " "
+- "&9&l[!] &9Left-Click to Purchase %amount%, Shift for 64"
+- "&9&l[!] &9Right Click to Sell %amount%, Shift for 64"

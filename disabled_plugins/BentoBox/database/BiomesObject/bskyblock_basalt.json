@@ -1,0 +1,23 @@
+{
+  "biome": "BASALT_DELTAS",
+  "deployed": true,
+  "friendlyName": "<white><bold> Basalt Deltas",
+  "description": [
+    "<gray> Volcanic basalt formations",
+    "<gray> where magma cubes bounce",
+    "<gray> between pillars of dark",
+    "<gray> stone."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: BASALT\n",
+  "order": -1,
+  "environment": "NETHER",
+  "uniqueId": "bskyblock_basalt",
+  "unlockLevel": 230,
+  "unlockCost": 0.0,
+  "cost": 1200.0,
+  "itemCost": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: BASALT\n  amount: 64\n"
+  ],
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

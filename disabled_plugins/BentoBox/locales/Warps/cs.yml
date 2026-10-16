@@ -1,0 +1,60 @@
+warp:
+  help:
+    description: Teleportovat se na warp ceduli hráče
+    parameters: <player name>
+warps:
+  deactivate: <red>Stará warp cedule deaktivována!</red>
+  error:
+    does-not-exist: <red>Sakra! Tento warp již neexistuje!</red>
+    no-permission: <red>Na toto nemáš oprávnění!</red>
+    no-remove: <red>Nemůžeš odstranit tuto ceduli!</red>
+    no-warps-yet: <red>Nejsou k dispozici žádné warpy</red>
+    not-enough-level: <red>Úroveň tvého ostrova není dostatečně vysoká!</red>
+    not-on-island: <red>K tomuto musíš být na svém ostrově!</red>
+    not-safe: <red>Tento warp není bezpečný!</red>
+    your-level-is: <red>Úroveň tvého ostrova je jen [level], musí být vyšší než [required].
+      Spusť příkaz pro úroveň.</red>
+    not-correct-rank: <red>Nemáte správnou hodnost pro nastavení warpu!</red>
+  help:
+    description: otevřít panel warpů
+  player-warped: <dark_green>[name] se pokřivilo na váš [gamemode] warp znamení!</dark_green>
+  sign-removed: <red>Warp cedule odstraněna!</red>
+  success: <green>Úspěch!</green>
+  warpTip: <gold>Polož warp ceduli s [text] na vrchu</gold>
+  warpToPlayersSign: <gold>Teleportuji tě na ceduli [player]</gold>
+  gui:
+    titles:
+      warp-title: <black><bold>Warp Signs</bold></black>
+    buttons:
+      previous:
+        name: <white><bold>Předchozí stránka</bold></white>
+        description: <gray>Přepnout na stránku [number]</gray>
+      next:
+        name: <white><bold>Další stránka</bold></white>
+        description: <gray>Přepnout na stránku [number]</gray>
+      warp:
+        name: <white><bold>[name]</bold></white>
+        description: '[sign_text]'
+      random:
+        name: <white><bold>Náhodné pokřivení</bold></white>
+        description: <gray>Hmm, kde se objevím?</gray>
+    tips:
+      click-to-previous: <yellow>Klepnutím na </yellow><gray>zobrazíte předchozí stránku.</gray>
+      click-to-next: <yellow>Klepnutím na </yellow><gray>zobrazíte další stránku.</gray>
+      click-to-warp: <yellow>Klikněte na </yellow><gray>pro deformaci.</gray>
+  conversations:
+    prefix: '<gold><bold>[BentoBox]: </bold></gold><reset>'
+togglewarp:
+  help:
+    description: přepnout znak warp
+  enabled: <green>Vaše warp je nyní viditelný!</green>
+  disabled: <red>Váš warp je nyní skrytý!</red>
+  error:
+    no-permission: <red>K tomu nemáte oprávnění!</red>
+    generic: <red>Při přepínání vašeho warpu došlo k chybě.</red>
+    no-warp: <red>Nemáte warp k přepínání!</red>
+protection:
+  flags:
+    PLACE_WARP:
+      name: Umístěte Warp
+      description: Povolit umístění warp znamení

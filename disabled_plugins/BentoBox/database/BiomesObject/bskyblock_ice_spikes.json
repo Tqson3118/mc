@@ -1,0 +1,23 @@
+{
+  "biome": "ICE_SPIKES",
+  "deployed": true,
+  "friendlyName": "<white><bold> Ice Spikes",
+  "description": [
+    "<gray> Towers of packed ice rising",
+    "<gray> from the frozen land. A",
+    "<gray> spectacular and rare frozen",
+    "<gray> landscape."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: ICE\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_ice_spikes",
+  "unlockLevel": 90,
+  "unlockCost": 0.0,
+  "cost": 1000.0,
+  "itemCost": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: ICE\n  amount: 64\n"
+  ],
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

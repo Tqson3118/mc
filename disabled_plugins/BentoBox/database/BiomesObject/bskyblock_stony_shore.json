@@ -1,0 +1,19 @@
+{
+  "biome": "STONY_SHORE",
+  "deployed": true,
+  "friendlyName": "<white><bold> Stony Shore",
+  "description": [
+    "<gray> Rocky coastline where stone",
+    "<gray> meets the sea. Great for",
+    "<gray> dramatic coastal structures."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: ANDESITE\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_stony_shore",
+  "unlockLevel": 18,
+  "unlockCost": 0.0,
+  "cost": 250.0,
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

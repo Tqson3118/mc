@@ -1,0 +1,23 @@
+{
+  "biome": "GROVE",
+  "deployed": true,
+  "friendlyName": "<white><bold> Grove",
+  "description": [
+    "<gray> Snowy conifer forests where",
+    "<gray> powder snow falls gently.",
+    "<gray> Serene and perfect for",
+    "<gray> winter wonderlands."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: POWDER_SNOW_BUCKET\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_grove",
+  "unlockLevel": 40,
+  "unlockCost": 0.0,
+  "unlockItems": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: SPRUCE_SAPLING\n  amount: 8\n"
+  ],
+  "cost": 600.0,
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

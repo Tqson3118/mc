@@ -1,0 +1,27 @@
+{
+  "uniqueId": "BSkyBlock_example_donor_t1",
+  "upgrade": "BSkyBlock_example_donor",
+  "name": "Donor Perk",
+  "description": [],
+  "startLevel": 0,
+  "endLevel": 0,
+  "prices": [
+    {
+      "class": "PermissionPriceDB",
+      "parameters": {
+        "permission": "upgrades.example.donor"
+      }
+    }
+  ],
+  "rewards": [
+    {
+      "class": "CommandRewardDB",
+      "parameters": {
+        "commands": [
+          "say [player] has unlocked the Donor Perk on their island!"
+        ],
+        "isConsole": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "uniqueId": "BSkyBlock_example_diamond",
+  "world": "BSkyBlock",
+  "name": "Diamond Border",
+  "description": [
+    "Example: spend 10 diamonds to expand island border by 3 blocks. Up to 3 times."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: DIAMOND\n",
+  "order": 5,
+  "active": true
+}

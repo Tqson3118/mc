@@ -1,0 +1,20 @@
+{
+  "biome": "BEACH",
+  "deployed": true,
+  "friendlyName": "<white><bold> Beach",
+  "description": [
+    "<gray> Golden shores where turtles",
+    "<gray> nest. Essential for turtle",
+    "<gray> farming and tropical building",
+    "<gray> aesthetics."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: TURTLE_EGG\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_beach",
+  "unlockLevel": 15,
+  "unlockCost": 0.0,
+  "cost": 250.0,
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

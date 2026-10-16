@@ -1,0 +1,60 @@
+warp:
+  help:
+    description: teleporteer naar een speler zijn warp bord
+    parameters: <speler>
+warps:
+  deactivate: <red>Oude warp bord is gedeactiveerd!</red>
+  error:
+    does-not-exist: <red>Oh nee! Deze warp bestaat niet meer!</red>
+    no-permission: <red>Je hebt geen permissies om dit te doen!</red>
+    no-remove: <red>Je kan dit bord niet weghalen!</red>
+    no-warps-yet: <red>Er bestaan nog geen warps op dit moment</red>
+    not-enough-level: <red>Je eiland level is nog niet hoog genoeg!</red>
+    not-on-island: <red>Je moet een eiland hebben om dit te doen!</red>
+    not-safe: <red>Deze warp is niet veilig!</red>
+    your-level-is: <red>Je eiland level is [level], maar het moet op zijn minst [required]
+      zijn. Gebruik het level commando.</red>
+    not-correct-rank: <red>Je hebt niet de correcte rank om een warp te maken!</red>
+  help:
+    description: open het warp paneel
+  player-warped: <dark_green>[name] teleporteerde naar jou [gamemode] warp!</dark_green>
+  sign-removed: <red>Warp bord verwijderd!</red>
+  success: <green>Geslaagd!</green>
+  warpTip: <gold>Plaats een warp bord met [text] op de eerste regel</gold>
+  warpToPlayersSign: <gold>Teleporteren naar [player]'s warp</gold>
+  gui:
+    titles:
+      warp-title: <black><bold>Warp Borden</bold></black>
+    buttons:
+      previous:
+        name: <white><bold>Vorige pagina</bold></white>
+        description: <gray>Ga naar pagina [number]</gray>
+      next:
+        name: <white><bold>Volgende pagina</bold></white>
+        description: <gray>Ga naar pagina [number]</gray>
+      warp:
+        name: <white><bold>[name]</bold></white>
+        description: '[sign_text]'
+      random:
+        name: <white><bold>Willekeurige Warp</bold></white>
+        description: <gray>Hmm, waar ga ik heen?</gray>
+    tips:
+      click-to-previous: <yellow>Klik </yellow><gray>om naar de vorige pagina te gaan.</gray>
+      click-to-next: <yellow>Klik </yellow><gray>om naar de volgende pagina te gaan.</gray>
+      click-to-warp: <yellow>Klik </yellow><gray>om te teleporteren.</gray>
+  conversations:
+    prefix: '<gold><bold>[BentoBox]: </bold></gold><reset>'
+togglewarp:
+  help:
+    description: schakel het warpbord
+  enabled: <green>Je warp is nu zichtbaar!</green>
+  disabled: <red>Je warp is nu verborgen!</red>
+  error:
+    no-permission: <red>Je hebt geen permissies om dit te doen!</red>
+    generic: <red>Er is een fout opgetreden bij het omschakelen van je warp.</red>
+    no-warp: <red>Je hebt geen warp om te schakelen!</red>
+protection:
+  flags:
+    PLACE_WARP:
+      name: Plaats warp
+      description: Staat het toe om een warp bord te plaatsen

@@ -1,0 +1,221 @@
+menu_title: '&8⚡ &6&lĐẠI ĐIỆN TIẾN HÓA 20 TIERS &8⚡'
+open_command:
+  - nangcap
+  - evolution
+size: 54
+open_requirement:
+  requirements: {}
+
+items:
+  'border':
+    material: BLACK_STAINED_GLASS_PANE
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 26
+      - 27
+      - 35
+      - 36
+      - 44
+      - 45
+      - 46
+      - 47
+      - 48
+      - 50
+      - 51
+      - 52
+      - 53
+    display_name: ' '
+
+  'info':
+    material: NETHER_STAR
+    slot: 4
+    display_name: '&e&l🌌 HỆ THỐNG TIẾN HÓA RPG 20 TIERS'
+    lore:
+      - '&7Đỉnh cao chế tác trang bị cổ xưa & sức mạnh vũ trụ.'
+      - ''
+      - '&f • &aBậc 1 - 5 (Sơ Khai): &7Mảnh Quặng Cổ Đại & Đào Nhanh I'
+      - '&f • &5Bậc 6 - 9 (Thần Thoại): &7Tinh Thể Cổ Đại & Chém Lan'
+      - '&f • &4Bậc 10 - 12 (Hắc Ám): &7Trái Tim Của Quỷ & Đào nổ 3x3'
+      - '&f • &dBậc 13 - 15 (Hư Không): &7Lõi Hư Không & Hút Máu'
+      - '&f • &3Bậc 16 - 18 (Thâm Uyên): &7Trái Tim Thâm Uyên & Sonic Boom'
+      - '&f • &6Bậc 19 - 20 (Sáng Thế): &7Dị Điểm Vĩnh Hằng & Bất Tử Hư Không'
+      - ''
+      - '&e▶ Nhấp vào từng loại hình bên dưới để nâng cấp hoặc đến NPC!'
+
+  'pickaxe_cat':
+    material: NETHERITE_PICKAXE
+    slot: 19
+    display_name: '&b&l🔮 CÚP CỔ ĐẠI & VŨ TRỤ [TIER 1 - 20]'
+    lore:
+      - '&7Vũ khí khai khoáng tối thượng của các vị thần.'
+      - ''
+      - '&f • Hiệu quả: &aHiệu Suất V..XV &7• &eGia Tài III..X'
+      - '&f • Kỹ năng T10+: &cĐào nổ 3x3 khối quặng liên hoàn'
+      - '&f • Kỹ năng T16+: &dĐào siêu tốc Haste IV & Nhìn Đêm vĩnh cửu'
+      - ''
+      - '&a▶ NHẤP CHUỘT TRÁI ĐỂ ĐẾN THẦN RÈN CÚP & RÌU!'
+    left_click_commands:
+      - '[player] warp trade'
+      - '[close]'
+
+  'axe_cat':
+    material: NETHERITE_AXE
+    slot: 20
+    display_name: '&c&l🪓 RÌU CỔ ĐẠI CHIẾN THẦN [TIER 1 - 20]'
+    lore:
+      - '&7Chiến rìu uy lực xé toạc mọi lớp giáp kiên cố.'
+      - ''
+      - '&f • Hiệu quả: &aSắc Bén V..XVI &7• &eĐập Tan Giáp'
+      - '&f • Kỹ năng T16+: &6Rìu Thiên Thạch Sấm Sét'
+      - ''
+      - '&a▶ NHẤP CHUỘT TRÁI ĐỂ ĐẾN THẦN RÈN CÚP & RÌU!'
+    left_click_commands:
+      - '[player] warp trade'
+      - '[close]'
+
+  'sword_cat':
+    material: NETHERITE_SWORD
+    slot: 21
+    display_name: '&6&l⚔ THANH KIẾM THẦN KHÍ [TIER 1 - 20]'
+    lore:
+      - '&7Bảo kiếm chém lan diện rộng & trảm sát ma vật.'
+      - ''
+      - '&f • Hiệu quả: &aSắc Bén V..XVI &7• &eChém Lan III..VII'
+      - '&f • Kỹ năng T13+: &dHút Máu Cực Đại khi đánh trúng'
+      - '&f • Kỹ năng T16+: &3Phát ra Sóng Âm Sonic Boom xuyên giáp'
+      - ''
+      - '&a▶ NHẤP CHUỘT TRÁI ĐỂ ĐẾN THẦN RÈN VŨ KHÍ!'
+    left_click_commands:
+      - '[player] warp trade'
+      - '[close]'
+
+  'bow_cat':
+    material: BOW
+    slot: 22
+    display_name: '&d&l🏹 THẦN TIỄN XUYÊN KHÔNG [TIER 1 - 20]'
+    lore:
+      - '&7Thần tiễn bắn ra những mũi tên hủy diệt tầm xa.'
+      - ''
+      - '&f • Hiệu quả: &aSức Mạnh V..XV &7• &bVô Hạn I'
+      - '&f • Kỹ năng T10+: &cTên Nổ Sấm Sét thiêu đốt mục tiêu'
+      - '&f • Kỹ năng T19+: &6Mưa Sao Băng Tinh Tú diệt thế'
+      - ''
+      - '&a▶ NHẤP CHUỘT TRÁI ĐỂ ĐẾN THẦN RÈN CUNG THỦ!'
+    left_click_commands:
+      - '[player] warp trade'
+      - '[close]'
+
+  'armor_cat':
+    material: NETHERITE_CHESTPLATE
+    slot: 23
+    display_name: '&9&l🛡 BỘ GIÁP HOÀNG KIM CHÚA TỂ [TIER 1 - 20]'
+    lore:
+      - '&7Bảo vệ cơ thể khỏi mọi sát thương ma thuật & vật lý.'
+      - ''
+      - '&f • Hiệu quả: &aBảo Vệ IV..XIV &7• &cKháng Lửa Vĩnh Cửu'
+      - '&f • Kỹ năng T16+: &a+6 đến +10 Tim Vàng (Absorption)'
+      - '&f • Kỹ năng T20: &eHào quang Sonic Boom & Giáp Phản Đòn'
+      - ''
+      - '&a▶ NHẤP CHUỘT TRÁI ĐỂ ĐẾN THẦN RÈN GIÁP TRỤ!'
+    left_click_commands:
+      - '[player] warp trade'
+      - '[close]'
+
+  'talisman_cat':
+    material: TOTEM_OF_UNDYING
+    slot: 24
+    display_name: '&e&l🔮 BÙA HỘ MỆNH & CỔ NGỮ (/BUA)'
+    lore:
+      - '&75 Cổ Ngữ Bùa kích hoạt hiệu ứng vĩnh viễn trong túi đồ:'
+      - '&f • &eBùa Thợ Mỏ: &7Haste II + 10% Giá bán'
+      - '&f • &cBùa Chiến Binh: &7Strength II + 15% Giá bán'
+      - '&f • &6Bùa Thần Tài: &7Luck II + 25% Giá bán'
+      - '&f • &bBùa Bất Tử Hư Không: &7Cứu mạng khi rơi Y < -40'
+      - '&f • &aBùa Sáng Thế: &7Speed II + Saturation + 30% Giá bán'
+      - ''
+      - '&a▶ NHẤP CHUỘT TRÁI ĐỂ MỞ MENU /BUA!'
+    left_click_commands:
+      - '[player] bua'
+      - '[close]'
+
+  'forge_teleport':
+    material: ANVIL
+    slot: 25
+    display_name: '&a&l🏛 ĐẾN ĐIỆN THẦN RÈN CỔ ĐẠI (/WARP TRADE)'
+    lore:
+      - '&7Dịch chuyển tức thời đến Cánh Bắc Spawn Hub:'
+      - '&f • &dĐại Sư Luyện Kim: &7Đổi phôi nguyên liệu quý'
+      - '&f • &eThần Rèn Cúp & Rìu [T1-15]'
+      - '&f • &cThần Rèn Vũ Khí & Giáp [T1-15]'
+      - '&f • &5Thần Rèn Vũ Trụ [T16-20]'
+      - '&f • &bĐại Sư Cổ Ngữ (/bua)'
+      - ''
+      - '&a&l▶ NHẤP ĐỂ DỊCH CHUYỂN NGAY!'
+    left_click_commands:
+      - '[player] warp trade'
+      - '[close]'
+
+  'mat_shard':
+    material: PRISMARINE_SHARD
+    slot: 38
+    display_name: '&b&l✦ MẢNH QUẶNG CỔ ĐẠI ✦'
+    lore:
+      - '&7Nguyên liệu rèn trang bị Bậc 1 - 5'
+      - '&eNguồn kiếm: &fQuặng hiếm / Boss 1 / Đổi Sắt Vàng'
+
+  'mat_crystal':
+    material: AMETHYST_SHARD
+    slot: 39
+    display_name: '&d&l❂ TINH THỂ CỔ ĐẠI ❂'
+    lore:
+      - '&7Nguyên liệu rèn trang bị Bậc 6 - 9'
+      - '&eNguồn kiếm: &fBoss 2 / Đổi Kim Cương & Netherite'
+
+  'mat_demon_heart':
+    material: FERMENTED_SPIDER_EYE
+    slot: 40
+    display_name: '&4&l☠ TRÁI TIM CỦA QUỶ ☠'
+    lore:
+      - '&7Nguyên liệu ĐỘT PHÁ bắt buộc mốc Tier 10 - 12'
+      - '&eNguồn kiếm: &cRơi 100% khi diệt Boss 3: Chúa Tể Bóng Tối'
+
+  'mat_void_core':
+    material: ECHO_SHARD
+    slot: 41
+    display_name: '&5&l🌀 LÕI HƯ KHÔNG 🌀'
+    lore:
+      - '&7Nguyên liệu ĐỘT PHÁ bắt buộc mốc Tier 13 - 15'
+      - '&eNguồn kiếm: &dRơi 100% khi diệt Boss 4: Chúa Tể Hư Không'
+
+  'mat_warden_heart':
+    material: RECOVERY_COMPASS
+    slot: 42
+    display_name: '&3&l💠 TRÁI TIM THÂM UYÊN 💠'
+    lore:
+      - '&7Nguyên liệu ĐỘT PHÁ THẦN THOẠI mốc Tier 15 Vĩnh Cửu'
+      - '&eNguồn kiếm: &bRơi 100% khi diệt Boss 5: Cổ Thần Thâm Uyên'
+
+  'mat_singularity':
+    material: HEAVY_CORE
+    slot: 43
+    display_name: '&6&l🌌 DỊ ĐIỂM VĨNH HẰNG 🌌'
+    lore:
+      - '&7Nguyên liệu SÁNG THẾ TỐI CAO mốc Tier 15 [MAX Vĩnh Cửu]'
+      - '&eNguồn kiếm: &6Rơi 100% khi diệt Boss 6: Hoàng Đế Tinh Tú'
+
+  'close':
+    material: BARRIER
+    slot: 49
+    display_name: '&c&lĐÓNG MENU'
+    left_click_commands:
+      - '[close]'

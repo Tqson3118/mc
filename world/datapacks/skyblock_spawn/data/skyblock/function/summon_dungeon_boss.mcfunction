@@ -1,0 +1,5 @@
+# Summon Boss Dia Dao Rhong (X=0, Y=88, Z=137)
+kill @e[tag=dungeon_boss]
+summon wither_skeleton 0 88 137 {Tags:["dungeon_boss","skyblock_boss"],CustomName:'{"text":"☠ Hắc Ám Địa Ngục Vương [3,500 HP] ☠","color":"dark_red","bold":true}',CustomNameVisible:1b,Health:3500f,PersistenceRequired:1b,Glowing:1b,HandItems:[{id:"minecraft:netherite_sword",count:1,components:{"minecraft:enchantments":{levels:{"minecraft:sharpness":8,"minecraft:fire_aspect":3}}}},{}],ArmorItems:[{id:"minecraft:netherite_boots",count:1},{id:"minecraft:netherite_leggings",count:1},{id:"minecraft:netherite_chestplate",count:1},{id:"minecraft:dragon_head",count:1}],attributes:[{id:"minecraft:max_health",base:3500.0d},{id:"minecraft:attack_damage",base:28.0d},{id:"minecraft:movement_speed",base:0.32d},{id:"minecraft:knockback_resistance",base:0.9d}]}
+minecraft:scoreboard players set #dungeon_boss_alive sb_boss_alive 1
+tellraw @a [{"text":"[Hầm Ngục Rhông] ","color":"dark_red","bold":true},{"text":"☠ Hắc Ám Địa Ngục Vương (3,500 HP) đã thức tỉnh tại Phòng Boss Hầm Ngục (/dungeon)!","color":"red"}]

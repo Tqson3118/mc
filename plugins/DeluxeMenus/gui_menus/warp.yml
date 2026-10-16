@@ -1,0 +1,180 @@
+menu_title: '&8⚡ &6&lHỆ THỐNG DỊCH CHUYỂN &8(&e/WARP&8) ⚡'
+open_command:
+  - warp
+  - warps
+size: 45
+open_requirement:
+  requirements: {}
+
+items:
+  'border':
+    material: BLACK_STAINED_GLASS_PANE
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 26
+      - 27
+      - 35
+      - 36
+      - 37
+      - 38
+      - 39
+      - 40
+      - 41
+      - 42
+      - 43
+      - 44
+    display_name: ' '
+
+  'spawn_hub':
+    material: BEACON
+    slot: 4
+    display_name: '&e&l🏛️ QUẢNG TRƯỜNG TRUNG TÂM YGGDRASIL'
+    lore:
+      - '&7Cây Thế Giới Yggdrasil & Đài Phun Nước Cổ Thần.'
+      - '&f • &aĐiểm hồi sinh chính & hướng dẫn viên'
+      - '&f • &6Cổng Torii & Pháo đài Thợ rèn'
+      - ''
+      - '&e▶ Nhấp để về Spawn chính!'
+    left_click_commands:
+      - '[player] warp spawn'
+      - '[close]'
+
+  'island':
+    material: GRASS_BLOCK
+    slot: 11
+    display_name: '&a&l🏝 ĐẢO SINH TỒN CÁ NHÂN'
+    lore:
+      - '&7Không gian tự do xây dựng vương quốc trên mây.'
+      - '&f • &eNâng cấp quy mô đảo & máy tạo quặng'
+      - '&f • &bLắp đặt Minions tự động hóa'
+      - ''
+      - '&a▶ Nhấp để trở về Đảo của bạn (/is)!'
+    left_click_commands:
+      - '[player] is'
+      - '[close]'
+
+  'boss_unlocked':
+    material: NETHERITE_SWORD
+    slot: 13
+    priority: 0
+    view_requirement:
+      requirements:
+        fighting_level:
+          type: '>='
+          input: '%auraskills_fighting%'
+          output: '5'
+    display_name: '&c&l⚔ ĐẤU TRƯỜNG BOSS 1 - 6 [ĐÃ MỞ KHÓA]'
+    lore:
+      - '&7Vực Thẳm Đấu Trường 6 Quỷ Vương Thượng Cổ.'
+      - '&f • &cBoss 1: Nữ Hoàng Nhện (Lv.5)'
+      - '&f • &6Boss 2: Đao Phủ Địa Ngục (Lv.10)'
+      - '&f • &4Boss 3: Chúa Tể Bóng Tối (Lv.20)'
+      - '&f • &dBoss 4: Hoàng Tử Hư Không (Lv.30)'
+      - '&f • &3Boss 5: Cổ Thần Sculk (Lv.40)'
+      - '&f • &eBoss 6: Thần Diệt Thế Cosmic (Lv.50)'
+      - ''
+      - '&a✔ Đủ điều kiện: Fighting Lv.%auraskills_fighting%/5'
+      - '&e▶ Nhấp để vào Sảnh Chỉ Huy Boss!'
+    left_click_commands:
+      - '[player] warp boss'
+      - '[close]'
+
+  'boss_locked':
+    material: BARRIER
+    slot: 13
+    priority: 1
+    display_name: '&c&l⚔ ĐẤU TRƯỜNG BOSS 1 - 6 [CHƯA MỞ KHÓA]'
+    lore:
+      - '&7Vực Thẳm Đấu Trường 6 Quỷ Vương Thượng Cổ.'
+      - '&c✖ Yêu cầu Kỹ Năng Chiến Đấu: Fighting Lv.5'
+      - '&7Cấp độ hiện tại của bạn: &eLv.%auraskills_fighting%'
+      - ''
+      - '&eHãy cày cấp Chiến Đấu tại /warp farm để mở khóa!'
+    left_click_commands:
+      - '[message] &c⚡ Bạn cần đạt Kỹ Năng Chiến Đấu (Fighting) tối thiểu Lv.5 để mở khóa Đấu Trường Boss!'
+      - '[sound] minecraft:block.chest.locked 1.0 0.8'
+
+  'farm':
+    material: WHEAT
+    slot: 15
+    display_name: '&2&l🌾 VƯỜN THƯỢNG UYỂN SAKURA & HẦM NGỤC'
+    lore:
+      - '&7Thế giới canh tác và cày cấp chiến đấu công cộng.'
+      - '&f • &aTầng trên: Ruộng bậc thang cày Farming'
+      - '&f • &cTầng dưới: Hầm ngục 5 tầng cày Fighting/Defense'
+      - '&f • &dThu thập Mảnh Linh Hồn từ quái tầng sâu'
+      - ''
+      - '&a▶ Nhấp để dịch chuyển đến Vườn Farm!'
+    left_click_commands:
+      - '[player] warp farm'
+      - '[close]'
+
+  'cauca':
+    material: FISHING_ROD
+    slot: 29
+    display_name: '&b&l🎣 BIỂN HỒ TRÊN MÂY (CELESTIAL OASIS)'
+    lore:
+      - '&7Thiên đường câu cá thư giãn & săn thủy quái cổ xưa.'
+      - '&f • &b8 Quần đảo hoa sen khổng lồ'
+      - '&f • &aBến Cảng Thần Thoại & NPC Lão Ngư'
+      - '&f • &3Săn Vảy Thần Biển Sâu (Ancient Sea Scale)'
+      - ''
+      - '&b▶ Nhấp để dịch chuyển đến Biển Hồ!'
+    left_click_commands:
+      - '[player] warp cauca'
+      - '[close]'
+
+  'parkour':
+    material: FEATHER
+    slot: 31
+    display_name: '&e&l🏃 SIÊU THÁP PHONG LÔI 50 TẦNG'
+    lore:
+      - '&7Tháp thử thách từ mây ngàn vươn tận trời xanh.'
+      - '&f • &e50 Tầng xoắn ốc vượt chướng ngại vật'
+      - '&f • &6Cơ chế Checkpoint an toàn & Cứu hộ rơi'
+      - '&f • &aChinh phục đỉnh tháp nhận Tinh Thể Phong Lôi & $50,000 Xu'
+      - ''
+      - '&e▶ Nhấp để bắt đầu thử thách leo tháp!'
+    left_click_commands:
+      - '[player] warp parkour'
+      - '[close]'
+
+  'casino':
+    material: GOLD_INGOT
+    slot: 33
+    display_name: '&6&l🎰 CUNG ĐIỆN HOÀNG GIA LAS VEGAS'
+    lore:
+      - '&7Trung tâm giải trí tiêu khiển bậc nhất liên giới.'
+      - '&f • &eCoinflip 50/50 thử tài dự đoán'
+      - '&f • &dVé Số Jackpot Thần Tài Mega 6/45'
+      - '&f • &bBàn Cờ Tỷ Phú Hoàng Gia 40 Ô Độc Quyền'
+      - '&f • &6Tích lũy Vé Vàng Hoàng Gia (Royal Ticket)'
+      - ''
+      - '&6▶ Nhấp để tiến vào Cung Điện Casino!'
+    left_click_commands:
+      - '[player] warp casino'
+      - '[close]'
+
+  'portal_sanctuary':
+    material: CHERRY_SAPLING
+    slot: 22
+    display_name: '&d&l🌸 CỔNG TRỜI LIÊN GIỚI (ZEN SAKURA)'
+    lore:
+      - '&7Quần thể đền đài Á Đông & 5 Cổng Torii Thần Đạo.'
+      - '&f • &7Bước qua các cổng Torii để vào trực tiếp 5 cõi'
+      - '&f • &dHoa anh đào rực rỡ & hồ cá Koi phát sáng'
+      - ''
+      - '&d▶ Nhấp để đến Khu Vực Cổng Torii!'
+    left_click_commands:
+      - '[player] warp portal'
+      - '[close]'

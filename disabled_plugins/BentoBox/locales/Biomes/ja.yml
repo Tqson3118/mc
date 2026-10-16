@@ -1,0 +1,722 @@
+biomes:
+  commands:
+    admin:
+      main:
+        description: メインバイオーム管理コマンド
+      import:
+        parameters: <ファイル>
+        description: バイオームをインポートする
+        confirmation: これにより、[gamemode]から既存のバイオームが削除され、テンプレートファイルから新しいバイオームがインポートされます。確認してください。
+      migrate:
+        description: バイオームに保存されたデータを新しい形式に移行します
+      set:
+        description: プレイヤーのバイオームを変更する
+        parameters: <プレイヤー> <バイオームID> [モード] [サイズ]
+      unlock:
+        description: チェックなしでプレイヤーのバイオームをアンロックします。最後に `true` を追加すると、購入済みとしてマークされます。
+        parameters: <プレイヤー> <バイオームID> [true]
+      clear-queue:
+        description: バイオーム更新キューをクリアします
+    player:
+      main:
+        description: バイオーム選択GUIを開く
+      set:
+        description: プレイヤーのバイオームを変更する
+        parameters: <バイオームID> [モード] [サイズ]
+      buy:
+        description: 要求されたバイオームを購入する
+        parameters: <バイオームID>
+      info:
+        description: バイオームの詳細な説明をチャットメッセージで送信する
+        parameters: <バイオームID>
+  gui:
+    titles:
+      player-panel: <black><bold> バイオームを選択
+      buy-panel: <black><bold> バイオームを購入
+      advanced-panel: <black><bold> 更新モード
+      admin-panel: <black><bold> 管理 GUI
+      settings: <black><bold> 設定
+      library: <black><bold> ライブラリ
+      manage-biomes: <black><bold> バイオームの管理
+      manage-bundles: <black><bold> バンドルの管理
+      manage-islands: <black><bold> アイランドデータの管理
+      edit-biome: '<black><bold> バイオームを編集: [biome]'
+      edit-bundle: '<black><bold> バンドルの編集: [bundle]'
+      edit-island: '<black><bold> 島を編集: [island]'
+      environment-selector: <black><bold> 環境を選択
+      biome-selector: <black><bold> バイオームを選択
+      bundle-selector: <black><bold> バンドルを選択
+      item-selector: <black><bold> アイテムを選択
+    buttons:
+      island:
+        name: <white><bold> 島
+        description: <gray> 島全体のバイオームを変更します。
+      chunk:
+        name: <white><bold> チャンク
+        description: <gray> チャンク単位でバイオームを変更します。
+      range:
+        name: <white><bold> 範囲
+        description: <gray> 範囲によってバイオームを変更します。
+      reduce:
+        name: <white><bold> 減らす
+        description: <gray> を <yellow> [number] だけ減らす
+      increase:
+        name: <white><bold> 増加
+        description: <gray> <yellow> [number] 増加
+      accept:
+        name: <white><bold> 変更を適用
+        description: |-
+          <gray> バイオームを <yellow> [biome] に変更します
+
+          <gray> 更新モード: <yellow> [mode]
+          <gray> 更新範囲: <yellow> [number]
+      return:
+        name: <white><bold> 戻る
+        description: <gray> 前のメニューに戻ります。
+      previous:
+        name: <white><bold> 前のページ
+        description: <gray> <yellow> [number] <gray> ページに切り替える
+      next:
+        name: <white><bold> 次のページ
+        description: <gray> <yellow> [number] <gray> ページに切り替える
+      quit:
+        name: <white><bold> 終了
+        description: <gray> GUIを終了します。
+      save:
+        name: <white><bold> 保存
+        description: <gray> 変更を保存して戻ります。
+      cancel:
+        name: <white><bold> キャンセル
+        description: <gray> 変更をキャンセルして戻ります。
+      search:
+        name: <white><bold> 検索
+        description: |-
+          <gray> 入力された<gray> テキスト値を持つ
+          <gray> 要素を検索できます。
+        search: '<aqua> 値: [value]'
+      buy:
+        name: <white><bold> 購入
+        description: <gray> 新しいバイオームを購入します。
+      manage_islands:
+        name: <white><bold> 島の管理
+        description: <gray> 島のデータを管理できます。
+      manage_biomes:
+        name: <white><bold> バイオームの管理
+        description: |-
+          <gray> バイオームを管理できます
+          <gray> データ。
+      manage_bundles:
+        name: <white><bold> バンドルの管理
+        description: |-
+          <gray> バンドルを管理できます
+          <gray> データ。
+      settings:
+        name: <white><bold> 設定
+        description: |-
+          <gray> 一部の
+          <gray> アドオン設定を変更できます。
+      import_template:
+        name: <white><bold> テンプレートのインポート
+        description: |-
+          <gray> インポート テンプレート
+          <gray> ファイルは
+          <gray> アドオン ディレクトリ内にあります。
+      web_library:
+        name: <white><bold> ウェブライブラリ
+        description: |-
+          <gray> 共有バイオームを含む
+          <gray> ウェブ
+          <gray> ライブラリにアクセスします。
+      export_from_database:
+        name: <white><bold> データベースのエクスポート
+        description: |-
+          <gray> データベースを
+          <gray> アドオン ディレクトリにある
+          <gray> 単一のファイルにエクスポートします。
+      import_to_database:
+        name: <white><bold> データベースのインポート
+        description: |-
+          <gray> アドオン
+          <gray> ディレクトリにあるファイルからデータベースをインポートします。
+      wipe_islands_data:
+        name: <white><bold> 島のデータベースをクリア
+        description: |-
+          <gray> このゲームモードのすべてのバイオーム ユーザー データをクリアします
+          <gray>。
+      wipe_biomes_data:
+        name: <white><bold> バイオームデータベースをクリア
+        description: <gray> このゲームモードのすべてのバイオームとバンドルをクリアします。
+      add_biome:
+        name: <white><bold> バイオームを追加
+        description: |-
+          <gray> は、<gray> 人のプレイヤーが
+          <gray> 人のユーザー パネルを使用して使用できる新しいバイオームを作成します。
+      remove_biome:
+        name: <white><bold> バイオームを削除
+        description: |-
+          <gray> 選択したバイオームを
+          <gray> ユーザーパネルから削除します。
+        title: '選択されたバイオーム:'
+        value: <yellow> - [biome]
+      accept_selected:
+        name: <white><bold> 選択を受け入れる
+        description: <gray> 選択された要素を受け入れます。
+        title: '選択された要素:'
+        element: <yellow> - [element]
+      environment_element:
+        name: <white><bold> [environment]
+        description: <gray> [description]。
+      properties:
+        name: <white><bold> プロパティ
+        description: <gray> メインバイオームのプロパティを表示します。
+      change_properties:
+        name: <white><bold> プロパティの変更
+        description: <gray> バイオームのプロパティの変化を表示します。
+      unlock_properties:
+        name: <white><bold> プロパティのロック解除
+        description: <gray> ロック解除バイオームのプロパティを表示します。
+      biome:
+        name: <white><bold> [biome]
+        description: <gray> Minecraft バイオーム タイプ。
+        value: '<gray> バイオームID: <yellow> [id]'
+      name:
+        name: <white><bold> 表示名
+        description: |-
+          <gray> バイオームの表示名。
+          <gray> カラーコードをサポートします。
+        value: '<gray> 現在の値: <reset> [name]'
+      deployed:
+        name: <white><bold> デプロイ済み
+        description: |-
+          <gray> バイオームがプレイヤーに
+          <gray> アクセス可能か
+          <gray> 否かを切り替えます。
+        enabled: <dark_green> 有効
+        disabled: <red> 無効
+      environment:
+        name: <white><bold> 寸法
+        description: |-
+          <gray> バイオームを適用できる
+          <gray> 次元を制限できます。
+        enabled: <dark_green>
+        disabled: ＆ｃ
+      icon:
+        name: <white><bold> アイコン
+        description: |-
+          <gray> このバイオームのアイコンを変更できます
+          <gray>。
+      order:
+        name: <white><bold> 注文
+        description: |-
+          <gray> オブジェクトの順序を変更できます。
+          <gray> 同じ番号のオブジェクトは、
+          <gray> 固有の ID 名で順序付けされます。
+        value: '<gray> 現在の順序: <yellow> [number]'
+      description:
+        name: <white><bold> 説明
+        description: |-
+          <gray> バイオームの具体的な説明
+          <gray>。色
+          <gray> コードを適用する必要があります。
+        value: '<yellow> 現在の説明:'
+        none: <gray> 説明が設定されていません。
+      unlock_permissions:
+        name: <white><bold> 権限
+        description: |-
+          <gray> この<gray>バイオームにアクセスできるように、ロック解除
+          <gray> 権限を変更できます。
+        title: '<yellow> 権限:'
+        element: <dark_gray> - [permission]
+        none: <gray> 権限が設定されていません。
+      unlock_cost:
+        name: <white><bold> コスト
+        description: |-
+          <gray> このバイオームのロックを解除するコストを
+          <gray> で変更できます。
+        value: '<gray> 現在のコスト: <yellow> $[number]'
+      unlock_items:
+        name: <white><bold> アイテム
+        description: |-
+          <gray> このバイオームのロック解除アイテムを
+          <gray> 個変更できます。
+        title: '<yellow> アイテム:'
+        element: <dark_gray> - [number]x[item]
+        none: <gray> 項目が設定されていません。
+      unlock_level:
+        name: <white><bold> レベル
+        description: |-
+          <gray> このバイオームのロックを解除するために必要な
+          <gray> 島のレベル
+          <gray> を変更できます。
+        value: '<gray> 現在のレベル: <yellow> [number]'
+      change_cost:
+        name: <white><bold> コスト
+        description: |-
+          <gray> このバイオームを適用すると
+          <gray> のコストが変わります。
+        value: '<gray> 現在のコスト: <yellow> [number]'
+      change_items:
+        name: <white><bold> アイテム
+        description: |-
+          <gray> アイテムの変更を許可
+          <gray> このバイオームを適用します。
+        title: '<yellow> アイテム:'
+        element: <dark_gray> - [number]x[item]
+        none: <gray> 項目が設定されていません。
+      change_type:
+        name: <white><bold> [type]
+        description: |-
+          <gray> このバイオームを適用するためのコスト タイプを変更できます
+          <gray>。
+        static:
+          name: 静的値
+          description: |-
+            <gray> バイオーム変更コストは
+            <gray> 変わりません。
+        per_block:
+          name: ブロックあたり
+          description: |-
+            <gray> バイオーム変更コストは
+            ブロックごとに<gray> 計算されます。
+        per_usage:
+          name: 使用量ごと
+          description: |-
+            <gray> バイオーム変更コストは
+            <gray> 使用ごとに
+            <gray> 増加します。
+        enabled: <dark_green>
+        disabled: ＆ｃ
+      change_increment:
+        name: <white><bold> 増分
+        description: |-
+          <gray> 使用ごとに
+          <gray> の増分を変更できます。
+        value: '<gray> 現在の値: <yellow> [number]'
+      biome-filter:
+        name: <white><bold> [filter]
+        description: <gray> バイオーム フィルターは Minecraft Wiki の <gray> に基づいています。
+        lush: 豊かなバイオーム
+        dry: 乾燥バイオーム
+        cold: 寒冷バイオーム
+        snowy: 雪のバイオーム
+        aquatic: 海洋バイオーム
+        nether: ネザーバイオーム
+        the_end: エンドバイオーム
+        neutral: 中立バイオーム
+        unused: 未使用のバイオーム
+        warm: 温暖なバイオーム
+        cave: 洞窟バイオーム
+        temperate: 温帯バイオーム
+      protection_range:
+        name: <white><bold> 保護範囲
+        description: |-
+          <gray> バイオーム内での制限を許可
+          <gray> 島全体のバイオームを変更する代わりに、島の保護範囲のみに変更
+          <gray> できます。
+        enabled: <dark_green> 有効
+        disabled: <red> 無効
+      reset:
+        name: <white><bold> 所有者変更時にリセット
+        description: <gray> 島の所有者が変わり、新しい所有者が現在のバイオームの権限を持っていない場合、バイオームを強制的にデフォルトのバイオームに変更できるようにします。
+        enabled: <dark_green> 有効
+        disabled: <red> 無効
+      cool_down:
+        name: <white><bold> バイオームクールダウン
+        description: |-
+          <gray> プレイヤー間の秒数を設定できます
+          <gray> 再びバイオームを変更できます。
+        value: '<gray> 現在のクールダウン: <yellow> [number]'
+        disabled: <yellow> クールダウンは無効です。
+      default_size:
+        name: <white><bold> デフォルト範囲
+        description: |-
+          <gray> プレイヤーがバイオームを変更したときに使用される番号を設定できます。
+          <gray> 書き込みなし。
+        value: '<gray> デフォルト範囲: <yellow> [number]'
+      default_mode:
+        name: <white><bold> デフォルトの更新モード
+        description: <gray> プレイヤーが提供しなかった場合に、デフォルトの更新モードを設定できます。
+        enabled: <dark_green>
+        disabled: ＆ｃ
+      unlock_notify:
+        name: <white><bold> ロック解除時に通知
+        description: <gray> ユーザーが新しいバイオームをアンロックすると、<gray> メッセージがユーザーに送信されます。
+        enabled: <aqua> ロック解除時の通知は <green> 有効 <aqua> です。
+        disabled: <aqua> ロック解除時の通知は <red> 無効です <aqua>。
+      change_timeout:
+        name: <white><bold> 変更のタイムアウト
+        description: |-
+          <gray> 何分後にバイオーム更新が終了するかを設定できます。
+          <gray> 非常に大きな島や負荷の大きいサーバーで発生する可能性があります。
+        value: '<gray> タイムアウト: <yellow> [number] 分'
+      parallel_updates:
+        name: <white><bold> 並列更新
+        description: |-
+          <gray> 同時に実行できるバイオーム
+          <gray> 更新の数を設定できます。
+          <gray> その他は
+          <gray> キューに配置されます。
+        value: '<gray> 現在の値: <yellow>[number]<gray>。'
+      use_bank:
+        name: <white><bold> 銀行口座を使用する
+        description: |-
+          <gray> Biomes アドオンによって行われるすべての支払いが
+          <gray> Bank Addon Island
+          <gray> アカウントを使用するかどうかを切り替えます。
+        enabled: <aqua> 銀行口座の使用は<green>有効<aqua>です。
+        disabled: <aqua> 銀行口座の使用は<red> 無効になっています<aqua>。
+        missing: <red> 銀行アドオンがインストールされていません。
+      visibility:
+        name: <white><bold> バイオームの可視性
+        description: |-
+          <gray> バイオーム選択パネルでプレイヤーの
+          <gray> バイオームの表示を変更できます。
+        enabled: <dark_green>
+        disabled: ＆ｃ
+        all: すべてのバイオーム
+        deployed: 配置されたバイオーム
+        accessible: アクセス可能なバイオーム
+        toggleable: 切り替え可能
+      is_online:
+        name: <white><bold> オンラインプレイヤーアイランド
+        description: <gray> メンバーがオンラインになっているすべての島を一覧表示します。
+      all_islands:
+        name: <white><bold> すべての島
+        description: |-
+          <gray> 現在のゲームモードで作成された
+          <gray> すべての島のリスト。
+      island_name:
+        name: <white><bold> [name]
+        island-owner: '[player]'
+        unknown: <red> 所有者不明
+        description: |-
+          [owner]
+          [members]
+          [id]
+        owner: '<gray> 所有者: <yellow> [player]'
+        title: '<gray> 島のメンバー:'
+        element: <gray> - <yellow> [player]
+      change_biome:
+        name: <white><bold> バイオームの変更
+        description: <gray> 島ごとにバイオームを変更します。
+      manage_data:
+        name: <white><bold> 島のデータの管理
+        description: <gray> 特定の島に保存されているデータを管理します。
+      clear_data:
+        name: <white><bold> 島のデータを消去
+        description: <gray> 島の保存データをすべて消去します。
+      island_bundle:
+        name: <white><bold> アイランドバンドル
+        description: |-
+          <gray> 現在の島に割り当てられているバンドル。
+          <gray> このバンドルのバイオームのみが
+          <gray> 島で使用できます。
+        value: '<aqua> バンドル: [bundle]'
+        overwritten: <red> 所有者には、バンドルを上書きする権限があります。
+      owner_bundle:
+        name: <white><bold> オーナーバンドル
+        description: |-
+          <gray> 現在の島の所有者に割り当てられたバンドル。
+          <gray> このバンドルのバイオームのみが
+          <gray> 島で使用できます。
+          <gray> ユーザーが割り当てる権限:
+          <gray><italic> '[gamemode].biomes.
+          <gray><italic> bundle.<bundle-id>'
+        value: '<aqua> バンドル: [bundle]'
+      reset_to_default:
+        name: <white><bold> デフォルトにリセット
+        description: |-
+          <gray> すべての島の値を
+          <gray> 設定のデフォルト値にリセットします。
+      bundle_info:
+        name: <white><bold> 一般情報
+        description: <gray> 一般的なバンドル情報を表示します。
+      bundle_biomes:
+        name: <white><bold> バイオームの管理
+        description: <gray> バンドルに割り当てられているバイオームを管理します。
+      bundle_name:
+        name: <white><bold> 名前の変更
+        description: |-
+          <gray> バンドルの表示を変更します
+          <gray> 名前。
+        value: '<yellow> 現在の値: <reset> [bundle]'
+      bundle_icon:
+        name: <white><bold> アイコンを変更
+        description: <gray> バンドルアイコンを変更します。
+      bundle_description:
+        name: <white><bold> 変更の説明
+        description: <gray> バンドルの説明を変更します。
+        value: '<yellow> 現在の値:'
+        none: <red> 説明なし
+      bundle_permission:
+        name: <white><bold> バンドル権限
+        description: |-
+          <gray> このバンドルを強制するために
+          <gray> ユーザーに追加する必要がある権限。
+        value: '<yellow> 権限: <white> [gamemode].biomes.bundle.[id]'
+      add_bundle_biome:
+        name: <white><bold> バイオームを追加
+        description: <gray> このバンドルにバイオームを割り当てます。
+        title: '<aqua> 選択されたバイオーム:'
+        value: <aqua> - [biome]
+      remove_bundle_biome:
+        name: <white><bold> バイオームを削除
+        description: |-
+          <gray> このバンドルからバイオームを
+          <gray> 削除します。
+        title: '<aqua> 選択されたバイオーム:'
+        value: <aqua> - [biome]
+      create_bundle:
+        name: <white><bold> バンドルを作成
+        description: |-
+          <gray> このゲームモード用の新しいバンドルを作成します
+          <gray>。
+      delete_bundle:
+        name: <white><bold> バンドルを削除
+        description: <gray> このゲームモードからバンドルを完全に削除します。
+        title: '<aqua> 選択されたバンドル:'
+        value: <aqua> - [biome]
+      download:
+        name: <white><bold> ダウンロード
+        description: <gray> Web ライブラリをダウンロードします。
+        enabled: <dark_green> キャッシュクリアあり
+        disabled: <red> キャッシュクリアなし
+    tips:
+      click-to-filter: <yellow> フィルタリングするには <gray> をクリックします。
+      click-to-manage: <yellow> 管理するには <gray> をクリックします。
+      click-to-clear: <yellow> クリアするには <gray> をクリックします。
+      click-to-change-biome: <yellow> バイオームを変更するには <gray> をクリックします。
+      click-to-view: <yellow> 表示するには<gray>をクリックしてください。
+      click-to-select: <yellow> <gray>をクリックして選択します。
+      click-to-choose: <yellow> 選択するには<gray>をクリックします。
+      click-to-complete: <yellow> 完了するには <gray> をクリックします。
+      left-click-to-accept: <yellow> 適用するには <gray> を左クリックします。
+      right-click-to-write: <yellow> 書き込むには <gray> を右クリックします。
+      click-to-reduce: <yellow> 縮小するには <gray> をクリックします。
+      click-to-increase: <yellow> 増やすには <gray> をクリックします。
+      click-to-return: <yellow> 戻るには <gray> をクリックします。
+      click-to-quit: <yellow> 終了するには <gray> をクリックします。
+      click-to-wipe: <yellow> 消去するには <gray> をクリックします。
+      left-click-to-wipe: <yellow> 左クリックして <gray> を消去します。
+      right-click-to-switch: <yellow> 切り替えるには <gray> を右クリックします。
+      click-to-open: <yellow> <gray> をクリックして開きます。
+      click-to-export: <yellow> エクスポートするには <gray> をクリックします。
+      click-to-create: <yellow> 作成するには <gray> をクリックします。
+      left-click-to-open: <yellow> <gray> を左クリックして開きます。
+      right-click-to-reset-all: <yellow> すべてを消去するには <gray> を右クリックします。
+      click-to-toggle: <yellow> 切り替えるには <gray> をクリックします。
+      click-to-change: <yellow> 変更するには<gray>をクリックします。
+      shift-click-to-reset: <yellow> Shift リセットするには <gray> をクリックします。
+      click-to-add: <yellow> 追加するには<gray>をクリックします。
+      click-to-remove: <yellow> 削除するには<gray>をクリックします。
+      left-click-to-cycle: <yellow> <gray> を左クリックすると下に移動します。
+      right-click-to-cycle: <yellow> <gray> を右クリックすると上へ循環します。
+      click-to-edit: <yellow> 編集するには <gray> をクリックします。
+      left-click-to-download: <yellow> ダウンロードするには <gray> を左クリックします。
+      right-click-to-toggle: <yellow> 切り替えるには <gray> を右クリックします。
+      click-to-install: <yellow> インストールするには <gray> をクリックします。
+      click-to-reset-all: <yellow> すべてをリセットするには <gray> をクリックします。
+      right-click-to-select: <yellow> <gray> を右クリックして選択します。
+      right-click-to-deselect: <yellow> 選択を解除するには <gray> を右クリックします。
+      left-click-to-choose: <yellow> 選択するには <gray> を左クリックします。
+      click-to-buy: <yellow> 購入するには<gray>をクリックしてください。
+      click-to-cancel: <yellow> キャンセルするには <gray> をクリックします。
+      click-to-save: <yellow> <gray> をクリックして保存します。
+      click-to-deselect: <yellow> 選択を解除するには <gray> をクリックします。
+      click-on-item: <yellow> インベントリ内のアイテムをクリックします。
+      left-click-to-edit: <yellow> 編集するには <gray> を左クリックします。
+      right-click-to-clear: <yellow> クリアするには <gray> を右クリックします。
+      click-to-previous: <yellow> 前のページを表示するには <gray> をクリックします。
+      click-to-next: <yellow> 次のページを表示するには <gray> をクリックします。
+      select-before: <yellow> 続行する前に <gray> 個の項目を選択してください。
+      click-to-apply: <yellow> 適用するには<gray>をクリックします。
+      right-click-to-open: <yellow> <gray> を右クリックして開きます。
+      click-to-perform: <yellow> 実行するには<gray>をクリックします。
+      left-click-to-apply: <yellow> 適用するには <gray> を左クリックします。
+      right-click-to-unlock: <yellow> 右クリックして<gray> をロック解除します。
+      right-click-to-buy: <yellow> 購入するには<gray>を右クリックします。
+      right-click-to-change: <yellow> 変更するには<gray>を右クリックします。
+    descriptions:
+      update-mode:
+        island: アイランドモード
+        chunk: チャンクモード
+        range: レンジモード
+      selected: <dark_green> 選択済み
+      island-owner: '[player]'
+      unknown: 不明
+      biome:
+        lore: |-
+          [description]
+          [biome]
+          [unlock]
+          [change]
+        original: '<gray> バイオーム: <yellow> [biome]'
+        unlock:
+          lore: |-
+            [items]
+            [money]
+            [level]
+            [permissions]
+          money: '<gray> ロック解除コスト: <yellow> [number]'
+          level: |-
+            <gray> <yellow> [number]
+            <gray> 島レベルに到達する必要があります。
+          permission-single: '<gray> 権限がありません: <red> [permission]'
+          permissions-title: '<red> 権限がありません:'
+          permissions-list: <red> - [permission]
+          item-single: '<gray> アイテムのロックを解除: [color] [number] x [item]'
+          item-title: '<gray> アイテムのロックを解除:'
+          item-list: <gray> - [color] [number] x [item]
+          missing: <red>
+          has: <yellow>
+        change:
+          lore: |-
+            [items]
+            [money]
+            [mode]
+            [usage]
+          mode:
+            per_block: |-
+              <aqua><italic> バイオームは、変更されたブロックごとに
+              <aqua><italic> コストがかかります。
+            per_usage: |-
+              <aqua><italic> バイオームを変更すると、その価格が
+              <aqua><italic> 上がります。
+            static: <aqua><italic> 標準変更価格。
+          money: '<gray> コスト: <yellow> [number]'
+          item-single: '<gray> アイテム: [color] [number] x [item]'
+          item-title: '<gray> アイテム:'
+          item-list: <gray> - [color] [number] x [item]
+          number-of-usage: |-
+            |<gray> このバイオームは
+            <gray> <yellow> [number] <reset><gray> 回適用されました。
+          missing: <red>
+          has: <yellow>
+      bundle:
+        lore: |-
+          [description]
+          [permission]
+          [biomes]
+        permission: |-
+          <gray> プレイヤーに割り当てる必要のある権限:
+          <gray><italic> [gamemode].biomes.bundle.[id]
+        title: '<gray> バンドルバイオーム:'
+        value: <gray> - [biome]
+        no-biomes: <red> バイオームが割り当てられていません
+      library:
+        author: <yellow> [author]
+        version: <gray> バイオームで作成 <yellow> [version]
+        lang: '<gray> 言語: <yellow> [lang]'
+        gamemode: <gray> <yellow> のプライマリ [gamemode]
+  conversations:
+    prefix: '<bold><gold> [BentoBox]: <reset>'
+    confirm-string: 真、オン、はい、確認、y、有効、正しい
+    deny-string: 偽、オフ、いいえ、拒否、n、無効、正しくない
+    cancel-string: キャンセル
+    exit-string: キャンセル、終了、やめる
+    cancelled: <red> 会話がキャンセルされました!
+    input-number: <yellow> チャットに数字を入力してください。
+    input-seconds: <yellow> チャットに秒数を入力してください。
+    numeric-only: <red> 指定された[value]は数値ではありません。
+    not-valid-value: <red> 指定された数値 [value] は無効です。[min] より大きく、[max] より小さくなければなりません。
+    data-removed: <green> 選択されたバイオームは [gamemode] から削除されます。
+    confirm-deletion: <yellow> 名前が [value] である [number] 個のバイオームを削除することを確認してください。
+    user-data-removed: <green> [gamemode] のすべてのユーザー データがデータベースから消去されます。
+    confirm-user-data-deletion: <yellow> [gamemode] のユーザーデータベースをクリアすることを確認してください。
+    all-data-removed: <green> [gamemode] のすべてのアドオン データがデータベースからクリアされます。
+    confirm-all-data-deletion: <yellow> [gamemode]のアドオンデータをクリアすることを確認してください。
+    write-name: <yellow> チャットに名前を記入してください。
+    new-object-created: <green> [gamemode] の新しいオブジェクトが作成されます。
+    object-already-exists: <red> オブジェクト <gray> [id] <red> は既に存在します。別の名前を選択してください。
+    name-changed: <green> 成功しました。名前が更新されました。
+    write-description: <yellow> チャットに新しい説明を入力し、終了するには 1 行だけ入力して「quit」と入力してください。
+    description-changed: <green> 成功しました。説明が更新されました。
+    write-permissions: <yellow> チャットで必要な権限を 1 行に 1 つずつ入力し、終了するには 1 行に 'quit' と入力してください。
+    permissions-changed: <green> 成功、権限が更新されました。
+    start-downloading: <green> バイオーム ライブラリのダウンロードとインポートを開始しています。
+    written-text: '入力テキスト(<green>):'
+    confirm-data-replacement: <yellow> 現在のデータを新しいデータに置き換えるかどうかを確認してください。
+    new-data-imported: <green> 成功。[gamemode] の新しいデータがインポートされました。
+    exported-file-name: <yellow> エクスポートしたデータベース ファイルのファイル名を入力してください。(終了するには「キャンセル」と入力してください)
+    database-export-completed: <green> 成功。[world] のデータベースのエクスポートが完了しました。ファイル [file]
+      が生成されました。
+    file-name-exist: <red> '[id]' という名前のファイルが存在します。上書きできません。
+    write-search: <yellow> 検索値を入力してください。(終了するには「キャンセル」と入力してください)
+    search-updated: <green> 検索値が更新されました。
+    invalid-biome: <red> 保存された `[biome]`<reset><red> 内の一部のデータは無効です。
+    confirm-biome-deletion: <yellow> [gamemode] から [biome] を削除することを確認してください。
+    biome-removed: '[biome] <reset><green> は [gamemode] から削除されました。'
+    confirm-island-data-deletion: <yellow> [player] の島のデータを削除するかどうか確認してください。
+    island-data-removed: '[player] <green>島のデータが削除されます。'
+    confirm-biome-data-deletion: <yellow> [gamemode] からすべてのバイオームを削除することを確認してください。
+    biome-data-removed: すべてのバイオームが[gamemode]から削除されます。
+    click-text-to-purchase: <yellow> <reset> [biome]<reset><yellow> のロックを解除しました。購入するにはここをクリックしてください。
+    click-text-to-set: <yellow> <reset> [biome]<reset><yellow> のロックを解除しました。使用するにはここをクリックしてください。
+  messages:
+    biome-not-unlocked: '[biome] <reset><red> はロック解除されていません。使用できません。'
+    biome-not-purchased: <red> <reset> [biome] <reset><red>は使用できません。購入する必要があります。
+    biome-cannot-be-unlocked: <red> <reset> [biome] <reset><red> のロックを解除できません。
+    biome-already-purchased: <red> すでに <reset> [biome] <reset><red> を購入しています。
+    island-level-not-reached: '[biome] <reset><red> には少なくとも島レベル [number] が必要です。'
+    missing-permission: '[biome] <reset><red> には権限が必要です: [permission]。'
+    no-credits-buy: <red> <reset> [biome] <reset><red> を購入するのに十分なクレジットがありません。費用は [number]
+      です。
+    no-credits-buy-bank: <red> 銀行口座に <reset> [biome] <reset><red> を購入するのに十分なクレジットがありません。費用は
+      [number] です。
+    no-items-buy: <red> 購入するためのアイテムが足りません <reset> [biome] <reset><red>。[items]が必要です。
+    biome-purchased: <yellow> <reset> [biome]<reset><yellow> を購入しました。
+    import-count: <yellow> [biomes] バイオームと [bundles] バンドルをインポートしました。
+    start-downloading: <yellow> ライブラリのダウンロードを開始します。
+    update-start: '<green> 開始バイオームを [biome] に変更します。<reset><green> [number] チャンクで。<yellow>
+      推定時間: [time] 秒。'
+    update-done: <green> バイオームを [biome] に変更し完了しました<reset><green>。
+    waiting: '<green> キューにバイオームの変更を追加しました。<yellow> 推定待機時間: [time] 秒。'
+    biome-already-unlocked: '[biome] <reset><yellow> はすでにロック解除されています。'
+    everything-already-bought: <green> このゲームモードのすべてのバイオームをすでに購入しています。
+    skipping: <green> <reset> [biome]<reset><green> の読み込みをスキップします。
+    overwriting: <green> キャッシュ内の <reset> [biome] <reset><green> を上書きしています。
+    imported: <green> <reset> [biome] <reset><green> をキャッシュにインポートしました。
+    migrate-start: <green> 新しいデータ形式への移行を開始します。
+    migrate-finish: 新しいデータ形式への移行が完了しました。
+    migrate-valid: <green> すべてのデータは有効です。移行は必要ありません。
+    bundle-loaded: <green> バンドル <reset> [bundle] <green> がロードされました。
+    clear-queue: <green> [gamemode] のバイオーム変更タスク キューがクリアされます。
+  errors:
+    no-island-data: <red> 島には保存されたデータがありません。
+    no-biomes-admin: <red> 現在のゲームモードには使用可能なバイオームがありません。/[command]を使用してバイオームをインポートまたは作成してください。
+    no-biomes: <red> 現在のゲームモードには使用可能なバイオームがありません。
+    no-rank: <red> この島のバイオームを変更することはできません。
+    not-enough-level: <red> このバイオームには少なくとも島レベル[number]が必要です。
+    not-enough-money: <red> このバイオームの変更には$[number]のコストがかかります。
+    not-enough-money-bank: <red> 銀行口座に十分なクレジットがありません。バイオームの変更には$[number]かかります。
+    not-enough-items: <red> このバイオームの変更には[items]のコストがかかります。
+    admin-not-on-island: <red> あなたは [user] 島にいません。
+    incorrect-object: '<red> 要求された名前のバイオームが見つかりませんでした: [biome]'
+    missing-biome: <red> バイオーム名が指定されていません。
+    incorrect-mode: <red> '[mode]' という名前のモードは存在しません。
+    incorrect-range: <red> 指定された値 '[number]' は有効な数値ではありません。
+    no-file: <red> バイオームディレクトリ内に [file] が見つかりませんでした。
+    no-load: '<red> [file] からバイオームをインポートできませんでした。理由: [description]'
+    not-a-gamemode-world: <red> ワールド [world] は GameModeAddon ワールドではありません。
+    file-exist: <red> [file]という名前のファイルは既に存在します。別の名前を選択してください。
+    no-library-entries: <red> 有効なライブラリ エントリが見つかりませんでした。
+    not-unlocked: <red> このバイオームはロック解除されていません。
+    not-purchased: <red> このバイオームを購入していません。
+    timeout: <red> バイオームの変更に時間がかかっています。選択したエリアが大きすぎるか、サーバーがビジー状態である可能性があります。
+    failed: <red> サーバーはバイオームの変更中にいくつかの問題に遭遇します。
+    could-not-remove-money: <red> 出金中に問題が発生しました。
+    could-not-remove-items: <red> アイテムの引き出し中に問題が発生しました。
+    something-went-wrong: <red> 問題が発生しました。実行できませんでした。
+protection:
+  flags:
+    BIOMES_ISLAND_PROTECTION:
+      name: バイオーム制御
+      description: |-
+        <dark_purple><italic> 誰が島のバイオームを変更できるか切り替える
+        <dark_purple><italic>
+    BIOMES_WORLD_PROTECTION:
+      name: バイオーム島の制限
+      description: |-
+        <dark_purple><italic> バイオームを変更するには、プレイヤーが自分の島にいる必要がある
+        <dark_purple><italic> というトグル要件。
+      hint: <red> バイオームを変更するには、自分の島にいる必要があります。

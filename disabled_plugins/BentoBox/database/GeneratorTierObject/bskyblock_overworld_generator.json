@@ -1,0 +1,68 @@
+{
+  "uniqueId": "bskyblock_overworld_generator",
+  "friendlyName": "&r&lCobblestone Generator II",
+  "description": [
+    "&7 A generator that works ",
+    "&7 in all Overworld biomes"
+  ],
+  "generatorIcon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: STONE\n",
+  "lockedIcon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: BARRIER\n",
+  "generatorType": "COBBLESTONE_OR_STONE",
+  "defaultGenerator": false,
+  "priority": 1,
+  "requiredMinIslandLevel": 100,
+  "requiredBiomes": [
+    "FOREST",
+    "DESERT",
+    "SNOWY_PLAINS",
+    "PLAINS",
+    "BEACH",
+    "RIVER",
+    "JUNGLE",
+    "DARK_FOREST",
+    "BIRCH_FOREST",
+    "OCEAN",
+    "SAVANNA",
+    "SWAMP"
+  ],
+  "requiredPermissions": [],
+  "generatorTierCost": 5.0,
+  "activationCost": 0.0,
+  "deployed": true,
+  "blockChanceMap": {
+    "45.0": "STONE",
+    "80.0": "DEEPSLATE",
+    "90.0": "GRANITE",
+    "95.0": "DIORITE",
+    "100.0": "ANDESITE"
+  },
+  "treasureChanceMap": {},
+  "treasureItemChanceMap": {},
+  "treasureChance": 0.0,
+  "maxTreasureAmount": 1,
+  "minHeight": -64,
+  "maxHeight": 320,
+  "materialHeightMap": {
+    "STONE": [
+      0,
+      64
+    ],
+    "GRANITE": [
+      0,
+      256
+    ],
+    "DIORITE": [
+      0,
+      256
+    ],
+    "ANDESITE": [
+      0,
+      256
+    ],
+    "DEEPSLATE": [
+      -64,
+      0
+    ]
+  },
+  "blockHeightRanges": {}
+}

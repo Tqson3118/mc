@@ -1,0 +1,108 @@
+prefix: '&a[Parduotuvė] &r'
+shopinfo: |-
+  &aParduotuvės Informacija:
+  &fSavininkas: &7%owner
+  &fAtsargos: &7%stock
+  &fDaiktas: &7%item
+shopinfo_buy: '&fPirkti &7%amount &fuž &7%price'
+shopinfo_sell: '&fParduoti &7%amount &fuž &7%price'
+iteminfo: '&aPrekės Informacija: &r'
+iteminfo_fullname: '&fPilnas Pavadinimas: &7%item'
+iteminfo_shopname: '&fParduotuvės ženklas: &7%item'
+iteminfo_repaircost: '&fRemonto kaina: &7%cost'
+iteminfo_book: |-
+  &fKnygos Pavadinimas: &7%title
+  &fKnygos Autorius: &7%author
+  &fKnygos Puslapiai: &7%pages
+iteminfo_book_generation: '&fKnygos generacija: &7%generation'
+iteminfo_leather_color: '&fOdos spalva: &7Raudona: %colorred, Žalia: %colorgreen,
+  Mėlyna: %colorblue (Hex: #%colorhex)'
+iteminfo_bundle_items: '&fPaketo elementai: &7%itemcount'
+iteminfo_axolotl_variant: '&fAxolotl variantas: &7%variant'
+iteminfo_armor_trim: '&fArmor Trim: &7%material %pattern'
+iteminfo_recipes: '&fŽinios apie receptą:'
+iteminfo_map_view: |-
+  &fŽemėlapio ID: &7%id
+  &fŽemėlapių pasaulis: &7%world
+  &fŽemėlapių centras: &7%x/%z
+  &fŽemėlapis užrakintas: &7locked
+iteminfo_map_location: '&fŽemėlapio vieta: &7%location'
+iteminfo_tropical_fish: |-
+  &fŽuvų modelis &7%pattern
+  &fŽuvų modelio spalva: &7%patterncolor
+  &fŽuvų kūno spalva: &7%bodycolor
+iteminfo_crossbow_projectiles: '&fĮkrautas arbaleto sviedinys:'
+iteminfo_crossbow_projectile: '&f%item'
+iteminfo_lore: |-
+  &fLore:
+  &r%lore
+METRICS: |-
+  &a[Parduotuvė] &fMetrika:
+  &fSąskaitos: &7%accounts
+  &fVidutiniai pervedimai: &7%totalTransactions &f(pirkti: &7%buyTransactions &fparduoti: &7%sellTransactions&f)
+  &fVidutinės prekės, kuriomis prekiaujama: &7%totalItems &f(nupirkta: &7%boughtItems &fparduota: &7%soldItems&f)
+ACCESS_DENIED: Neturite leidimo pasiekti tos parduotuvės saugyklos konteinerio!
+TRADE_DENIED: Jūs neturite leidimo prekiauti su ta parduotuve!
+TRADE_DENIED_ACCESS_PERMS: Negalite prekiauti parduotuvėse, į kurias turite prieigą!
+TRADE_DENIED_CREATIVE_MODE: Negalite prekiauti su parduotuvėmis, kol esate kūrybingam
+  režimas!
+NOT_ENOUGH_MONEY: Jūs neturite pakankamai pinigų!
+NOT_ENOUGH_MONEY_SHOP: Parduotuvės savininkas neturi pakankamai pinigų!
+CLIENT_DEPOSIT_FAILED: Pinigų įnešimas į jūsų sąskaitą nepavyko!
+SHOP_DEPOSIT_FAILED: Pinigų įnešimas parduotuvės savininkui nepavyko!
+NO_ECONOMY_ACCOUNT: Ekonominės sąskaitos iš parduotuvės savininko nėra!
+NO_BUYING_HERE: Čia negalite nusipirkti!
+NO_SELLING_HERE: Čia negalite parduoti!
+NOT_ENOUGH_SPACE_IN_INVENTORY: Jūs neturite pakankamai vietos inventoriuje!
+NOT_ENOUGH_SPACE_IN_CHEST: Krūtinėje nėra pakankamai vietos!
+NOT_ENOUGH_ITEMS_TO_SELL: Jūs neturite pakankamai daiktų, kad galėtumėte parduoti!
+NOT_ENOUGH_SPACE_IN_YOUR_SHOP: |-
+  [%price %item&7 parduotuvė pilna!](&f%seller&7 bandė parduoti
+  &7Pasaulyje: &f%world
+  &7Pozicija: &f%x/%y/%z)
+NOT_ENOUGH_STOCK: Šioje parduotuvėje nebėra atsargų.
+NOT_ENOUGH_STOCK_IN_YOUR_SHOP: |-
+  [%price %item&7 parduotuvėje nebėra atsargų!](&f%buyer&7 bandė pirkti
+  &7Pasaulyje: &f%world
+  &7Pozicijoje: &f%x/%y/%z)
+YOU_BOUGHT_FROM_SHOP: Tu nupirkai %item iš %owner už %price.
+SOMEBODY_BOUGHT_FROM_YOUR_SHOP: |-
+  [%buyer nupirko %item už %price.](&7Pasaulyje: &f%world
+  &7Pozicijoje: &f%x/%y/%z)
+YOU_SOLD_TO_SHOP: Tu pardavei %item %buyer už %price.
+SOMEBODY_SOLD_TO_YOUR_SHOP: |-
+  [%seller pardavė %item už %price.](&7Pasaulyje: &f%world
+  &7Pozicijoje: &f%x/%y/%z)
+YOU_CANNOT_CREATE_SHOP: Tu negali sukurti šio tipo parduotuvės!
+NO_CHEST_DETECTED: Negalėjau surasti skrynios!
+INVALID_SHOP_DETECTED: Šios parduotuvės tau negalima naudoti!
+INVALID_SHOP_PRICE: Ši parduotuvė turi netinkamą kainą!
+INVALID_SHOP_QUANTITY: Ši parduotuvė turi netinkamą kiekį!
+CANNOT_ACCESS_THE_CHEST: Tu neturi teisės atidaryti šiois skrynios!
+CANNOT_CHANGE_SIGN_BACKSIDE: You can't change the back side of a shop sign!
+SELL_PRICE_HIGHER_THAN_BUY_PRICE: Pardavimo kaina yra aukščiau negu pirkimo kaina!
+SELL_PRICE_ABOVE_MAX: Pardavimo kaina %price yra aukčiau uz maximumą %maxprice!
+SELL_PRICE_BELOW_MIN: Pardavimo kaina %price yra žemiau minimumo %minprice!
+BUY_PRICE_ABOVE_MAX: Pirkimo kaina %price yra aukčiau uz maximumą %maxprice!
+BUY_PRICE_BELOW_MIN: Pirkimo kaina %price yra žemiau minimumo %minprice!
+CLICK_TO_AUTOFILL_ITEM: Spustelėkite ženklą su preke, kuriai skirta ši parduotuvė!
+NO_ITEM_IN_HAND: Rankoje neturite daikto, kurį galėtumėte automatiškai pildyti!
+PROTECTED_SHOP: Sėkmingai apsaugojo parduotuvę LWC!
+PROTECTED_SHOP_SIGN: Sėkmingai apsaugojo parduotuvės ženklą su LWC!
+SHOP_CREATED: Parduotuvė sėkmingai sukurta!
+SHOP_FEE_PAID: Jūs buvote apmokestinti %amount
+SHOP_REFUNDED: Jums buvo grąžinta %amount.
+ITEM_GIVEN: Davėte %player šį produktą %item.
+RESTRICTED_SIGN_CREATED: Sėkmingai sukurtas ženklas!
+PLAYER_NOT_FOUND: Žaidėjas nerastas!
+NO_PERMISSION: Jūs neturite teisės!
+INCORRECT_ITEM_ID: Nurodėte netinkamą prekės ID!
+INVALID_CLIENT_NAME: Jūsų vartotojo vardas nėra galiojantis Minecraft vardas!
+NOT_ENOUGH_PROTECTIONS: Nepavyko sukurti apsaugos!
+NO_SHOP_FOUND: Parduotuvės nerasta.
+CANNOT_CREATE_SHOP_HERE: Čia negalite sukurti parduotuvės čia!
+TOGGLE_MESSAGES_OFF: Nebegausite pranešimų iš parduotuvės(ių).
+TOGGLE_MESSAGES_ON: Dabar gausite pranešimus iš savo parduotuvės(ių).
+TOGGLE_ACCESS_ON: Nebegalite prekiauti parduotuvėse, į kurias turite prieigą
+TOGGLE_ACCESS_OFF: Dabar galite prekiauti parduotuvėse, į kurias turite prieigą
+ERROR_OCCURRED: '[An error occurred!](red) [%error](yellow)'

@@ -1,0 +1,309 @@
+---
+prefix: "&9&lIridiumSkyblock &8»"
+updateChecks: true
+dateTimeFormat: "EEEE, MMMM dd HH:mm:ss"
+numberFormatter:
+  numberAbbreviationDecimalPlaces: 2
+  thousandAbbreviation: "K"
+  millionAbbreviation: "M"
+  billionAbbreviation: "B"
+  trillionAbbreviation: "T"
+  displayNumberAbbreviations: true
+createRequiresName: false
+preventTntGriefing: true
+patreonMessage: true
+minTeamNameLength: 3
+maxTeamNameLength: 20
+recalculateInterval: 5
+forceRecalculateInterval: 1
+enableLeveling: true
+giveLevelRewards: true
+flatExpRequirement: 10
+curvedExpModifier: 0.95
+userRanks:
+  1:
+    name: "Member"
+    item:
+      material: "STONE_AXE"
+      amount: 1
+      displayName: "&9&lMember"
+      skullData: null
+      headData: null
+      headOwner: null
+      headOwnerUUID: null
+      model: null
+      lore: []
+      slot: 12
+  2:
+    name: "Moderator"
+    item:
+      material: "IRON_AXE"
+      amount: 1
+      displayName: "&5&lModerator"
+      skullData: null
+      headData: null
+      headOwner: null
+      headOwnerUUID: null
+      model: null
+      lore: []
+      slot: 13
+  3:
+    name: "CoOwner"
+    item:
+      material: "GOLDEN_AXE"
+      amount: 1
+      displayName: "&2&lCoOwner"
+      skullData: null
+      headData: null
+      headOwner: null
+      headOwnerUUID: null
+      model: null
+      lore: []
+      slot: 14
+visitor:
+  name: "Visitor"
+  item:
+    material: "WOODEN_AXE"
+    amount: 1
+    displayName: "&7&lVisitor"
+    skullData: null
+    headData: null
+    headOwner: null
+    headOwnerUUID: null
+    model: null
+    lore: []
+    slot: 11
+owner:
+  name: "Owner"
+  item:
+    material: "DIAMOND_AXE"
+    amount: 1
+    displayName: "&c&lOwner"
+    skullData: null
+    headData: null
+    headOwner: null
+    headOwnerUUID: null
+    model: null
+    lore: []
+    slot: 15
+teamInfoTitle: "&8[ &9&l%island_name% &8]"
+teamInfoTitleFiller: "&8&m "
+teamInfo:
+- "&9Description: &7%island_description%"
+- "&9Level: &7%island_level% (#%island_experience_rank%)"
+- "&9Value: &7%island_value% (#%island_value_rank%)"
+- "&9Online Members (%island_members_online_count%/%island_members_count%): &7%island_members_online%"
+- "&9Offline Members (%island_members_offline_count%/%island_members_count%): &7%island_members_offline%"
+levelInfo:
+- "&9Level: &7%island_level%"
+- "&9Experience: &7%island_experience% / %island_experienceForNextLevel% (need %island_experienceToLevelUp%\
+  \ more)"
+noneChatAlias:
+- "n"
+- "none"
+teamChatAlias:
+- "i"
+- "island"
+teamTopSlots:
+  1: 14
+  2: 22
+  3: 23
+  4: 24
+  5: 30
+  6: 31
+  7: 32
+  8: 33
+  9: 34
+teamWarpSlots:
+  1: 9
+  2: 11
+  3: 13
+  4: 15
+  5: 17
+teleportDelay: 0
+teleportMovementThreshold: 0.5
+teleportBypassPermission: "iridiumskyblock.teleport.bypass"
+levelRewards:
+  1:
+    item:
+      material: "EXPERIENCE_BOTTLE"
+      amount: 1
+      displayName: "&a&lPhần Thưởng Đảo Cấp 1"
+      skullData: null
+      headData: null
+      headOwner: null
+      headOwnerUUID: null
+      model: null
+      lore:
+      - "&7Phần thưởng đạt mốc Đảo Cấp 1:"
+      - "&a✔ &e$1,000 Xu"
+      - "&a✔ &b5 Pha Lê Đảo (Crystals)"
+      - "&a✔ &d200 Kinh Nghiệm"
+      - ""
+      - "&e▶ Click chuột trái để nhận quà!"
+      slot: null
+    commands: []
+    money: 1000.0
+    bankRewards:
+      Crystals: 5.0
+    experience: 200
+    teamExperience: 0
+    sound: "entity.player.levelup"
+  5:
+    item:
+      material: "IRON_BLOCK"
+      amount: 1
+      displayName: "&e&lPhần Thưởng Đảo Cấp 5"
+      skullData: null
+      headData: null
+      headOwner: null
+      headOwnerUUID: null
+      model: null
+      lore:
+      - "&7Phần thưởng đạt mốc Đảo Cấp 5:"
+      - "&a✔ &e$5,000 Xu"
+      - "&a✔ &b10 Pha Lê Đảo (Crystals)"
+      - "&a✔ &d1,000 Kinh Nghiệm"
+      - "&a✔ &65 Khối Sắt (Iron Block)"
+      - ""
+      - "&e▶ Click chuột trái để nhận quà!"
+      slot: null
+    commands:
+    - "give %player% iron_block 5"
+    money: 5000.0
+    bankRewards:
+      Crystals: 10.0
+    experience: 1000
+    teamExperience: 0
+    sound: "entity.player.levelup"
+  10:
+    item:
+      material: "DIAMOND"
+      amount: 1
+      displayName: "&b&lPhần Thưởng Đảo Cấp 10"
+      skullData: null
+      headData: null
+      headOwner: null
+      headOwnerUUID: null
+      model: null
+      lore:
+      - "&7Phần thưởng đạt mốc Đảo Cấp 10:"
+      - "&a✔ &e$15,000 Xu"
+      - "&a✔ &b20 Pha Lê Đảo (Crystals)"
+      - "&a✔ &d2,500 Kinh Nghiệm"
+      - "&a✔ &b10 Kim Cương (Diamond)"
+      - ""
+      - "&e▶ Click chuột trái để nhận quà!"
+      slot: null
+    commands:
+    - "give %player% diamond 10"
+    money: 15000.0
+    bankRewards:
+      Crystals: 20.0
+    experience: 2500
+    teamExperience: 0
+    sound: "ui.toast.challenge_complete"
+  25:
+    item:
+      material: "EMERALD_BLOCK"
+      amount: 1
+      displayName: "&6&lPhần Thưởng Đảo Cấp 25"
+      skullData: null
+      headData: null
+      headOwner: null
+      headOwnerUUID: null
+      model: null
+      lore:
+      - "&7Phần thưởng đạt mốc Đảo Cấp 25:"
+      - "&a✔ &e$50,000 Xu"
+      - "&a✔ &b50 Pha Lê Đảo (Crystals)"
+      - "&a✔ &d5,000 Kinh Nghiệm"
+      - "&a✔ &a16 Khối Ngọc Lục Bảo"
+      - ""
+      - "&e▶ Click chuột trái để nhận quà!"
+      slot: null
+    commands:
+    - "give %player% emerald_block 16"
+    money: 50000.0
+    bankRewards:
+      Crystals: 50.0
+    experience: 5000
+    teamExperience: 0
+    sound: "ui.toast.challenge_complete"
+  50:
+    item:
+      material: "NETHERITE_INGOT"
+      amount: 1
+      displayName: "&c&lPhần Thưởng Đảo Cấp 50 [Bá Chủ]"
+      skullData: null
+      headData: null
+      headOwner: null
+      headOwnerUUID: null
+      model: null
+      lore:
+      - "&7Phần thưởng đạt mốc Đảo Cấp 50:"
+      - "&a✔ &e$150,000 Xu"
+      - "&a✔ &b100 Pha Lê Đảo (Crystals)"
+      - "&a✔ &d10,000 Kinh Nghiệm"
+      - "&a✔ &84 Phôi Netherite (Netherite Ingot)"
+      - ""
+      - "&e▶ Click chuột trái để nhận quà!"
+      slot: null
+    commands:
+    - "give %player% netherite_ingot 4"
+    money: 150000.0
+    bankRewards:
+      Crystals: 100.0
+    experience: 10000
+    teamExperience: 0
+    sound: "ui.toast.challenge_complete"
+whitelistedWorlds: []
+defaultIslandName: "%owner%'s Island"
+islandCreateTitle: "&9&lIsland Created"
+islandCreateSubTitle: "&7IridiumSkyblock by Peaches_MLG"
+defaultDescription: "Default island description :c"
+worldName: "IridiumSkyblock"
+spawnWorldName: "world"
+generatorType: "VOID"
+islandTitleTop: "&9%island_name%"
+islandTitleBottom: "&7%island_description%"
+paster: "internalAsync"
+obsidianBucket: true
+netherOnlyGenerator: false
+endPortalPick: true
+removeIslandBlocksOnDelete: true
+clearInventoryOnRegen: false
+clearEnderChestOnRegen: false
+allowPvPOnIslands: false
+islandCreateOnJoin: false
+islandCreationCost: false
+spawnOnIsland: false
+distance: 250
+netherUnlockLevel: 10
+endUnlockLevel: 20
+pasterDelayInTick: 1
+pasterLimitPerTick: 10
+islandCrystal:
+  material: "NETHER_STAR"
+  amount: 1
+  displayName: "&9*** &9&lIsland Crystal &9***"
+  skullData: null
+  headData: null
+  headOwner: null
+  headOwnerUUID: null
+  model: null
+  lore:
+  - ""
+  - "&9%amount% Island Crystals"
+  - "&9&l[!] &9Right-Click to Redeem"
+  slot: null
+enabledWorlds:
+  NORMAL: true
+  NETHER: true
+  THE_END: true
+defaultBorderColor: "BLUE"
+enabledBorders:
+  BLUE: true
+  RED: true
+  GREEN: true
+  "OFF": true

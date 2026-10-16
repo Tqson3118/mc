@@ -1,0 +1,11 @@
+{
+  "uniqueId": "BSkyBlock_example_range1",
+  "world": "BSkyBlock",
+  "name": "Border Expansion I",
+  "description": [
+    "Example: pay $500 to expand island border by 5 blocks. Up to 5 times."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: OAK_FENCE\n",
+  "order": 1,
+  "active": true
+}

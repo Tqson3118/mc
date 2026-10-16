@@ -1,0 +1,60 @@
+warp:
+  help:
+    description: Warpt dich zu dem Warp Schild von dem Spieler
+    parameters: <player name>
+warps:
+  deactivate: <red>Altes Warp Schild deaktiviert!</red>
+  error:
+    does-not-exist: <red>Oh nein! Dieser Warp existiert nicht mehr!</red>
+    no-permission: <red>Hierfür hast du keine Rechte!</red>
+    no-remove: <red>Du kannst dieses Schild nicht entfernen!</red>
+    no-warps-yet: <red>Es sind noch keine Warps verfügbar</red>
+    not-enough-level: <red>Dein Insel-Level ist nicht hoch gneug!</red>
+    not-on-island: <red>Dafür musst du auf deiner Insel sein!</red>
+    not-safe: <red>Dieser Warp ist nicht sicher!</red>
+    your-level-is: <red>Dein Insel-Level ist erst [level] und muss höher als [required]
+      sein. Nutze das Level Kommando.</red>
+    not-correct-rank: <red>Sie haben nicht den richtigen Rang, um einen Warp einzustellen!</red>
+  help:
+    description: Öffnet das Warps Panel
+  player-warped: <dark_green>[name] ist zu deinem [gamemode]-Warp-Zeichen gesprungen!</dark_green>
+  sign-removed: <red>Warp Schild entfernt!</red>
+  success: <green>Erfolg!</green>
+  warpTip: <gold>Platziere ein Warp Schild mit [text] in der ersten Zeile</gold>
+  warpToPlayersSign: <gold>Warpe zu [player]'s Schild</gold>
+  gui:
+    titles:
+      warp-title: <black><bold>Warp-Schild</bold></black>
+    buttons:
+      previous:
+        name: <white><bold>Vorherige Seite</bold></white>
+        description: <gray>Zur Seite [number] wechseln</gray>
+      next:
+        name: <white><bold>Nächste Seite</bold></white>
+        description: <gray>Zur Seite [number] wechseln</gray>
+      warp:
+        name: <white><bold>[name]</bold></white>
+        description: '[sign_text]'
+      random:
+        name: <white><bold>Random Warp</bold></white>
+        description: <gray>Hmm, wo werde ich erscheinen?</gray>
+    tips:
+      click-to-previous: <yellow>Klicken </yellow><gray>, um die vorherige Seite anzuzeigen.</gray>
+      click-to-next: <yellow>Klicken </yellow><gray>, um die nächste Seite anzuzeigen.</gray>
+      click-to-warp: <yellow>Zum Warpen </yellow><gray>klicken.</gray>
+  conversations:
+    prefix: '<gold><bold>[BentoBox]: </bold></gold><reset>'
+togglewarp:
+  help:
+    description: das Warp-Zeichen umschalten
+  enabled: <green>Ihr Warp ist jetzt sichtbar!</green>
+  disabled: <red>Ihr Warp ist jetzt verborgen!</red>
+  error:
+    no-permission: <red>Sie haben keine Berechtigung, das zu tun!</red>
+    generic: <red>Beim Umschalten Ihres Warps ist ein Fehler aufgetreten.</red>
+    no-warp: <red>Sie haben keinen Warp zum Umschalten!</red>
+protection:
+  flags:
+    PLACE_WARP:
+      name: Warp platzieren
+      description: Platzieren von Warp-Zeichen zulassen

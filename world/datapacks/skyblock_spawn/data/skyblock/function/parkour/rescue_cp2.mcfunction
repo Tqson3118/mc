@@ -1,0 +1,4 @@
+teleport @s -14.5 131.0 -4.5 0 0
+playsound minecraft:entity.enderman.teleport player @s ~ ~ ~ 1.5 1.0
+effect give @s minecraft:slow_falling 3 0 true
+title @s actionbar {"text":"🛡️ CỨU HỘ RƠI VỰC! Đã đưa bạn về Checkpoint 2 (Tầng 20).","color":"green","bold":true}

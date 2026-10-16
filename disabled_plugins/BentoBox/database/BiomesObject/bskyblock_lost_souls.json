@@ -1,0 +1,23 @@
+{
+  "biome": "SOUL_SAND_VALLEY",
+  "deployed": true,
+  "friendlyName": "<white><bold> Lost Soul Valley",
+  "description": [
+    "<gray> A haunted valley where",
+    "<gray> ghasts wail and skeletons",
+    "<gray> wander. Those who stay too",
+    "<gray> long may never leave."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: SOUL_SAND\n",
+  "order": -1,
+  "environment": "NETHER",
+  "uniqueId": "bskyblock_lost_souls",
+  "unlockLevel": 240,
+  "unlockCost": 0.0,
+  "cost": 1200.0,
+  "itemCost": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: SOUL_SAND\n  amount: 64\n"
+  ],
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

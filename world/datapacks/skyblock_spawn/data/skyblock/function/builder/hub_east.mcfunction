@@ -1,0 +1,641 @@
+# Clear old East Wing space (X: 38..72, Z: -18..18, Y: 96..145)
+fill 38 96 -18 72 145 18 air
+
+# 1. Đảo Bay Cánh Đông - Zen Sakura Portals Sanctuary (Center 55, 0, Max R=16)
+fill 55 98 -1 55 98 -1 gilded_blackstone
+fill 54 98 0 56 98 0 gilded_blackstone
+fill 55 98 1 55 98 1 gilded_blackstone
+fill 55 99 -2 55 99 -2 gilded_blackstone
+fill 54 99 -1 56 99 -1 gilded_blackstone
+fill 53 99 0 57 99 0 gilded_blackstone
+fill 54 99 1 56 99 1 gilded_blackstone
+fill 55 99 2 55 99 2 gilded_blackstone
+fill 54 100 -3 56 100 -3 gilded_blackstone
+fill 53 100 -2 57 100 -2 gilded_blackstone
+fill 52 100 -1 58 100 -1 gilded_blackstone
+fill 52 100 0 58 100 0 gilded_blackstone
+fill 52 100 1 58 100 1 gilded_blackstone
+fill 53 100 2 57 100 2 gilded_blackstone
+fill 54 100 3 56 100 3 gilded_blackstone
+fill 54 101 -4 56 101 -4 gilded_blackstone
+fill 52 101 -3 58 101 -3 gilded_blackstone
+fill 52 101 -2 58 101 -2 gilded_blackstone
+fill 51 101 -1 59 101 -1 gilded_blackstone
+fill 51 101 0 59 101 0 gilded_blackstone
+fill 51 101 1 59 101 1 gilded_blackstone
+fill 52 101 2 58 101 2 gilded_blackstone
+fill 52 101 3 58 101 3 gilded_blackstone
+fill 54 101 4 56 101 4 gilded_blackstone
+fill 54 102 -5 56 102 -5 cobbled_deepslate
+fill 52 102 -4 58 102 -4 cobbled_deepslate
+fill 51 102 -3 59 102 -3 cobbled_deepslate
+fill 51 102 -2 59 102 -2 cobbled_deepslate
+fill 50 102 -1 60 102 -1 cobbled_deepslate
+fill 50 102 0 60 102 0 cobbled_deepslate
+fill 50 102 1 60 102 1 cobbled_deepslate
+fill 51 102 2 59 102 2 cobbled_deepslate
+fill 51 102 3 59 102 3 cobbled_deepslate
+fill 52 102 4 58 102 4 cobbled_deepslate
+fill 54 102 5 56 102 5 cobbled_deepslate
+fill 54 103 -6 56 103 -6 cobbled_deepslate
+fill 52 103 -5 58 103 -5 cobbled_deepslate
+fill 51 103 -4 59 103 -4 cobbled_deepslate
+fill 50 103 -3 60 103 -3 cobbled_deepslate
+fill 50 103 -2 60 103 -2 cobbled_deepslate
+fill 49 103 -1 61 103 -1 cobbled_deepslate
+fill 49 103 0 61 103 0 cobbled_deepslate
+fill 49 103 1 61 103 1 cobbled_deepslate
+fill 50 103 2 60 103 2 cobbled_deepslate
+fill 50 103 3 60 103 3 cobbled_deepslate
+fill 51 103 4 59 103 4 cobbled_deepslate
+fill 52 103 5 58 103 5 cobbled_deepslate
+fill 54 103 6 56 103 6 cobbled_deepslate
+fill 52 104 -6 58 104 -6 cobbled_deepslate
+fill 51 104 -5 59 104 -5 cobbled_deepslate
+fill 50 104 -4 60 104 -4 cobbled_deepslate
+fill 49 104 -3 61 104 -3 cobbled_deepslate
+fill 49 104 -2 61 104 -2 cobbled_deepslate
+fill 49 104 -1 61 104 -1 cobbled_deepslate
+fill 49 104 0 61 104 0 cobbled_deepslate
+fill 49 104 1 61 104 1 cobbled_deepslate
+fill 49 104 2 61 104 2 cobbled_deepslate
+fill 49 104 3 61 104 3 cobbled_deepslate
+fill 50 104 4 60 104 4 cobbled_deepslate
+fill 51 104 5 59 104 5 cobbled_deepslate
+fill 52 104 6 58 104 6 cobbled_deepslate
+fill 53 105 -7 57 105 -7 cobbled_deepslate
+fill 51 105 -6 59 105 -6 cobbled_deepslate
+fill 50 105 -5 60 105 -5 cobbled_deepslate
+fill 49 105 -4 61 105 -4 cobbled_deepslate
+fill 49 105 -3 61 105 -3 cobbled_deepslate
+fill 48 105 -2 62 105 -2 cobbled_deepslate
+fill 48 105 -1 62 105 -1 cobbled_deepslate
+fill 48 105 0 62 105 0 cobbled_deepslate
+fill 48 105 1 62 105 1 cobbled_deepslate
+fill 48 105 2 62 105 2 cobbled_deepslate
+fill 49 105 3 61 105 3 cobbled_deepslate
+fill 49 105 4 61 105 4 cobbled_deepslate
+fill 50 105 5 60 105 5 cobbled_deepslate
+fill 51 105 6 59 105 6 cobbled_deepslate
+fill 53 105 7 57 105 7 cobbled_deepslate
+fill 53 106 -8 57 106 -8 cobbled_deepslate
+fill 51 106 -7 59 106 -7 cobbled_deepslate
+fill 50 106 -6 60 106 -6 cobbled_deepslate
+fill 49 106 -5 61 106 -5 cobbled_deepslate
+fill 48 106 -4 62 106 -4 cobbled_deepslate
+fill 48 106 -3 62 106 -3 cobbled_deepslate
+fill 47 106 -2 63 106 -2 cobbled_deepslate
+fill 47 106 -1 63 106 -1 cobbled_deepslate
+fill 47 106 0 63 106 0 cobbled_deepslate
+fill 47 106 1 63 106 1 cobbled_deepslate
+fill 47 106 2 63 106 2 cobbled_deepslate
+fill 48 106 3 62 106 3 cobbled_deepslate
+fill 48 106 4 62 106 4 cobbled_deepslate
+fill 49 106 5 61 106 5 cobbled_deepslate
+fill 50 106 6 60 106 6 cobbled_deepslate
+fill 51 106 7 59 106 7 cobbled_deepslate
+fill 53 106 8 57 106 8 cobbled_deepslate
+fill 51 107 -8 59 107 -8 cobbled_deepslate
+fill 50 107 -7 60 107 -7 cobbled_deepslate
+fill 49 107 -6 61 107 -6 cobbled_deepslate
+fill 48 107 -5 62 107 -5 cobbled_deepslate
+fill 47 107 -4 63 107 -4 cobbled_deepslate
+fill 47 107 -3 63 107 -3 cobbled_deepslate
+fill 47 107 -2 63 107 -2 cobbled_deepslate
+fill 47 107 -1 63 107 -1 cobbled_deepslate
+fill 47 107 0 63 107 0 cobbled_deepslate
+fill 47 107 1 63 107 1 cobbled_deepslate
+fill 47 107 2 63 107 2 cobbled_deepslate
+fill 47 107 3 63 107 3 cobbled_deepslate
+fill 47 107 4 63 107 4 cobbled_deepslate
+fill 48 107 5 62 107 5 cobbled_deepslate
+fill 49 107 6 61 107 6 cobbled_deepslate
+fill 50 107 7 60 107 7 cobbled_deepslate
+fill 51 107 8 59 107 8 cobbled_deepslate
+fill 52 108 -9 58 108 -9 deepslate
+fill 50 108 -8 60 108 -8 deepslate
+fill 49 108 -7 61 108 -7 deepslate
+fill 48 108 -6 62 108 -6 deepslate
+fill 47 108 -5 63 108 -5 deepslate
+fill 47 108 -4 63 108 -4 deepslate
+fill 46 108 -3 64 108 -3 deepslate
+fill 46 108 -2 64 108 -2 deepslate
+fill 46 108 -1 64 108 -1 deepslate
+fill 46 108 0 64 108 0 deepslate
+fill 46 108 1 64 108 1 deepslate
+fill 46 108 2 64 108 2 deepslate
+fill 46 108 3 64 108 3 deepslate
+fill 47 108 4 63 108 4 deepslate
+fill 47 108 5 63 108 5 deepslate
+fill 48 108 6 62 108 6 deepslate
+fill 49 108 7 61 108 7 deepslate
+fill 50 108 8 60 108 8 deepslate
+fill 52 108 9 58 108 9 deepslate
+fill 54 109 -10 56 109 -10 deepslate
+fill 51 109 -9 59 109 -9 deepslate
+fill 49 109 -8 61 109 -8 deepslate
+fill 48 109 -7 62 109 -7 deepslate
+fill 47 109 -6 63 109 -6 deepslate
+fill 47 109 -5 63 109 -5 deepslate
+fill 46 109 -4 64 109 -4 deepslate
+fill 46 109 -3 64 109 -3 deepslate
+fill 46 109 -2 64 109 -2 deepslate
+fill 45 109 -1 65 109 -1 deepslate
+fill 45 109 0 65 109 0 deepslate
+fill 45 109 1 65 109 1 deepslate
+fill 46 109 2 64 109 2 deepslate
+fill 46 109 3 64 109 3 deepslate
+fill 46 109 4 64 109 4 deepslate
+fill 47 109 5 63 109 5 deepslate
+fill 47 109 6 63 109 6 deepslate
+fill 48 109 7 62 109 7 deepslate
+fill 49 109 8 61 109 8 deepslate
+fill 51 109 9 59 109 9 deepslate
+fill 54 109 10 56 109 10 deepslate
+fill 51 110 -10 59 110 -10 deepslate
+fill 50 110 -9 60 110 -9 deepslate
+fill 48 110 -8 62 110 -8 deepslate
+fill 47 110 -7 63 110 -7 deepslate
+fill 47 110 -6 63 110 -6 deepslate
+fill 46 110 -5 64 110 -5 deepslate
+fill 45 110 -4 65 110 -4 deepslate
+fill 45 110 -3 65 110 -3 deepslate
+fill 45 110 -2 65 110 -2 deepslate
+fill 45 110 -1 65 110 -1 deepslate
+fill 45 110 0 65 110 0 deepslate
+fill 45 110 1 65 110 1 deepslate
+fill 45 110 2 65 110 2 deepslate
+fill 45 110 3 65 110 3 deepslate
+fill 45 110 4 65 110 4 deepslate
+fill 46 110 5 64 110 5 deepslate
+fill 47 110 6 63 110 6 deepslate
+fill 47 110 7 63 110 7 deepslate
+fill 48 110 8 62 110 8 deepslate
+fill 50 110 9 60 110 9 deepslate
+fill 51 110 10 59 110 10 deepslate
+fill 53 111 -11 57 111 -11 deepslate
+fill 50 111 -10 60 111 -10 deepslate
+fill 49 111 -9 61 111 -9 deepslate
+fill 47 111 -8 63 111 -8 deepslate
+fill 47 111 -7 63 111 -7 deepslate
+fill 46 111 -6 64 111 -6 deepslate
+fill 45 111 -5 65 111 -5 deepslate
+fill 45 111 -4 65 111 -4 deepslate
+fill 45 111 -3 65 111 -3 deepslate
+fill 44 111 -2 66 111 -2 deepslate
+fill 44 111 -1 66 111 -1 deepslate
+fill 44 111 0 66 111 0 deepslate
+fill 44 111 1 66 111 1 deepslate
+fill 44 111 2 66 111 2 deepslate
+fill 45 111 3 65 111 3 deepslate
+fill 45 111 4 65 111 4 deepslate
+fill 45 111 5 65 111 5 deepslate
+fill 46 111 6 64 111 6 deepslate
+fill 47 111 7 63 111 7 deepslate
+fill 47 111 8 63 111 8 deepslate
+fill 49 111 9 61 111 9 deepslate
+fill 50 111 10 60 111 10 deepslate
+fill 53 111 11 57 111 11 deepslate
+fill 51 112 -11 59 112 -11 deepslate
+fill 49 112 -10 61 112 -10 deepslate
+fill 48 112 -9 62 112 -9 deepslate
+fill 47 112 -8 63 112 -8 deepslate
+fill 46 112 -7 64 112 -7 deepslate
+fill 45 112 -6 65 112 -6 deepslate
+fill 45 112 -5 65 112 -5 deepslate
+fill 44 112 -4 66 112 -4 deepslate
+fill 44 112 -3 66 112 -3 deepslate
+fill 44 112 -2 66 112 -2 deepslate
+fill 44 112 -1 66 112 -1 deepslate
+fill 44 112 0 66 112 0 deepslate
+fill 44 112 1 66 112 1 deepslate
+fill 44 112 2 66 112 2 deepslate
+fill 44 112 3 66 112 3 deepslate
+fill 44 112 4 66 112 4 deepslate
+fill 45 112 5 65 112 5 deepslate
+fill 45 112 6 65 112 6 deepslate
+fill 46 112 7 64 112 7 deepslate
+fill 47 112 8 63 112 8 deepslate
+fill 48 112 9 62 112 9 deepslate
+fill 49 112 10 61 112 10 deepslate
+fill 51 112 11 59 112 11 deepslate
+fill 52 113 -12 58 113 -12 deepslate
+fill 50 113 -11 60 113 -11 deepslate
+fill 48 113 -10 62 113 -10 deepslate
+fill 47 113 -9 63 113 -9 deepslate
+fill 46 113 -8 64 113 -8 deepslate
+fill 45 113 -7 65 113 -7 deepslate
+fill 45 113 -6 65 113 -6 deepslate
+fill 44 113 -5 66 113 -5 deepslate
+fill 44 113 -4 66 113 -4 deepslate
+fill 43 113 -3 67 113 -3 deepslate
+fill 43 113 -2 67 113 -2 deepslate
+fill 43 113 -1 67 113 -1 deepslate
+fill 43 113 0 67 113 0 deepslate
+fill 43 113 1 67 113 1 deepslate
+fill 43 113 2 67 113 2 deepslate
+fill 43 113 3 67 113 3 deepslate
+fill 44 113 4 66 113 4 deepslate
+fill 44 113 5 66 113 5 deepslate
+fill 45 113 6 65 113 6 deepslate
+fill 45 113 7 65 113 7 deepslate
+fill 46 113 8 64 113 8 deepslate
+fill 47 113 9 63 113 9 deepslate
+fill 48 113 10 62 113 10 deepslate
+fill 50 113 11 60 113 11 deepslate
+fill 52 113 12 58 113 12 deepslate
+fill 55 114 -13 55 114 -13 deepslate
+fill 50 114 -12 60 114 -12 deepslate
+fill 49 114 -11 61 114 -11 deepslate
+fill 47 114 -10 63 114 -10 deepslate
+fill 46 114 -9 64 114 -9 deepslate
+fill 45 114 -8 65 114 -8 deepslate
+fill 45 114 -7 65 114 -7 deepslate
+fill 44 114 -6 66 114 -6 deepslate
+fill 43 114 -5 67 114 -5 deepslate
+fill 43 114 -4 67 114 -4 deepslate
+fill 43 114 -3 67 114 -3 deepslate
+fill 43 114 -2 67 114 -2 deepslate
+fill 43 114 -1 67 114 -1 deepslate
+fill 42 114 0 68 114 0 deepslate
+fill 43 114 1 67 114 1 deepslate
+fill 43 114 2 67 114 2 deepslate
+fill 43 114 3 67 114 3 deepslate
+fill 43 114 4 67 114 4 deepslate
+fill 43 114 5 67 114 5 deepslate
+fill 44 114 6 66 114 6 deepslate
+fill 45 114 7 65 114 7 deepslate
+fill 45 114 8 65 114 8 deepslate
+fill 46 114 9 64 114 9 deepslate
+fill 47 114 10 63 114 10 deepslate
+fill 49 114 11 61 114 11 deepslate
+fill 50 114 12 60 114 12 deepslate
+fill 55 114 13 55 114 13 deepslate
+fill 52 115 -13 58 115 -13 deepslate
+fill 49 115 -12 61 115 -12 deepslate
+fill 48 115 -11 62 115 -11 deepslate
+fill 46 115 -10 64 115 -10 deepslate
+fill 45 115 -9 65 115 -9 deepslate
+fill 45 115 -8 65 115 -8 deepslate
+fill 44 115 -7 66 115 -7 deepslate
+fill 43 115 -6 67 115 -6 deepslate
+fill 43 115 -5 67 115 -5 deepslate
+fill 43 115 -4 67 115 -4 deepslate
+fill 42 115 -3 68 115 -3 deepslate
+fill 42 115 -2 68 115 -2 deepslate
+fill 42 115 -1 68 115 -1 deepslate
+fill 42 115 0 68 115 0 deepslate
+fill 42 115 1 68 115 1 deepslate
+fill 42 115 2 68 115 2 deepslate
+fill 42 115 3 68 115 3 deepslate
+fill 43 115 4 67 115 4 deepslate
+fill 43 115 5 67 115 5 deepslate
+fill 43 115 6 67 115 6 deepslate
+fill 44 115 7 66 115 7 deepslate
+fill 45 115 8 65 115 8 deepslate
+fill 45 115 9 65 115 9 deepslate
+fill 46 115 10 64 115 10 deepslate
+fill 48 115 11 62 115 11 deepslate
+fill 49 115 12 61 115 12 deepslate
+fill 52 115 13 58 115 13 deepslate
+fill 54 116 -14 56 116 -14 stone
+fill 50 116 -13 60 116 -13 stone
+fill 48 116 -12 62 116 -12 stone
+fill 47 116 -11 63 116 -11 stone
+fill 46 116 -10 64 116 -10 stone
+fill 45 116 -9 65 116 -9 stone
+fill 44 116 -8 66 116 -8 stone
+fill 43 116 -7 67 116 -7 stone
+fill 43 116 -6 67 116 -6 stone
+fill 42 116 -5 68 116 -5 stone
+fill 42 116 -4 68 116 -4 stone
+fill 42 116 -3 68 116 -3 stone
+fill 42 116 -2 68 116 -2 stone
+fill 41 116 -1 69 116 -1 stone
+fill 41 116 0 69 116 0 stone
+fill 41 116 1 69 116 1 stone
+fill 42 116 2 68 116 2 stone
+fill 42 116 3 68 116 3 stone
+fill 42 116 4 68 116 4 stone
+fill 42 116 5 68 116 5 stone
+fill 43 116 6 67 116 6 stone
+fill 43 116 7 67 116 7 stone
+fill 44 116 8 66 116 8 stone
+fill 45 116 9 65 116 9 stone
+fill 46 116 10 64 116 10 stone
+fill 47 116 11 63 116 11 stone
+fill 48 116 12 62 116 12 stone
+fill 50 116 13 60 116 13 stone
+fill 54 116 14 56 116 14 stone
+fill 52 117 -14 58 117 -14 stone
+fill 49 117 -13 61 117 -13 stone
+fill 47 117 -12 63 117 -12 stone
+fill 46 117 -11 64 117 -11 stone
+fill 45 117 -10 65 117 -10 stone
+fill 44 117 -9 66 117 -9 stone
+fill 43 117 -8 67 117 -8 stone
+fill 43 117 -7 67 117 -7 stone
+fill 42 117 -6 68 117 -6 stone
+fill 42 117 -5 68 117 -5 stone
+fill 42 117 -4 68 117 -4 stone
+fill 41 117 -3 69 117 -3 stone
+fill 41 117 -2 69 117 -2 stone
+fill 41 117 -1 69 117 -1 stone
+fill 41 117 0 69 117 0 stone
+fill 41 117 1 69 117 1 stone
+fill 41 117 2 69 117 2 stone
+fill 41 117 3 69 117 3 stone
+fill 42 117 4 68 117 4 stone
+fill 42 117 5 68 117 5 stone
+fill 42 117 6 68 117 6 stone
+fill 43 117 7 67 117 7 stone
+fill 43 117 8 67 117 8 stone
+fill 44 117 9 66 117 9 stone
+fill 45 117 10 65 117 10 stone
+fill 46 117 11 64 117 11 stone
+fill 47 117 12 63 117 12 stone
+fill 49 117 13 61 117 13 stone
+fill 52 117 14 58 117 14 stone
+fill 54 118 -15 56 118 -15 dirt
+fill 50 118 -14 60 118 -14 dirt
+fill 48 118 -13 62 118 -13 dirt
+fill 46 118 -12 64 118 -12 dirt
+fill 45 118 -11 65 118 -11 dirt
+fill 44 118 -10 66 118 -10 dirt
+fill 43 118 -9 67 118 -9 dirt
+fill 43 118 -8 67 118 -8 dirt
+fill 42 118 -7 68 118 -7 dirt
+fill 42 118 -6 68 118 -6 dirt
+fill 41 118 -5 69 118 -5 dirt
+fill 41 118 -4 69 118 -4 dirt
+fill 41 118 -3 69 118 -3 dirt
+fill 41 118 -2 69 118 -2 dirt
+fill 40 118 -1 70 118 -1 dirt
+fill 40 118 0 70 118 0 dirt
+fill 40 118 1 70 118 1 dirt
+fill 41 118 2 69 118 2 dirt
+fill 41 118 3 69 118 3 dirt
+fill 41 118 4 69 118 4 dirt
+fill 41 118 5 69 118 5 dirt
+fill 42 118 6 68 118 6 dirt
+fill 42 118 7 68 118 7 dirt
+fill 43 118 8 67 118 8 dirt
+fill 43 118 9 67 118 9 dirt
+fill 44 118 10 66 118 10 dirt
+fill 45 118 11 65 118 11 dirt
+fill 46 118 12 64 118 12 dirt
+fill 48 118 13 62 118 13 dirt
+fill 50 118 14 60 118 14 dirt
+fill 54 118 15 56 118 15 dirt
+fill 52 119 -15 58 119 -15 dirt
+fill 49 119 -14 61 119 -14 dirt
+fill 47 119 -13 63 119 -13 dirt
+fill 46 119 -12 64 119 -12 dirt
+fill 45 119 -11 65 119 -11 dirt
+fill 44 119 -10 66 119 -10 dirt
+fill 43 119 -9 67 119 -9 dirt
+fill 42 119 -8 68 119 -8 dirt
+fill 42 119 -7 68 119 -7 dirt
+fill 41 119 -6 69 119 -6 dirt
+fill 41 119 -5 69 119 -5 dirt
+fill 41 119 -4 69 119 -4 dirt
+fill 40 119 -3 70 119 -3 dirt
+fill 40 119 -2 70 119 -2 dirt
+fill 40 119 -1 70 119 -1 dirt
+fill 40 119 0 70 119 0 dirt
+fill 40 119 1 70 119 1 dirt
+fill 40 119 2 70 119 2 dirt
+fill 40 119 3 70 119 3 dirt
+fill 41 119 4 69 119 4 dirt
+fill 41 119 5 69 119 5 dirt
+fill 41 119 6 69 119 6 dirt
+fill 42 119 7 68 119 7 dirt
+fill 42 119 8 68 119 8 dirt
+fill 43 119 9 67 119 9 dirt
+fill 44 119 10 66 119 10 dirt
+fill 45 119 11 65 119 11 dirt
+fill 46 119 12 64 119 12 dirt
+fill 47 119 13 63 119 13 dirt
+fill 49 119 14 61 119 14 dirt
+fill 52 119 15 58 119 15 dirt
+fill 55 120 -16 55 120 -16 grass_block
+fill 50 120 -15 60 120 -15 grass_block
+fill 48 120 -14 62 120 -14 grass_block
+fill 46 120 -13 64 120 -13 grass_block
+fill 45 120 -12 65 120 -12 grass_block
+fill 44 120 -11 66 120 -11 grass_block
+fill 43 120 -10 67 120 -10 grass_block
+fill 42 120 -9 68 120 -9 grass_block
+fill 42 120 -8 68 120 -8 grass_block
+fill 41 120 -7 69 120 -7 grass_block
+fill 41 120 -6 69 120 -6 grass_block
+fill 40 120 -5 70 120 -5 grass_block
+fill 40 120 -4 70 120 -4 grass_block
+fill 40 120 -3 70 120 -3 grass_block
+fill 40 120 -2 70 120 -2 grass_block
+fill 40 120 -1 70 120 -1 grass_block
+fill 39 120 0 71 120 0 grass_block
+fill 40 120 1 70 120 1 grass_block
+fill 40 120 2 70 120 2 grass_block
+fill 40 120 3 70 120 3 grass_block
+fill 40 120 4 70 120 4 grass_block
+fill 40 120 5 70 120 5 grass_block
+fill 41 120 6 69 120 6 grass_block
+fill 41 120 7 69 120 7 grass_block
+fill 42 120 8 68 120 8 grass_block
+fill 42 120 9 68 120 9 grass_block
+fill 43 120 10 67 120 10 grass_block
+fill 44 120 11 66 120 11 grass_block
+fill 45 120 12 65 120 12 grass_block
+fill 46 120 13 64 120 13 grass_block
+fill 48 120 14 62 120 14 grass_block
+fill 50 120 15 60 120 15 grass_block
+fill 55 120 16 55 120 16 grass_block
+
+# 2. Mặt Sàn Thư Thái Zen Sakura & Hồ Cá Koi Phát Sáng (Y=120)
+fill 55 120 -15 55 120 -15 cherry_planks
+fill 50 120 -14 60 120 -14 cherry_planks
+fill 48 120 -13 62 120 -13 cherry_planks
+fill 46 120 -12 64 120 -12 cherry_planks
+fill 45 120 -11 65 120 -11 cherry_planks
+fill 44 120 -10 66 120 -10 cherry_planks
+fill 43 120 -9 67 120 -9 cherry_planks
+fill 43 120 -8 67 120 -8 cherry_planks
+fill 42 120 -7 68 120 -7 cherry_planks
+fill 42 120 -6 68 120 -6 cherry_planks
+fill 41 120 -5 69 120 -5 cherry_planks
+fill 41 120 -4 69 120 -4 cherry_planks
+fill 41 120 -3 69 120 -3 cherry_planks
+fill 41 120 -2 69 120 -2 cherry_planks
+fill 41 120 -1 69 120 -1 cherry_planks
+fill 40 120 0 70 120 0 cherry_planks
+fill 41 120 1 69 120 1 cherry_planks
+fill 41 120 2 69 120 2 cherry_planks
+fill 41 120 3 69 120 3 cherry_planks
+fill 41 120 4 69 120 4 cherry_planks
+fill 41 120 5 69 120 5 cherry_planks
+fill 42 120 6 68 120 6 cherry_planks
+fill 42 120 7 68 120 7 cherry_planks
+fill 43 120 8 67 120 8 cherry_planks
+fill 43 120 9 67 120 9 cherry_planks
+fill 44 120 10 66 120 10 cherry_planks
+fill 45 120 11 65 120 11 cherry_planks
+fill 46 120 12 64 120 12 cherry_planks
+fill 48 120 13 62 120 13 cherry_planks
+fill 50 120 14 60 120 14 cherry_planks
+fill 55 120 15 55 120 15 cherry_planks
+fill 55 120 -12 55 120 -12 moss_block
+fill 51 120 -11 59 120 -11 moss_block
+fill 49 120 -10 61 120 -10 moss_block
+fill 48 120 -9 62 120 -9 moss_block
+fill 47 120 -8 63 120 -8 moss_block
+fill 46 120 -7 64 120 -7 moss_block
+fill 45 120 -6 65 120 -6 moss_block
+fill 45 120 -5 65 120 -5 moss_block
+fill 44 120 -4 66 120 -4 moss_block
+fill 44 120 -3 66 120 -3 moss_block
+fill 44 120 -2 66 120 -2 moss_block
+fill 44 120 -1 66 120 -1 moss_block
+fill 43 120 0 67 120 0 moss_block
+fill 44 120 1 66 120 1 moss_block
+fill 44 120 2 66 120 2 moss_block
+fill 44 120 3 66 120 3 moss_block
+fill 44 120 4 66 120 4 moss_block
+fill 45 120 5 65 120 5 moss_block
+fill 45 120 6 65 120 6 moss_block
+fill 46 120 7 64 120 7 moss_block
+fill 47 120 8 63 120 8 moss_block
+fill 48 120 9 62 120 9 moss_block
+fill 49 120 10 61 120 10 moss_block
+fill 51 120 11 59 120 11 moss_block
+fill 55 120 12 55 120 12 moss_block
+fill 55 120 -8 55 120 -8 smooth_quartz
+fill 52 120 -7 58 120 -7 smooth_quartz
+fill 50 120 -6 60 120 -6 smooth_quartz
+fill 49 120 -5 61 120 -5 smooth_quartz
+fill 49 120 -4 61 120 -4 smooth_quartz
+fill 48 120 -3 62 120 -3 smooth_quartz
+fill 48 120 -2 62 120 -2 smooth_quartz
+fill 48 120 -1 62 120 -1 smooth_quartz
+fill 47 120 0 63 120 0 smooth_quartz
+fill 48 120 1 62 120 1 smooth_quartz
+fill 48 120 2 62 120 2 smooth_quartz
+fill 48 120 3 62 120 3 smooth_quartz
+fill 49 120 4 61 120 4 smooth_quartz
+fill 49 120 5 61 120 5 smooth_quartz
+fill 50 120 6 60 120 6 smooth_quartz
+fill 52 120 7 58 120 7 smooth_quartz
+fill 55 120 8 55 120 8 smooth_quartz
+# Hồ cá Koi phát sáng tại tâm (X=55, Z=0, R=5)
+fill 55 119 -5 55 119 -5 sea_lantern
+fill 52 119 -4 58 119 -4 sea_lantern
+fill 51 119 -3 59 119 -3 sea_lantern
+fill 51 119 -2 59 119 -2 sea_lantern
+fill 51 119 -1 59 119 -1 sea_lantern
+fill 50 119 0 60 119 0 sea_lantern
+fill 51 119 1 59 119 1 sea_lantern
+fill 51 119 2 59 119 2 sea_lantern
+fill 51 119 3 59 119 3 sea_lantern
+fill 52 119 4 58 119 4 sea_lantern
+fill 55 119 5 55 119 5 sea_lantern
+fill 55 120 -4 55 120 -4 water
+fill 53 120 -3 57 120 -3 water
+fill 52 120 -2 58 120 -2 water
+fill 52 120 -1 58 120 -1 water
+fill 51 120 0 59 120 0 water
+fill 52 120 1 58 120 1 water
+fill 52 120 2 58 120 2 water
+fill 53 120 3 57 120 3 water
+fill 55 120 4 55 120 4 water
+setblock 55 121 0 lily_pad
+setblock 54 121 1 lily_pad
+setblock 56 121 -1 lily_pad
+fill 47 121 -12 63 121 12 pink_petals[flower_amount=3] replace air
+
+# Cầu Gỗ Cong Zen bắc qua hồ (X=52..58, Z=0)
+fill 52 121 0 58 121 0 cherry_slab[type=bottom]
+fill 54 121 0 56 121 0 cherry_slab[type=top]
+fill 52 122 -1 58 122 -1 cherry_fence
+fill 52 122 1 58 122 1 cherry_fence
+
+# 3. Năm Cổng Torii Thần Đạo (5 Physical Torii Portals)
+# Torii 1: Cổng Vực Thẳm Boss (world_boss) tại X=55, Z=-11
+fill 53 121 -11 53 125 -11 cherry_wood
+fill 57 121 -11 57 125 -11 cherry_wood
+fill 52 124 -11 58 124 -11 deepslate_tile_slab[type=bottom]
+fill 51 125 -11 59 125 -11 cherry_wood
+fill 50 126 -11 60 126 -11 deepslate_tile_stairs[facing=south,half=top]
+setblock 53 123 -11 soul_lantern[hanging=true]
+setblock 57 123 -11 soul_lantern[hanging=true]
+setblock 55 120 -11 crying_obsidian
+setblock 55 121 -11 polished_blackstone_pressure_plate
+setblock 55 123 -11 oak_wall_sign[facing=south]{front_text:{has_glowing_text:1b,messages:['{"text":"[ CỔNG TORII 1 ]","color":"dark_red","bold":true}','{"text":"Vực Thẳm Boss","color":"gold"}','{"text":"Bước vào cổng","color":"yellow"}','{"text":"Sang world_boss","color":"red","bold":true}']}}
+summon text_display 55.5 124.5 -10.5 {text:'{"text":"👹 VỰC THẲM ĐẤU TRƯỜNG BOSS 👹","color":"red","bold":true}',billboard:"vertical",transformation:{scale:[0.8f,0.8f,0.8f],translation:[0f,0f,0f],rotation:[0f,0f,0f,1f]},Tags:["portal_display"]}
+# Torii 2: Cổng Nông Trại & Hầm Quái (world_farm) tại X=45, Z=-7
+fill 45 121 -9 45 125 -9 cherry_wood
+fill 45 121 -5 45 125 -5 cherry_wood
+fill 45 124 -10 45 124 -4 cherry_slab[type=bottom]
+fill 45 125 -11 45 125 -3 cherry_wood
+fill 45 126 -12 45 126 -2 deepslate_tile_stairs[facing=east,half=top]
+setblock 45 123 -9 lantern[hanging=true]
+setblock 45 123 -5 lantern[hanging=true]
+setblock 45 120 -7 moss_block
+setblock 45 121 -7 stone_pressure_plate
+setblock 45 123 -7 oak_wall_sign[facing=east]{front_text:{has_glowing_text:1b,messages:['{"text":"[ CỔNG TORII 2 ]","color":"green","bold":true}','{"text":"Ruộng Lúa & Quái","color":"dark_green"}','{"text":"Bước vào cổng","color":"yellow"}','{"text":"Sang world_farm","color":"green","bold":true}']}}
+summon text_display 45.5 124.5 -6.5 {text:'{"text":"🌾 VƯỜN SAKURA & HẦM NGỤC 🌾","color":"green","bold":true}',billboard:"vertical",transformation:{scale:[0.8f,0.8f,0.8f],translation:[0f,0f,0f],rotation:[0f,0f,0f,1f]},Tags:["portal_display"]}
+# Torii 3: Cổng Biển Hồ Trên Mây (world_cauca) tại X=45, Z=7
+fill 45 121 5 45 125 5 cherry_wood
+fill 45 121 9 45 125 9 cherry_wood
+fill 45 124 4 45 124 10 prismarine_slab[type=bottom]
+fill 45 125 3 45 125 11 cherry_wood
+fill 45 126 2 45 126 12 deepslate_tile_stairs[facing=east,half=top]
+setblock 45 123 5 lantern[hanging=true]
+setblock 45 123 9 lantern[hanging=true]
+setblock 45 120 7 dark_prismarine
+setblock 45 121 7 stone_pressure_plate
+setblock 45 123 7 oak_wall_sign[facing=east]{front_text:{has_glowing_text:1b,messages:['{"text":"[ CỔNG TORII 3 ]","color":"aqua","bold":true}','{"text":"Thiên Đường Câu Cá","color":"dark_aqua"}','{"text":"Bước vào cổng","color":"yellow"}','{"text":"Sang world_cauca","color":"aqua","bold":true}']}}
+summon text_display 45.5 124.5 7.5 {text:'{"text":"🎣 BIỂN HỒ TRÊN MÂY CELESTIAL 🎣","color":"aqua","bold":true}',billboard:"vertical",transformation:{scale:[0.8f,0.8f,0.8f],translation:[0f,0f,0f],rotation:[0f,0f,0f,1f]},Tags:["portal_display"]}
+# Torii 4: Cổng Tháp Phong Lôi (world_parkour) tại X=55, Z=11
+fill 53 121 11 53 125 11 cherry_wood
+fill 57 121 11 57 125 11 cherry_wood
+fill 52 124 11 58 124 11 smooth_quartz_slab[type=bottom]
+fill 51 125 11 59 125 11 cherry_wood
+fill 50 126 11 60 126 11 deepslate_tile_stairs[facing=north,half=top]
+setblock 53 123 11 lantern[hanging=true]
+setblock 57 123 11 lantern[hanging=true]
+setblock 55 120 11 smooth_quartz
+setblock 55 121 11 light_weighted_pressure_plate
+setblock 55 123 11 oak_wall_sign[facing=north]{front_text:{has_glowing_text:1b,messages:['{"text":"[ CỔNG TORII 4 ]","color":"yellow","bold":true}','{"text":"50 Tầng Thử Thách","color":"gold"}','{"text":"Bước vào cổng","color":"aqua"}','{"text":"Sang world_parkour","color":"yellow","bold":true}']}}
+summon text_display 55.5 124.5 11.5 {text:'{"text":"🏃 SIÊU THÁP THỬ THÁCH PHONG LÔI 🏃","color":"yellow","bold":true}',billboard:"vertical",transformation:{scale:[0.8f,0.8f,0.8f],translation:[0f,0f,0f],rotation:[0f,0f,0f,1f]},Tags:["portal_display"]}
+# Torii 5: Cổng Hoàng Gia Las Vegas (world_casino) tại X=66, Z=0
+fill 66 121 -2 66 125 -2 cherry_wood
+fill 66 121 2 66 125 2 cherry_wood
+fill 66 124 -3 66 124 3 gold_block
+fill 66 125 -4 66 125 4 cherry_wood
+fill 66 126 -5 66 126 5 deepslate_tile_stairs[facing=west,half=top]
+setblock 66 127 0 beacon
+setblock 66 123 -2 soul_lantern[hanging=true]
+setblock 66 123 2 soul_lantern[hanging=true]
+setblock 66 120 0 gilded_blackstone
+setblock 66 121 0 heavy_weighted_pressure_plate
+setblock 66 123 0 oak_wall_sign[facing=west]{front_text:{has_glowing_text:1b,messages:['{"text":"[ CỔNG TORII 5 ]","color":"gold","bold":true}','{"text":"Coinflip, Vé Số","color":"yellow"}','{"text":"Bước vào cổng","color":"aqua"}','{"text":"Sang world_casino","color":"gold","bold":true}']}}
+summon text_display 65.5 124.5 0.5 {text:'{"text":"🎰 CUNG ĐIỆN HOÀNG GIA LAS VEGAS 🎰","color":"gold","bold":true}',billboard:"vertical",transformation:{scale:[0.8f,0.8f,0.8f],translation:[0f,0f,0f],rotation:[0f,0f,0f,1f]},Tags:["portal_display"]}
+
+# 4. Bonsai Cổ Thụ Sakura & Đèn Đá Vườn Thiền
+fill 63 121 -9 63 124 -9 cherry_log
+fill 61 124 -11 65 126 -7 cherry_leaves
+fill 62 126 -10 64 127 -8 flowering_azalea_leaves
+setblock 63 123 -8 lantern[hanging=true]
+fill 63 121 9 63 124 9 cherry_log
+fill 61 124 7 65 126 11 cherry_leaves
+fill 62 126 8 64 127 10 flowering_azalea_leaves
+setblock 63 123 10 lantern[hanging=true]
+
+# 5. Bệ Phóng Launch Pad Về Trung Tâm (43, 120, 0)
+setblock 43 120 0 lodestone
+setblock 43 121 0 heavy_weighted_pressure_plate
+setblock 43 120 -1 sea_lantern
+setblock 43 120 1 sea_lantern
+setblock 42 120 0 sea_lantern
+setblock 44 120 0 sea_lantern
+summon text_display 42.5 122.5 0.5 {text:'{"text":"◀ PHÓNG VỀ ĐẢO TRUNG TÂM ◀","color":"gold","bold":true}',billboard:"vertical",transformation:{scale:[0.8f,0.8f,0.8f],translation:[0f,0f,0f],rotation:[0f,0f,0f,1f]},Tags:["portal_display"]}

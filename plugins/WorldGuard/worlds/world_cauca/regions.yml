@@ -1,0 +1,25 @@
+regions:
+  __global__:
+    members: {}
+    owners: {}
+    type: global
+    priority: 0
+    flags:
+      build: deny
+  cauca_world:
+    min: {x: -500, y: -64, z: -500}
+    max: {x: 500, y: 319, z: 500}
+    members: {}
+    owners: {}
+    flags:
+      build: deny
+      block-break: deny
+      block-place: deny
+      mob-spawning: deny
+      use: allow
+      interact: allow
+      pvp: deny
+      fall-damage: deny
+    type: cuboid
+    priority: 10
+version: 7

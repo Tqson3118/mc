@@ -1,0 +1,41 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: true
+muted: false
+jailed: false
+ip-address: 26.208.106.68
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1791739620604
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1791741200515
+  login: 1791730361408
+  kits:
+    tanthu: 1791728612843
+money: '989.37'
+last-account-name: hieudzvc
+lastlocation:
+  world: dd8f2722-02c1-487c-9407-8de6469b78a5
+  world-name: world
+  x: 34.39048418496538
+  y: 116.0
+  z: -34.3371864094246
+  yaw: 161.2501678466797
+  pitch: 28.350000381469727
+logoutlocation:
+  world: b04c88c0-b026-4529-840e-516ca663ec98
+  world-name: IridiumSkyblock
+  x: -6.497993703197451
+  y: 78.0
+  z: 2.489373254576903
+  yaw: -124.65625
+  pitch: -39.30009078979492

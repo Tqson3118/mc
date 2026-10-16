@@ -1,0 +1,60 @@
+warp:
+  help:
+    description: teleportirati se na warp znak igrača
+    parameters: <ime igrača>
+warps:
+  deactivate: <red>Stari warp znak deaktiviran!</red>
+  error:
+    does-not-exist: <red>Ups! Taj warp više ne postoji!</red>
+    no-permission: <red>Nemate dozvolu za to!</red>
+    no-remove: <red>Ne možete ukloniti taj znak!</red>
+    no-warps-yet: <red>Još nema dostupnih warpova</red>
+    not-enough-level: <red>Razina vašeg otoka nije dovoljno visoka!</red>
+    not-on-island: <red>Morate biti na svom otoku!</red>
+    not-safe: <red>Taj warp nije siguran!</red>
+    your-level-is: <red>Razina vašeg otoka je samo [level] i mora biti viša od [required].
+      Pokrenite naredbu razine.</red>
+    not-correct-rank: <red>Nemate odgovarajući rang za postavljanje warpa!</red>
+  help:
+    description: otvori panel warpova
+  player-warped: <dark_green>[name] se teleportirao na vaš [gamemode] warp znak!</dark_green>
+  sign-removed: <red>Warp znak uklonjen!</red>
+  success: <green>Uspjeh!</green>
+  warpTip: <gold>Postavi warp znak s [text] na vrhu</gold>
+  warpToPlayersSign: <gold>Teleportiranje na znak igrača [player]</gold>
+  gui:
+    titles:
+      warp-title: <black><bold>Warp Znakovi</bold></black>
+    buttons:
+      previous:
+        name: <white><bold>Prethodna stranica</bold></white>
+        description: <gray>Prebaci na stranicu [number]</gray>
+      next:
+        name: <white><bold>Sljedeća stranica</bold></white>
+        description: <gray>Prebaci na stranicu [number]</gray>
+      warp:
+        name: <white><bold>[name]</bold></white>
+        description: '[sign_text]'
+      random:
+        name: <white><bold>Nasumični Warp</bold></white>
+        description: <gray>Hmm, gdje ću se pojaviti?</gray>
+    tips:
+      click-to-previous: <yellow>Kliknite </yellow><gray>za prikaz prethodne stranice.</gray>
+      click-to-next: <yellow>Kliknite </yellow><gray>za prikaz sljedeće stranice.</gray>
+      click-to-warp: <yellow>Kliknite </yellow><gray>za teleportaciju.</gray>
+  conversations:
+    prefix: '<gold><bold>[BentoBox]: </bold></gold><reset>'
+togglewarp:
+  help:
+    description: prebaci warp znak
+  enabled: <green>Vaš warp je sada vidljiv!</green>
+  disabled: <red>Vaš warp je sada skriven!</red>
+  error:
+    no-permission: <red>Nemate dozvolu za to!</red>
+    generic: <red>Dogodila se greška pri prebacivanju vašeg warpa.</red>
+    no-warp: <red>Nemate warp za prebacivanje!</red>
+protection:
+  flags:
+    PLACE_WARP:
+      name: Postavi Warp
+      description: Dozvoli postavljanje warp znaka

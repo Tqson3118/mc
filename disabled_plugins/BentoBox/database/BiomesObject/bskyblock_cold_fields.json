@@ -1,0 +1,20 @@
+{
+  "biome": "SNOWY_TAIGA",
+  "deployed": true,
+  "friendlyName": "<white><bold> Snowy Taiga",
+  "description": [
+    "<gray> Frigid tundra where white",
+    "<gray> rabbits and arctic foxes",
+    "<gray> thrive. Harsh beauty for",
+    "<gray> arctic builders."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: SNOW_BLOCK\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_cold_fields",
+  "unlockLevel": 45,
+  "unlockCost": 0.0,
+  "cost": 500.0,
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

@@ -1,0 +1,184 @@
+menu_title: '&8🌾 &2&lCỬA HÀNG: NÔNG SẢN 🌾'
+open_command: shop_nongsan
+size: 45
+open_requirement:
+  requirements: {}
+
+items:
+  'border':
+    material: LIME_STAINED_GLASS_PANE
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 26
+      - 27
+      - 35
+      - 36
+      - 37
+      - 38
+      - 39
+      - 41
+      - 42
+      - 43
+      - 44
+    display_name: ' '
+
+  'info':
+    material: WHEAT
+    slot: 4
+    display_name: '&a&l🌾 DANH MỤC: NÔNG SẢN'
+    lore:
+      - '&8━━━━━━━━━━━━━━━━━━━━━━━━━'
+      - '&f • &aChuột trái:&f Mua x1'
+      - '&f • &2Shift-Chuột trái:&f Mua x64'
+      - '&f • &eChuột phải:&f Bán x1'
+      - '&f • &6Shift-Chuột phải:&f Bán hết loại đó trong túi'
+      - '&8━━━━━━━━━━━━━━━━━━━━━━━━━'
+
+  'wheat':
+    material: WHEAT
+    slot: 11
+    display_name: '&e&lLúa Mì'
+    lore:
+      - '&7Nông sản cơ bản thu hoạch từ ruộng lúa.'
+      - '&a• Mua: $10 Xu / cái'
+      - '&e• Bán: $5 Xu / cái'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($10)'
+      - '&2▶ Shift-Trái: Mua x64 ($640)'
+      - '&e▶ Chuột phải: Bán x1 ($5)'
+      - '&6▶ Shift-Phải: Bán tất cả trong túi'
+    left_click_commands:
+      - '[player] shop buy wheat 1'
+    shift_left_click_commands:
+      - '[player] shop buy wheat 64'
+    right_click_commands:
+      - '[player] shop sell wheat 1'
+    shift_right_click_commands:
+      - '[player] shop sell wheat all'
+
+  'carrot':
+    material: CARROT
+    slot: 13
+    display_name: '&6&lCà Rốt'
+    lore:
+      - '&7Củ cà rốt tươi ngon bổ dưỡng.'
+      - '&a• Mua: $8 Xu / cái'
+      - '&e• Bán: $4 Xu / cái'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($8)'
+      - '&2▶ Shift-Trái: Mua x64 ($512)'
+      - '&e▶ Chuột phải: Bán x1 ($4)'
+      - '&6▶ Shift-Phải: Bán tất cả trong túi'
+    left_click_commands:
+      - '[player] shop buy carrot 1'
+    shift_left_click_commands:
+      - '[player] shop buy carrot 64'
+    right_click_commands:
+      - '[player] shop sell carrot 1'
+    shift_right_click_commands:
+      - '[player] shop sell carrot all'
+
+  'potato':
+    material: POTATO
+    slot: 15
+    display_name: '&e&lKhoai Tây'
+    lore:
+      - '&7Củ khoai tây giàu tinh bột.'
+      - '&a• Mua: $8 Xu / cái'
+      - '&e• Bán: $4 Xu / cái'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($8)'
+      - '&2▶ Shift-Trái: Mua x64 ($512)'
+      - '&e▶ Chuột phải: Bán x1 ($4)'
+      - '&6▶ Shift-Phải: Bán tất cả trong túi'
+    left_click_commands:
+      - '[player] shop buy potato 1'
+    shift_left_click_commands:
+      - '[player] shop buy potato 64'
+    right_click_commands:
+      - '[player] shop sell potato 1'
+    shift_right_click_commands:
+      - '[player] shop sell potato all'
+
+  'sugar_cane':
+    material: SUGAR_CANE
+    slot: 29
+    display_name: '&a&lMía Đường'
+    lore:
+      - '&7Nguyên liệu chế biến đường & giấy.'
+      - '&a• Mua: $10 Xu / cái'
+      - '&e• Bán: $5 Xu / cái'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($10)'
+      - '&2▶ Shift-Trái: Mua x64 ($640)'
+      - '&e▶ Chuột phải: Bán x1 ($5)'
+      - '&6▶ Shift-Phải: Bán tất cả trong túi'
+    left_click_commands:
+      - '[player] shop buy sugar_cane 1'
+    shift_left_click_commands:
+      - '[player] shop buy sugar_cane 64'
+    right_click_commands:
+      - '[player] shop sell sugar_cane 1'
+    shift_right_click_commands:
+      - '[player] shop sell sugar_cane all'
+
+  'melon':
+    material: MELON_SLICE
+    slot: 31
+    display_name: '&a&lLát Dưa Hấu'
+    lore:
+      - '&7Thanh mát ngọt lành giải khát.'
+      - '&a• Mua: $6 Xu / cái'
+      - '&e• Bán: $3 Xu / cái'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($6)'
+      - '&2▶ Shift-Trái: Mua x64 ($384)'
+      - '&e▶ Chuột phải: Bán x1 ($3)'
+      - '&6▶ Shift-Phải: Bán tất cả trong túi'
+    left_click_commands:
+      - '[player] shop buy melon_slice 1'
+    shift_left_click_commands:
+      - '[player] shop buy melon_slice 64'
+    right_click_commands:
+      - '[player] shop sell melon_slice 1'
+    shift_right_click_commands:
+      - '[player] shop sell melon_slice all'
+
+  'pumpkin':
+    material: PUMPKIN
+    slot: 33
+    display_name: '&6&lQuả Bí Ngô'
+    lore:
+      - '&7Trái bí ngô tròn vàng óng.'
+      - '&a• Mua: $24 Xu / quả'
+      - '&e• Bán: $12 Xu / quả'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($24)'
+      - '&2▶ Shift-Trái: Mua x64 ($1,536)'
+      - '&e▶ Chuột phải: Bán x1 ($12)'
+      - '&6▶ Shift-Phải: Bán tất cả trong túi'
+    left_click_commands:
+      - '[player] shop buy pumpkin 1'
+    shift_left_click_commands:
+      - '[player] shop buy pumpkin 64'
+    right_click_commands:
+      - '[player] shop sell pumpkin 1'
+    shift_right_click_commands:
+      - '[player] shop sell pumpkin all'
+
+  'back':
+    material: ARROW
+    slot: 40
+    display_name: '&e&l◀ QUAY LẠI CỬA HÀNG CHÍNH'
+    left_click_commands:
+      - '[openguimenu] shop'

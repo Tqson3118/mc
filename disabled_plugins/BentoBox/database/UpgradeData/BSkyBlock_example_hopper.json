@@ -1,0 +1,11 @@
+{
+  "uniqueId": "BSkyBlock_example_hopper",
+  "world": "BSkyBlock",
+  "name": "Hopper Limit",
+  "description": [
+    "Example: pay $1000 to increase your hopper limit by 2. Up to 5 times."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: HOPPER\n",
+  "order": 3,
+  "active": true
+}

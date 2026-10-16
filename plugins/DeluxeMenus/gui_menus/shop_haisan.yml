@@ -1,0 +1,134 @@
+menu_title: '&8🐟 &3&lCỬA HÀNG: HẢI SẢN 🐟'
+open_command: shop_haisan
+size: 36
+open_requirement:
+  requirements: {}
+
+items:
+  'border':
+    material: BLUE_STAINED_GLASS_PANE
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 26
+      - 27
+      - 28
+      - 29
+      - 30
+      - 32
+      - 33
+      - 34
+      - 35
+    display_name: ' '
+
+  'info':
+    material: COD
+    slot: 4
+    display_name: '&3&l🐟 DANH MỤC: HẢI SẢN & ĐỒ CÂU'
+    lore:
+      - '&8━━━━━━━━━━━━━━━━━━━━━━━━━'
+      - '&f • &aChuột trái:&f Mua x1'
+      - '&f • &2Shift-Chuột trái:&f Mua x64'
+      - '&f • &eChuột phải:&f Bán x1'
+      - '&f • &6Shift-Chuột phải:&f Bán hết loại đó trong túi'
+      - '&8━━━━━━━━━━━━━━━━━━━━━━━━━'
+
+  'cod':
+    material: COD
+    slot: 11
+    display_name: '&f&lCá Tuyết Sống'
+    lore:
+      - '&a• Mua: $15 Xu'
+      - '&e• Bán: $8 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($15)'
+      - '&2▶ Shift-Trái: Mua x64 ($960)'
+      - '&e▶ Chuột phải: Bán x1 ($8)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy cod 1'
+    shift_left_click_commands:
+      - '[player] shop buy cod 64'
+    right_click_commands:
+      - '[player] shop sell cod 1'
+    shift_right_click_commands:
+      - '[player] shop sell cod all'
+
+  'salmon':
+    material: SALMON
+    slot: 13
+    display_name: '&c&lCá Hồi Sống'
+    lore:
+      - '&a• Mua: $25 Xu'
+      - '&e• Bán: $12 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($25)'
+      - '&2▶ Shift-Trái: Mua x64 ($1,600)'
+      - '&e▶ Chuột phải: Bán x1 ($12)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy salmon 1'
+    shift_left_click_commands:
+      - '[player] shop buy salmon 64'
+    right_click_commands:
+      - '[player] shop sell salmon 1'
+    shift_right_click_commands:
+      - '[player] shop sell salmon all'
+
+  'pufferfish':
+    material: PUFFERFISH
+    slot: 15
+    display_name: '&e&lCá Nóc'
+    lore:
+      - '&a• Mua: $50 Xu'
+      - '&e• Bán: $25 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($50)'
+      - '&2▶ Shift-Trái: Mua x64 ($3,200)'
+      - '&e▶ Chuột phải: Bán x1 ($25)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy pufferfish 1'
+    shift_left_click_commands:
+      - '[player] shop buy pufferfish 64'
+    right_click_commands:
+      - '[player] shop sell pufferfish 1'
+    shift_right_click_commands:
+      - '[player] shop sell pufferfish all'
+
+  'tropical_fish':
+    material: TROPICAL_FISH
+    slot: 22
+    display_name: '&6&lCá Nhiệt Đới'
+    lore:
+      - '&a• Mua: $80 Xu'
+      - '&e• Bán: $40 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($80)'
+      - '&2▶ Shift-Trái: Mua x64 ($5,120)'
+      - '&e▶ Chuột phải: Bán x1 ($40)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy tropical_fish 1'
+    shift_left_click_commands:
+      - '[player] shop buy tropical_fish 64'
+    right_click_commands:
+      - '[player] shop sell tropical_fish 1'
+    shift_right_click_commands:
+      - '[player] shop sell tropical_fish all'
+
+  'back':
+    material: ARROW
+    slot: 31
+    display_name: '&e&l◀ QUAY LẠI CỬA HÀNG CHÍNH'
+    left_click_commands:
+      - '[openguimenu] shop'

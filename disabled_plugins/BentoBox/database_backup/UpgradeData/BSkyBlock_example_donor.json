@@ -1,0 +1,11 @@
+{
+  "uniqueId": "BSkyBlock_example_donor",
+  "world": "BSkyBlock",
+  "name": "Donor Perk",
+  "description": [
+    "Example: requires the upgrades.example.donor permission. Runs a console command on purchase."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: NETHER_STAR\n",
+  "order": 6,
+  "active": true
+}

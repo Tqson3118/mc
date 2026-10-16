@@ -1,0 +1,107 @@
+prefix: '&a[Loja] &r'
+shopinfo: |-
+  &aInformações da Loja:
+  &fDono: &7%owner
+  &fStock: &7%stock
+  &fItem: &7%item
+shopinfo_buy: '&fCompre &7%amount &fpor &7%price'
+shopinfo_sell: '&fVende &7%amount &fpor &7%price'
+iteminfo: '&aInformação do item: &r'
+iteminfo_fullname: '&fNome completo: &7%item'
+iteminfo_shopname: '&fSimbolo da Loja: &7%item'
+iteminfo_repaircost: '&fCusto da reparação: &7%cost'
+iteminfo_book: |-
+  &fTitlo do Livro: &7%title
+  &fAutor do Livro: &7%author
+  &fPáginas do Livro: &7%pages
+iteminfo_book_generation: '&fGerar o livro: &7%generation'
+iteminfo_leather_color: '&fCor do couro: &7Vermelho: %colorred, Verde: %colorgreen,
+  Azul: %colorblue (Hex: #%colorhex)'
+iteminfo_bundle_items: '&fPacote de itens: &7%itemcount'
+iteminfo_axolotl_variant: '&fVariante Axolotl: &7%variant'
+iteminfo_armor_trim: '&fArmor Trim: &7%material %pattern'
+iteminfo_recipes: '&fConhecimento de receitas:'
+iteminfo_map_view: |-
+  &fID do mapa: &7%id
+  &fMapa do Mundo: &7%world
+  &fCentro do Mapa: &7%x/%z
+  &fBloquei do Mapa: &7locked
+iteminfo_map_location: '&fLocalização do Mapa: &7%location'
+iteminfo_tropical_fish: |-
+  &fPeixe padrão: &7%pattern
+  &fCor do peixe padrão: &7%patterncolor
+  &fCor do corpo do peixe: &7%bodycolor
+iteminfo_crossbow_projectiles: '&fProjétil de besta carregado:'
+iteminfo_crossbow_projectile: '&f%item'
+iteminfo_lore: |-
+  &fDescrição do item:
+  &r%lore
+METRICS: |-
+  &a[Loja] &fMétricas:
+  &fContas: &7%accounts
+  &fTransações médias: &7%totalTransactions &f(Compra: &7%buyTransactions &fVenda: &7%sellTransactions&f)
+  &fMédia de itens negociados: &7%totalItems &f(comprados: &7%boughtItems &fvendidos: &7%soldItems&f)
+ACCESS_DENIED: Não tem permissão para acessar o armazenamento dessa loja!
+TRADE_DENIED: Não tem permissão para negociar com esta loja!
+TRADE_DENIED_ACCESS_PERMS: Não pode negociar com lojas que tem acesso!
+TRADE_DENIED_CREATIVE_MODE: Não pode negociar com lojas enquanto estiver no modo criativo!
+NOT_ENOUGH_MONEY: Não tem dinheiro suficiente!
+NOT_ENOUGH_MONEY_SHOP: O dono da loja não tem dinheiro suficiente!
+CLIENT_DEPOSIT_FAILED: Falha a depositar o dinheiro na sua conta!
+SHOP_DEPOSIT_FAILED: Falha a depositar o dinheiro ao dono da loja!
+NO_ECONOMY_ACCOUNT: A conta econômica de dono de loja não existe!
+NO_BUYING_HERE: Não pode comprar aqui!
+NO_SELLING_HERE: Não pode vender aqui!
+NOT_ENOUGH_SPACE_IN_INVENTORY: Não tem espaço suficiente no inventário!
+NOT_ENOUGH_SPACE_IN_CHEST: Não há espaço suficiente no baú!
+NOT_ENOUGH_ITEMS_TO_SELL: Não tem itens suficientes para vender!
+NOT_ENOUGH_SPACE_IN_YOUR_SHOP: |-
+  [%price %item&7 loja cheia!](&f%seller&7 tentei vender
+  &7No mundo: &f%world
+  &7Na posição: &f%x/%y/%z)
+NOT_ENOUGH_STOCK: Esta loja está sem stock.
+NOT_ENOUGH_STOCK_IN_YOUR_SHOP: |-
+  [%price %item&7 loja sem stock!](&f%buyer&7 tentou comprar
+  &7No mundo: &f%world
+  &7Na posição: &f%x/%y/%z)
+YOU_BOUGHT_FROM_SHOP: Comprou %item de %owner por %price.
+SOMEBODY_BOUGHT_FROM_YOUR_SHOP: |-
+  [%buyer comprou %item por %price.](&7No Mundo: &f%world
+  &7Na posição: &f%x/%y/%z)
+YOU_SOLD_TO_SHOP: Vendeu %item a %buyer por %price.
+SOMEBODY_SOLD_TO_YOUR_SHOP: |-
+  [%seller vendeu %item por %price.](&7No Mundo: &f%world
+  &7Na posição: &f%x/%y/%z)
+YOU_CANNOT_CREATE_SHOP: Não pode criar esse tipo de loja!
+NO_CHEST_DETECTED: Não foi possível encontrar o baú!
+INVALID_SHOP_DETECTED: A loja não pode ser usada!
+INVALID_SHOP_PRICE: A loja tem um preço inválido!
+INVALID_SHOP_QUANTITY: A loja tem uma quantidade inválida!
+CANNOT_ACCESS_THE_CHEST: Não tem permissão para acessar este baú!
+CANNOT_CHANGE_SIGN_BACKSIDE: Não pode mudar a parte de trás da placa de loja!
+SELL_PRICE_HIGHER_THAN_BUY_PRICE: O preço de venda está acima do preço de compra!
+SELL_PRICE_ABOVE_MAX: O preço de venda %price está acima do preço máximo %maxprice!
+SELL_PRICE_BELOW_MIN: Preço de venda %price está abaixo do mínimo %minprice!
+BUY_PRICE_ABOVE_MAX: O preço de compra %price está acima do máximo %maxprice!
+BUY_PRICE_BELOW_MIN: O preço %price está abaixo do mínimo %minprice!
+CLICK_TO_AUTOFILL_ITEM: Clique na placa com o item para adicionará loja!
+NO_ITEM_IN_HAND: Não tem um item em mão para abastecer o stock da loja!
+PROTECTED_SHOP: Protegeu a loja com LWC!
+PROTECTED_SHOP_SIGN: Protegeu a placa da loja com LWC!
+SHOP_CREATED: Loja criada com sucesso!
+SHOP_FEE_PAID: Fez um pagamento de %amount
+SHOP_REFUNDED: Recebeu um pagamento de %amount.
+ITEM_GIVEN: '%item dado a %player. '
+RESTRICTED_SIGN_CREATED: Placa criada com sucesso!
+PLAYER_NOT_FOUND: Jogador não encontrado!
+NO_PERMISSION: Não tem permissão para fazer isso!
+INCORRECT_ITEM_ID: Especificou um ID de item inválido!
+INVALID_CLIENT_NAME: O seu nome de usuário não é um nome de usuário válido do Minecraft!
+NOT_ENOUGH_PROTECTIONS: Não foi possível criar uma proteção!
+NO_SHOP_FOUND: Nenhuma loja encontrada.
+CANNOT_CREATE_SHOP_HERE: Não pode criar uma loja aqui!
+TOGGLE_MESSAGES_OFF: Não receberá mais mensagens da(s) sua(s) loja(s).
+TOGGLE_MESSAGES_ON: Agora receberá mensagens de sua(s) loja(s).
+TOGGLE_ACCESS_ON: Não pode mais negociar em lojas que tem acesso.
+TOGGLE_ACCESS_OFF: Pode agora negociar em lojas que tem acesso.
+ERROR_OCCURRED: '[An error occurred!](red) [%error](yellow)'

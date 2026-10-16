@@ -1,0 +1,970 @@
+biomes:
+  commands:
+    # This section contains only admin commands translations.
+    admin:
+      main:
+        description: main biomes admin command
+      import:
+        parameters: <file>
+        description: imports biomes
+        confirmation: This will remove existing biomes from [gamemode] and import
+          new biomes from the template file - please confirm
+      migrate:
+        description: migrates biomes stored data to new format
+      set:
+        description: changes biome for the player
+        parameters: <player> <biome-id> [mode] [size]
+      unlock:
+        description: unlocks biome for the player without checks. Adding `true` at
+          the end will mark it as purchased.
+        parameters: <player> <biome-id> [true]
+      clear-queue:
+        description: clears biome update queue
+    # This section contains only player commands translations.
+    player:
+      main:
+        description: opens biomes selection GUI
+      set:
+        description: changes biome for the player
+        parameters: <biome-id> [mode] [size]
+      buy:
+        description: purchases the requested biome
+        parameters: <biome-id>
+      info:
+        description: sends a chat message with detailed biome description
+        parameters: <biome-id>
+  gui:
+    titles:
+      player-panel: <black><bold> Choose Biome
+      buy-panel: <black><bold> Purchase Biome
+      advanced-panel: <black><bold> Update Mode
+      # All Titles Below this comment is for Admin Menus.
+      admin-panel: <black><bold> Admin GUI
+      settings: <black><bold> Settings
+      library: <black><bold> Library
+      manage-biomes: <black><bold> Manage Biomes
+      manage-bundles: <black><bold> Manage Bundles
+      manage-islands: <black><bold> Manage Islands Data
+      edit-biome: '<black><bold> Edit Biome: [biome]'
+      edit-bundle: '<black><bold> Edit Bundle: [bundle]'
+      edit-island: '<black><bold> Edit Island: [island]'
+      environment-selector: <black><bold> Select Environment
+      biome-selector: <black><bold> Select Biome
+      bundle-selector: <black><bold> Select Bundle
+      item-selector: <black><bold> Select Items
+    buttons:
+      island:
+        name: <white><bold> Island
+        description: |-
+          <gray> Changes biome on whole
+          <gray> island.
+      chunk:
+        name: <white><bold> Chunk
+        description: <gray> Changes biome in chunks.
+      range:
+        name: <white><bold> Range
+        description: <gray> Changes biome by range. # Button that allows to reduce number
+      reduce:
+        name: <white><bold> Reduce
+        description: <gray> Reduce by <yellow> [number] # Button that allows to increase number
+      increase:
+        name: <white><bold> Increase
+        description: <gray> Increase by <yellow> [number] # Button that displays and allows completing challenge
+      accept:
+        name: <white><bold> Apply Change
+        description: |-
+          <gray> Changes biome to <yellow> [biome]
+
+          <gray> Update mode: <yellow> [mode]
+          <gray> Update range: <yellow> [number]
+      # Button that is used to return to previous GUI or exit it completely.
+      return:
+        name: <white><bold> Return
+        description: <gray> Return to previous menu. # Button that is used in multi-page GUIs which allows to return to previous page.
+      previous:
+        name: <white><bold> Previous Page
+        description: <gray> Switch to <yellow> [number] <gray> page # Button that is used in multi-page GUIs which allows to go to next page.
+      next:
+        name: <white><bold> Next Page
+        description: <gray> Switch to <yellow> [number] <gray> page # Button that allows to quit the current gui.
+      quit:
+        name: <white><bold> Quit
+        description: <gray> Exit from the GUI. # Button that allows to save the changes.
+      save:
+        name: <white><bold> Save
+        description: <gray> Save changes and return. # Button that allows to cancel the changes.
+      cancel:
+        name: <white><bold> Cancel
+        description: <gray> Cancel changes and return. # Button that allows to search for specific value.
+      search:
+        name: <white><bold> Search
+        description: |-
+          <gray> Allows to search an
+          <gray> element with input
+          <gray> text value.
+        search: '<aqua> Value: [value]'
+      # Button that allows to buy biome.
+      buy:
+        name: <white><bold> Purchase
+        description: <gray> Purchase a new biome. # All buttons below this comment is for Admin Menus.
+      manage_islands:
+        name: <white><bold> Manage Islands
+        description: |-
+          <gray> Allows to manage island
+          <gray> data.
+      manage_biomes:
+        name: <white><bold> Manage Biomes
+        description: |-
+          <gray> Allows to manage biomes
+          <gray> data.
+      manage_bundles:
+        name: <white><bold> Manage Bundles
+        description: |-
+          <gray> Allows to manage bundles
+          <gray> data.
+      settings:
+        name: <white><bold> Settings
+        description: |-
+          <gray> Allows to change some
+          <gray> addon settings.
+      import_template:
+        name: <white><bold> Import Template
+        description: |-
+          <gray> Import template
+          <gray> file located inside the
+          <gray> addon directory.
+      web_library:
+        name: <white><bold> Web Library
+        description: |-
+          <gray> Access the web
+          <gray> library that contains
+          <gray> shared biomes.
+      export_from_database:
+        name: <white><bold> Export Database
+        description: |-
+          <gray> Export the database
+          <gray> into a single file located in
+          <gray> the addon directory.
+      import_to_database:
+        name: <white><bold> Import Database
+        description: |-
+          <gray> Import a database from
+          <gray> a file located in the addon
+          <gray> directory.
+      wipe_islands_data:
+        name: <white><bold> Clear Island Database
+        description: |-
+          <gray> Clear all biomes user data
+          <gray> for this gamemode.
+      wipe_biomes_data:
+        name: <white><bold> Clear Biomes Database
+        description: |-
+          <gray> Clear all biomes and bundel
+          <gray> data for this gamemode.
+      add_biome:
+        name: <white><bold> Add Biome
+        description: |-
+          <gray> Creates new Biome that
+          <gray> players can use using
+          <gray> user panels.
+      remove_biome:
+        name: <white><bold> Remove Biome
+        description: |-
+          <gray> Removes selected biomes
+          <gray> from user panels.
+        title: '<yellow> Selected Biomes:'
+        value: <yellow> - [biome]
+      accept_selected:
+        name: <white><bold> Accept Selected
+        description: <gray> Accepts Selected elements.
+        title: '<yellow> Selected Elements:'
+        element: <yellow> - [element]
+      environment_element:
+        name: <white><bold> [environment]
+        description: <gray> [description].
+      properties:
+        name: <white><bold> Properties
+        description: <gray> View main biome properties.
+      change_properties:
+        name: <white><bold> Change Properties
+        description: <gray> View changing biome properties.
+      unlock_properties:
+        name: <white><bold> Unlock Properties
+        description: <gray> View unlock biome properties.
+      biome:
+        name: <white><bold> [biome]
+        description: <gray> Minecraft Biome type.
+        value: '<gray> Biome ID: <yellow> [id]'
+      name:
+        name: <white><bold> Display Name
+        description: |-
+          <gray> Display name for biome.
+          <gray> Supports color codes.
+        value: '<gray> Current Value: <reset> [name]'
+      deployed:
+        name: <white><bold> Deployed
+        description: |-
+          <gray> Toggles if biome is
+          <gray> accessable to players
+          <gray> or not.
+        enabled: <dark_green> Enabled
+        disabled: <red> Disabled
+      environment:
+        name: <white><bold> Dimension
+        description: |-
+          <gray> Allows to limit in which
+          <gray> dimension the biome
+          <gray> can be appied.
+        enabled: <dark_green>
+        disabled: <red>
+      icon:
+        name: <white><bold> Icon
+        description: |-
+          <gray> Allows to change icon
+          <gray> for this biome.
+      order:
+        name: <white><bold> Order
+        description: |-
+          <gray> Allows to change order of
+          <gray> objects.
+          <gray> Objects with equal numbers
+          <gray> will be ordered by their
+          <gray> unique id names.
+        value: '<gray> Current order: <yellow> [number]'
+      description:
+        name: <white><bold> Description
+        description: |-
+          <gray> The specific description
+          <gray> for the biome. The color
+          <gray> codes must be applied to it.
+        value: '<yellow> Current description:'
+        none: <gray> Description is not set.
+      unlock_permissions:
+        name: <white><bold> Permissions
+        description: |-
+          <gray> Allows to change unlock
+          <gray> permissions for this
+          <gray> biome to be accessible.
+        title: '<yellow> Permissions: '
+        element: ' <dark_gray> - [permission]'
+        none: <gray> Permissions are not set.
+      unlock_cost:
+        name: <white><bold> Cost
+        description: |-
+          <gray> Allows to change cost of
+          <gray> unlocking this biome.
+        value: '<gray> Current cost: <yellow> [number]'
+      unlock_items:
+        name: <white><bold> Items
+        description: |-
+          <gray> Allows to change unlock
+          <gray> items for this biome.
+        title: '<yellow> Items: '
+        element: ' <dark_gray> - [number]x[item]'
+        none: <gray> Items are not set.
+      unlock_level:
+        name: <white><bold> Level
+        description: |-
+          <gray> Allows to change the
+          <gray> required island level
+          <gray> for unlocking this biome.
+        value: '<gray> Current level: <yellow> [number]'
+      change_cost:
+        name: <white><bold> Cost
+        description: |-
+          <gray> Allows to change cost of
+          <gray> applying this biome.
+        value: '<gray> Current cost: <yellow> [number]'
+      change_items:
+        name: <white><bold> Items
+        description: |-
+          <gray> Allows to change items
+          <gray> for applying this biome.
+        title: '<yellow> Items: '
+        element: ' <dark_gray> - [number]x[item]'
+        none: <gray> Items are not set.
+      change_type:
+        name: <white><bold> [type]
+        description: |-
+          <gray> Allows to change cost type
+          <gray> for applying this biome.
+        static:
+          name: Static Value
+          description: |-
+            <gray> Biome change cost does
+            <gray> not change.
+        per_block:
+          name: Per Block
+          description: |-
+            <gray> Biome change cost is
+            <gray> calculated per block.
+        per_usage:
+          name: Per Usage
+          description: |-
+            <gray> Biome change cost is
+            <gray> increased after each
+            <gray> usage.
+        enabled: <dark_green>
+        disabled: <red>
+      change_increment:
+        name: <white><bold> Increment
+        description: |-
+          <gray> Allows to change the
+          <gray> increment per usage.
+        value: '<gray> Current value: <yellow> [number]'
+      biome-filter:
+        name: <white><bold> [filter]
+        description: |-
+          <gray> Biome Filter based
+          <gray> on Minecraft Wiki.
+        lush: Lush Biomes
+        dry: Dry Biomes
+        cold: Cold Biomes
+        snowy: Snowy Biomes
+        aquatic: Ocean Biomes
+        nether: Nether Biomes
+        the_end: The End Biomes
+        neutral: Neutral Biomes
+        unused: Unused Biomes
+        warm: Warm Biomes
+        cave: Cave Biomes
+        temperate: Temperate Biomes
+      protection_range:
+        name: <white><bold> Protection Range
+        description: |-
+          <gray> Allows to limit in the biome
+          <gray> changing only to the island
+          <gray> protection range instead of
+          <gray> changing biome on whole island.
+        enabled: <dark_green> Enabled
+        disabled: <red> Disabled
+      reset:
+        name: <white><bold> Reset on Owner change
+        description: |-
+          <gray> Allows to enable force biome
+          <gray> change to the default one,
+          <gray> if island changes its owner
+          <gray> and new owner does not have
+          <gray> current biome permission.
+        enabled: <dark_green> Enabled
+        disabled: <red> Disabled
+      cool_down:
+        name: <white><bold> Biome Cool Down
+        description: |-
+          <gray> Allows to set number of
+          <gray> seconds between player
+          <gray> can change biome again.
+        value: '<gray> Current cool down: <yellow> [number]'
+        disabled: <yellow> Cool down is disabled.
+      default_size:
+        name: <white><bold> Default Range
+        description: |-
+          <gray> Allows to set number that
+          <gray> will be used when player
+          <gray> changes biome without
+          <gray> writting it.
+        value: '<gray> Default Range: <yellow> [number]'
+      default_mode:
+        name: <white><bold> Default Update Mode
+        description: |-
+          <gray> Allows to set default update
+          <gray> mode when players did not
+          <gray> provide it.
+        enabled: <dark_green>
+        disabled: <red>
+      unlock_notify:
+        name: <white><bold> Notify On Unlock
+        description: |-
+          <gray> A message will be sent
+          <gray> to a user when she unlocks
+          <gray> a new biome.
+        enabled: <aqua> Notify on unlock is <green> enabled <aqua>.
+        disabled: <aqua> Notify on unlock is <red> disabled <aqua>.
+      change_timeout:
+        name: <white><bold> Timeout For Change
+        description: |-
+          <gray> Allows to set after how
+          <gray> many minutes biome update
+          <gray> will be terminated.
+          <gray> May happen on very large
+          <gray> islands or servers under
+          <gray> huge load.
+        value: '<gray> Timeout after: <yellow> [number] min'
+      parallel_updates:
+        name: <white><bold> Parallel Updates
+        description: |-
+          <gray> Allows to set how many biome
+          <gray> updates may happen at the
+          <gray> same time.
+          <gray> Others will be placed in the
+          <gray> queue.
+        value: '<gray> Current value: <yellow>[number]<gray>.'
+      use_bank:
+        name: <white><bold> Use Bank Account
+        description: |-
+          <gray> Toggles if all payments that
+          <gray> are done by Biomes addon will
+          <gray> be using Bank Addon Island
+          <gray> account.
+        enabled: <aqua> Using Bank Account is <green> enabled <aqua>.
+        disabled: <aqua> Using Bank Account is <red> disabled <aqua>.
+        missing: <red> The Bank addon is not installed.
+      visibility:
+        name: <white><bold> Biome Visibility
+        description: |-
+          <gray> Allows to change player
+          <gray> biome visibility in the
+          <gray> biome selection panels.
+        enabled: <dark_green>
+        disabled: <red>
+        all: All Biomes
+        deployed: Deployed Biomes
+        accessible: Accessible Biomes
+        toggleable: Toggleable
+      is_online:
+        name: <white><bold> Online Player Islands
+        description: |-
+          <gray> List all islands where
+          <gray> any member is online.
+      all_islands:
+        name: <white><bold> All Islands
+        description: |-
+          <gray> List of all islands
+          <gray> that are created in
+          <gray> current gamemode.
+      island_name:
+        name: <white><bold> [name]
+        island-owner: '[player]'
+        unknown: <red> Unknown Owner
+        description: |-
+          [owner]
+          [members]
+          [id]
+        owner: '<gray> Owner: <yellow> [player]'
+        title: '<gray> Island Members:'
+        element: ' <gray> - <yellow> [player]'
+      change_biome:
+        name: <white><bold> Change Biome
+        description: <gray> Change biome per island.
+      manage_data:
+        name: <white><bold> Manage Island Data
+        description: |-
+          <gray> Manage data that are
+          <gray> stored for specific island.
+      clear_data:
+        name: <white><bold> Clear Island Data
+        description: |-
+          <gray> Clear all stored data for
+          <gray> island.
+      island_bundle:
+        name: <white><bold> Island Bundle
+        description: |-
+          <gray> Bundle that is assigned to
+          <gray> the current island.
+          <gray> Only biomes from this
+          <gray> bundle can be used on the
+          <gray> island.
+        value: '<aqua> Bundle: [bundle]'
+        overwritten: |-
+          <red> Owner has a permission that
+          <red> overwrites bundle.
+      owner_bundle:
+        name: <white><bold> Owner Bundle
+        description: |-
+          <gray> Bundle that is assigned to
+          <gray> the current island owner.
+          <gray> Only biomes from this
+          <gray> bundle can be used on the
+          <gray> island.
+          <gray> Permission for user to assign:
+          <gray><italic> '[gamemode].biomes.
+          <gray><italic> bundle.<bundle-id>'
+        value: '<aqua> Bundle: [bundle]'
+      reset_to_default:
+        name: <white><bold> Reset To Defaults
+        description: |-
+          <gray> Resets all island values
+          <gray> to the default values from
+          <gray> the settings.
+      bundle_info:
+        name: <white><bold> General Information
+        description: |-
+          <gray> View general bundle
+          <gray> information.
+      bundle_biomes:
+        name: <white><bold> Manage Biomes
+        description: |-
+          <gray> Manage biomes that are
+          <gray> assigned to the bundle.
+      bundle_name:
+        name: <white><bold> Change Name
+        description: |-
+          <gray> Change bundle display
+          <gray> name.
+        value: '<yellow> Current Value: <reset> [bundle]'
+      bundle_icon:
+        name: <white><bold> Change Icon
+        description: <gray> Change bundle icon.
+      bundle_description:
+        name: <white><bold> Change Description
+        description: <gray> Change bundle description.
+        value: '<yellow> Current value:'
+        none: <red> No description
+      bundle_permission:
+        name: <white><bold> Bundle Permission
+        description: |-
+          <gray> The permission that must
+          <gray> added to the user for
+          <gray> forcing this bundle.
+        value: '<yellow> Permission: <white> [gamemode].biomes.bundle.[id]'
+      add_bundle_biome:
+        name: <white><bold> Add Biome
+        description: |-
+          <gray> Assign a biome
+          <gray> to this bundle.
+        title: '<aqua> Selected Biomes:'
+        value: <aqua> - [biome]
+      remove_bundle_biome:
+        name: <white><bold> Remove Biome
+        description: |-
+          <gray> Remove a biome
+          <gray> from this bundle.
+        title: '<aqua> Selected Biomes:'
+        value: <aqua> - [biome]
+      create_bundle:
+        name: <white><bold> Create Bundle
+        description: |-
+          <gray> Create a new bundle
+          <gray> for this gamemode.
+      delete_bundle:
+        name: <white><bold> Remove Bundle
+        description: |-
+          <gray> Remove a bundle from
+          <gray> this gamemode completely.
+        title: '<aqua> Selected Bundles:'
+        value: <aqua> - [bundle]
+      download:
+        name: <white><bold> Download
+        description: <gray> Download web library.
+        enabled: <dark_green> With Cache clearing
+        disabled: <red> Without Cache clearing
+    tips:
+      click-to-filter: <yellow> Click <gray> to filter.
+      click-to-manage: <yellow> Click <gray> to manage.
+      click-to-clear: <yellow> Click <gray> to clear.
+      click-to-change-biome: <yellow> Click <gray> to change biome.
+      click-to-view: <yellow> Click <gray> to view.
+      click-to-select: <yellow> Click <gray> to select.
+      click-to-choose: <yellow> Click <gray> to choose.
+      click-to-complete: <yellow> Click <gray> to complete.
+      left-click-to-accept: <yellow> Left Click <gray> to apply.
+      right-click-to-write: <yellow> Right Click <gray> to write.
+      click-to-reduce: <yellow> Click <gray> to reduce.
+      click-to-increase: <yellow> Click <gray> to increase.
+      click-to-return: <yellow> Click <gray> to return.
+      click-to-quit: <yellow> Click <gray> to quit.
+      click-to-wipe: <yellow> Click <gray> to wipe.
+      left-click-to-wipe: <yellow> Left Click <gray> to wipe.
+      right-click-to-switch: <yellow> Right Click <gray> to switch.
+      click-to-open: <yellow> Click <gray> to open.
+      click-to-export: <yellow> Click <gray> to export.
+      click-to-create: <yellow> Click <gray> to create.
+      left-click-to-open: <yellow> Left Click <gray> to open.
+      right-click-to-reset-all: <yellow> Right Click <gray> to wipe all.
+      click-to-toggle: <yellow> Click <gray> to toggle.
+      click-to-change: <yellow> Click <gray> to change.
+      shift-click-to-reset: <yellow> Shift Click <gray> to reset.
+      click-to-add: <yellow> Click <gray> to add.
+      click-to-remove: <yellow> Click <gray> to remove.
+      left-click-to-cycle: <yellow> Left Click <gray> to cycle down.
+      right-click-to-cycle: <yellow> Right Click <gray> to cycle up.
+      click-to-edit: <yellow> Click <gray> to edit.
+      left-click-to-download: <yellow> Left Click <gray> to download.
+      right-click-to-toggle: <yellow> Right Click <gray> to toggle.
+      click-to-install: <yellow> Click <gray> to install.
+      click-to-reset-all: <yellow> Click <gray> to reset all.
+      right-click-to-select: <yellow> Right Click <gray> to select.
+      right-click-to-deselect: <yellow> Right Click <gray> to deselect.
+      left-click-to-choose: <yellow> Left Click <gray> to choose.
+      click-to-buy: <yellow> Click <gray> to buy.
+      click-to-cancel: <yellow> Click <gray> to cancel.
+      click-to-save: <yellow> Click <gray> to save.
+      click-to-deselect: <yellow> Click <gray> to deselect.
+      click-on-item: |-
+        <yellow> Click <gray> on item in
+        <gray> your inventory.
+      left-click-to-edit: <yellow> Left Click <gray> to edit.
+      right-click-to-clear: <yellow> Right Click <gray> to clear.
+      click-to-previous: <yellow> Click <gray> to view previous page.
+      click-to-next: <yellow> Click <gray> to view next page.
+      select-before: <yellow> Select <gray> item(-s) before proceed.
+      click-to-apply: <yellow> Click <gray> to apply.
+      right-click-to-open: <yellow> Right Click <gray> to open.
+      click-to-perform: <yellow> Click <gray> to perform.
+      left-click-to-apply: <yellow> Left Click <gray> to apply.
+      right-click-to-unlock: <yellow> Right Click <gray> to unlock.
+      right-click-to-buy: <yellow> Right Click <gray> to buy.
+      right-click-to-change: <yellow> Right Click <gray> to change.
+    descriptions:
+      update-mode:
+        island: Island Mode
+        chunk: Chunk Mode
+        range: Range Mode
+      selected: <dark_green> Selected
+      island-owner: '[player]'
+      unknown: <yellow> Unknown
+      biome:
+        lore: |-
+          [description]
+          [biome]
+          [unlock]
+          [change]
+        # Text that will replace [biome]
+        original: '<gray> Biome: <yellow> [biome]' # The text that will replace [unlock] message. If biome is unlocked, then this message will be generated empty.
+        unlock:
+          lore: |-
+            [items]
+            [money]
+            [level]
+            [permissions]
+          # Text that will replace [money]
+          money: '<gray> Unlock cost: <yellow> [number]' # Text that will replace [level]
+          level: |-
+            <gray> Requires to reach <yellow> [number]
+            <gray> island level.
+          # Text that will replace [permissions]
+          permission-single: '<gray> Missing Permission: <red> [permission]'
+          permissions-title: '<red> Missing Permissions:'
+          permissions-list: <red> - [permission] # Text that will replace [items]
+          item-single: '<gray> Unlock Item: [color] [number] x [item]'
+          item-title: '<gray> Unlock Items:'
+          item-list: <gray> - [color] [number] x [item] # Text that replaces [color].
+          missing: <red>
+          has: <yellow>
+        # The text that will replace [change] message. If biome is locked, then this message will be generated empty.
+        change:
+          lore: |-
+            [items]
+            [money]
+            [mode]
+            [usage]
+          # Text that will replace [mode]
+          mode:
+            per_block: |-
+              <aqua><italic> Biome costs per each
+              <aqua><italic> changed block.
+            per_usage: |-
+              <aqua><italic> Changing biome increases
+              <aqua><italic> its price.
+            static: <aqua><italic> Standard change price. # Text that will replace [money]
+          money: '<gray> Cost: <yellow> [number]' # Text that will replace [items]
+          item-single: '<gray> Item: [color] [number] x [item]'
+          item-title: '<gray> Items:'
+          item-list: <gray> - [color] [number] x [item] # Text that shows how many times player has used this biome.
+          number-of-usage: |-
+            |<gray> This biome has been
+            <gray> applied <yellow> [number] <reset><gray> times.
+          # Text that replaces [color].
+          missing: <red>
+          has: <yellow>
+      bundle:
+        lore: |-
+          [description]
+          [permission]
+          [biomes]
+        permission: |-
+          <gray> Permission that must be
+          <gray> assigned to player:
+          <gray><italic> [gamemode].biomes.bundle.[id]
+        # String that are before listing all biomes assigned to bundle.
+        title: '<gray> Bundle Biomes: '
+        # Each biome name in listing
+        value: <gray> - [biome]
+        # If no biomes are added.
+        no-biomes: <red> No Biomes Assigned
+      # This part generates description for the Library Entry
+      library:
+        author: <gray> by <yellow> [author]
+        version: <gray> Made with Biomes <yellow> [version]
+        lang: '<gray> Language: <yellow> [lang]'
+        gamemode: <gray> Primary for <yellow> [gamemode]
+  conversations:
+    # Prefix for messages that are send from server.
+    prefix: '<bold><gold> [BentoBox]: <reset>'
+    # List of strings that are valid for confirming input. (separated with ,)
+    confirm-string: true, on, yes, confirm, y, valid, correct
+    # List of strings that are valid for denying input. (separated with ,)
+    deny-string: false, off, no, deny, n, invalid, incorrect
+    # String that allows to cancel conversation. (can be only one)
+    cancel-string: cancel
+    # List of strings that allows to exit conversation. (separated with ,)
+    exit-string: cancel, exit, quit
+    # Message that is send to user when conversation is cancelled.
+    cancelled: <red> Conversation cancelled!
+    # Message that appears when admin clicks on number editing button.
+    input-number: <yellow> Please enter a number in chat.
+    # Message that appears when admin clicks on seconds editing button.
+    input-seconds: <yellow> Please enter a seconds in chat.
+    # Error message that is showed if user input a value that is not a number.
+    numeric-only: <red> The given [value] is not a number!
+    # Error message that is showed if user input a number that is smaller or larger that allowed.
+    not-valid-value: <red> The given number [value] is not valid. It must be larger
+      than [min] and smaller than [max]!
+    # Message that confirms user data removing.
+    data-removed: <green> Chosen biomes are removed from [gamemode].
+    # Message that asks confirmation for user data removing.
+    confirm-deletion: '<yellow> Please confirm that you want to delete [number] biomes
+      with names: [value].'
+    # Message that confirms user data removing.
+    user-data-removed: <green> All user data for [gamemode] is cleared from the database.
+    # Message that asks confirmation for user data removing.
+    confirm-user-data-deletion: <yellow> Please confirm that you want to clear user
+      database for [gamemode].
+    # Message that confirms user data removing.
+    all-data-removed: <green> All addon data for [gamemode] is cleared from the database.
+    # Message that asks confirmation for user data removing.
+    confirm-all-data-deletion: <yellow> Please confirm that you want to clear addon
+      data for [gamemode].
+    # Message that asks user to write a name
+    write-name: <yellow> Please write a name in the chat.
+    # Message that confirms new object creation.
+    new-object-created: <green> New object for [gamemode] is created.
+    # Error message that sends that object cannot be created with a given name
+    object-already-exists: <red> Object <gray> [id] <red> already exists. Choose different
+      name.
+    # Message that confirms name changing
+    name-changed: <green> Success, the name was updated.
+    # Message that appears after clicking
+    write-description: <yellow> Please enter a new description in chat and 'quit'
+      on a line by itself to finish.
+    # Message that appears after successful description change.
+    description-changed: <green> Success, the description was updated.
+    # Message that appears when admin clicks on permission editing button.
+    write-permissions: <yellow> Please enter the required permissions, one per line
+      in chat, and 'quit' on a line by itself to finish.
+    # Message that appears after successful permission updating.
+    permissions-changed: <green> Success, permissions were updated.
+    # Message that appears when user clicks on library installation.
+    start-downloading: <green> Starting to download and import Biomes Library.
+    # Message that appears when writing multiline text.
+    written-text: '<green> Input Text:'
+    # Message that appears after importing library data into database.
+    confirm-data-replacement: <yellow> Please confirm that you want to replace your
+      current data with new one.
+    # Message that appears after successful data importing
+    new-data-imported: <green> Success, new data for [gamemode] were imported.
+    # Message that appears after admin clicks on database exporting button.
+    exported-file-name: <yellow> Please enter a file name for the exported database
+      file. (write 'cancel' to exit)
+    # Message that appears after successful database exporting to file.
+    database-export-completed: <green> Success, the database export for [world] is
+      completed. File [file] generated.
+    # Message that appears if input file name is already taken.
+    file-name-exist: <red> File with name '[id]' exists. Cannot overwrite.
+    # Message that asks for search value input.
+    write-search: <yellow> Please write a search value. (write 'cancel' to exit)
+    # Message that appears after updating search value.
+    search-updated: <green> Search value updated.
+    # Message that appears when admin tries to deploy invalid biome.
+    invalid-biome: <red> Some data in stored `[biome]`<reset><red> is not valid.
+    # Message that appears when admin tries to delete biome.
+    confirm-biome-deletion: <yellow> Please confirm that you want to remove [biome]<reset><yellow>
+      from [gamemode].
+    # Message that appears when admin removed biome.
+    biome-removed: '[biome] <reset><green> is removed from [gamemode].'
+    # Message that appears when admin tries to delete island data.
+    confirm-island-data-deletion: <yellow> Please confirm that you want to remove
+      [player] island data.
+    # Message that appears when admin removed island data.
+    island-data-removed: '[player] <green> island data is removed.'
+    # Message that appears when admin tries to delete biome.
+    confirm-biome-data-deletion: <yellow> Please confirm that you want to remove all
+      biomes from [gamemode].
+    # Message that appears when admin removed biome.
+    biome-data-removed: All biomes are removed from [gamemode].
+    # Message that appears when user unlocks new biome and need to buy it.
+    click-text-to-purchase: <yellow> You have unlocked <reset> [biome]<reset><yellow>!
+      Click here to buy it.
+    # Message that appears when user unlocks new biome and can already use it.
+    click-text-to-set: <yellow> You have unlocked <reset> [biome]<reset><yellow>!
+      Click here to use it.
+    # Message shown when a biome is unlocked while the player is outside that gamemode world.
+    click-text-to-purchase-other-world: <yellow> You have unlocked <reset> [biome]<reset><yellow>
+      in <reset> [gamemode]<reset><yellow>! Visit that world to buy it.
+    # Message shown when a biome is unlocked while the player is outside that gamemode world.
+    click-text-to-set-other-world: <yellow> You have unlocked <reset> [biome]<reset><yellow>
+      in <reset> [gamemode]<reset><yellow>! Visit that world to use it.
+  messages:
+    # Message that is sent to a player if he tries to use locked biome.
+    biome-not-unlocked: '[biome] <reset><red> is not unlocked. You cannot use it.'
+    # Message that is sent to a player if he tries to use biome which he has not purchased.
+    biome-not-purchased: <red> You cannot use <reset> [biome] <reset><red>. You need
+      to purchase it.
+    # Message that is sent to player if he tries to unlock invalid or undeployed biome.
+    biome-cannot-be-unlocked: <red> You cannot unlock <reset> [biome] <reset><red>.
+    # Message that is sent to player if he tries to buy biome that he already owns.
+    biome-already-purchased: <red> You have already purchased <reset> [biome] <reset><red>.
+    # Message that is sent to player if he tries purchase biome without reaching required level.
+    island-level-not-reached: '[biome] <reset><red> requires to have at least island
+      level: [number].'
+    # Message that is sent to player if he tries purchase biome without required permission.
+    missing-permission: '[biome] <reset><red> requires to have permission: [permission].'
+    # Message that is sent to player if he tries purchase biome without required money in account.
+    no-credits-buy: <red> You do not have enough credits to buy <reset> [biome] <reset><red>.
+      It costs [number].
+    # Message that is sent to player if he tries purchase biome without required money in bank account.
+    no-credits-buy-bank: <red> You do not have enough credits in your bank account
+      to buy <reset> [biome] <reset><red>. It costs [number].
+    # Message that is sent to player if he tries purchase biome without required items in account.
+    no-items-buy: <red> You do not have enough items to buy <reset> [biome] <reset><red>.
+      It requires [items].
+    # Message that is sent to player when he buys a biome.
+    biome-purchased: <yellow> You have purchased <reset> [biome]<reset><yellow>.
+    # Message that is sent to player after importing biomes.
+    import-count: <yellow> Imported [biomes] biomes and [bundles] bundles.
+    # Message that appears after clicking on download button in web library.
+    start-downloading: <yellow> Start downloading library.
+    # This message is sent to user when biome changing is started.
+    update-start: '<green> Starting biome changing to [biome] <reset><green> in [number]
+      chunks. <yellow> Estimated time: [time] sec.'
+    # This message is sent to user when biome changing is finished.
+    update-done: <green> Finished changing biome to [biome]<reset><green>.
+    # This message is sent to user when his change is placed in queue.
+    waiting: '<green> Added biome change in queue. <yellow> Estimated waiting time:
+      [time] sec.'
+    # Message that is sent to player when the biome is already unlocked.
+    biome-already-unlocked: '[biome] <reset><yellow> is already unlocked.'
+    # Message that is displayed for players if gamemode does not have any biome.
+    everything-already-bought: <green> You already have bought all biomes for this
+      gamemode.
+    skipping: <green> Skipping loading <reset> [biome]<reset><green>.
+    overwriting: <green> Overwriting <reset> [biome] <reset><green> in cache.
+    imported: <green> Imported <reset> [biome] <reset><green> in cache.
+    migrate-start: <green> Starting migration to new data format.
+    migrate-finish: <green> Migration to new data format completed.
+    migrate-valid: <green> All data is valid. Migration is not necessary.
+    bundle-loaded: <green> Bundle <reset> [bundle] <green> is loaded.
+    clear-queue: <green> Biome change task queue for [gamemode] is cleared.
+  errors:
+    # Message that is displayed if requested user or island does not have any valid data.
+    no-island-data: <red> Island does not have any stored data.
+    # Message that is displayed for admins if gamemode does not have any biome.
+    no-biomes-admin: <red> Current GameMode does not have any usable biome. Please
+      import or create biomes by using /[command]
+    # Message that is displayed for players if gamemode does not have any biome.
+    no-biomes: <red> Current GameMode does not have any usable biome.
+    # Message that is displayed for player if biome change is protected by island protection flag.
+    no-rank: <red> You are not allowed to change biome on this island.
+    # Message that is displayed for player if biome requires higher island level.
+    not-enough-level: <red> This biome requires at least island level [number].
+    # Message that is displayed for player if biome requires more money than player has.
+    not-enough-money: <red> This biomes change cost [number].
+    # Message that is displayed for player if biome requires more money than island bank has.
+    not-enough-money-bank: <red> Your bank account has not enough credits. Biome change
+      costs [number].
+    # Message that is displayed for player if biome requires more items than player has.
+    not-enough-items: <red> This biomes change cost [items].
+    # Message that is displayed for admin when he tries to change biome on other player island while not being on it.
+    admin-not-on-island: <red> You are not on [user] island.
+    # Message that is displayed for players when they use command, but requested biome does not exist.
+    incorrect-object: '<red> Could not find biome with requested name: [biome]'
+    # Message that is displayed for players when they use command, but biome is not specified.
+    missing-biome: <red> Biome name is not specified.
+    # Message that is displayed for players when they write incorrect update mode name.
+    incorrect-mode: <red> Mode with name '[mode]' does not exist.
+    # Message that is displayed for players when they write incorrect number.
+    incorrect-range: <red> Given value '[number]' is not a valid number.
+    # Error message that is displayed when user tries to import file that does not exist.
+    no-file: <red> Could not find [file] in biomes directory.
+    # Error message that is displayed when user tries to import broken (incorrect) file.
+    no-load: '<red> Could not import biomes from [file]. Reason: [description]'
+    # Error message that is displayed when user tries to import biomes in non-gamemode world. May be impossible to reach.
+    not-a-gamemode-world: <red> World [world] is not a GameModeAddon world.
+    # Error message that is displayed when user tires to export biomes to a file that already exist.
+    file-exist: <red> File with name [file] already exist. Choose a different name.
+    # Error message that is displayed when user opens library gui but there are no elements to display.
+    no-library-entries: <red> Could not find any valid library entries.
+    # Error message that is displayed when user tries to use biome that is not unlocked.
+    not-unlocked: <red> You have not unlocked this biome.
+    # Error message that is displayed when user tries to use biome that is not purchased.
+    not-purchased: <red> You have not purchased this biome.
+    # Error message that is displayed when biome update task run out of time.
+    timeout: <red> Biome change run out of time. Possibly that selected area was too
+      large or server is busy.
+    # Error message that is displayed when biome update task failed.
+    failed: <red> Server run into some issues while changing biome.
+    # Error message that is displayed when addon failed to withdraw money.
+    could-not-remove-money: <red> Something went wrong while withdrawing money.
+    # Error message that is displayed when addon failed to withdraw items.
+    could-not-remove-items: <red> Something went wrong while withdrawing items.
+    # Error message that is displayed when addon has some error to do some stuff.
+    something-went-wrong: <red> Something went wrong. Could not do it.
+#    materials:
+#        # Names should be lowercase.
+#        cobblestone: "Cobblestone"
+#        # Also supports descriptions.
+#        stone:
+#            name: "Stone"
+#            description: ""
+#    biomes:
+#        # Names should be lowercase.
+#        plains: "Plains"
+#        # Also supports descriptions.
+#        jungle_hills:
+#            name: "Jungle Hills"
+#            description: ""
+#    item-stacks:
+#        # Non-specific item meta translations.
+#        # TYPE is the item type
+#        # META is a content of item meta.
+#        generic: "[type] [meta]"
+#        # Non-specific meta translations. Will replace [meta]
+#        meta:
+#            upgraded: "Upgraded"
+#            extended: "Extended"
+#            potion-meta: "<yellow> [type] [upgraded] [extended]"
+#            # Be aware, enchants are always listed below item in separate line.
+#            enchant-meta: "    <gray> - <yellow> [type] [level]"
+#            skull-meta: ": <yellow> [player-name]"
+#            book-meta: "<yellow> [title] [author]"
+#        # Custom Enchantment Translation.
+#        enchant:
+#            menting: "Mending"
+#            unbreaking: "Unbreaking"
+#        # Custom Potion Translation.
+#        potion-type:
+#            water_breathing: "Water Breathing"
+#        # You can also create specific item translations
+#        # Like translate all potions.
+#        potion:
+#            # This will overwrite generic translation.
+#            name: "[type] [upgraded] [extended]"
+#            # Type is either specific translation or potion effect.
+#            water_breathing: "Potion of Water Breathing"
+#        stone_shovel:
+#            # This will mean that only stone shovels will not show
+#            # meta information.
+#            name: "[type]"
+#    # Showcase how to support multi-linguistic biomes
+#    custom-biomes:
+#        # Database ID name.
+#        example_biome_id:
+#            name: "<dark_green> Translated Name"
+#            description: |-
+#                <gray> Translated Custom
+#                <gray> description
+protection:
+  flags:
+    BIOMES_ISLAND_PROTECTION:
+      name: Biome control
+      description: |-
+        <dark_purple><italic> Toggle who can change
+        <dark_purple><italic> the island biome
+    BIOMES_WORLD_PROTECTION:
+      name: Biome Island limitation
+      description: |-
+        <dark_purple><italic> Toggle requirement
+        <dark_purple><italic> for players to
+        <dark_purple><italic> be on their island to
+        <dark_purple><italic> change biome.
+      hint: <red> You must be on your island to change the biome!

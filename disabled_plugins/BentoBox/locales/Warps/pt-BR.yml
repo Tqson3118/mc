@@ -1,0 +1,60 @@
+warp:
+  help:
+    description: teletransportar para o sinal de warp do jogador
+    parameters: <nome do jogador>
+warps:
+  deactivate: <red>Sinal de warp antigo desativado!</red>
+  error:
+    does-not-exist: <red>Eita! Esse warp não existe mais!</red>
+    no-permission: <red>Você não tem permissão para fazer isso!</red>
+    no-remove: <red>Você não pode remover esse sinal!</red>
+    no-warps-yet: <red>Não há warps disponíveis ainda</red>
+    not-enough-level: <red>O nível da sua ilha não é alto o suficiente!</red>
+    not-on-island: <red>Você precisa estar na sua ilha para fazer isso!</red>
+    not-safe: <red>Esse warp não é seguro!</red>
+    your-level-is: <red>O nível da sua ilha é apenas [level] e deve ser maior que
+      [required]. Execute o comando de nível.</red>
+    not-correct-rank: <red>Você não tem o cargo correto para definir um warp!</red>
+  help:
+    description: abrir o painel de warps
+  player-warped: <dark_green>[name] teletransportou para o seu sinal de warp [gamemode]!</dark_green>
+  sign-removed: <red>Sinal de warp removido!</red>
+  success: <green>Sucesso!</green>
+  warpTip: <gold>Coloque um sinal de warp com [text] no topo</gold>
+  warpToPlayersSign: <gold>Teletransportando para o sinal de [player]</gold>
+  gui:
+    titles:
+      warp-title: <black><bold>Sinais de Warp</bold></black>
+    buttons:
+      previous:
+        name: <white><bold>Página Anterior</bold></white>
+        description: <gray>Mudar para a página [number]</gray>
+      next:
+        name: <white><bold>Próxima Página</bold></white>
+        description: <gray>Mudar para a página [number]</gray>
+      warp:
+        name: <white><bold>[name]</bold></white>
+        description: '[sign_text]'
+      random:
+        name: <white><bold>Warp Aleatório</bold></white>
+        description: <gray>Hmm, onde vou aparecer?</gray>
+    tips:
+      click-to-previous: <yellow>Clique </yellow><gray>para ver a página anterior.</gray>
+      click-to-next: <yellow>Clique </yellow><gray>para ver a próxima página.</gray>
+      click-to-warp: <yellow>Clique </yellow><gray>para teletransportar.</gray>
+  conversations:
+    prefix: '<gold><bold>[BentoBox]: </bold></gold><reset>'
+togglewarp:
+  help:
+    description: alternar o sinal de warp
+  enabled: <green>Seu warp agora está visível!</green>
+  disabled: <red>Seu warp agora está oculto!</red>
+  error:
+    no-permission: <red>Você não tem permissão para fazer isso!</red>
+    generic: <red>Ocorreu um erro ao alternar seu warp.</red>
+    no-warp: <red>Você não tem um warp para alternar!</red>
+protection:
+  flags:
+    PLACE_WARP:
+      name: Colocar Warp
+      description: Permitir colocar sinal de warp

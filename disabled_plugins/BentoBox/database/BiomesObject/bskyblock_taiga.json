@@ -1,0 +1,18 @@
+{
+  "biome": "TAIGA",
+  "deployed": true,
+  "friendlyName": "<white><bold> Taiga",
+  "description": [
+    "<gray> A cold forest teeming with",
+    "<gray> foxes and rabbits. Ideal",
+    "<gray> for hunting and building",
+    "<gray> cozy cabins."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: FERN\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_taiga",
+  "cost": 100.0,
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

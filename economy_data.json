@@ -1,0 +1,30 @@
+{
+  "balances": {
+    "Alex": 49950
+  },
+  "gems": {
+    "Alex": 1000
+  },
+  "talismans": {},
+  "rebirths": {},
+  "pets": {},
+  "quests": {
+    "Alex": {
+      "date": "2026-10-16",
+      "progress": {
+        "mining": 0,
+        "hunting": 0,
+        "fishing": 0,
+        "trading": 50
+      },
+      "claimed": {
+        "mining": false,
+        "hunting": false,
+        "fishing": false,
+        "trading": false
+      },
+      "all_bonus_claimed": false
+    }
+  },
+  "achievements": {}
+}

@@ -1,0 +1,23 @@
+{
+  "biome": "LUSH_CAVES",
+  "deployed": true,
+  "friendlyName": "<white><bold> Lush Caves",
+  "description": [
+    "<gray> Underground greenery where",
+    "<gray> axolotls swim and glow",
+    "<gray> squids illuminate the",
+    "<gray> darkness."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: FLOWERING_AZALEA\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_pretty_caves",
+  "unlockLevel": 55,
+  "unlockCost": 0.0,
+  "cost": 700.0,
+  "itemCost": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: MOSS_BLOCK\n  amount: 64\n"
+  ],
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

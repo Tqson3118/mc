@@ -1,0 +1,94 @@
+# Config file for Upgrades addon
+#
+# ############################################################################
+# IMPORTANT: Upgrades are NOT defined in this file.
+# ############################################################################
+#
+# Upgrades are stored in the addon's database and are created, edited and
+# deleted in-game with:
+#
+#     /[gamemode] admin upgrade
+#
+# There you set each upgrade's name, icon, tiers, prices (money, island level,
+# items, permission) and rewards (island range, limits, commands, spawner
+# speed, crop growth). Nothing you write in this file will add, remove or
+# change an upgrade.
+#
+# On first install the addon seeds a few example upgrades for each game mode so
+# there is something to look at. Delete them in the admin panel if you don't
+# want them - they are not recreated on restart.
+#
+# This file only holds the handful of settings listed below.
+
+# ======================
+# Disabled Game Mode Addons
+# ======================
+# List of game modes where the Upgrades functionality will not work.
+# Specify game modes by name in the array below.
+disabled-gamemodes: []
+
+# String a player types to cancel a chat input prompt in the admin panels.
+chat-input-escape: "END"
+
+# ======================
+# Limits addon integration
+# ======================
+# These three sections do NOT create upgrades. They tell Upgrades which block,
+# entity and entity-group limits it is responsible for, so that the Limits
+# addon's own permission-based limits are suppressed for them. Without this,
+# a player's Limits permission and their purchased upgrade would fight over
+# the same limit.
+#
+# Only the KEY NAMES matter - HOPPER, CHICKEN, group1 below. The tier values
+# underneath are ignored; they are kept only so that older config files keep
+# loading. A tier needs 'max-level' and 'upgrade' present to parse.
+#
+# Entity group names must match the group names in the Limits addon config.
+#
+# If you do not use the Limits addon, these sections do nothing.
+
+block-limits-upgrade:
+  HOPPER:
+    tier1:
+      max-level: 1
+      upgrade: "1"
+
+entity-limits-upgrade:
+  CHICKEN:
+    tier1:
+      max-level: 1
+      upgrade: "1"
+
+entity-group-limits-upgrade:
+  # This name has to match your entity group name in the Limits addon
+  group1:
+    tier1:
+      max-level: 1
+      upgrade: "1"
+
+# ======================
+# GameMode-Specific Limits
+# ======================
+# Add per-game-mode entries here if a game mode should suppress Limits
+# permissions for a different set of blocks, entities or groups than the
+# defaults above. Same rule applies: only the key names are used.
+gamemodes:
+  BSkyBlock:
+    block-limits-upgrade:
+      HOPPER:
+        tier1:
+          max-level: 1
+          upgrade: "1"
+
+    entity-limits-upgrade:
+      CHICKEN:
+        tier1:
+          max-level: 1
+          upgrade: "1"
+
+    entity-group-limits-upgrade:
+      # Has to match the entity group name in the Limits addon
+      group1:
+        tier1:
+          max-level: 1
+          upgrade: "1"

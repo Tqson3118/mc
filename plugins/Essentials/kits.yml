@@ -1,0 +1,89 @@
+# EssentialsX kit configuration.
+# If no kits are defined in this file, the plugin will attempt to copy them from 'config.yml'.
+
+# All items MUST be followed by a quantity.
+# Kit names should be in lowercase and will be treated as such in permissions and costs.
+# Syntax: - item[:durability] amount [enchantment:level]... [itemmeta:value]...
+# For detailed information on item meta, visit https://wiki.ess3.net/wiki/Item_Meta
+#
+# To make a kit execute a command, add '/<command>' to the item list. Use {USERNAME} to reference the player receiving the kit.
+# Use {PLAYER} to display the player's display name instead of the username.
+# 'delay' refers to the cooldown between how often you can use each kit, measured in seconds. Set to -1 for a one-time kit.
+#
+# You can also organize kits into separate files within the 'kits' subdirectory.
+# Essentials will treat all '.yml' files in the subdirectory as valid kit files and add them along with those in here.
+# Each file in the 'kits' subdirectory must be formatted the same as this file.
+#
+# For more information, refer to https://wiki.ess3.net/wiki/Kits
+
+kits:
+  tanthu:
+    delay: 86400
+    items:
+      - iron_sword 1 sharpness:1 unbreaking:1 name:&a&lKiếm_Tân_Thủ lore:&7Vũ_khí_khởi_đầu_Skyblock!
+      - iron_pickaxe 1 efficiency:1 unbreaking:1 name:&a&lCúp_Tân_Thủ lore:&7Dùng_để_đào_đá_và_khoáng_sản!
+      - iron_axe 1 efficiency:1 unbreaking:1 name:&a&lRìu_Tân_Thủ lore:&7Chặt_cây_mở_rộng_đảo!
+      - iron_shovel 1 efficiency:1 unbreaking:1 name:&a&lXẻng_Tân_Thủ lore:&7Dùng_để_đào_đất!
+      - leather_helmet 1 protection:1 unbreaking:1 name:&a&lMũ_Tân_Thủ
+      - leather_chestplate 1 protection:1 unbreaking:1 name:&a&lÁo_Tân_Thủ
+      - leather_leggings 1 protection:1 unbreaking:1 name:&a&lQuần_Tân_Thủ
+      - leather_boots 1 protection:1 unbreaking:1 name:&a&lGiày_Tân_Thủ
+      - cooked_beef 32 name:&6&lBò_Nướng_Tân_Thủ
+      - torch 32
+      - oak_sapling 4
+      - bone_meal 16
+      - ice 2
+      - lava_bucket 1
+      - emerald 10 name:&a&lNgọc_Khởi_Nghiệp
+      - /eco give {USERNAME} 1000
+      - /broadcast &a[Server] &eChào mừng tân thủ &b{USERNAME} &eđã nhận &aKit Tân Thủ&e!
+  daily:
+    delay: 86400
+    items:
+      - cooked_beef 16 name:&6&lBò_Nướng_Hàng_Ngày
+      - coal 8
+      - diamond 2
+      - /minecraft:give {USERNAME} tripwire_hook[custom_data={crate_key:"common"},item_name='{"text":"Chìa Khóa Đồng","color":"gold","bold":true}',lore=['{"text":"Dùng để mở Hòm Đồng tại Spawn!","color":"yellow"}','{"text":"(Common Crate Key)","color":"gray"}']] 1
+      - /eco give {USERNAME} 500
+      - /broadcast &a[Điểm Danh] &eNgười chơi &b{USERNAME} &eđã nhận &6Kit Hàng Ngày (Daily)&e!
+  pvp:
+    delay: 1800
+    items:
+      - diamond_sword 1 sharpness:3 unbreaking:2 name:&c&lKiếm_Chiến_Binh_PvP lore:&7Vũ_khí_chiến_đấu_sắc_bén!
+      - iron_helmet 1 protection:2 unbreaking:2 name:&9&lMũ_Sắt_Chiến_Binh
+      - iron_chestplate 1 protection:2 unbreaking:2 name:&9&lÁo_Sắt_Chiến_Binh
+      - iron_leggings 1 protection:2 unbreaking:2 name:&9&lQuần_Sắt_Chiến_Binh
+      - iron_boots 1 protection:2 unbreaking:2 name:&9&lGiày_Sắt_Chiến_Binh
+      - golden_apple 2
+      - bow 1 power:2 infinity:1 name:&6&lCung_Chiến_Binh
+      - arrow 64
+      - /broadcast &c[PvP Arena] &eNgười chơi &b{USERNAME} &eđã trang bị &cKit PvP&e chuẩn bị xuất trận!
+  tools:
+    delay: 10
+    items:
+      - stonesword 1
+      - stoneshovel 1
+      - stonepickaxe 1
+      - stoneaxe 1
+  dtools:
+    delay: 600
+    items:
+      - dpickaxe 1 efficiency:1 durability:1 fortune:1 name:&4Gigadrill lore:The_drill_that_&npierces|the_heavens
+      - dshovel 1 digspeed:3 name:Dwarf lore:Diggy|Diggy|Hole
+      - lhelm 1 color:255,255,255 name:Top_Hat lore:Good_day,_Good_day
+      - daxe:780 1
+      - /broadcast {USERNAME} just got some fancy tools!
+  notch:
+    delay: 6000
+    items:
+      - playerhead 1 player:Notch
+  color:
+    delay: 6000
+    items:
+      - writtenbook 1 title:&4Book_&9o_&6Colors author:KHobbits lore:Ingame_color_codes book:Colors
+  firework:
+    delay: 6000
+    items:
+      - fireworkrocket 1 name:Angry_Creeper color:red fade:green type:creeper power:1
+      - fireworkrocket 1 name:Starry_Night color:yellow,orange fade:blue type:star effect:trail,twinkle power:1
+      - fireworkrocket 2 name:Solar_Wind color:yellow,orange fade:red shape:large effect:twinkle color:yellow,orange fade:red shape:ball effect:trail color:red,purple fade:pink shape:star effect:trail power:1

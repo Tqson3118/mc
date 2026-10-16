@@ -1,0 +1,289 @@
+worlds:
+  world:
+    ==: MVWorld
+    hidden: false
+    alias: "Thánh Điện Cổ Thần (Spawn)"
+    color: WHITE
+    style: NORMAL
+    pvp: false
+    scale: 1.0
+    respawnWorld: ''
+    allowWeather: false
+    difficulty: PEACEFUL
+    spawning:
+      ==: MVSpawnSettings
+      animals:
+        ==: MVSpawnSubSettings
+        spawn: false
+        amount: -1
+        exceptions: []
+      monsters:
+        ==: MVSpawnSubSettings
+        spawn: false
+        amount: -1
+        exceptions: []
+    entryfee:
+      ==: MVEntryFee
+      amount: 0.0
+      currency: -1
+    hunger: false
+    autoHeal: true
+    adjustSpawn: true
+    portalForm: ALL
+    gameMode: SURVIVAL
+    keepSpawnInMemory: true
+    spawnLocation:
+      ==: MVSpawnLocation
+      x: 0.5
+      y: 122.0
+      z: 0.5
+      pitch: 0.0
+      yaw: 0.0
+    autoLoad: true
+    bedRespawn: true
+    worldBlacklist: []
+    environment: NORMAL
+    seed: 12345
+    generator: 'VoidGen'
+    playerLimit: -1
+    allowFlight: true
+  world_boss:
+    ==: MVWorld
+    hidden: false
+    alias: "Vực Thẳm Đấu Trường Boss"
+    color: RED
+    style: BOLD
+    pvp: false
+    scale: 1.0
+    respawnWorld: 'world'
+    allowWeather: false
+    difficulty: HARD
+    spawning:
+      ==: MVSpawnSettings
+      animals:
+        ==: MVSpawnSubSettings
+        spawn: false
+        amount: -1
+        exceptions: []
+      monsters:
+        ==: MVSpawnSubSettings
+        spawn: true
+        amount: -1
+        exceptions: []
+    entryfee:
+      ==: MVEntryFee
+      amount: 0.0
+      currency: -1
+    hunger: true
+    autoHeal: false
+    adjustSpawn: true
+    portalForm: ALL
+    gameMode: SURVIVAL
+    keepSpawnInMemory: false
+    spawnLocation:
+      ==: MVSpawnLocation
+      x: 0.5
+      y: 111.0
+      z: 76.0
+      pitch: 0.0
+      yaw: 0.0
+    autoLoad: true
+    bedRespawn: false
+    worldBlacklist: []
+    environment: NORMAL
+    seed: 12345
+    generator: 'VoidGen'
+    playerLimit: -1
+    allowFlight: false
+  world_farm:
+    ==: MVWorld
+    hidden: false
+    alias: "Vườn Thượng Uyển Sakura & Hầm Ngục Quái"
+    color: LIGHT_PURPLE
+    style: NORMAL
+    pvp: false
+    scale: 1.0
+    respawnWorld: 'world'
+    allowWeather: false
+    difficulty: NORMAL
+    spawning:
+      ==: MVSpawnSettings
+      animals:
+        ==: MVSpawnSubSettings
+        spawn: true
+        amount: -1
+        exceptions: []
+      monsters:
+        ==: MVSpawnSubSettings
+        spawn: true
+        amount: -1
+        exceptions: []
+    entryfee:
+      ==: MVEntryFee
+      amount: 0.0
+      currency: -1
+    hunger: true
+    autoHeal: true
+    adjustSpawn: true
+    portalForm: ALL
+    gameMode: SURVIVAL
+    keepSpawnInMemory: false
+    spawnLocation:
+      ==: MVSpawnLocation
+      x: 0.5
+      y: 111.0
+      z: 0.5
+      pitch: 0.0
+      yaw: 0.0
+    autoLoad: true
+    bedRespawn: false
+    worldBlacklist: []
+    environment: NORMAL
+    seed: 12345
+    generator: 'VoidGen'
+    playerLimit: -1
+    allowFlight: false
+  world_cauca:
+    ==: MVWorld
+    hidden: false
+    alias: "Biển Hồ Trên Mây (Celestial Oasis)"
+    color: AQUA
+    style: NORMAL
+    pvp: false
+    scale: 1.0
+    respawnWorld: 'world'
+    allowWeather: false
+    difficulty: PEACEFUL
+    spawning:
+      ==: MVSpawnSettings
+      animals:
+        ==: MVSpawnSubSettings
+        spawn: true
+        amount: -1
+        exceptions: []
+      monsters:
+        ==: MVSpawnSubSettings
+        spawn: false
+        amount: -1
+        exceptions: []
+    entryfee:
+      ==: MVEntryFee
+      amount: 0.0
+      currency: -1
+    hunger: false
+    autoHeal: true
+    adjustSpawn: true
+    portalForm: ALL
+    gameMode: SURVIVAL
+    keepSpawnInMemory: false
+    spawnLocation:
+      ==: MVSpawnLocation
+      x: 0.5
+      y: 101.0
+      z: 0.5
+      pitch: 0.0
+      yaw: 0.0
+    autoLoad: true
+    bedRespawn: false
+    worldBlacklist: []
+    environment: NORMAL
+    seed: 12345
+    generator: 'VoidGen'
+    playerLimit: -1
+    allowFlight: true
+  world_parkour:
+    ==: MVWorld
+    hidden: false
+    alias: "Siêu Tháp Thử Thách Phong Lôi"
+    color: YELLOW
+    style: NORMAL
+    pvp: false
+    scale: 1.0
+    respawnWorld: 'world'
+    allowWeather: false
+    difficulty: PEACEFUL
+    spawning:
+      ==: MVSpawnSettings
+      animals:
+        ==: MVSpawnSubSettings
+        spawn: false
+        amount: -1
+        exceptions: []
+      monsters:
+        ==: MVSpawnSubSettings
+        spawn: false
+        amount: -1
+        exceptions: []
+    entryfee:
+      ==: MVEntryFee
+      amount: 0.0
+      currency: -1
+    hunger: false
+    autoHeal: true
+    adjustSpawn: true
+    portalForm: ALL
+    gameMode: SURVIVAL
+    keepSpawnInMemory: false
+    spawnLocation:
+      ==: MVSpawnLocation
+      x: 0.5
+      y: 71.0
+      z: 0.5
+      pitch: 0.0
+      yaw: 0.0
+    autoLoad: true
+    bedRespawn: false
+    worldBlacklist: []
+    environment: NORMAL
+    seed: 12345
+    generator: 'VoidGen'
+    playerLimit: -1
+    allowFlight: false
+  world_casino:
+    ==: MVWorld
+    hidden: false
+    alias: "Cung Điện Hoàng Gia Las Vegas"
+    color: GOLD
+    style: BOLD
+    pvp: false
+    scale: 1.0
+    respawnWorld: 'world'
+    allowWeather: false
+    difficulty: PEACEFUL
+    spawning:
+      ==: MVSpawnSettings
+      animals:
+        ==: MVSpawnSubSettings
+        spawn: false
+        amount: -1
+        exceptions: []
+      monsters:
+        ==: MVSpawnSubSettings
+        spawn: false
+        amount: -1
+        exceptions: []
+    entryfee:
+      ==: MVEntryFee
+      amount: 0.0
+      currency: -1
+    hunger: false
+    autoHeal: true
+    adjustSpawn: true
+    portalForm: ALL
+    gameMode: SURVIVAL
+    keepSpawnInMemory: false
+    spawnLocation:
+      ==: MVSpawnLocation
+      x: 0.5
+      y: 111.0
+      z: 0.5
+      pitch: 0.0
+      yaw: 0.0
+    autoLoad: true
+    bedRespawn: false
+    worldBlacklist: []
+    environment: NORMAL
+    seed: 12345
+    generator: 'VoidGen'
+    playerLimit: -1
+    allowFlight: true

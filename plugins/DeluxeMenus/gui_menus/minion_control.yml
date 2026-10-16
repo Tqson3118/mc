@@ -1,0 +1,160 @@
+menu_title: '&8⚡ &6&lQUẢN LÝ MINION &8(&e/IS MINION&8) ⚡'
+open_command: minion_control
+size: 45
+open_requirement:
+  requirements: {}
+
+items:
+  'border':
+    material: BLACK_STAINED_GLASS_PANE
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 26
+      - 27
+      - 35
+      - 36
+      - 37
+      - 38
+      - 39
+      - 41
+      - 42
+      - 43
+      - 44
+    display_name: ' '
+
+  'info':
+    material: NETHER_STAR
+    slot: 4
+    display_name: '&e&l🤖 BẢNG ĐIỀU KHIỂN MINION ĐẢO'
+    lore:
+      - '&8━━━━━━━━━━━━━━━━━━━━━━━━━'
+      - '&7Quản lý và nâng cấp sức mạnh Minion trực tiếp.'
+      - '&f • Chi phí nâng cấp: &dĐiểm Tinh Anh (Gems)'
+      - '&f • Số dư hiện có: &d%objective_score_sb_gems% Gems'
+      - '&8━━━━━━━━━━━━━━━━━━━━━━━━━'
+
+  'collect_all':
+    material: HOPPER
+    slot: 10
+    display_name: '&a&l📥 THU HOẠCH TOÀN BỘ'
+    lore:
+      - '&7Rút toàn bộ sản phẩm đang chờ trong kho'
+      - '&7của các Minions trên đảo vào túi đồ của bạn.'
+      - ''
+      - '&a▶ Nhấp để thu hoạch!'
+    left_click_commands:
+      - '[player] is minion collectall'
+      - '[close]'
+
+  'upgrade_tier':
+    material: NETHER_STAR
+    slot: 12
+    display_name: '&e&l⭐ NÂNG CẤP BẬC (TIER 1 - 12)'
+    lore:
+      - '&7Tăng bậc sản xuất tài nguyên quý hiếm hơn'
+      - '&7và rút ngắn thời gian chu kỳ làm việc.'
+      - ''
+      - '&d• Chi phí: 15 Gems x Bậc kế tiếp'
+      - '&e▶ Nhấp để nâng cấp bậc!'
+    left_click_commands:
+      - '[player] is minion upgrade'
+
+  'upgrade_range':
+    material: SPYGLASS
+    slot: 14
+    display_name: '&b&l🔍 TẦM ĐÀO & TÁC ĐỘNG (CẤP 1 - 5)'
+    lore:
+      - '&7Mở rộng bán kính đào / chặt / săn quái'
+      - '&7(Bán kính từ 3 blocks lên tới 7 blocks).'
+      - ''
+      - '&d• Chi phí: 20 Gems x Cấp kế tiếp'
+      - '&b▶ Nhấp để tăng tầm đào!'
+    left_click_commands:
+      - '[player] is minion upgrade_range'
+
+  'upgrade_speed':
+    material: SUGAR
+    slot: 16
+    display_name: '&f&l⚡ TỐC ĐỘ LÀM VIỆC (CẤP 1 - 5)'
+    lore:
+      - '&7Gia tăng nhịp độ vung cúp/kiếm'
+      - '&7(+15% tốc độ mỗi cấp, tối đa +75%).'
+      - ''
+      - '&d• Chi phí: 25 Gems x Cấp kế tiếp'
+      - '&f▶ Nhấp để tăng tốc độ!'
+    left_click_commands:
+      - '[player] is minion upgrade_speed'
+
+  'upgrade_storage':
+    material: CHEST
+    slot: 28
+    display_name: '&6&l📦 SỨC CHỨA KHO (CẤP 1 - 5)'
+    lore:
+      - '&7Mở rộng kho lưu trữ sản phẩm Minion'
+      - '&7(+256 items mỗi cấp, tối đa 2048+ items).'
+      - ''
+      - '&d• Chi phí: 15 Gems x Cấp kế tiếp'
+      - '&6▶ Nhấp để mở rộng kho!'
+    left_click_commands:
+      - '[player] is minion upgrade_storage'
+
+  'change_tool':
+    material: DIAMOND_PICKAXE
+    slot: 30
+    display_name: '&3&l🛠 THAY TOOL LAO ĐỘNG (BẬC 1 - 5)'
+    lore:
+      - '&7Nâng cấp công cụ trên tay Minion:'
+      - '&f • Gỗ &7(x1.0) &f-> Đá &7(x1.25) &f-> Sắt &7(x1.5)'
+      - '&f • Kim Cương &7(x1.75) &f-> Netherite &7(x2.0)'
+      - ''
+      - '&d• Chi phí: 30 Gems x Bậc Tool'
+      - '&3▶ Nhấp để nâng cấp Tool!'
+    left_click_commands:
+      - '[player] is minion change_tool'
+
+  'change_skin':
+    material: PLAYER_HEAD
+    slot: 32
+    display_name: '&d&l🎭 ĐỔI SKIN MINION'
+    lore:
+      - '&7Thay đổi ngoại hình & bộ giáp của Minion:'
+      - '&f • Dân Làng &7(Mặc định)'
+      - '&f • Cyborg &7(MHF_Enderman)'
+      - '&f • Samurai &7(MHF_PigZombie)'
+      - '&f • Hoàng Gia &7(MHF_Alex)'
+      - ''
+      - '&d• Chi phí: 50 Gems / lần đổi'
+      - '&d▶ Chuột trái: Skin Samurai | Chuột phải: Skin Cyborg'
+    left_click_commands:
+      - '[player] is minion change_skin samurai'
+    right_click_commands:
+      - '[player] is minion change_skin cyborg'
+
+  'sell_all':
+    material: GOLD_INGOT
+    slot: 34
+    display_name: '&e&l💰 BÁN TÀI NGUYÊN TRONG KHO'
+    lore:
+      - '&7Bán nhanh toàn bộ sản phẩm trong kho'
+      - '&7ra tiền Số Dư ($) theo thời giá niêm yết.'
+      - ''
+      - '&e▶ Nhấp để bán ngay!'
+    left_click_commands:
+      - '[player] is minion sellall'
+
+  'close':
+    material: BARRIER
+    slot: 40
+    display_name: '&c&l✕ ĐÓNG BẢNG ĐIỀU KHIỂN'
+    left_click_commands:
+      - '[close]'

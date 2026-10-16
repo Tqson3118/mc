@@ -1,0 +1,304 @@
+menu_title: '&8⛏ &b&lCỬA HÀNG: KHOÁNG SẢN ⛏'
+open_command: shop_khoangsan
+size: 45
+open_requirement:
+  requirements: {}
+
+items:
+  'border':
+    material: CYAN_STAINED_GLASS_PANE
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 26
+      - 27
+      - 35
+      - 36
+      - 37
+      - 38
+      - 39
+      - 41
+      - 42
+      - 43
+      - 44
+    display_name: ' '
+
+  'info':
+    material: DIAMOND_PICKAXE
+    slot: 4
+    display_name: '&b&l⛏ DANH MỤC: QUẶNG & KHOÁNG SẢN'
+    lore:
+      - '&8━━━━━━━━━━━━━━━━━━━━━━━━━'
+      - '&f • &aChuột trái:&f Mua x1'
+      - '&f • &2Shift-Chuột trái:&f Mua x64'
+      - '&f • &eChuột phải:&f Bán x1'
+      - '&f • &6Shift-Chuột phải:&f Bán hết loại đó trong túi'
+      - '&8━━━━━━━━━━━━━━━━━━━━━━━━━'
+
+  'cobblestone':
+    material: COBBLESTONE
+    slot: 10
+    display_name: '&7&lĐá Cuội'
+    lore:
+      - '&a• Mua: $4 Xu'
+      - '&e• Bán: $2 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($4)'
+      - '&2▶ Shift-Trái: Mua x64 ($256)'
+      - '&e▶ Chuột phải: Bán x1 ($2)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy cobblestone 1'
+    shift_left_click_commands:
+      - '[player] shop buy cobblestone 64'
+    right_click_commands:
+      - '[player] shop sell cobblestone 1'
+    shift_right_click_commands:
+      - '[player] shop sell cobblestone all'
+
+  'stone':
+    material: STONE
+    slot: 11
+    display_name: '&f&lĐá Nhẵn'
+    lore:
+      - '&a• Mua: $6 Xu'
+      - '&e• Bán: $3 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($6)'
+      - '&2▶ Shift-Trái: Mua x64 ($384)'
+      - '&e▶ Chuột phải: Bán x1 ($3)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy stone 1'
+    shift_left_click_commands:
+      - '[player] shop buy stone 64'
+    right_click_commands:
+      - '[player] shop sell stone 1'
+    shift_right_click_commands:
+      - '[player] shop sell stone all'
+
+  'coal':
+    material: COAL
+    slot: 12
+    display_name: '&8&lThan Đá'
+    lore:
+      - '&a• Mua: $16 Xu'
+      - '&e• Bán: $8 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($16)'
+      - '&2▶ Shift-Trái: Mua x64 ($1,024)'
+      - '&e▶ Chuột phải: Bán x1 ($8)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy coal 1'
+    shift_left_click_commands:
+      - '[player] shop buy coal 64'
+    right_click_commands:
+      - '[player] shop sell coal 1'
+    shift_right_click_commands:
+      - '[player] shop sell coal all'
+
+  'copper':
+    material: COPPER_INGOT
+    slot: 13
+    display_name: '&6&lĐồng Thỏi'
+    lore:
+      - '&a• Mua: $20 Xu'
+      - '&e• Bán: $10 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($20)'
+      - '&2▶ Shift-Trái: Mua x64 ($1,280)'
+      - '&e▶ Chuột phải: Bán x1 ($10)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy copper_ingot 1'
+    shift_left_click_commands:
+      - '[player] shop buy copper_ingot 64'
+    right_click_commands:
+      - '[player] shop sell copper_ingot 1'
+    shift_right_click_commands:
+      - '[player] shop sell copper_ingot all'
+
+  'iron':
+    material: IRON_INGOT
+    slot: 14
+    display_name: '&f&lSắt Thỏi'
+    lore:
+      - '&a• Mua: $36 Xu'
+      - '&e• Bán: $18 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($36)'
+      - '&2▶ Shift-Trái: Mua x64 ($2,304)'
+      - '&e▶ Chuột phải: Bán x1 ($18)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy iron_ingot 1'
+    shift_left_click_commands:
+      - '[player] shop buy iron_ingot 64'
+    right_click_commands:
+      - '[player] shop sell iron_ingot 1'
+    shift_right_click_commands:
+      - '[player] shop sell iron_ingot all'
+
+  'raw_iron':
+    material: RAW_IRON
+    slot: 15
+    display_name: '&f&lSắt Thô'
+    lore:
+      - '&a• Mua: $28 Xu'
+      - '&e• Bán: $14 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($28)'
+      - '&2▶ Shift-Trái: Mua x64 ($1,792)'
+      - '&e▶ Chuột phải: Bán x1 ($14)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy raw_iron 1'
+    shift_left_click_commands:
+      - '[player] shop buy raw_iron 64'
+    right_click_commands:
+      - '[player] shop sell raw_iron 1'
+    shift_right_click_commands:
+      - '[player] shop sell raw_iron all'
+
+  'gold':
+    material: GOLD_INGOT
+    slot: 16
+    display_name: '&e&lVàng Thỏi'
+    lore:
+      - '&a• Mua: $56 Xu'
+      - '&e• Bán: $28 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($56)'
+      - '&2▶ Shift-Trái: Mua x64 ($3,584)'
+      - '&e▶ Chuột phải: Bán x1 ($28)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy gold_ingot 1'
+    shift_left_click_commands:
+      - '[player] shop buy gold_ingot 64'
+    right_click_commands:
+      - '[player] shop sell gold_ingot 1'
+    shift_right_click_commands:
+      - '[player] shop sell gold_ingot all'
+
+  'redstone':
+    material: REDSTONE
+    slot: 29
+    display_name: '&c&lBột Đá Đỏ'
+    lore:
+      - '&a• Mua: $20 Xu'
+      - '&e• Bán: $10 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($20)'
+      - '&2▶ Shift-Trái: Mua x64 ($1,280)'
+      - '&e▶ Chuột phải: Bán x1 ($10)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy redstone 1'
+    shift_left_click_commands:
+      - '[player] shop buy redstone 64'
+    right_click_commands:
+      - '[player] shop sell redstone 1'
+    shift_right_click_commands:
+      - '[player] shop sell redstone all'
+
+  'lapis':
+    material: LAPIS_LAZULI
+    slot: 30
+    display_name: '&9&lNgọc Lưu Ly'
+    lore:
+      - '&a• Mua: $24 Xu'
+      - '&e• Bán: $12 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($24)'
+      - '&2▶ Shift-Trái: Mua x64 ($1,536)'
+      - '&e▶ Chuột phải: Bán x1 ($12)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy lapis_lazuli 1'
+    shift_left_click_commands:
+      - '[player] shop buy lapis_lazuli 64'
+    right_click_commands:
+      - '[player] shop sell lapis_lazuli 1'
+    shift_right_click_commands:
+      - '[player] shop sell lapis_lazuli all'
+
+  'diamond':
+    material: DIAMOND
+    slot: 31
+    display_name: '&b&lKim Cương'
+    lore:
+      - '&a• Mua: $170 Xu'
+      - '&e• Bán: $85 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($170)'
+      - '&2▶ Shift-Trái: Mua x64 ($10,880)'
+      - '&e▶ Chuột phải: Bán x1 ($85)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy diamond 1'
+    shift_left_click_commands:
+      - '[player] shop buy diamond 64'
+    right_click_commands:
+      - '[player] shop sell diamond 1'
+    shift_right_click_commands:
+      - '[player] shop sell diamond all'
+
+  'emerald':
+    material: EMERALD
+    slot: 32
+    display_name: '&a&lNgọc Lục Bảo'
+    lore:
+      - '&a• Mua: $220 Xu'
+      - '&e• Bán: $110 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($220)'
+      - '&2▶ Shift-Trái: Mua x64 ($14,080)'
+      - '&e▶ Chuột phải: Bán x1 ($110)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy emerald 1'
+    shift_left_click_commands:
+      - '[player] shop buy emerald 64'
+    right_click_commands:
+      - '[player] shop sell emerald 1'
+    shift_right_click_commands:
+      - '[player] shop sell emerald all'
+
+  'quartz':
+    material: QUARTZ
+    slot: 33
+    display_name: '&f&lThạch Anh'
+    lore:
+      - '&a• Mua: $32 Xu'
+      - '&e• Bán: $16 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($32)'
+      - '&2▶ Shift-Trái: Mua x64 ($2,048)'
+      - '&e▶ Chuột phải: Bán x1 ($16)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy quartz 1'
+    shift_left_click_commands:
+      - '[player] shop buy quartz 64'
+    right_click_commands:
+      - '[player] shop sell quartz 1'
+    shift_right_click_commands:
+      - '[player] shop sell quartz all'
+
+  'back':
+    material: ARROW
+    slot: 40
+    display_name: '&e&l◀ QUAY LẠI CỬA HÀNG CHÍNH'
+    left_click_commands:
+      - '[openguimenu] shop'

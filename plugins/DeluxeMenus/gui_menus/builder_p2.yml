@@ -1,0 +1,148 @@
+menu_title: '&8[&a&lBẢN VẼ&8] &0Nông Trại & Kho &7(Trang 2/3)'
+open_command: isbuildermenu2
+size: 27
+open_requirement:
+  requirements: {}
+
+items:
+  'border':
+    material: LIME_STAINED_GLASS_PANE
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 11
+      - 13
+      - 15
+      - 17
+      - 19
+      - 20
+      - 21
+      - 23
+      - 24
+      - 25
+    display_name: ' '
+
+  'info':
+    material: WRITABLE_BOOK
+    slot: 4
+    display_name: '&a&l🌾 BẢN VẼ KIẾN TRÚC SƯ - TRANG 2/3'
+    lore:
+      - '&7Chủ đề: &a&lNông Trại & Kho Lưu Trữ Đảo'
+      - '&7Tối ưu hóa sản lượng nông nghiệp và kho đồ!'
+      - ''
+      - '&eLưu ý an toàn:'
+      - '&f • Hãy đứng quay mặt về khoảng không muốn xây'
+      - '&f • Không lo mất rương/spawner (bảo vệ tuyệt đối)'
+      - '&f • Được hoàn tác dỡ bỏ trong 3 phút (&aHoàn lại 90%&f)'
+
+  'windmill':
+    material: HAY_BLOCK
+    slot: 10
+    display_name: '&6&l🌾 CỐI XAY GIÓ & VỰA LÚA MÌ'
+    lore:
+      - '&7Biểu tượng trù phú nông thôn châu Âu cổ điển.'
+      - ''
+      - '&eThông số kiến trúc:'
+      - '&f • Quy mô: &b11x11 x H14 blocks &7(4 Cánh Quạt Lớn)'
+      - '&f • Tiện ích: Vườn lúa mì chín rộ, kiện rơm, cối nghiền & thùng thóc'
+      - '&f • Chi phí: &6$20,000 Xu'
+      - ''
+      - '&a&l▶ NHẤP CHUỘT TRÁI ĐỂ THI CÔNG NGAY!'
+    left_click_commands:
+      - '[player] is build windmill'
+      - '[close]'
+
+  'warehouse':
+    material: CHEST
+    slot: 12
+    display_name: '&e&l📦 KHO LƯU TRỮ 36 RƯƠNG LỚN'
+    lore:
+      - '&7Kho chứa đồ trung tâm quy mô cực khủng cho đảo.'
+      - ''
+      - '&eThông số kiến trúc:'
+      - '&f • Quy mô: &b13x15 x H7 blocks &7(Đá Deepslate Kiên Cố)'
+      - '&f • Tiện ích: 36 Rương Đôi (72 rương ghép), Ender Chest, Đe sắt, Lò'
+      - '&f • Chi phí: &6$30,000 Xu'
+      - ''
+      - '&a&l▶ NHẤP CHUỘT TRÁI ĐỂ THI CÔNG NGAY!'
+    left_click_commands:
+      - '[player] is build warehouse'
+      - '[close]'
+
+  'greenhouse':
+    material: BEE_NEST
+    slot: 14
+    display_name: '&2&l🌿 NHÀ KÍNH SINH THÁI TỰ NHIÊN'
+    lore:
+      - '&7Hệ sinh thái nông nghiệp khép kín mái vòm kính.'
+      - ''
+      - '&eThông số kiến trúc:'
+      - '&f • Quy mô: &b13x13 x H8 blocks &7(Vòm Kính Quang Hợp)'
+      - '&f • Tiện ích: Cà rốt, khoai tây, củ dền, mía & 2 tổ ong mật chín'
+      - '&f • Chi phí: &6$25,000 Xu'
+      - ''
+      - '&a&l▶ NHẤP CHUỘT TRÁI ĐỂ THI CÔNG NGAY!'
+    left_click_commands:
+      - '[player] is build greenhouse'
+      - '[close]'
+
+  'garden':
+    material: LILY_PAD
+    slot: 16
+    display_name: '&d&l🌸 VƯỜN HOA ZEN & SUỐI NƯỚC'
+    lore:
+      - '&7Khu vườn thiền thanh bình ngập tràn cây cỏ hoa lá.'
+      - ''
+      - '&eThông số kiến trúc:'
+      - '&f • Quy mô: &b15x15 x H8 blocks &7(Suối Nước Tự Nhiên)'
+      - '&f • Cảnh quan: Hồ sen ngắm trăng, cầu gỗ, cây anh đào thư giãn'
+      - '&f • Chi phí: &6$15,000 Xu'
+      - ''
+      - '&a&l▶ NHẤP CHUỘT TRÁI ĐỂ THI CÔNG NGAY!'
+    left_click_commands:
+      - '[player] is build garden'
+      - '[close]'
+
+  'prev_page':
+    material: ARROW
+    slot: 18
+    display_name: '&e&l◀ TRANG TRƯỚC &7(Trang 1: Nhà Ở & Biệt Thự)'
+    lore:
+      - '&7Nhấp để quay lại danh mục Nhà Ở & Biệt Thự'
+      - ''
+      - '&e&l◀ BẤM ĐỂ QUAY LẠI TRANG 1'
+    left_click_commands:
+      - '[openguimenu] builder'
+
+  'undo':
+    material: SHEARS
+    slot: 22
+    display_name: '&c&l🧹 HOÀN TÁC CÔNG TRÌNH VỪA XÂY (/is undo)'
+    lore:
+      - '&7Lỡ đặt nhầm vị trí hoặc không ưng ý?'
+      - '&7Nhấp vào đây trong vòng 3 phút để:'
+      - '&a • Dọn sạch công trình trả lại không gian đảo'
+      - '&a • Nhận lại 90% chi phí vào số dư Vault!'
+      - ''
+      - '&c&l▶ NHẤP VÀO ĐÂY ĐỂ DỠ BỎ & HOÀN TIỀN'
+    left_click_commands:
+      - '[player] is undo'
+      - '[close]'
+
+  'next_page':
+    material: ARROW
+    slot: 26
+    display_name: '&a&l▶ TRANG KẾ TIẾP &7(Trang 3: Thần Bí & Hư Không)'
+    lore:
+      - '&7Nhấp để xem danh mục công trình Thần Bí & Hư Không'
+      - ''
+      - '&a&l▶ BẤM ĐỂ CHUYỂN TRANG 3'
+    left_click_commands:
+      - '[openguimenu] builder_p3'

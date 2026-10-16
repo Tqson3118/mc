@@ -1,0 +1,209 @@
+# ==============================================================================
+# HỆ THỐNG TRỢ GIÚP SKYBLOCK VN (HELP.YML)
+# ==============================================================================
+ignore-plugins: []
+command-topics-in-master-index: true
+
+general-topics:
+  HuongDan:
+    shortText: "Hướng dẫn cơ bản và luồng tiến trình chơi Skyblock"
+    fullText: |
+      &6&l═══════════════════════════════════════════════
+      &e&l        ✦ HƯỚNG DẪN CƠ BẢN SKYBLOCK VN ✦
+      &6&l═══════════════════════════════════════════════
+      &a1. Khởi Đầu:&f Gõ &a/tanthu&f nhận kit khởi nghiệp, gõ &a/is&f tạo đảo sinh tồn.
+      &a2. Kiếm Tiền:&f Đào đá, farm quái, gõ &a/bankhoangsan&f hoặc &a/bando&f bán lấy xu.
+      &a3. Săn Boss:&f Gõ &c/boss&f (hoặc &c/boss1&f..&c/boss4&f) để kiếm nguyên liệu Cổ Đại.
+      &a4. Rèn Cổ Đại:&f Đến &b/warp trade&f gặp Thần Rèn nâng cấp trang bị Bậc 1 - 15.
+      &7Gõ &e/help <tên lệnh>&7 để xem hướng dẫn chi tiết từng lệnh!
+
+  Lenh:
+    shortText: "Danh sách tổng hợp các lệnh thường dùng trên server"
+    fullText: |
+      &6&l═══════════════════════════════════════════════
+      &e&l           ✦ DANH SÁCH LỆNH CƠ BẢN ✦
+      &6&l═══════════════════════════════════════════════
+      &a/is &7- Mở bảng điều khiển giao diện menu đảo, tạo đảo, về đảo
+      &a/tanthu &7- Nhận bộ trang bị và tài nguyên khởi đầu tân thủ
+      &a/daily &7- Nhận phần thưởng điểm danh hằng ngày
+      &a/warp <tên> &7- Dịch chuyển đến các khu vực công cộng
+      &a/boss &7- Đến Sảnh Boss Trung Tâm (/boss1, /boss2, /boss3, /boss4)
+      &a/bankhoangsan &7- Bán nhanh toàn bộ khoáng sản lấy tiền (/bando)
+      &a/nung &7- Tự động nung quặng trên người (/smelt)
+      &a/ah &7- Mở sàn đấu giá và chợ người chơi (/chotroi)
+      &a/shop &7- Mở cửa hàng hệ thống
+      &a/cauca &7- Đến bến câu cá giải trí (/warp fishing)
+      &a/pvp &7- Đến đấu trường PvP (/warp pvp, /pvpkit)
+      &a/trade &7- Đến khu thương gia & Thần Rèn (/warp trade)
+      &a/farm &7- Đến khu farm quái & nông trại (/warp farm, /mob)
+      &a/crates &7- Đến khu mở hòm báu Neon (/warp crates)
+      &a/casino &7- Đến sòng bạc cá cược (/cf, /xoso)
+      &a/banexp &7- Bán cấp độ EXP đổi tiền Vault
+      &a/bottle &7- Đóng chai EXP lưu trữ
+
+  is:
+    shortText: "Lệnh quản lý đảo Skyblock (/is)"
+    fullText: |
+      &6&l✦ HƯỚNG DẪN LỆNH ĐẢO (/IS) ✦
+      &a/is &7- Mở bảng điều khiển giao diện menu đảo
+      &a/is create &7- Tạo hòn đảo sinh tồn mới
+      &a/is go &7(hoặc &a/is home&7) - Dịch chuyển về đảo cá nhân
+      &a/is sethome &7- Đặt điểm xuất hiện trên đảo
+      &a/is level &7- Quét và tính cấp độ hòn đảo
+      &a/is team &7- Quản lý đồng đội và nhóm sinh tồn
+      &a/is invite <tên> &7- Mời người chơi khác vào đảo
+      &a/is kick <tên> &7- Xóa thành viên khỏi đảo
+      &a/is warp <tên> &7- Đến thăm đảo của người chơi khác
+
+  warp:
+    shortText: "Danh sách các điểm dịch chuyển công cộng (/warp)"
+    fullText: |
+      &6&l✦ HỆ THỐNG ĐIỂM WARP (/WARP) ✦
+      &a/warp spawn &7- Sảnh chính Spawn Hub
+      &a/warp boss &7- Sảnh Boss Trung Tâm (/boss1, /boss2, /boss3, /boss4)
+      &a/warp farm &7- Nông trại & Mob farm luyện cấp
+      &a/warp trade &7- Chợ thương gia & Thần Rèn Cổ Đại
+      &a/warp pvp &7- Đấu trường đọ kiếm 1v1 & Pháo đài Siege
+      &a/warp fishing &7- Bến câu cá thư giãn & đổi cá (/cauca)
+      &a/warp crates &7- Khu mở hòm báu Neon
+      &a/warp casino &7- Sòng bạc Coinflip (/cf) & Vé số (/xoso)
+      &a/warp parkour &7- Thử thách nhảy Parkour leo tháp
+
+  boss:
+    shortText: "Điều hướng và thông tin Đấu Trường Boss (/boss)"
+    fullText: |
+      &6&l✦ HỆ THỐNG ĐẤU TRƯỜNG BOSS (/BOSS) ✦
+      &c/boss &7- Sảnh Boss Trung Tâm (gặp NPC Thợ Săn Boss)
+      &a/boss1 &7- Boss 1: Nữ Hoàng Nhện (150 HP) -> Rơi Mảnh Quặng Cổ Đại (Tier 1-5)
+      &a/boss2 &7- Boss 2: Đao Phủ Địa Ngục (300 HP) -> Rơi Tinh Thể Cổ Đại (Tier 6-9)
+      &a/boss3 &7- Boss 3: Chúa Tể Bóng Tối (600 HP) -> Rơi Trái Tim Của Quỷ (Tier 10)
+      &a/boss4 &7- World Boss: Thực Thể Hư Không (1200 HP) -> Rơi Lõi Hư Không (Tier 13-15)
+      &7Tại mỗi đại điện đều có bệ áp suất để dịch chuyển ngược về Sảnh Boss!
+
+  bankhoangsan:
+    shortText: "Bán nhanh khoáng sản lấy tiền Vault (/bankhoangsan)"
+    fullText: |
+      &6&l✦ BÁN KHOÁNG SẢN (/BANKHOANGSAN) ✦
+      &7Cú pháp: &a/bankhoangsan&7 hoặc alias: &a/bando&7, &a/sellores
+      &7Tác dụng: Bán tức thì tất cả than, sắt, vàng, đồng, kim cương trong túi đồ.
+      &7Tiền sẽ được daemon tự động cộng vào tài khoản Vault của bạn.
+
+  tanthu:
+    shortText: "Nhận Kit Tân Thủ khởi nghiệp (/tanthu)"
+    fullText: |
+      &6&l✦ QUÀ TÂN THỦ (/TANTHU) ✦
+      &7Cú pháp: &a/tanthu&7 hoặc &a/kit tanthu
+      &7Phần thưởng: Bộ dụng cụ sắt cường hóa, giáp da, 32 bò nướng, xô dung nham, băng, ngọc lục bảo và $1,000 khởi nghiệp.
+      &7Thời gian hồi: 24 giờ.
+
+  daily:
+    shortText: "Nhận thưởng điểm danh hằng ngày (/daily)"
+    fullText: |
+      &6&l✦ ĐIỂM DANH HẰNG NGÀY (/DAILY) ✦
+      &7Cú pháp: &a/daily&7 hoặc &a/kit daily
+      &7Phần thưởng: 16 bò nướng, than đá, 2 kim cương, Chìa Khóa Hòm Đồng và $500.
+      &7Thời gian hồi: 24 giờ (mỗi ngày nhận 1 lần).
+
+  ah:
+    shortText: "Sàn đấu giá & Chợ người chơi (/chợ, /ah)"
+    fullText: |
+      &6&l✦ CHỢ ĐẤU GIÁ SKYBLOCK (/CHỢ, /AH) ✦
+      &7Cú pháp chính: &a/chợ&7 hoặc &a/ah&7 (mở sàn đấu giá toàn server)
+      &e• /chợ &7- Mở giao diện xem các vật phẩm đang được người chơi đăng bán
+      &e• /chợ ban <giá> &7- Cầm vật phẩm trên tay rồi gõ lệnh để đăng bán (thời hạn 48h, thuế 5%)
+      &e• /chợ mua <mã> &7- Mua vật phẩm từ chợ bằng tiền Vault
+      &e• /chợ huy <mã> &7- Hủy bán, thu hồi vật phẩm về Hộp Thư
+      &e• /chợ mail &7- Mở Hộp Thư để nhận lại vật phẩm hết hạn hoặc đã hủy bán
+
+  shop:
+    shortText: "Cửa hàng thương mại hệ thống MMORPG (/shop)"
+    fullText: |
+      &6&l✦ CỬA HÀNG THƯƠNG MẠI HỆ THỐNG (/SHOP) ✦
+      &7Cú pháp chính: &a/shop&7 hoặc &a/cuahang
+      &7Gồm 4 danh mục: &aNông Sản&7, &bQuặng & Khoáng Sản&7, &3Hải Sản&7, &dNguyên Liệu Hiếm&7.
+      &e• Chuột trái: &7Mua x1
+      &e• Shift-Chuột trái: &7Mua x64 (1 stack)
+      &e• Chuột phải: &7Bán x1
+      &e• Shift-Chuột phải: &7Bán tất cả loại đó trong túi đồ
+      &7Giá bán được cộng thêm % thưởng từ Cổ Ngữ, Cảnh Giới Tu Luyện và Linh Thú!
+
+  pets:
+    shortText: "Bộ sưu tập Linh Thú đồng hành (/pets, /thucung)"
+    fullText: |
+      &6&l✦ BỘ SƯU TẬP LINH THÚ ĐỒNG HÀNH (/PETS) ✦
+      &7Cú pháp chính: &a/pets&7 hoặc &a/thucung
+      &7Gồm 8 Linh Thú: Tinh Linh Pha Lê, Cáo Lửa, Mèo May Mắn, Sói Băng, Ong Vàng, Quy Lão, Hắc Long, Phượng Hoàng.
+      &e• Chuột trái trong GUI: &7Chiêu mộ / Trang bị Linh Thú bay theo sau
+      &e• Chuột phải trong GUI: &7Nâng cấp Buff Linh Thú (Cấp 1 - 5)
+      &e• /pet unequip: &7Thu hồi Linh Thú đang theo sau vào không gian linh hồn
+      &7Mở khóa và nâng cấp 100% bằng &dĐiểm Tinh Anh (Gems)&7 cày cuốc trong game!
+
+  menu:
+    shortText: "Bảng điều khiển Menu chính của máy chủ (/menu)"
+    fullText: |
+      &6&l✦ MENU TỔNG TRUNG TÂM (/MENU) ✦
+      &7Cú pháp chính: &a/menu&7
+      &7Trung tâm điều hướng kết nối tất cả tính năng của máy chủ:
+      &e• Hòn Đảo (/is) & Cổng Dịch Chuyển (/warp)
+      &e• Săn Boss 1-6, Boss 7-8 & World Boss
+      &e• Cửa Hàng Hệ Thống (/shop) & Chợ Đấu Giá (/chợ, /ah)
+      &e• Bộ Sưu Tập Linh Thú (/pets) & Quản Lý Minions (/is minions)
+      &e• Cung Điện Casino, Câu Cá, Hòm Báu Neon & Nâng Cấp Trang Bị
+
+  nung:
+    shortText: "Tự động nung nhanh quặng thô (/nung)"
+    fullText: |
+      &6&l✦ LỆNH NUNG NHANH (/NUNG) ✦
+      &7Cú pháp: &a/nung&7 hoặc &a/smelt
+      &7Tác dụng: Nung lập tức toàn bộ quặng sắt thô, vàng thô, đồng thô, cát, đất sét trong túi đồ mà không cần dùng lò nung!
+
+  cauca:
+    shortText: "Đến bến câu cá giải trí & đổi thưởng (/cauca)"
+    fullText: |
+      &6&l✦ HỒ CÂU CÁ (/CAUCA) ✦
+      &7Cú pháp: &a/cauca&7 hoặc &a/warp fishing
+      &7Gặp NPC Lão Ngư để đổi cá lấy Ngọc Lục Bảo và mua Cần Câu Thần Kỳ!
+
+  pvp:
+    shortText: "Đấu trường sinh tử PvP (/pvp)"
+    fullText: |
+      &6&l✦ ĐẤU TRƯỜNG PVP (/PVP) ✦
+      &7Cú pháp: &a/pvp&7 hoặc &a/warp pvp
+      &7Trang bị kit chiến binh: &a/pvpkit
+      &7Có 2 khu vực: Võ đài La Mã 1v1 và Pháo đài công thành Hỗn Chiến Team Siege!
+
+  trade:
+    shortText: "Khu thương gia & Thần Rèn Cổ Đại (/trade)"
+    fullText: |
+      &6&l✦ KHU THƯƠNG GIA & THẦN RÈN (/TRADE) ✦
+      &7Cú pháp: &a/trade&7 hoặc &a/warp trade
+      &7Nơi tập hợp Đại Sư Luyện Kim, Thần Rèn Cúp/Rìu, Thần Rèn Kiếm/Giáp để tiến hóa trang bị từ Tier 1 lên Tier 15!
+
+  farm:
+    shortText: "Nông trại & Mob Farm luyện cấp (/warp farm)"
+    fullText: |
+      &6&l✦ KHU FARM QUÁI & NÔNG TRẠI (/WARP FARM) ✦
+      &7Cú pháp: &a/warp farm&7 hoặc &a/warp mob
+      &7Nơi luyện cấp EXP an toàn, thu thập thịt, da, xương, chỉ nhện và vật phẩm mob rơi.
+
+  crates:
+    shortText: "Khu mở hòm báu Neon & Chìa khóa (/warp crates)"
+    fullText: |
+      &6&l✦ KHU HÒM BÁU NEON (/WARP CRATES) ✦
+      &7Cú pháp: &a/warp crates&7 hoặc &a/warp crate
+      &7Sử dụng Chìa Khóa Hòm (Đồng, Bạc, Vàng, Kim Cương) nhận từ điểm danh hoặc săn Boss để mở thưởng trang bị quý hiếm!
+
+  casino:
+    shortText: "Sòng bạc Coinflip & Xổ Số (/casino)"
+    fullText: |
+      &6&l✦ SÒNG BẠC GIẢI TRÍ (/CASINO) ✦
+      &7Cú pháp: &a/warp casino
+      &7Lệnh Coinflip tung đồng xu 50/50: &a/cf <tiền> <ngửa/sấp>
+      &7Lệnh Xổ Số may mắn: &a/xoso <tiền> <số>
+
+  banexp:
+    shortText: "Bán & Đóng chai EXP lưu trữ (/banexp, /bottle)"
+    fullText: |
+      &6&l✦ BÁN & ĐÓNG CHAI EXP (/BANEXP) ✦
+      &7Bán cấp độ EXP đổi tiền Vault: &a/banexp <số level>
+      &7Đóng chai EXP thành bình thuốc: &a/bottle <số level>

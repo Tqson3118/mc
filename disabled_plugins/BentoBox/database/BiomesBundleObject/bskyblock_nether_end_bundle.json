@@ -1,0 +1,18 @@
+{
+  "uniqueId": "bskyblock_nether_end_bundle",
+  "friendlyName": "<white><bold> Nether & End Bundle",
+  "description": [
+    "<gray> Unlock the dimensions beyond",
+    "<gray> the overworld. For adventurers",
+    "<gray> seeking ultimate power."
+  ],
+  "bundleIcon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: NETHERRACK\n",
+  "biomeObjects": [
+    "BSkyBlock_hell",
+    "BSkyBlock_the_end",
+    "BSkyBlock_lost_souls",
+    "BSkyBlock_red_forest",
+    "BSkyBlock_basalt",
+    "BSkyBlock_cyan_forest"
+  ]
+}

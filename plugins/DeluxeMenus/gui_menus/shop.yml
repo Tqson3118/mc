@@ -1,0 +1,95 @@
+menu_title: '&8🏪 &2&lCỬA HÀNG THƯƠNG MẠI &8(&e/SHOP&8) 🏪'
+open_command:
+  - shop
+  - cuahang
+size: 27
+open_requirement:
+  requirements: {}
+
+items:
+  'border':
+    material: GREEN_STAINED_GLASS_PANE
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 23
+      - 24
+      - 25
+      - 26
+    display_name: ' '
+
+  'info':
+    material: EMERALD
+    slot: 4
+    display_name: '&a&l🏪 CỬA HÀNG THƯƠNG MẠI HỆ THỐNG'
+    lore:
+      - '&8━━━━━━━━━━━━━━━━━━━━━━━━━'
+      - '&7Quy tắc giao dịch chuẩn MMORPG:'
+      - '&f • &aChuột trái:&f Mua x1'
+      - '&f • &2Shift-Chuột trái:&f Mua x64 (1 stack)'
+      - '&f • &eChuột phải:&f Bán x1'
+      - '&f • &6Shift-Chuột phải:&f Bán hết loại đó trong túi'
+      - '&8━━━━━━━━━━━━━━━━━━━━━━━━━'
+
+  'cat_farming':
+    material: WHEAT
+    slot: 10
+    display_name: '&a&l🌾 DANH MỤC: NÔNG SẢN'
+    lore:
+      - '&7Lúa mì, cà rốt, khoai tây, mía, dưa hấu, bí ngô.'
+      - ''
+      - '&a▶ Nhấp để mở Danh mục Nông Sản!'
+    left_click_commands:
+      - '[openguimenu] shop_nongsan'
+
+  'cat_mining':
+    material: DIAMOND_PICKAXE
+    slot: 12
+    display_name: '&b&l⛏ DANH MỤC: QUẶNG & KHOÁNG SẢN'
+    lore:
+      - '&7Than, sắt, đồng, vàng, redstone, kim cương, ngọc lục bảo.'
+      - ''
+      - '&b▶ Nhấp để mở Danh mục Khoáng Sản!'
+    left_click_commands:
+      - '[openguimenu] shop_khoangsan'
+
+  'cat_fishing':
+    material: COD
+    slot: 14
+    display_name: '&3&l🐟 DANH MỤC: HẢI SẢN'
+    lore:
+      - '&7Cá tuyết, cá hồi, cá nóc, cá nhiệt đới.'
+      - ''
+      - '&3▶ Nhấp để mở Danh mục Hải Sản!'
+    left_click_commands:
+      - '[openguimenu] shop_haisan'
+
+  'cat_rare':
+    material: NETHER_STAR
+    slot: 16
+    display_name: '&d&l✨ DANH MỤC: NGUYÊN LIỆU HIẾM'
+    lore:
+      - '&7Hắc diện thạch, que lửa, ngọc ender, mảnh vỡ cổ đại, netherite.'
+      - ''
+      - '&d▶ Nhấp để mở Danh mục Nguyên Liệu Hiếm!'
+    left_click_commands:
+      - '[openguimenu] shop_nguyenlieu'
+
+  'close':
+    material: BARRIER
+    slot: 22
+    display_name: '&c&l✕ ĐÓNG CỬA HÀNG'
+    left_click_commands:
+      - '[close]'

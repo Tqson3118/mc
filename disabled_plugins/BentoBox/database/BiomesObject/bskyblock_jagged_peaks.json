@@ -1,0 +1,23 @@
+{
+  "biome": "JAGGED_PEAKS",
+  "deployed": true,
+  "friendlyName": "<white><bold> Jagged Peaks",
+  "description": [
+    "<gray> Dangerous mountains with",
+    "<gray> sharp cliffs that few",
+    "<gray> dare to climb. Epic",
+    "<gray> views await the brave."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: POINTED_DRIPSTONE\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_jagged_peaks",
+  "unlockLevel": 70,
+  "unlockCost": 0.0,
+  "cost": 900.0,
+  "itemCost": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: STONE\n  amount: 64\n"
+  ],
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

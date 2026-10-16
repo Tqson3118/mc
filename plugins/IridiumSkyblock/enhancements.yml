@@ -1,0 +1,844 @@
+---
+farmingEnhancement:
+  enabled: true
+  type: "BOOSTER"
+  item:
+    material: "WHEAT"
+    amount: 1
+    displayName: "&a&l🌾 GIA TỐC NÔNG TRẠI (FARM BOOSTER)"
+    skullData: null
+    headData: null
+    headOwner: null
+    headOwnerUUID: null
+    model: null
+    lore:
+    - "&7Gia tốc tốc độ sinh trưởng của mọi cây trồng trên đảo!"
+    - ""
+    - "&e&lThông Tin Kích Hoạt:"
+    - "&7 • Thời gian còn lại: &a%timeremaining_hours%h %timeremaining_minutes%m %timeremaining_seconds%s"
+    - "&7 • Cấp độ hiện tại: &eCấp %current_level%"
+    - "&7 • Chi phí kích hoạt: &6$%vault_cost%"
+    - ""
+    - "&b&lHiệu Quả Từng Cấp:"
+    - "&7 • Cấp 1: &aTốc độ cây trồng x2"
+    - "&7 • Cấp 2: &aTốc độ cây trồng x3"
+    - "&7 • Cấp 3: &aTốc độ cây trồng x4 (Siêu Nhanh)"
+    - ""
+    - "&c[!] &7Yêu cầu Đảo đạt cấp: &e%minLevel%"
+    - "&a&l▶ Nhấp Chuột Trái để Mua Cấp %next_level%!"
+    slot: 10
+  levels:
+    1:
+      minLevel: 3
+      money: 5000
+      bankCosts:
+        Crystals: 5.0
+      farmingModifier: 1
+    2:
+      minLevel: 7
+      money: 15000
+      bankCosts:
+        Crystals: 10.0
+      farmingModifier: 2
+    3:
+      minLevel: 12
+      money: 30000
+      bankCosts:
+        Crystals: 20.0
+      farmingModifier: 3
+spawnerEnhancement:
+  enabled: true
+  type: "BOOSTER"
+  item:
+    material: "SPAWNER"
+    amount: 1
+    displayName: "&c&l☠ GIA TỐC SPAWNER (SPAWNER BOOSTER)"
+    skullData: null
+    headData: null
+    headOwner: null
+    headOwnerUUID: null
+    model: null
+    lore:
+    - "&7Tăng tốc độ sinh quái từ lồng Spawner trên đảo!"
+    - ""
+    - "&e&lThông Tin Kích Hoạt:"
+    - "&7 • Thời gian còn lại: &a%timeremaining_hours%h %timeremaining_minutes%m %timeremaining_seconds%s"
+    - "&7 • Cấp độ hiện tại: &eCấp %current_level%"
+    - "&7 • Chi phí kích hoạt: &6$%vault_cost%"
+    - ""
+    - "&b&lHiệu Quả Từng Cấp:"
+    - "&7 • Cấp 1: &aSố lượng quái sinh ra: 6 con/lần"
+    - "&7 • Cấp 2: &aSố lượng quái sinh ra: 8 con/lần"
+    - "&7 • Cấp 3: &cSố lượng quái sinh ra: 10 con/lần"
+    - ""
+    - "&c[!] &7Yêu cầu Đảo đạt cấp: &e%minLevel%"
+    - "&a&l▶ Nhấp Chuột Trái để Mua Cấp %next_level%!"
+    slot: 12
+  levels:
+    1:
+      minLevel: 5
+      money: 10000
+      bankCosts:
+        Crystals: 10.0
+      spawnCount: 6
+      spawnMultiplier: 0
+    2:
+      minLevel: 10
+      money: 25000
+      bankCosts:
+        Crystals: 20.0
+      spawnCount: 8
+      spawnMultiplier: 0
+    3:
+      minLevel: 15
+      money: 50000
+      bankCosts:
+        Crystals: 35.0
+      spawnCount: 10
+      spawnMultiplier: 0
+experienceEnhancement:
+  enabled: true
+  type: "BOOSTER"
+  item:
+    material: "EXPERIENCE_BOTTLE"
+    amount: 1
+    displayName: "&b&l✨ NHÂN BỘI KINH NGHIỆM (EXP BOOSTER)"
+    skullData: null
+    headData: null
+    headOwner: null
+    headOwnerUUID: null
+    model: null
+    lore:
+    - "&7Nhân đôi điểm kinh nghiệm (EXP) nhận được từ farm & quái!"
+    - ""
+    - "&e&lThông Tin Kích Hoạt:"
+    - "&7 • Thời gian còn lại: &a%timeremaining_hours%h %timeremaining_minutes%m %timeremaining_seconds%s"
+    - "&7 • Cấp độ hiện tại: &eCấp %current_level%"
+    - "&7 • Chi phí kích hoạt: &6$%vault_cost%"
+    - ""
+    - "&b&lHiệu Quả Từng Cấp:"
+    - "&7 • Cấp 1: &b+50% Kinh nghiệm nhận được"
+    - "&7 • Cấp 2: &b+100% (x2) Kinh nghiệm nhận được"
+    - "&7 • Cấp 3: &d+150% (x2.5) Kinh nghiệm nhận được"
+    - ""
+    - "&c[!] &7Yêu cầu Đảo đạt cấp: &e%minLevel%"
+    - "&a&l▶ Nhấp Chuột Trái để Mua Cấp %next_level%!"
+    slot: 14
+  levels:
+    1:
+      minLevel: 3
+      money: 5000
+      bankCosts:
+        Crystals: 5.0
+      experienceModifier: 1.5
+    2:
+      minLevel: 7
+      money: 15000
+      bankCosts:
+        Crystals: 10.0
+      experienceModifier: 2.0
+    3:
+      minLevel: 12
+      money: 30000
+      bankCosts:
+        Crystals: 20.0
+      experienceModifier: 2.5
+flightEnhancement:
+  enabled: true
+  type: "BOOSTER"
+  item:
+    material: "FEATHER"
+    amount: 1
+    displayName: "&f&l🕊️ ĐÔI CÁNH TỰ DO (FLIGHT BOOSTER)"
+    skullData: null
+    headData: null
+    headOwner: null
+    headOwnerUUID: null
+    model: null
+    lore:
+    - "&7Bay lượn tự do để thỏa sức xây dựng đảo trên không trung!"
+    - ""
+    - "&e&lThông Tin Kích Hoạt:"
+    - "&7 • Thời gian còn lại: &a%timeremaining_hours%h %timeremaining_minutes%m %timeremaining_seconds%s"
+    - "&7 • Cấp độ hiện tại: &eCấp %current_level%"
+    - "&7 • Chi phí kích hoạt: &6$%vault_cost%"
+    - ""
+    - "&b&lHiệu Quả Từng Cấp:"
+    - "&7 • Cấp 1: &fBay lượn trên lãnh thổ Đảo của bạn"
+    - "&7 • Cấp 2: &fBay lượn ở bất kỳ nơi nào trên thế giới Skyblock"
+    - ""
+    - "&c[!] &7Yêu cầu Đảo đạt cấp: &e%minLevel%"
+    - "&a&l▶ Nhấp Chuột Trái để Mua Cấp %next_level%!"
+    slot: 16
+  levels:
+    1:
+      minLevel: 10
+      money: 25000
+      bankCosts:
+        Crystals: 15.0
+      enhancementAffectsType:
+      - "MEMBERS_IN_TERRITORY"
+    2:
+      minLevel: 20
+      money: 75000
+      bankCosts:
+        Crystals: 35.0
+      enhancementAffectsType:
+      - "MEMBERS_ANYWHERE"
+membersEnhancement:
+  enabled: true
+  type: "UPGRADE"
+  item:
+    material: "PLAYER_HEAD"
+    amount: 1
+    displayName: "&6&l👥 QUY MÔ THÀNH VIÊN (MEMBERS)"
+    skullData: "Peaches_MLG"
+    headData: null
+    headOwner: null
+    headOwnerUUID: null
+    model: null
+    lore:
+    - "&7Mở rộng số lượng thành viên tối đa có thể cùng sinh sống trên đảo!"
+    - ""
+    - "&e&lThông Tin Nâng Cấp:"
+    - "&7 • Cấp độ hiện tại: &eCấp %current_level%"
+    - "&7 • Số lượng hiện tại: &a%members% Thành viên"
+    - "&7 • Chi phí nâng cấp: &6$%vault_cost%"
+    - ""
+    - "&b&lCác Mốc Thành Viên:"
+    - "&7 • Cấp 0: &e5 Thành viên"
+    - "&7 • Cấp 1: &a10 Thành viên"
+    - "&7 • Cấp 2: &a15 Thành viên"
+    - "&7 • Cấp 3: &d20 Thành viên (Đại Gia Tộc)"
+    - ""
+    - "&c[!] &7Yêu cầu Đảo đạt cấp: &e%minLevel%"
+    - "&a&l▶ Nhấp Chuột Trái để Nâng Cấp Lên Cấp %next_level%!"
+    slot: 13
+  levels:
+    0:
+      minLevel: 1
+      money: 0
+      bankCosts:
+        Crystals: 0.0
+      members: 5
+    1:
+      minLevel: 5
+      money: 5000
+      bankCosts:
+        Crystals: 5.0
+      members: 10
+    2:
+      minLevel: 10
+      money: 15000
+      bankCosts:
+        Crystals: 10.0
+      members: 15
+    3:
+      minLevel: 15
+      money: 30000
+      bankCosts:
+        Crystals: 20.0
+      members: 20
+warpsEnhancement:
+  enabled: true
+  type: "UPGRADE"
+  item:
+    material: "END_PORTAL_FRAME"
+    amount: 1
+    displayName: "&3&l🌀 ĐIỂM WARP ĐẢO (ISLAND WARPS)"
+    skullData: null
+    headData: null
+    headOwner: null
+    headOwnerUUID: null
+    model: null
+    lore:
+    - "&7Tăng số điểm dịch chuyển (Warp) công khai trên đảo để mời bạn bè!"
+    - ""
+    - "&e&lThông Tin Nâng Cấp:"
+    - "&7 • Cấp độ hiện tại: &eCấp %current_level%"
+    - "&7 • Số warp hiện tại: &a%warps% Điểm Warp"
+    - "&7 • Chi phí nâng cấp: &6$%vault_cost%"
+    - ""
+    - "&b&lCác Mốc Điểm Warp:"
+    - "&7 • Cấp 0: &e1 Điểm Warp"
+    - "&7 • Cấp 1: &a3 Điểm Warp"
+    - "&7 • Cấp 2: &a5 Điểm Warp"
+    - "&7 • Cấp 3: &a7 Điểm Warp"
+    - "&7 • Cấp 4: &d9 Điểm Warp (Vương Quốc)"
+    - ""
+    - "&c[!] &7Yêu cầu Đảo đạt cấp: &e%minLevel%"
+    - "&a&l▶ Nhấp Chuột Trái để Nâng Cấp Lên Cấp %next_level%!"
+    slot: 14
+  levels:
+    0:
+      minLevel: 1
+      money: 0
+      bankCosts:
+        Crystals: 0.0
+      warps: 1
+    1:
+      minLevel: 5
+      money: 5000
+      bankCosts:
+        Crystals: 5.0
+      warps: 3
+    2:
+      minLevel: 10
+      money: 15000
+      bankCosts:
+        Crystals: 10.0
+      warps: 5
+    3:
+      minLevel: 15
+      money: 30000
+      bankCosts:
+        Crystals: 20.0
+      warps: 7
+    4:
+      minLevel: 20
+      money: 50000
+      bankCosts:
+        Crystals: 35.0
+      warps: 9
+potionEnhancements:
+  haste:
+    enabled: true
+    type: "UPGRADE"
+    item:
+      material: "DIAMOND_PICKAXE"
+      amount: 1
+      displayName: "&e&l⚡ HIỆU ỨNG ĐÀO NHANH (HASTE)"
+      skullData: null
+      headData: null
+      headOwner: null
+      headOwnerUUID: null
+      model: null
+      lore:
+      - "&7Ban hiệu ứng Đào Nhanh (Haste) vĩnh viễn cho thành viên trên đảo!"
+      - ""
+      - "&e&lThông Tin Nâng Cấp:"
+      - "&7 • Cấp độ hiện tại: &eCấp %current_level%"
+      - "&7 • Chi phí nâng cấp: &6$%vault_cost%"
+      - ""
+      - "&b&lHiệu Lực Từng Cấp:"
+      - "&7 • Cấp 1: &aHaste I (Đào nhanh +20%)"
+      - "&7 • Cấp 2: &aHaste II (Đào nhanh +40%)"
+      - "&7 • Cấp 3: &eHaste III (Đào siêu tốc +60%)"
+      - ""
+      - "&c[!] &7Yêu cầu Đảo đạt cấp: &e%minLevel%"
+      - "&a&l▶ Nhấp Chuột Trái để Nâng Cấp Lên Cấp %next_level%!"
+      slot: 21
+    levels:
+      1:
+        minLevel: 5
+        money: 5000
+        bankCosts:
+          Crystals: 5.0
+        strength: 1
+        potion: "HASTE"
+        enhancementAffectsType:
+        - "MEMBERS_IN_TERRITORY"
+      2:
+        minLevel: 10
+        money: 15000
+        bankCosts:
+          Crystals: 10.0
+        strength: 2
+        potion: "HASTE"
+        enhancementAffectsType:
+        - "MEMBERS_IN_TERRITORY"
+      3:
+        minLevel: 15
+        money: 35000
+        bankCosts:
+          Crystals: 20.0
+        strength: 3
+        potion: "HASTE"
+        enhancementAffectsType:
+        - "MEMBERS_IN_TERRITORY"
+  speed:
+    enabled: true
+    type: "UPGRADE"
+    item:
+      material: "SUGAR"
+      amount: 1
+      displayName: "&b&l💨 HIỆU ỨNG TỐC ĐỘ (SPEED)"
+      skullData: null
+      headData: null
+      headOwner: null
+      headOwnerUUID: null
+      model: null
+      lore:
+      - "&7Ban hiệu ứng Tốc Độ (Speed) vĩnh viễn khi di chuyển trên đảo!"
+      - ""
+      - "&e&lThông Tin Nâng Cấp:"
+      - "&7 • Cấp độ hiện tại: &eCấp %current_level%"
+      - "&7 • Chi phí nâng cấp: &6$%vault_cost%"
+      - ""
+      - "&b&lHiệu Lực Từng Cấp:"
+      - "&7 • Cấp 1: &aSpeed I (Tốc độ chạy +20%)"
+      - "&7 • Cấp 2: &aSpeed II (Tốc độ chạy +40%)"
+      - "&7 • Cấp 3: &bSpeed III (Lướt như bay +60%)"
+      - ""
+      - "&c[!] &7Yêu cầu Đảo đạt cấp: &e%minLevel%"
+      - "&a&l▶ Nhấp Chuột Trái để Nâng Cấp Lên Cấp %next_level%!"
+      slot: 22
+    levels:
+      1:
+        minLevel: 5
+        money: 5000
+        bankCosts:
+          Crystals: 5.0
+        strength: 1
+        potion: "SPEED"
+        enhancementAffectsType:
+        - "MEMBERS_IN_TERRITORY"
+      2:
+        minLevel: 10
+        money: 15000
+        bankCosts:
+          Crystals: 10.0
+        strength: 2
+        potion: "SPEED"
+        enhancementAffectsType:
+        - "MEMBERS_IN_TERRITORY"
+      3:
+        minLevel: 15
+        money: 35000
+        bankCosts:
+          Crystals: 20.0
+        strength: 3
+        potion: "SPEED"
+        enhancementAffectsType:
+        - "MEMBERS_IN_TERRITORY"
+  jump:
+    enabled: true
+    type: "UPGRADE"
+    item:
+      material: "RABBIT_FOOT"
+      amount: 1
+      displayName: "&a&l🦘 HIỆU ỨNG NHẢY CAO (JUMP BOOST)"
+      skullData: null
+      headData: null
+      headOwner: null
+      headOwnerUUID: null
+      model: null
+      lore:
+      - "&7Ban hiệu ứng Nhảy Cao vĩnh viễn giúp leo trèo đảo dễ dàng!"
+      - ""
+      - "&e&lThông Tin Nâng Cấp:"
+      - "&7 • Cấp độ hiện tại: &eCấp %current_level%"
+      - "&7 • Chi phí nâng cấp: &6$%vault_cost%"
+      - ""
+      - "&b&lHiệu Lực Từng Cấp:"
+      - "&7 • Cấp 1: &aJump Boost I (Nhảy cao 1.5 block)"
+      - "&7 • Cấp 2: &aJump Boost II (Nhảy cao 2.5 block)"
+      - "&7 • Cấp 3: &aJump Boost III (Nhảy cao 3.5 block)"
+      - ""
+      - "&c[!] &7Yêu cầu Đảo đạt cấp: &e%minLevel%"
+      - "&a&l▶ Nhấp Chuột Trái để Nâng Cấp Lên Cấp %next_level%!"
+      slot: 23
+    levels:
+      1:
+        minLevel: 5
+        money: 5000
+        bankCosts:
+          Crystals: 5.0
+        strength: 1
+        potion: "JUMP_BOOST"
+        enhancementAffectsType:
+        - "MEMBERS_IN_TERRITORY"
+      2:
+        minLevel: 10
+        money: 15000
+        bankCosts:
+          Crystals: 10.0
+        strength: 2
+        potion: "JUMP_BOOST"
+        enhancementAffectsType:
+        - "MEMBERS_IN_TERRITORY"
+      3:
+        minLevel: 15
+        money: 35000
+        bankCosts:
+          Crystals: 20.0
+        strength: 3
+        potion: "JUMP_BOOST"
+        enhancementAffectsType:
+        - "MEMBERS_IN_TERRITORY"
+sizeEnhancement:
+  enabled: true
+  type: "UPGRADE"
+  item:
+    material: "GRASS_BLOCK"
+    amount: 1
+    displayName: "&d&l🏰 MỞ RỘNG BIÊN GIỚI ĐẢO (ISLAND SIZE)"
+    skullData: null
+    headData: null
+    headOwner: null
+    headOwnerUUID: null
+    model: null
+    lore:
+    - "&7Mở rộng đường biên giới lãnh thổ đảo để xây dựng thỏa thích!"
+    - ""
+    - "&e&lThông Tin Nâng Cấp:"
+    - "&7 • Cấp độ hiện tại: &eCấp %current_level%"
+    - "&7 • Kích thước hiện tại: &a%size%x%size% Block"
+    - "&7 • Chi phí nâng cấp: &6$%vault_cost% &7+ &b%Crystals_cost% Pha Lê"
+    - ""
+    - "&b&lCác Mốc Kích Thước:"
+    - "&7 • Cấp 0: &e50 x 50 block"
+    - "&7 • Cấp 1: &a75 x 75 block"
+    - "&7 • Cấp 2: &a100 x 100 block"
+    - "&7 • Cấp 3: &a125 x 125 block"
+    - "&7 • Cấp 4: &d150 x 150 block (Vương Quốc Bất Tận)"
+    - ""
+    - "&c[!] &7Yêu cầu Đảo đạt cấp: &e%minLevel%"
+    - "&a&l▶ Nhấp Chuột Trái để Nâng Cấp Lên Cấp %next_level%!"
+    slot: 12
+  levels:
+    0:
+      minLevel: 1
+      money: 0
+      bankCosts:
+        Crystals: 0.0
+      size: 50
+    1:
+      minLevel: 5
+      money: 5000
+      bankCosts:
+        Crystals: 5.0
+      size: 75
+    2:
+      minLevel: 10
+      money: 15000
+      bankCosts:
+        Crystals: 10.0
+      size: 100
+    3:
+      minLevel: 15
+      money: 35000
+      bankCosts:
+        Crystals: 20.0
+      size: 125
+    4:
+      minLevel: 20
+      money: 75000
+      bankCosts:
+        Crystals: 35.0
+      size: 150
+voidEnhancement:
+  enabled: true
+  type: "UPGRADE"
+  item:
+    material: "RED_BED"
+    amount: 1
+    displayName: "&5&l🛡️ BẢO HỘ VỰC THẲM (VOID GUARD)"
+    skullData: null
+    headData: null
+    headOwner: null
+    headOwnerUUID: null
+    model: null
+    lore:
+    - "&7Lỡ chân sẩy ngã xuống hư vô? Tự động dịch chuyển về đảo an toàn!"
+    - ""
+    - "&e&lThông Tin Nâng Cấp:"
+    - "&7 • Cấp độ hiện tại: &eCấp %current_level%"
+    - "&7 • Chi phí nâng cấp: &6$%vault_cost% &7+ &b%Crystals_cost% Pha Lê"
+    - ""
+    - "&b&lHiệu Lực Bảo Hộ:"
+    - "&7 • Kích hoạt: &aTự động cứu về đảo an toàn"
+    - "&7 • Tỉ lệ mất đồ: &e0% (Giữ trọn vẹn 100% trang bị)"
+    - ""
+    - "&c[!] &7Yêu cầu Đảo đạt cấp: &e%minLevel%"
+    - "&a&l▶ Nhấp Chuột Trái để Nâng Cấp Lên Cấp %next_level%!"
+    slot: 15
+  levels:
+    0:
+      minLevel: 5
+      money: 10000
+      bankCosts:
+        Crystals: 5.0
+      enabled: true
+      itemLossChance: 0.0
+generatorEnhancement:
+  enabled: true
+  type: "UPGRADE"
+  item:
+    material: "DIAMOND_ORE"
+    amount: 1
+    displayName: "&e&l⚡ MÁY QUẶNG ĐẢO (10 CẤP ĐỘ KHỐI BLOCK)"
+    skullData: null
+    headData: null
+    headOwner: null
+    headOwnerUUID: null
+    model: null
+    lore:
+    - "&7Nâng cấp máy tạo đá (Lava + Nước) để sinh ra quặng & NGUYÊN KHỐI BLOCK!"
+    - ""
+    - "&e&lThông Tin Nâng Cấp:"
+    - "&7 • Cấp độ hiện tại: &aCấp %current_level% / 10"
+    - "&7 • Chi phí nâng cấp: &6$%vault_cost% &7+ &b%Crystals_cost% Pha Lê"
+    - ""
+    - "&b&lChi Tiết Các Mốc Đột Phá:"
+    - "&7 • &fCấp 0: &7Máy Đá Cuội Sơ Khai & Than"
+    - "&7 • &fCấp 1-2: &7Thêm Đồng, Sắt, Đá Đỏ"
+    - "&7 • &aCấp 3-4: &aXuất hiện Vàng, Lapis & &eKHỐI ĐỒNG, KHỐI SẮT"
+    - "&7 • &bCấp 5-6: &bXuất hiện Kim Cương & &6KHỐI VÀNG, KHỐI LAPIS"
+    - "&7 • &dCấp 7-8: &dXuất hiện &bKHỐI KIM CƯƠNG & &aKHỐI EMERALD!"
+    - "&7 • &cCấp 9-10: &cĐỈNH CAO - &4MẢNH CỔ ĐẠI & KHỐI NETHERITE!"
+    - ""
+    - "&6[!] &eMẹo: Quặng rơi tự vào túi! Dùng &f/nung &evà &f/kho&e!"
+    - "&c[!] &7Yêu cầu Đảo đạt cấp: &e%minLevel%"
+    - "&a&l▶ Nhấp Chuột Trái để Nâng Cấp Lên Cấp %next_level%!"
+    slot: 11
+  levels:
+    0:
+      minLevel: 1
+      money: 0
+      bankCosts:
+        Crystals: 0.0
+      ores:
+        COBBLESTONE: 80
+        COAL_ORE: 20
+      netherOres:
+        BASALT: 100
+    1:
+      minLevel: 3
+      money: 3000
+      bankCosts:
+        Crystals: 3.0
+      ores:
+        COBBLESTONE: 60
+        COAL_ORE: 25
+        COPPER_ORE: 15
+      netherOres:
+        NETHERRACK: 80
+        BASALT: 20
+    2:
+      minLevel: 5
+      money: 8000
+      bankCosts:
+        Crystals: 5.0
+      ores:
+        COBBLESTONE: 45
+        COAL_ORE: 20
+        COPPER_ORE: 15
+        IRON_ORE: 10
+        REDSTONE_ORE: 10
+      netherOres:
+        NETHERRACK: 60
+        BASALT: 20
+        GLOWSTONE: 20
+    3:
+      minLevel: 8
+      money: 18000
+      bankCosts:
+        Crystals: 10.0
+      ores:
+        COBBLESTONE: 35
+        COAL_ORE: 15
+        COPPER_ORE: 12
+        IRON_ORE: 15
+        GOLD_ORE: 10
+        REDSTONE_ORE: 10
+        LAPIS_ORE: 8
+      netherOres:
+        NETHERRACK: 45
+        BASALT: 15
+        GLOWSTONE: 20
+        NETHER_QUARTZ_ORE: 10
+        NETHER_GOLD_ORE: 10
+    4:
+      minLevel: 12
+      money: 35000
+      bankCosts:
+        Crystals: 15.0
+      ores:
+        COBBLESTONE: 28
+        COAL_ORE: 12
+        COPPER_ORE: 10
+        IRON_ORE: 15
+        GOLD_ORE: 12
+        REDSTONE_ORE: 10
+        LAPIS_ORE: 8
+        EMERALD_ORE: 2
+        COPPER_BLOCK: 3
+      netherOres:
+        NETHERRACK: 35
+        BASALT: 15
+        GLOWSTONE: 20
+        NETHER_QUARTZ_ORE: 15
+        NETHER_GOLD_ORE: 15
+    5:
+      minLevel: 16
+      money: 65000
+      bankCosts:
+        Crystals: 25.0
+      ores:
+        COBBLESTONE: 22
+        COAL_ORE: 10
+        COPPER_ORE: 8
+        IRON_ORE: 15
+        GOLD_ORE: 12
+        REDSTONE_ORE: 10
+        LAPIS_ORE: 8
+        EMERALD_ORE: 4
+        DIAMOND_ORE: 4
+        COPPER_BLOCK: 4
+        IRON_BLOCK: 3
+      netherOres:
+        NETHERRACK: 30
+        BASALT: 10
+        GLOWSTONE: 20
+        NETHER_QUARTZ_ORE: 20
+        NETHER_GOLD_ORE: 15
+        ANCIENT_DEBRIS: 5
+    6:
+      minLevel: 20
+      money: 110000
+      bankCosts:
+        Crystals: 40.0
+      ores:
+        COBBLESTONE: 16
+        COAL_ORE: 8
+        COPPER_ORE: 8
+        IRON_ORE: 14
+        GOLD_ORE: 12
+        REDSTONE_ORE: 10
+        LAPIS_ORE: 8
+        EMERALD_ORE: 5
+        DIAMOND_ORE: 6
+        COPPER_BLOCK: 4
+        IRON_BLOCK: 4
+        GOLD_BLOCK: 3
+        LAPIS_BLOCK: 2
+      netherOres:
+        NETHERRACK: 25
+        BASALT: 10
+        GLOWSTONE: 20
+        NETHER_QUARTZ_ORE: 20
+        NETHER_GOLD_ORE: 15
+        ANCIENT_DEBRIS: 8
+        GOLD_BLOCK: 2
+    7:
+      minLevel: 25
+      money: 180000
+      bankCosts:
+        Crystals: 55.0
+      ores:
+        COBBLESTONE: 12
+        COAL_ORE: 6
+        COPPER_ORE: 6
+        IRON_ORE: 12
+        GOLD_ORE: 12
+        REDSTONE_ORE: 8
+        LAPIS_ORE: 8
+        EMERALD_ORE: 6
+        DIAMOND_ORE: 8
+        COPPER_BLOCK: 5
+        IRON_BLOCK: 5
+        GOLD_BLOCK: 4
+        LAPIS_BLOCK: 4
+        REDSTONE_BLOCK: 4
+      netherOres:
+        NETHERRACK: 20
+        BASALT: 10
+        GLOWSTONE: 20
+        NETHER_QUARTZ_ORE: 20
+        NETHER_GOLD_ORE: 15
+        ANCIENT_DEBRIS: 10
+        GOLD_BLOCK: 5
+    8:
+      minLevel: 30
+      money: 300000
+      bankCosts:
+        Crystals: 75.0
+      ores:
+        COBBLESTONE: 10
+        COAL_ORE: 5
+        COPPER_ORE: 5
+        IRON_ORE: 10
+        GOLD_ORE: 10
+        REDSTONE_ORE: 8
+        LAPIS_ORE: 8
+        EMERALD_ORE: 6
+        DIAMOND_ORE: 10
+        COPPER_BLOCK: 5
+        IRON_BLOCK: 7
+        GOLD_BLOCK: 5
+        LAPIS_BLOCK: 4
+        REDSTONE_BLOCK: 4
+        EMERALD_BLOCK: 1
+        DIAMOND_BLOCK: 2
+      netherOres:
+        NETHERRACK: 15
+        BASALT: 10
+        GLOWSTONE: 15
+        NETHER_QUARTZ_ORE: 20
+        NETHER_GOLD_ORE: 20
+        ANCIENT_DEBRIS: 12
+        GOLD_BLOCK: 7
+        NETHERITE_BLOCK: 1
+    9:
+      minLevel: 40
+      money: 550000
+      bankCosts:
+        Crystals: 110.0
+      ores:
+        COBBLESTONE: 8
+        COAL_ORE: 4
+        COPPER_ORE: 4
+        IRON_ORE: 8
+        GOLD_ORE: 8
+        REDSTONE_ORE: 6
+        LAPIS_ORE: 6
+        EMERALD_ORE: 7
+        DIAMOND_ORE: 10
+        COPPER_BLOCK: 6
+        IRON_BLOCK: 9
+        GOLD_BLOCK: 8
+        LAPIS_BLOCK: 5
+        REDSTONE_BLOCK: 5
+        EMERALD_BLOCK: 3
+        DIAMOND_BLOCK: 3
+      netherOres:
+        NETHERRACK: 10
+        BASALT: 10
+        GLOWSTONE: 15
+        NETHER_QUARTZ_ORE: 20
+        NETHER_GOLD_ORE: 20
+        ANCIENT_DEBRIS: 15
+        GOLD_BLOCK: 8
+        NETHERITE_BLOCK: 2
+    10:
+      minLevel: 50
+      money: 1000000
+      bankCosts:
+        Crystals: 200.0
+      ores:
+        COBBLESTONE: 5
+        COAL_ORE: 3
+        COPPER_ORE: 3
+        IRON_ORE: 6
+        GOLD_ORE: 6
+        REDSTONE_ORE: 5
+        LAPIS_ORE: 5
+        EMERALD_ORE: 8
+        DIAMOND_ORE: 12
+        COPPER_BLOCK: 7
+        IRON_BLOCK: 12
+        GOLD_BLOCK: 10
+        LAPIS_BLOCK: 6
+        REDSTONE_BLOCK: 6
+        EMERALD_BLOCK: 5
+        DIAMOND_BLOCK: 6
+      netherOres:
+        NETHERRACK: 5
+        BASALT: 5
+        GLOWSTONE: 15
+        NETHER_QUARTZ_ORE: 20
+        NETHER_GOLD_ORE: 20
+        ANCIENT_DEBRIS: 20
+        GOLD_BLOCK: 12
+        NETHERITE_BLOCK: 3

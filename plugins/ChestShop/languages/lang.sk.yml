@@ -1,0 +1,108 @@
+prefix: '&a[Obchod] &r'
+shopinfo: |-
+  &aInformácie o obchode:
+  &fMajiteľ: &7%owner
+  &fSkladom: &7%stock
+  &fPredmet: &7%item
+shopinfo_buy: '&fKúpiť &7%amount &fza &7%price'
+shopinfo_sell: '&fPredať &7%amount &fza &7%price'
+iteminfo: '&aInformácie o predmete: &r'
+iteminfo_fullname: '&fCelý názov: &7%item'
+iteminfo_shopname: '&fText pre tabuľku: &7%item'
+iteminfo_repaircost: '&fCena opravy: &7%cost'
+iteminfo_book: |-
+  &fNadpis knihy: &7%title
+  &fAutor knihy: &7%author
+  &fPočet strán: &7%pages
+iteminfo_book_generation: '&fGenerácia knihy: &7%generation'
+iteminfo_leather_color: '&fFarba kože: &7Červená: %colorred, Zelená: %colorgreen,
+  Modrá: %colorblue (Hex: #%colorhex)'
+iteminfo_bundle_items: '&fBalík predmetov: &7%itemcount'
+iteminfo_axolotl_variant: '&fVarianta axolotla: &7%variant'
+iteminfo_armor_trim: '&fArmor Trim: &7%material %pattern'
+iteminfo_recipes: '&fZnalosť receptov:'
+iteminfo_map_view: |-
+  &fID mapy: &7%id
+  &fSvet mapy: &7%world
+  &fStred mapy: &7%x/%z
+  &fMapa uzamknutá: &7locked
+iteminfo_map_location: '&fPoloha na mape: &7%location'
+iteminfo_tropical_fish: |-
+  &fVzor ryby: &7%pattern
+  &fFarba vzoru ryby: &7%patterncolor
+  &fFarba tela ryby: &7%bodycolor
+iteminfo_crossbow_projectiles: '&fNabitý projektil z kuše:'
+iteminfo_crossbow_projectile: '&f%item'
+iteminfo_lore: |-
+  &fLore:
+  &r%lore
+METRICS: |-
+  &a[Obchod] &fMetriky:
+  &fÚčty: &7%accounts
+  &fPriemerné transakcie: &7%totalTransactions &f(kúpy: &7%buyTransactions &fpredaje: &7%sellTransactions&f)
+  &fPriemerne obchodovaný tovar: &7%totalItems &f(kúpene: &7%boughtItems &fpredané: &7%soldItems&f)
+ACCESS_DENIED: Nemáš povolenie na prístup k truhlice tohto obchodu!
+TRADE_DENIED: Nemáš povolenie obchodovať s týmto obchodom!
+TRADE_DENIED_ACCESS_PERMS: Nemôžeš obchodovať s obchodmi, ku ktorým máš prístup!
+TRADE_DENIED_CREATIVE_MODE: Keď si v creative, nemôžeš obchodovať s obchodmi!
+NOT_ENOUGH_MONEY: Nemáš dosť peňazí!
+NOT_ENOUGH_MONEY_SHOP: Majiteľ obchodu nemá dosť peňazí!
+CLIENT_DEPOSIT_FAILED: Vklad peňazí na tvoj účet zlyhal!
+SHOP_DEPOSIT_FAILED: Vklad peňazí majiteľovi obchodu zlyhal!
+NO_ECONOMY_ACCOUNT: Ekonomický účet od majiteľa obchodu neexistuje!
+NO_BUYING_HERE: Nie je možné tu nakupovať!
+NO_SELLING_HERE: Nie je možné tu predávať!
+NOT_ENOUGH_SPACE_IN_INVENTORY: Nemáš dostatok miesta v inventári!
+NOT_ENOUGH_SPACE_IN_CHEST: V truhlici nie je dosť miesta!
+NOT_ENOUGH_ITEMS_TO_SELL: Nemáš dostatok predmetov na predaj!
+NOT_ENOUGH_SPACE_IN_YOUR_SHOP: |-
+  [%price %item&7 obchod preplnený!](&f%seller&7 sa pokúsil/a predať
+  &7Vo svete: &f%world
+  &7Na pozícií: &f%x/%y/%z)
+NOT_ENOUGH_STOCK: Tento obchod je vypredaný.
+NOT_ENOUGH_STOCK_IN_YOUR_SHOP: |-
+  [%price %item&7 obchod je vypredaný!](&f%buyer&7 sa pokúsil/a kúpiť
+  &7Vo svete: &f%world
+  &7Na pozícií: &f%x/%y/%z)
+YOU_BOUGHT_FROM_SHOP: Kúpil/a si %item od %owner za %price.
+SOMEBODY_BOUGHT_FROM_YOUR_SHOP: |-
+  [%buyer kúpil/a %item za %price.](&7Vo svete: &f%world
+  &7Na pozícií: &f%x/%y/%z)
+YOU_SOLD_TO_SHOP: Predal/a si %item hráčovi %buyer za %price.
+SOMEBODY_SOLD_TO_YOUR_SHOP: |-
+  [%seller predal/a %item za %price.](&7Vo svete: &f%world
+  &7Na pozícií: &f%x/%y/%z)
+YOU_CANNOT_CREATE_SHOP: Nemôžeš vytvoriť tento typ obchodu!
+NO_CHEST_DETECTED: Nepodarilo sa nájsť truhlicu!
+INVALID_SHOP_DETECTED: Obchod nie je možné použiť!
+INVALID_SHOP_PRICE: Obchod má neplatnú cenu!
+INVALID_SHOP_QUANTITY: Obchod má neplatné množstvo!
+CANNOT_ACCESS_THE_CHEST: Nemáš povolenia na prístup k tejto truhlici!
+CANNOT_CHANGE_SIGN_BACKSIDE: Nemôžeš zmeniť zadnú stranu tabuľky obchodu!
+SELL_PRICE_HIGHER_THAN_BUY_PRICE: Predajná cena je vyššia ako nákupná cena!
+SELL_PRICE_ABOVE_MAX: Predajná cena %price je vyššia ako maximálna %maxprice!
+SELL_PRICE_BELOW_MIN: Predajná cena %price je nižšia ako minimálna %minprice!
+BUY_PRICE_ABOVE_MAX: Nákupná cena %price je vyššia ako maximálna %maxprice!
+BUY_PRICE_BELOW_MIN: Nákupná cena %price je nižšia ako minimálna %minprice!
+CLICK_TO_AUTOFILL_ITEM: Klikni na tabuľku s predmetom, pre ktorý je tento obchod určený!
+NO_ITEM_IN_HAND: Nemáš v ruke predmet pre automatické doplnenie!
+PROTECTED_SHOP: Obchod úspešne chránený s LWC!
+PROTECTED_SHOP_SIGN: Tabuľka obchodu úspešne chránená s LWC!
+SHOP_CREATED: Obchod bol úspešne vytvorený!
+SHOP_FEE_PAID: Bolo ti účtované %amount
+SHOP_REFUNDED: Bolo ti vrátené %amount.
+ITEM_GIVEN: Predmet %item daný hráčovi %player.
+RESTRICTED_SIGN_CREATED: Tabuľka bola úspešne vytvorená!
+PLAYER_NOT_FOUND: Hráč nebol nájdený!
+NO_PERMISSION: Na toto nemáš povolenie!
+INCORRECT_ITEM_ID: Zadal/a si neplatné id predmetu!
+INVALID_CLIENT_NAME: Tvoje používateľské meno nie je platné Minecraft používateľské
+  meno!
+NOT_ENOUGH_PROTECTIONS: Nepodarilo sa vytvoriť ochranu!
+NO_SHOP_FOUND: Nebol nájdený žiadny obchod.
+CANNOT_CREATE_SHOP_HERE: Nemôžeš tu vytvoriť obchod!
+TOGGLE_MESSAGES_OFF: Už nebudeš dostávať správy z tvojich obchodov.
+TOGGLE_MESSAGES_ON: Teraz budeš dostávať správy z tvojich obchodov.
+TOGGLE_ACCESS_ON: Už nemôžeš obchodovať v obchodoch, ku ktorým máš prístup
+TOGGLE_ACCESS_OFF: Teraz môžeš obchodovať v obchodoch, ku ktorým máš prístup
+ERROR_OCCURRED: '[An error occurred!](red) [%error](yellow)'

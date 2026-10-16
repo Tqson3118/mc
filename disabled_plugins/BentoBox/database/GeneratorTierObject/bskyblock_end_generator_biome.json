@@ -1,0 +1,56 @@
+{
+  "uniqueId": "bskyblock_end_generator_biome",
+  "friendlyName": "&r&lEnd Generator",
+  "description": [
+    "&7 A generator that works in all End biomes.",
+    "&7 Note: Height range is 0-256 in all dimensions"
+  ],
+  "generatorIcon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: END_STONE\n",
+  "lockedIcon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: BARRIER\n",
+  "generatorType": "COBBLESTONE_OR_STONE",
+  "defaultGenerator": false,
+  "priority": 1,
+  "requiredMinIslandLevel": 100,
+  "requiredBiomes": [
+    "END_MIDLANDS",
+    "END_BARRENS",
+    "END_HIGHLANDS",
+    "SMALL_END_ISLANDS",
+    "THE_END"
+  ],
+  "requiredPermissions": [],
+  "generatorTierCost": 5.0,
+  "activationCost": 0.0,
+  "deployed": true,
+  "blockChanceMap": {
+    "60.0": "END_STONE",
+    "80.0": "OBSIDIAN",
+    "95.0": "PURPUR_BLOCK",
+    "100.0": "END_STONE_BRICKS"
+  },
+  "treasureChanceMap": {},
+  "treasureItemChanceMap": {},
+  "treasureChance": 0.0,
+  "maxTreasureAmount": 1,
+  "minHeight": 0,
+  "maxHeight": 256,
+  "materialHeightMap": {
+    "OBSIDIAN": [
+      0,
+      128
+    ],
+    "PURPUR_BLOCK": [
+      64,
+      256
+    ],
+    "END_STONE": [
+      0,
+      256
+    ],
+    "END_STONE_BRICKS": [
+      32,
+      196
+    ]
+  },
+  "blockHeightRanges": {}
+}

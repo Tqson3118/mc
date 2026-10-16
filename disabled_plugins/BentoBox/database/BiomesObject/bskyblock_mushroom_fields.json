@@ -1,0 +1,26 @@
+{
+  "biome": "MUSHROOM_FIELDS",
+  "deployed": true,
+  "friendlyName": "<white><bold> Mushroom Fields",
+  "description": [
+    "<gray> A strange paradise where",
+    "<gray> mushrooms grow tall, cows",
+    "<gray> are red, and no hostile mobs",
+    "<gray> dare to spawn."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: MYCELIUM\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_mushroom_fields",
+  "unlockLevel": 160,
+  "unlockCost": 0.0,
+  "unlockItems": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: BROWN_MUSHROOM\n  amount: 21\n"
+  ],
+  "cost": 3000.0,
+  "itemCost": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: RED_MUSHROOM\n  amount: 64\n"
+  ],
+  "costMode": "PER_USAGE",
+  "costIncrement": 300.0
+}

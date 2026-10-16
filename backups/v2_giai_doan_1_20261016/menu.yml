@@ -1,0 +1,113 @@
+menu_title: '&8⚡ &6&lSKYBLOCK MMORPG &8(&e/MENU&8) ⚡'
+open_command:
+  - menu
+  - mainmenu
+size: 45
+open_requirement:
+  requirements: {}
+
+items:
+  'border':
+    material: BLACK_STAINED_GLASS_PANE
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 26
+      - 27
+      - 35
+      - 36
+      - 37
+      - 38
+      - 39
+      - 40
+      - 41
+      - 42
+      - 43
+      - 44
+    display_name: ' '
+
+  'profile':
+    material: PLAYER_HEAD
+    slot: 4
+    display_name: '&e&l👤 THÔNG TIN HIỆP SĨ: &a%player_name%'
+    lore:
+      - '&8━━━━━━━━━━━━━━━━━━━━━━━━━'
+      - '&f • &6Số dư Tiền Mặt: &e$%vault_balance_int%'
+      - '&f • &bĐiểm Tinh Anh: &d%objective_score_sb_gems% Gems'
+      - '&f • &cTổng Kỹ Năng: &bLv.%auraskills_power%'
+      - '&f • &dChiến Đấu: &cLv.%auraskills_fighting% &7| &aNông Trại: &2Lv.%auraskills_farming%'
+      - '&f • &bCâu Cá: &3Lv.%auraskills_fishing% &7| &eNhanh Nhẹn: &6Lv.%auraskills_agility%'
+      - '&8━━━━━━━━━━━━━━━━━━━━━━━━━'
+
+  'island':
+    material: GRASS_BLOCK
+    slot: 11
+    display_name: '&a&l🏝 ĐẢO SINH TỒN CỦA BẠN'
+    lore:
+      - '&7Trở về vương quốc trên không chính của bạn.'
+      - '&a▶ Nhấp để gõ /is!'
+    left_click_commands:
+      - '[player] is'
+      - '[close]'
+
+  'warp_gate':
+    material: COMPASS
+    slot: 13
+    display_name: '&b&l🌀 HỆ THỐNG DỊCH CHUYỂN (/WARP)'
+    lore:
+      - '&76 Thế giới chuyên biệt: Boss, Farm, Câu Cá, Parkour, Casino.'
+      - '&b▶ Nhấp để mở Menu Warp!'
+    left_click_commands:
+      - '[openguimenu] warp'
+
+  'evolution':
+    material: ANVIL
+    slot: 15
+    display_name: '&c&l⚔ ĐẠI ĐIỆN TIẾN HÓA 20 TIERS'
+    lore:
+      - '&7Rèn vũ khí, giáp trụ & công cụ tối thượng.'
+      - '&c▶ Nhấp để mở Menu Tiến Hóa!'
+    left_click_commands:
+      - '[openguimenu] nangcap'
+
+  'minions':
+    material: DISPENSER
+    slot: 29
+    display_name: '&6&l🤖 TỰ ĐỘNG HÓA MINIONS'
+    lore:
+      - '&7Quản lý 4 chủng loại Minion: Miner, Farmer, Slayer, Builder.'
+      - '&6▶ Nhấp để mở Menu Minions!'
+    left_click_commands:
+      - '[player] is minion'
+      - '[close]'
+
+  'quests':
+    material: BOOK
+    slot: 31
+    display_name: '&e&l📜 NHIỆM VỤ HÀNG NGÀY (/NV)'
+    lore:
+      - '&74 Nhiệm vụ đổi mới mỗi ngày nhận Gems & Tiền Xu.'
+      - '&e▶ Nhấp để xem nhiệm vụ!'
+    left_click_commands:
+      - '[player] nv'
+      - '[close]'
+
+  'guide':
+    material: ENCHANTED_BOOK
+    slot: 33
+    display_name: '&d&l🔮 CẨM NANG HƯỚNG DẪN (/HUONGDAN)'
+    lore:
+      - '&7Bách khoa toàn thư khám phá thế giới Skyblock RPG.'
+      - '&d▶ Nhấp để mở Cẩm Nang!'
+    left_click_commands:
+      - '[player] huongdan'
+      - '[close]'

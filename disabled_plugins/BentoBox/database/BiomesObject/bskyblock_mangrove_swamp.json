@@ -1,0 +1,23 @@
+{
+  "biome": "MANGROVE_SWAMP",
+  "deployed": true,
+  "friendlyName": "<white><bold> Mangrove Swamp",
+  "description": [
+    "<gray> Waterlogged mangrove roots",
+    "<gray> where frogs croak their",
+    "<gray> evening songs. Muddy but",
+    "<gray> magical."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: MANGROVE_PROPAGULE\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_mangrove_swamp",
+  "unlockLevel": 5,
+  "unlockCost": 0.0,
+  "cost": 300.0,
+  "itemCost": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: MUD\n  amount: 32\n"
+  ],
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

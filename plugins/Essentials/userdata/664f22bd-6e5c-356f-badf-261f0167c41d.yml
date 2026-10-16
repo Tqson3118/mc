@@ -1,0 +1,41 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: false
+muted: false
+jailed: false
+ip-address: 127.0.0.1
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1792098664055
+  login: 1792098632298
+  kits:
+    tanthu: 1792087913937
+money: '2500'
+last-account-name: Tester_Bot
+lastlocation:
+  world: 96f4b9c1-3660-4983-b104-aac9027d9953
+  world-name: world_parkour
+  x: -6.5
+  y: 161.0
+  z: 15.5
+  yaw: 0.0
+  pitch: 0.0
+logoutlocation:
+  world: dd8f2722-02c1-487c-9407-8de6469b78a5
+  world-name: world
+  x: 0.5
+  y: 122.0
+  z: 0.5
+  yaw: 0.0
+  pitch: 0.0

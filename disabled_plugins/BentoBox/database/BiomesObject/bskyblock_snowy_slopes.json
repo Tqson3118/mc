@@ -1,0 +1,22 @@
+{
+  "biome": "SNOWY_SLOPES",
+  "deployed": true,
+  "friendlyName": "<white><bold> Snowy Slopes",
+  "description": [
+    "<gray> Steep snowy slopes where",
+    "<gray> goats leap between cliffs",
+    "<gray> and avalanches rumble."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: SNOW_BLOCK\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_snowy_slopes",
+  "unlockLevel": 70,
+  "unlockCost": 0.0,
+  "cost": 900.0,
+  "itemCost": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: SNOW_BLOCK\n  amount: 64\n"
+  ],
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

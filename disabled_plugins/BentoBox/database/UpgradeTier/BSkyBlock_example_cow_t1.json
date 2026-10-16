@@ -1,0 +1,26 @@
+{
+  "uniqueId": "BSkyBlock_example_cow_t1",
+  "upgrade": "BSkyBlock_example_cow",
+  "name": "Cow Limit",
+  "description": [],
+  "startLevel": 0,
+  "endLevel": 4,
+  "prices": [
+    {
+      "class": "MoneyPriceDB",
+      "parameters": {
+        "amountEquation": "500"
+      }
+    }
+  ],
+  "rewards": [
+    {
+      "class": "LimitsRewardDB",
+      "parameters": {
+        "limitType": "ENTITY",
+        "target": "COW",
+        "amountEquation": "2"
+      }
+    }
+  ]
+}

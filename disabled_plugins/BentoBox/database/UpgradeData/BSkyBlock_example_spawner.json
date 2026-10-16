@@ -1,0 +1,11 @@
+{
+  "uniqueId": "BSkyBlock_example_spawner",
+  "world": "BSkyBlock",
+  "name": "Spawner Boost",
+  "description": [
+    "Example: pay $2000 for +0.5 extra entities per spawner trigger."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: SPAWNER\n",
+  "order": 7,
+  "active": true
+}

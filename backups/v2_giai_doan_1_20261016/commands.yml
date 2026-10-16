@@ -1,0 +1,133 @@
+command-block-overrides: []
+ignore-vanilla-permissions: false
+aliases:
+  icanhasbukkit:
+  - version $1-
+  huongdan:
+  - trigger huongdan
+  guide:
+  - trigger huongdan
+  shop:
+  - is shop $1-
+  cuahang:
+  - is shop $1-
+  team:
+  - is members $1-
+  upgrade:
+  - is upgrades $1-
+  upgrades:
+  - is upgrades $1-
+  booster:
+  - is boosters $1-
+  boosters:
+  - is boosters $1-
+  tanthu:
+  - kit tanthu $1-
+  tanthuthu:
+  - kit tanthu $1-
+  fishing:
+  - warp fishing $1-
+  cauca:
+  - warp cauca $1-
+  boss:
+  - warp boss $1-
+  boss1:
+  - warp boss1 $1-
+  boss2:
+  - warp boss2 $1-
+  boss3:
+  - warp boss3 $1-
+  boss4:
+  - warp boss4 $1-
+  dongnhen:
+  - warp boss1 $1-
+  vuclua:
+  - warp boss2 $1-
+  thanhtri:
+  - warp boss3 $1-
+  hukhong:
+  - warp boss4 $1-
+  pvp:
+  - warp pvp $1-
+  farm:
+  - warp farm $1-
+  mob:
+  - warp mob $1-
+  trade:
+  - warp trade $1-
+  forge:
+  - warp trade $1-
+  portal:
+  - warp portal $1-
+  stargate:
+  - warp portal $1-
+  bazaar:
+  - warp shop $1-
+  warps:
+  - dm open warp $1-
+  warpmenu:
+  - dm open warp $1-
+  menu:
+  - dm open menu $1-
+  mainmenu:
+  - dm open menu $1-
+  spawn:
+  - warp spawn $1-
+  island:
+  - is $1-
+  islands:
+  - is $1-
+  kho:
+  - enderchest $1-
+  ec:
+  - enderchest $1-
+  nung:
+  - trigger nung
+  smelt:
+  - trigger nung
+  ah:
+  - tellraw @s [{"text":"[Chợ Trời] ","color":"gold","bold":true},{"text":"Máy chủ
+    sử dụng hệ thống ChestShop! Hãy tạo shop trên đảo của bạn bằng rương và biển hiệu,
+    hoặc đến ","color":"yellow"},{"text":"[Sảnh Thương Nhân /warp trade]","color":"green","bold":true,"clickEvent":{"action":"run_command","value":"/warp
+    trade"}},{"text":" để giao dịch!","color":"yellow"}]
+  auction:
+  - ah $1-
+  chotroi:
+  - ah $1-
+  parkour:
+  - warp parkour $1-
+  casino:
+  - warp casino $1-
+  crate:
+  - warp crates $1-
+  crates:
+  - warp crates $1-
+  daily:
+  - kit daily $1-
+  pvpkit:
+  - kit pvp $1-
+  danhhieu:
+  - trigger danhhieu
+  tags:
+  - trigger danhhieu
+  role:
+  - trigger danhhieu
+  roles:
+  - trigger danhhieu
+  tag:
+  - trigger danhhieu
+  kynang:
+  - skills $1-
+  skill:
+  - skills $1-
+  clearlag:
+  - donrac $1-
+  minion:
+  - is minion $1-
+  minions:
+  - is minions $1-
+  builder:
+  - is builder $1-
+  undo:
+  - is undo $1-
+

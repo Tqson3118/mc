@@ -1,0 +1,335 @@
+---
+blockValues:
+  NETHERITE_BLOCK:
+    value: 150.0
+    name: "&5&lNetherite Block"
+    page: 1
+    slot: 10
+  BEACON:
+    value: 150.0
+    name: "&b&lBeacon"
+    page: 1
+    slot: 11
+  ANCIENT_DEBRIS:
+    value: 50.0
+    name: "&4&lAncient Debris"
+    page: 1
+    slot: 12
+  EMERALD_BLOCK:
+    value: 20.0
+    name: "&a&lEmerald Block"
+    page: 1
+    slot: 13
+  DIAMOND_BLOCK:
+    value: 10.0
+    name: "&b&lDiamond Block"
+    page: 1
+    slot: 14
+  GOLD_BLOCK:
+    value: 5.0
+    name: "&e&lGold Block"
+    page: 1
+    slot: 15
+  IRON_BLOCK:
+    value: 3.0
+    name: "&f&lIron Block"
+    page: 1
+    slot: 16
+  COPPER_BLOCK:
+    value: 2.0
+    name: "&6&lCopper Block"
+    page: 1
+    slot: 19
+  REDSTONE_BLOCK:
+    value: 2.0
+    name: "&c&lRedstone Block"
+    page: 1
+    slot: 20
+  LAPIS_BLOCK:
+    value: 2.0
+    name: "&9&lLapis Block"
+    page: 1
+    slot: 21
+  COAL_BLOCK:
+    value: 1.5
+    name: "&8&lCoal Block"
+    page: 1
+    slot: 22
+  QUARTZ_BLOCK:
+    value: 1.5
+    name: "&f&lQuartz Block"
+    page: 1
+    slot: 23
+  AMETHYST_BLOCK:
+    value: 2.0
+    name: "&d&lAmethyst Block"
+    page: 1
+    slot: 24
+  OBSIDIAN:
+    value: 2.0
+    name: "&5&lObsidian"
+    page: 1
+    slot: 25
+  CRYING_OBSIDIAN:
+    value: 5.0
+    name: "&d&lCrying Obsidian"
+    page: 1
+    slot: 28
+  ENCHANTING_TABLE:
+    value: 15.0
+    name: "&d&lEnchanting Table"
+    page: 1
+    slot: 29
+  ANVIL:
+    value: 8.0
+    name: "&7&lAnvil"
+    page: 1
+    slot: 30
+  BREWING_STAND:
+    value: 5.0
+    name: "&e&lBrewing Stand"
+    page: 1
+    slot: 31
+  BOOKSHELF:
+    value: 1.5
+    name: "&6&lBookshelf"
+    page: 1
+    slot: 32
+  JUKEBOX:
+    value: 5.0
+    name: "&9&lJukebox"
+    page: 1
+    slot: 33
+  ENDER_CHEST:
+    value: 10.0
+    name: "&3&lEnder Chest"
+    page: 1
+    slot: 34
+  HOPPER:
+    value: 1.0
+    name: "&7&lHopper"
+    page: 1
+    slot: 37
+  DISPENSER:
+    value: 1.0
+    name: "&7&lDispenser"
+    page: 1
+    slot: 38
+  DROPPER:
+    value: 0.5
+    name: "&7&lDropper"
+    page: 1
+    slot: 39
+  PISTON:
+    value: 0.8
+    name: "&6&lPiston"
+    page: 1
+    slot: 40
+  STICKY_PISTON:
+    value: 1.2
+    name: "&a&lSticky Piston"
+    page: 1
+    slot: 41
+  TARGET:
+    value: 1.0
+    name: "&c&lTarget"
+    page: 1
+    slot: 42
+  DAYLIGHT_DETECTOR:
+    value: 1.0
+    name: "&e&lDaylight Detector"
+    page: 1
+    slot: 43
+  CHEST:
+    value: 0.5
+    name: "&6&lChest"
+    page: 2
+    slot: 10
+  TRAPPED_CHEST:
+    value: 0.5
+    name: "&6&lTrapped Chest"
+    page: 2
+    slot: 11
+  BARREL:
+    value: 0.5
+    name: "&6&lBarrel"
+    page: 2
+    slot: 12
+  FURNACE:
+    value: 0.5
+    name: "&7&lFurnace"
+    page: 2
+    slot: 13
+  BLAST_FURNACE:
+    value: 2.0
+    name: "&8&lBlast Furnace"
+    page: 2
+    slot: 14
+  SMOKER:
+    value: 1.5
+    name: "&6&lSmoker"
+    page: 2
+    slot: 15
+  CRAFTING_TABLE:
+    value: 0.2
+    name: "&6&lCrafting Table"
+    page: 2
+    slot: 16
+  OAK_LOG:
+    value: 0.2
+    name: "&6&lOak Log"
+    page: 2
+    slot: 19
+  SPRUCE_LOG:
+    value: 0.2
+    name: "&6&lSpruce Log"
+    page: 2
+    slot: 20
+  BIRCH_LOG:
+    value: 0.2
+    name: "&f&lBirch Log"
+    page: 2
+    slot: 21
+  JUNGLE_LOG:
+    value: 0.2
+    name: "&6&lJungle Log"
+    page: 2
+    slot: 22
+  ACACIA_LOG:
+    value: 0.2
+    name: "&6&lAcacia Log"
+    page: 2
+    slot: 23
+  DARK_OAK_LOG:
+    value: 0.2
+    name: "&8&lDark Oak Log"
+    page: 2
+    slot: 24
+  MANGROVE_LOG:
+    value: 0.2
+    name: "&4&lMangrove Log"
+    page: 2
+    slot: 25
+  STONE:
+    value: 0.1
+    name: "&7&lStone"
+    page: 2
+    slot: 28
+  STONE_BRICKS:
+    value: 0.2
+    name: "&7&lStone Bricks"
+    page: 2
+    slot: 29
+  SMOOTH_STONE:
+    value: 0.2
+    name: "&7&lSmooth Stone"
+    page: 2
+    slot: 30
+  DEEPSLATE_BRICKS:
+    value: 0.2
+    name: "&8&lDeepslate Bricks"
+    page: 2
+    slot: 31
+  PRISMARINE:
+    value: 1.0
+    name: "&3&lPrismarine"
+    page: 2
+    slot: 32
+  PRISMARINE_BRICKS:
+    value: 1.5
+    name: "&3&lPrismarine Bricks"
+    page: 2
+    slot: 33
+  SEA_LANTERN:
+    value: 3.0
+    name: "&b&lSea Lantern"
+    page: 2
+    slot: 34
+  GLOWSTONE:
+    value: 1.5
+    name: "&e&lGlowstone"
+    page: 2
+    slot: 37
+  SHROOMLIGHT:
+    value: 1.5
+    name: "&6&lShroomlight"
+    page: 2
+    slot: 38
+  GLASS:
+    value: 0.2
+    name: "&f&lGlass"
+    page: 2
+    slot: 39
+  TINTED_GLASS:
+    value: 1.0
+    name: "&8&lTinted Glass"
+    page: 2
+    slot: 40
+  TERRACOTTA:
+    value: 0.3
+    name: "&6&lTerracotta"
+    page: 2
+    slot: 41
+  HAY_BLOCK:
+    value: 0.5
+    name: "&e&lHay Block"
+    page: 2
+    slot: 42
+  HONEY_BLOCK:
+    value: 2.0
+    name: "&6&lHoney Block"
+    page: 2
+    slot: 43
+spawnerValues:
+  PIG:
+    value: 100.0
+    name: "&d&lPig Spawner"
+    page: 1
+    slot: 10
+  COW:
+    value: 100.0
+    name: "&8&lCow Spawner"
+    page: 1
+    slot: 11
+  SHEEP:
+    value: 100.0
+    name: "&f&lSheep Spawner"
+    page: 1
+    slot: 12
+  CHICKEN:
+    value: 100.0
+    name: "&f&lChicken Spawner"
+    page: 1
+    slot: 13
+  ZOMBIE:
+    value: 150.0
+    name: "&2&lZombie Spawner"
+    page: 1
+    slot: 14
+  SKELETON:
+    value: 150.0
+    name: "&7&lSkeleton Spawner"
+    page: 1
+    slot: 15
+  SPIDER:
+    value: 150.0
+    name: "&8&lSpider Spawner"
+    page: 1
+    slot: 16
+  CREEPER:
+    value: 200.0
+    name: "&a&lCreeper Spawner"
+    page: 1
+    slot: 19
+  BLAZE:
+    value: 250.0
+    name: "&6&lBlaze Spawner"
+    page: 1
+    slot: 20
+  ENDERMAN:
+    value: 300.0
+    name: "&5&lEnderman Spawner"
+    page: 1
+    slot: 21
+valueLore: "&9Value: &7%block_value%"
+teamValueLore: "&9Team Value: &7%total_block_value% (%total_blocks%)"

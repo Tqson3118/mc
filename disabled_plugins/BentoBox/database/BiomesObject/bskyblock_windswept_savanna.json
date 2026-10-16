@@ -1,0 +1,20 @@
+{
+  "biome": "WINDSWEPT_SAVANNA",
+  "deployed": true,
+  "friendlyName": "<white><bold> Windswept Savanna",
+  "description": [
+    "<gray> Wind-swept grasslands with",
+    "<gray> dramatic terrain generation.",
+    "<gray> Beautiful and open for",
+    "<gray> expansive building."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: ACACIA_SAPLING\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_windswept_savanna",
+  "unlockLevel": 25,
+  "unlockCost": 0.0,
+  "cost": 300.0,
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

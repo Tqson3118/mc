@@ -1,0 +1,25 @@
+regions:
+  __global__:
+    members: {}
+    owners: {}
+    type: global
+    priority: 0
+    flags:
+      build: deny
+  farm_world:
+    min: {x: -500, y: -64, z: -500}
+    max: {x: 500, y: 319, z: 500}
+    members: {}
+    owners: {}
+    flags:
+      build: deny
+      block-break: deny
+      block-place: deny
+      mob-spawning: allow
+      use: allow
+      interact: allow
+      chest-access: allow
+      pvp: deny
+    type: cuboid
+    priority: 10
+version: 7

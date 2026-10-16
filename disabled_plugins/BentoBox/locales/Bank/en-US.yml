@@ -1,0 +1,79 @@
+bank:
+  admin:
+    description: admin command for island bank
+    give:
+      parameters: <player> <amount>
+      description: add amount to player's island account
+      success: <green> Success! [name]'s island bank balance is now [number].
+    take:
+      parameters: <player> <amount>
+      description: take amount from player's island account
+    balance:
+      parameters: <player>
+      description: view balance of player's island account
+    set:
+      parameters: <player> <amount>
+      description: set amount in player's island account
+      success: <green> [name]'s account set to [number].
+    statement:
+      parameters: <player>
+      description: view island bank statement for player
+  balance:
+    description: shows your island bank balance
+    island-balance: <green> Island bank balance is [number].
+  baltop:
+    description: show balance rankings
+    description-syntax: <light_purple> [number]
+    highest: Sort by Highest
+    lowest: Sort by Lowest
+    name-syntax: <light_purple> [name]
+    title: Top Balances
+  deposit:
+    description: deposit amount into your island account
+    parameters: <amount>
+    success: <green> Success! Your new island bank balance is [number].
+    alert: <green> [name] deposited [number] into the island bank.
+  errors:
+    bank-error: <red> Error loading bank account info - please try again later
+    low-balance: <red> Your island bank balance is not high enough!
+    too-low: <red> The island balance is too low.
+    must-be-a-number: <red> Amount must be a number
+    no-rank: <red> Your rank is not high enough to use the bank.
+    too-much: <red> You do not have that amount to deposit.
+    value-must-be-positive: <red> Amount must be positive.
+    scientific: <red> Scientific notation is not supported.
+    too-long: <red> Value must be less than 10 digits
+  statement:
+    balance:
+      name: '<blue> Balance:'
+      description: <gold> [number]
+    deposit: Deposit
+    description: show your island bank history
+    give: Admin Give
+    interest: Interest
+    latest: Sort by newest
+    oldest: Sort by oldest
+    set: Admin Set
+    syntax: |
+      <blue> [date]
+      <blue> [time]
+      <gray> [name]
+      <gold> [number]
+    take: Admin Take
+    title: Account history
+    unknown: Unknown Type
+    withdrawal: Withdrawal
+  user:
+    description: island bank command
+  withdraw:
+    description: withdraw amount from your island account
+    parameters: <amount>
+    success: <green> Success! Your new island bank balance is [number].
+    alert: <green> [name] withdrew [number] from the island bank.
+protection:
+  flags:
+    BANK_ACCESS:
+      description: |-
+        <white> Allow access to
+        <white> the island bank
+      name: Island Bank Access

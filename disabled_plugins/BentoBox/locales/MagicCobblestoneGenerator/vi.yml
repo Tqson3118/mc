@@ -1,0 +1,957 @@
+stone-generator:
+  commands:
+    admin:
+      main:
+        description: Lệnh quản trị viên của Máy Tái Tạo Khối
+      import:
+        description: Nhập Máy Tái Tạo Khối
+        confirmation: Thao tác này sẽ xóa các trình tạo hiện có khỏi [gamemode] và
+          nhập các trình tạo mới từ tệp mẫu - vui lòng xác nhận
+      why:
+        parameters: <người chơi>
+        description: bật/tắt thông báo gỡ lỗi Magic Cobblestone Generator
+      database:
+        description: Lệnh cơ sở dữ liệu chính
+      import-database:
+        parameters: <tệp>
+        description: nhập tập tin cơ sở dữ liệu Máy Tái Tạo Khối
+        confirmation: Thao tác này sẽ xóa trình tạo hiện có cho [gamemode] và nhập
+          trình tạo từ tệp cơ sở dữ liệu - vui lòng xác nhận
+      export:
+        parameters: <tệp>
+        description: Xuất cơ sở dữ liệu trình Máy Tái Tạo Khối từ Chế độ trò chơi
+          thành tệp
+    player:
+      main:
+        description: mở GUI lựa chọn trình tạo
+      view:
+        description: mở GUI chi tiết trình tạo
+        parameters: <generator-id>
+      buy:
+        description: Mua Máy Tái Tạo Khối được yêu cầu
+        parameters: <generator-id>
+      activate:
+        description: Kích hoạt/hủy kích hoạt trình tạo được yêu cầu
+        parameters: <generator-id> <true/false>
+  gui:
+    titles:
+      player-panel: <black><bold>Trình tạo</bold></black>
+      view-generator: '<black><bold>Trình tạo: </bold></black> [generator]'
+      admin-panel: <black><bold>Bảng điều khiển của quản trị viên</bold></black>
+      select-biome: <black><bold>Chọn Quần xã sinh vật</bold></black>
+      select-block: <black><bold>Chọn Khối</bold></black>
+      select-bundle: <black><bold>Chọn gói</bold></black>
+      select-type: <black><bold>Chọn loại Trình tạo</bold></black>
+      view-bundle: '<black><bold>Gói: </bold></black> [gói]'
+      manage-bundles: <black><bold>Quản lý gói</bold></black>
+      manage-generators: <black><bold>Quản lý Trình tạo</bold></black>
+      view-island: '<black><bold>Đảo: [island]</bold></black>'
+      manage-islands: <black><bold>Quản lý dữ liệu đảo</bold></black>
+      library: <black><bold>Thư viện</bold></black>
+      settings: <black><bold>Cài đặt</bold></black>
+      configure-material-height: <black><bold>Cấu Hình Độ Cao Vật Liệu</bold></black>
+      height-range-config: '<black><bold>Khoảng Độ Cao: [material]</bold></black>'
+    buttons:
+      default:
+        name: <white><bold>Trình tạo mặc định</bold></white>
+        description: |-
+          <gray>Trình tạo mặc định luôn
+          </gray><gray>đang hoạt động.</gray>
+        enabled: <aqua>Đây là trình tạo </aqua><aqua>mặc định </aqua><green>.</green>
+        disabled: <aqua>Đây là </aqua><red>không phải là trình tạo </red><aqua>mặc
+          định.</aqua>
+      priority:
+        name: <white><bold>Mức độ ưu tiên của Trình tạo</bold></white>
+        description: |-
+          <gray>Ưu tiên lớn hơn
+          </gray><gray>số sẽ được ưu tiên nếu
+          </gray><gray>nhiều cái có thể được áp dụng
+          </gray><gray>đến cùng một vị trí.</gray>
+        value: '<aqua>Mức độ ưu tiên: </aqua><gray>[number]</gray>'
+      type:
+        name: <white><bold>Loại Trình tạo</bold></white>
+        description: |-
+          <gray>Xác định loại trình tạo nào
+          </gray><gray>sẽ được áp dụng cho hiện tại
+          </gray><gray>máy phát điện.</gray>
+        value: '<aqua>Loại: </aqua><gray>[type]</gray>'
+      required_min_level:
+        name: <white><bold>Cấp đảo tối thiểu</bold></white>
+        description: |-
+          <gray>Cấp đảo tối thiểu để
+          </gray><gray>mở khóa trình tạo này.</gray>
+        value: '<aqua>Yêu cầu mức tối thiểu: [number]</aqua>'
+      required_permissions:
+        name: <white><bold>Quyền được yêu cầu</bold></white>
+        description: |-
+          <gray>Danh sách các quyền mà
+          </gray><gray>được yêu cầu để mở khóa
+          </gray><gray>trình tạo này.</gray>
+        list: <aqua>Quyền được yêu cầu:</aqua>
+        value: <aqua>- [permission]</aqua>
+        none: <aqua>- không có</aqua>
+      purchase_cost:
+        name: <white><bold>Chi phí mua hàng</bold></white>
+        description: |-
+          <gray>Tín dụng cần thiết để
+          </gray><gray>mua máy phát điện này.</gray>
+        value: '<aqua>Chi phí: [number]</aqua>'
+      activation_cost:
+        name: <white><bold>Chi phí kích hoạt</bold></white>
+        description: |-
+          <gray>Tín dụng cần thiết để
+          </gray><gray>kích hoạt hoặc kích hoạt lại
+          </gray><gray>trình tạo này.</gray>
+        value: '<aqua>Chi phí: [number]</aqua>'
+      biomes:
+        name: <white><bold>Quần xã Hoạt động</bold></white>
+        description: |-
+          <gray>Danh sách các quần xã nơi này
+          </gray><gray>máy phát điện có thể hoạt động.</gray>
+        list: <aqua>Quần xã sinh vật:</aqua>
+        value: <aqua>- [biome]</aqua>
+        any: <aqua>- bất kỳ</aqua>
+      treasure_amount:
+        name: <white><bold>Số kho báu</bold></white>
+        description: |-
+          <gray>Lượng kho báu tối đa
+          </gray><gray>có thể bị xóa cùng một lúc.</gray>
+        value: '<aqua>Số lượng: [number]</aqua>'
+      treasure_chance:
+        name: <white><bold>Cơ hội kho báu</bold></white>
+        description: |-
+          <gray>Cơ hội có được kho báu
+          </gray><gray>bị loại bỏ khi tạo.</gray>
+        value: '<aqua>Cơ hội: [number]</aqua>'
+      info:
+        name: <white><bold>Thông tin chung</bold></white>
+        description: |-
+          <gray>Hiển thị thông tin chung
+          </gray><gray>về trình tạo này.</gray>
+      blocks:
+        name: <white><bold>Danh sách khối</bold></white>
+        description: |-
+          <gray>Hiển thị danh sách các khối và
+          </gray><gray>cơ hội của họ được tạo ra.</gray>
+      treasures:
+        name: <white><bold>Danh sách kho báu</bold></white>
+        description: |-
+          <gray>Hiển thị danh sách kho báu và
+          </gray><gray>cơ hội rơi.
+          </gray><gray>Kho báu bị rơi
+          </gray><gray>khi tạo khối.</gray>
+        drag-and-drop: |-
+          <gray>Hỗ trợ kéo và thả
+          </gray><gray>mục vào khoảng trống.</gray>
+      block-icon:
+        name: <white><bold>[material]</bold></white>
+        description: '<aqua>Cơ hội: [#.##]</aqua>'
+        actual: '<aqua>Giá trị cơ sở dữ liệu: [số]</aqua>'
+        height-range: '<gray>Khoảng độ cao: </gray><aqua>[min_height] </aqua><gray>đến
+          </gray><aqua>[max_height]</aqua>'
+        no-height-range: <gray>Sử dụng khoảng độ cao mặc định của máy tạo</gray>
+      treasure-icon:
+        name: <white><bold>[material]</bold></white>
+        description: '<aqua>Cơ hội: [#.####]</aqua>'
+        actual: '<aqua>Giá trị cơ sở dữ liệu: [number]</aqua>'
+      show_cobblestone:
+        name: <white><bold>Máy tạo đá cuội</bold></white>
+        description: |-
+          <gray>Chỉ hiển thị đá cuội
+          </gray><gray>máy phát điện</gray>
+      show_stone:
+        name: <white><bold>Máy tạo đá</bold></white>
+        description: |-
+          <gray>Chỉ hiển thị đá
+          </gray><gray>máy phát điện</gray>
+      show_basalt:
+        name: <white><bold>Máy tạo bazan</bold></white>
+        description: |-
+          <gray>Chỉ hiển thị đá bazan
+          </gray><gray>máy phát điện</gray>
+      toggle_visibility:
+        name: <white><bold>Máy phát điện đã được mở khóa</bold></white>
+        description: |-
+          <gray>Chỉ hiển thị đã mở khóa
+          </gray><gray>máy phát điện</gray>
+      show_active:
+        name: <white><bold>Trình tạo hoạt động</bold></white>
+        description: |-
+          <gray>Chỉ hiển thị hoạt động
+          </gray><gray>máy phát điện</gray>
+      return:
+        name: <white><bold>Quay lại</bold></white>
+        description: <gray>Quay lại menu trước</gray>
+      quit:
+        name: <white><bold>Thoát</bold></white>
+        description: <gray>Thoát khỏi menu hiện tại</gray>
+      previous:
+        name: <white><bold>Trang trước</bold></white>
+        description: <gray>Chuyển sang trang [số]</gray>
+      next:
+        name: <white><bold>Trang tiếp theo</bold></white>
+        description: <gray>Chuyển sang trang [number]</gray>
+      manage_users:
+        name: <white><bold>Quản lý dữ liệu đảo</bold></white>
+        description: |-
+          <gray>Quản lý dữ liệu đảo
+          </gray><gray>trong chế độ chơi hiện tại.</gray>
+      manage_generator_tiers:
+        name: <white><bold>Quản lý Trình tạo</bold></white>
+        description: |-
+          <gray>Quản lý trình tạo
+          </gray><gray>trong chế độ chơi hiện tại.</gray>
+      manage_generator_bundles:
+        name: <white><bold>Quản lý gói</bold></white>
+        description: |-
+          <gray>Quản lý gói
+          </gray><gray>trong chế độ chơi hiện tại.</gray>
+      settings:
+        name: <white><bold>Cài đặt</bold></white>
+        description: |-
+          <gray>Kiểm tra và thay đổi
+          </gray><gray>cài đặt bổ trợ.</gray>
+      import_template:
+        name: <white><bold>Nhập Mẫu</bold></white>
+        description: |-
+          <gray>Nhập mẫu
+          </gray><gray>tập tin nằm bên trong
+          </gray><gray>thư mục addon.</gray>
+      web_library:
+        name: <white><bold>Thư viện web</bold></white>
+        description: |-
+          <gray>Truy cập web
+          </gray><gray>thư viện có chứa
+          </gray><gray>trình tạo dùng chung.</gray>
+      export_from_database:
+        name: <white><bold>Xuất Cơ sở dữ liệu</bold></white>
+        description: |-
+          <gray>Xuất cơ sở dữ liệu
+          </gray><gray>thành một tệp duy nhất nằm trong
+          </gray><gray>thư mục addon.</gray>
+      import_to_database:
+        name: <white><bold>Nhập cơ sở dữ liệu</bold></white>
+        description: |-
+          <gray>Nhập cơ sở dữ liệu từ
+          </gray><gray>một tệp nằm trong addon
+          </gray><gray>thư mục.</gray>
+      wipe_user_data:
+        name: <white><bold>Xóa cơ sở dữ liệu người dùng</bold></white>
+        description: |-
+          <gray>Xóa dữ liệu người dùng cho
+          </gray><gray>mỗi hòn đảo trong
+          </gray><gray>chế độ trò chơi hiện tại.</gray>
+      wipe_generator_data:
+        name: <white><bold>Xóa cơ sở dữ liệu trình tạo</bold></white>
+        description: |-
+          <gray>Xóa trình tạo và gói
+          </gray><gray>dữ liệu trong gamemode hiện tại.</gray>
+      bundle_name:
+        name: <white><bold>Tên gói</bold></white>
+        description: <gray>Thay đổi tên gói.</gray>
+        value: '<aqua>Tên: </aqua> [bundle]'
+      bundle_id:
+        name: <white><bold>Gói Id</bold></white>
+        description: <gray>ID gói hiện tại.</gray>
+        value: '<aqua>ID: </aqua> [id]'
+      bundle_icon:
+        name: <white><bold>Biểu tượng gói</bold></white>
+        description: <gray>Thay đổi biểu tượng gói.</gray>
+      bundle_description:
+        name: <white><bold>Mô tả gói</bold></white>
+      bundle_info:
+        name: <white><bold>Thông tin chung</bold></white>
+        description: |-
+          <gray>Hiển thị thông tin chung
+          </gray><gray>về gói này.</gray>
+      bundle_generators:
+        name: <white><bold>Máy phát điện</bold></white>
+        description: |-
+          <gray>Hiển thị danh sách trình tạo
+          </gray><gray>được gán cho gói này.</gray>
+      add_generator:
+        name: <white><bold>Thêm Trình tạo</bold></white>
+        description: |-
+          <gray>Chỉ định trình tạo
+          </gray><gray>vào gói này.</gray>
+        list: <aqua>Trình tạo được chọn:</aqua>
+        value: <aqua>- [generator]</aqua>
+      remove_generator:
+        name: <white><bold>Xóa Trình tạo</bold></white>
+        description: |-
+          <gray>Xóa trình tạo
+          </gray><gray>từ gói này.</gray>
+        list: <aqua>Trình tạo được chọn:</aqua>
+        value: <aqua>- [generator]</aqua>
+      create_bundle:
+        name: <white><bold>Tạo Gói</bold></white>
+        description: |-
+          <gray>Tạo một gói mới
+          </gray><gray>cho chế độ chơi này.</gray>
+      delete_bundle:
+        name: <white><bold>Xóa gói</bold></white>
+        description: |-
+          <gray>Xóa một gói khỏi
+          </gray><gray>chế độ chơi này hoàn toàn.</gray>
+        list: <aqua>Các gói đã chọn:</aqua>
+        value: <aqua>- [bundle]</aqua>
+      name:
+        name: <white><bold>Tên trình tạo</bold></white>
+        description: |-
+          <gray>Tiêu đề cho trình tạo này.
+          </gray><gray>Hỗ trợ mã màu.</gray>
+        value: '<aqua>Tên: </aqua> [generator]'
+      id:
+        name: <white><bold>Id trình tạo</bold></white>
+        description: <gray>ID trình tạo hiện tại.</gray>
+        value: '<aqua>ID: </aqua> [id]'
+      icon:
+        name: <white><bold>Biểu tượng Trình tạo</bold></white>
+        description: |-
+          <gray>Mục được sử dụng để hiển thị mục này
+          </gray><gray>trong tất cả các GUI.</gray>
+      locked_icon:
+        name: <white><bold>Biểu tượng đã khóa</bold></white>
+        description: |-
+          <gray>Mục được sử dụng để hiển thị mục này
+          </gray><gray>trình tạo trong tất cả các GUI nếu
+          </gray><gray>nó bị khóa.</gray>
+      description:
+        name: <white><bold>Trình tạo Mô tả</bold></white>
+        description: |-
+          <gray>Văn bản cho trình tạo sẽ
+          </gray><gray>được viết dưới tiêu đề.</gray>
+        value: <aqua>Mô tả:</aqua>
+      deployed:
+        name: <white><bold>Đã triển khai</bold></white>
+        description: |-
+          <gray>Trình tạo đã triển khai có thể nhìn thấy
+          </gray><gray>đến và người chơi có thể truy cập.
+          </gray><gray>Trình tạo chưa triển khai sẽ không
+          </gray><gray>tạo khối.</gray>
+        enabled: <aqua>Trình tạo này được </aqua><green>triển khai.</green>
+        disabled: <aqua>Trình tạo này </aqua><red>chưa được triển khai.</red>
+      add_material:
+        name: <white><bold>Thêm tài liệu</bold></white>
+        description: |-
+          <gray>Thêm tài liệu mới vào
+          </gray><gray>danh sách tài liệu hiện tại.</gray>
+      remove_material:
+        name: <white><bold>Xóa tài liệu</bold></white>
+        description: |-
+          <gray>Xóa đã chọn
+          </gray><gray>tài liệu từ danh sách.</gray>
+        selected-materials: <gray>Tài liệu được chọn:</gray>
+        list-value: <gray>- [number] x [value]</gray>
+      create_generator:
+        name: <white><bold>Tạo Trình tạo</bold></white>
+        description: |-
+          <gray>Tạo mới
+          </gray><gray>trình tạo cho
+          </gray><gray>chế độ trò chơi.</gray>
+      delete_generator:
+        name: <white><bold>Xóa Trình tạo</bold></white>
+        description: |-
+          <gray>Xóa trình tạo
+          </gray><gray>khỏi gamemode hoàn toàn.</gray>
+        list: <aqua>Trình tạo được chọn:</aqua>
+        value: <aqua>- [generator]</aqua>
+      island_name:
+        name: <white><bold>[name]</bold></white>
+        description: |-
+          <gray>[owner]
+          </gray><aqua>[members]
+          </aqua><aqua>ID đảo: </aqua><gray>[id]</gray>
+        owner: '<aqua>Chủ sở hữu: [player]</aqua>'
+        list: <aqua>Thành viên:</aqua>
+        value: <aqua>- [player]</aqua>
+      island_working_range:
+        name: <white><bold>Phạm vi làm việc đảo</bold></white>
+        description: |-
+          <gray>Phạm vi làm việc cho máy phát điện
+          </gray><gray>trên đảo hiện tại.
+          </gray><gray>0 trở xuống có nghĩa là không giới hạn
+          </gray><gray>phạm vi.</gray>
+        value: '<aqua>Phạm vi: [number]</aqua>'
+        overwritten: |-
+          <red>Chủ sở hữu có quyền
+          & c ghi đè phạm vi làm việc.</red>
+      owner_working_range:
+        name: <white><bold>Phạm vi làm việc của chủ sở hữu</bold></white>
+        description: |-
+          <gray>Phạm vi làm việc cho máy phát điện
+          </gray><gray>cho chủ sở hữu hiện tại.
+          </gray><gray>'0' có nghĩa là phạm vi chủ sở hữu là
+          </gray><gray>bị bỏ qua.
+          </gray><gray>'-1' có nghĩa là chủ sở hữu có
+          </gray><gray>phạm vi làm việc không giới hạn.
+          "</gray><gray> Quyền cho người dùng gán:"
+          "</gray><gray><italic>'[gamemode].máy tạo đá."
+          "</italic></gray><italic><gray><italic>phạm vi tối đa.<số>'"</italic></gray></italic>
+        value: '<aqua>Phạm vi: [number]</aqua>'
+      island_max_generators:
+        name: <white><bold>Máy tạo đảo tối đa</bold></white>
+        description: |-
+          <gray>Kích hoạt tối đa
+          </gray><gray>tầng trình tạo được phép
+          </gray><gray>cùng lúc đó
+          </gray><gray>cho hòn đảo hiện tại.
+          </gray><gray>0 trở xuống có nghĩa là
+          </gray><gray>không giới hạn.</gray>
+        value: '<aqua>Trình tạo tối đa: [number]</aqua>'
+        overwritten: |-
+          <red>Chủ sở hữu có quyền
+          </red><red>ghi đè số lượng trình tạo.</red>
+      owner_max_generators:
+        name: <white><bold>Trình tạo chủ sở hữu tối đa</bold></white>
+        description: |-
+          <gray>Hoạt động đồng thời tối đa
+          </gray><gray>tầng trình tạo mà
+          </gray><gray>chủ sở hữu đảo được phép.
+          </gray><gray>'0' có nghĩa là số tiền của chủ sở hữu
+          </gray><gray>bị bỏ qua.
+          </gray><gray>'-1' có nghĩa là chủ sở hữu có
+          </gray><gray>số lượng trình tạo không giới hạn.
+          "</gray><gray> Quyền cho người dùng gán:"
+          "</gray><gray><italic>'[gamemode].máy tạo đá."
+          "</italic></gray><italic><gray><italic>bộ tạo hoạt động.<số>'"</italic></gray></italic>
+        value: '<aqua>Trình tạo tối đa: [number]</aqua>'
+      island_bundle:
+        name: <white><bold>Gói đảo</bold></white>
+        description: |-
+          <gray>Gói được gán cho
+          </gray><gray>hòn đảo hiện tại.
+          </gray><gray>Chỉ các trình tạo từ cái này
+          Gói </gray><gray>có thể được sử dụng trên
+          </gray><gray>đảo.</gray>
+        value: '<aqua>Gói: [bundle]</aqua>'
+        overwritten: |-
+          <red>Chủ sở hữu có quyền
+          </red><red>ghi đè gói.</red>
+      owner_bundle:
+        name: <white><bold>Gói chủ sở hữu</bold></white>
+        description: |-
+          <gray>Gói được gán cho
+          </gray><gray>chủ đảo hiện tại.
+          </gray><gray>Chỉ các trình tạo từ cái này
+          Gói </gray><gray>có thể được sử dụng trên
+          </gray><gray>đảo.
+          "</gray><gray> Quyền cho người dùng gán:"
+          "</gray><gray><italic>'[gamemode].máy tạo đá."
+          "</italic></gray><italic><gray><italic>gói.<id gói>'"</italic></gray></italic>
+        value: '<aqua>Gói: [bundle]</aqua>'
+      island_info:
+        name: <white><bold>Thông tin chung</bold></white>
+        description: |-
+          <gray>Hiển thị thông tin chung
+          </gray><gray>về hòn đảo này.</gray>
+      island_generators:
+        name: <white><bold>Đảo Máy phát điện</bold></white>
+        description: |-
+          <gray>Hiển thị danh sách tất cả các trình tạo
+          </gray><gray>có sẵn cho
+          </gray><gray>hòn đảo hiện tại.</gray>
+      reset_to_default:
+        name: <white><bold>Đặt lại về mặc định</bold></white>
+        description: |-
+          <gray>Đặt lại tất cả các giá trị đảo
+          </gray><gray>thành các giá trị mặc định từ
+          </gray><gray>cài đặt.</gray>
+      is_online:
+        name: <white><bold>Người chơi trực tuyến</bold></white>
+        description: |-
+          <gray>Danh sách người chơi trực tuyến
+          </gray><gray>hòn đảo.</gray>
+      all_islands:
+        name: <white><bold>Tất cả các đảo</bold></white>
+        description: <gray>Danh sách tất cả các đảo.</gray>
+      search:
+        name: <white><bold>Tìm kiếm</bold></white>
+        description: |-
+          <gray>Tìm kiếm cụ thể
+          </gray><gray>đảo.</gray>
+        search: '<aqua>Giá trị: [value]</aqua>'
+      offline_generation:
+        name: <white><bold>Tạo ngoại tuyến</bold></white>
+        description: |-
+          <gray>Ngăn không cho các khối
+          </gray><gray>được tạo nếu tất cả đảo
+          </gray><gray>thành viên đang ngoại tuyến.</gray>
+        enabled: <aqua>Tạo ngoại tuyến được </aqua><green>bật </green><aqua>.</aqua>
+        disabled: <aqua>Tạo ngoại tuyến bị </aqua><red>vô hiệu hóa </red><aqua>.</aqua>
+      use_physic:
+        name: <white><bold>Sử dụng Vật lý</bold></white>
+        description: |-
+          <gray>Sử dụng vật lý trên khối
+          </gray><gray>thế hệ cho phép
+          </gray><gray>sử dụng máy đá đỏ,
+          </gray><gray>tuy nhiên nó làm giảm máy chủ
+          </gray><gray>hiệu suất một chút.</gray>
+        enabled: <aqua>Vật lý được </aqua><green>bật </green><aqua>.</aqua>
+        disabled: <aqua>Vật lý bị </aqua><red>vô hiệu hóa </red><aqua>.</aqua>
+      use_bank:
+        name: <white><bold>Sử dụng ngân hàng</bold></white>
+        description: |-
+          <gray>Sử dụng tài khoản ngân hàng đảo
+          </gray><gray>cho tất cả các giao dịch mua và
+          </gray><gray>lần kích hoạt.
+          </gray><gray>Yêu cầu Addon ngân hàng.</gray>
+        enabled: <aqua>Việc sử dụng ngân hàng được </aqua><green>bật </green><aqua>.</aqua>
+        disabled: <aqua>Việc sử dụng ngân hàng bị </aqua><red>vô hiệu hóa </red><aqua>.</aqua>
+      working_range:
+        name: <white><bold>Phạm vi làm việc mặc định</bold></white>
+        description: |-
+          <gray>Khoảng cách từ người chơi cho đến khi
+          </gray><gray>việc tạo khối sẽ dừng lại.
+          </gray><gray>0 trở xuống có nghĩa là không giới hạn.
+          </gray><gray>Cài đặt yêu cầu máy chủ
+          </gray><gray>khởi động lại để kích hoạt.</gray>
+        value: '<aqua>Phạm vi: [number]</aqua>'
+      active_generators:
+        name: <white><bold>Trình tạo hoạt động mặc định</bold></white>
+        description: |-
+          <gray>Số lượng tối đa mặc định của
+          </gray><gray>máy phát điện đang hoạt động tại
+          </gray><gray>cùng lúc.
+          </gray><gray>0 trở xuống có nghĩa là không giới hạn.</gray>
+        value: '<aqua>Đếm: [number]</aqua>'
+      show_filters:
+        name: <white><bold>Hiển thị bộ lọc</bold></white>
+        description: |-
+          <gray>Bộ lọc là hàng trên cùng trong
+          </gray><gray>Player GUI, cho phép
+          </gray><gray>để chỉ hiển thị máy phát điện
+          </gray><gray>theo loại hoặc trạng thái.
+          </gray><gray>Cài đặt này vô hiệu hóa
+          </gray><gray>và ẩn chúng đi.</gray>
+        enabled: <aqua>Bộ lọc được </aqua><green>bật </green><aqua>.</aqua>
+        disabled: <aqua>Bộ lọc bị </aqua><red>vô hiệu hóa </red><aqua>.</aqua>
+      border_block:
+        name: <white><bold>Khối đường viền</bold></white>
+        description: |-
+          <gray>Khối viền là một vật liệu
+          </gray><gray>bao quanh GUI người dùng.
+          </gray><gray>Đặt nó thành vô hiệu hóa
+          </gray><gray>nó.</gray>
+      border_block_name:
+        name: <white><bold>Tên khối đường viền</bold></white>
+        description: |-
+          <gray>Tên hiển thị cho đường viền
+          & khối 7.
+          </gray><gray>Nếu nó được đặt thành trống, thì
+          </gray><gray>nó sẽ sử dụng tên khối.
+          </gray><gray>Để đặt nó thành 1 khoảng trống,
+          "</gray><gray> viết 'trống'."</gray>
+        value: '<aqua>Tên: `</aqua>[name]<aqua>`</aqua>'
+      unlock_notify:
+        name: <white><bold>Thông báo Khi Mở khóa</bold></white>
+        description: |-
+          <gray>Một tin nhắn sẽ được gửi
+          </gray><gray>cho người dùng khi cô ấy mở khóa
+          </gray><gray>một trình tạo mới.</gray>
+        enabled: <aqua>Thông báo khi mở khóa được </aqua><green>bật </green><aqua>.</aqua>
+        disabled: <aqua>Thông báo khi mở khóa bị </aqua><red>tắt </red><aqua>.</aqua>
+      disable_on_activate:
+        name: <white><bold>Vô hiệu hóa khi Kích hoạt</bold></white>
+        description: |-
+          <gray>Vô hiệu hóa trình tạo hoạt động cũ nhất
+          </gray><gray>nếu người dùng kích hoạt một cái mới
+          </gray><gray>máy phát điện.
+          </gray><gray>Hữu ích cho các trường hợp
+          </gray><gray>chỉ cho phép một trình tạo duy nhất.</gray>
+        enabled: <aqua>Tắt khi kích hoạt được </aqua><green>bật </green><aqua>.</aqua>
+        disabled: <aqua>Vô hiệu hóa khi kích hoạt bị </aqua><red>vô hiệu hóa </red><aqua>.</aqua>
+      library:
+        name: <white><bold>[number]</bold></white>
+        description: |-
+          <gray>[description]
+          </gray><gray>Tác giả: [author]
+          </gray><gray>Được tạo cho [gamemode]
+          </gray><gray>Ngôn ngữ: [lang]
+          </gray><gray>Phiên bản: [version]</gray>
+      accept_blocks:
+        name: <white><bold>Chấp nhận các khối</bold></white>
+        description: |-
+          <gray>Chấp nhận các khối đã chọn
+          </gray><gray>và trả về.</gray>
+        selected-blocks: <gray>Khối đã chọn:</gray>
+        list-value: <gray>- [value]</gray>
+      material-icon:
+        name: <white><bold>[material]</bold></white>
+        description: '<gray>ID khối: [id]</gray>'
+      search_block:
+        name: <white><bold>Tìm kiếm</bold></white>
+        description: |-
+          <gray>Tìm kiếm cụ thể
+          & khối 7.</gray>
+        search: '<aqua>Giá trị: [value]</aqua>'
+      accept_biome:
+        name: <white><bold>Chấp nhận quần xã sinh vật</bold></white>
+        description: |-
+          <gray>Chấp nhận quần xã đã chọn
+          </gray><gray>và trả về.</gray>
+        selected-biomes: <gray>Quần xã được chọn:</gray>
+        list-value: <gray>- [value]</gray>
+      biome-icon:
+        name: <white><bold>[biome]</bold></white>
+      biome-groups:
+        temperate:
+          name: <white><bold>Ôn đới</bold></white>
+          description: <gray>Chỉ hiển thị quần xã sinh vật ôn đới</gray>
+        warm:
+          name: <white><bold>Ấm áp</bold></white>
+          description: <gray>Chỉ hiển thị quần xã sinh vật ấm áp</gray>
+        cold:
+          name: <white><bold>Lạnh</bold></white>
+          description: <gray>Chỉ hiển thị quần xã sinh vật lạnh</gray>
+        snowy:
+          name: <white><bold>Tuyết</bold></white>
+          description: <gray>Chỉ hiển thị quần xã tuyết</gray>
+        ocean:
+          name: <white><bold>đại dương</bold></white>
+          description: <gray>Chỉ hiển thị quần xã sinh vật đại dương</gray>
+        nether:
+          name: <white><bold>Địa ngục</bold></white>
+          description: <gray>Chỉ hiển thị quần xã sinh vật âm phủ</gray>
+        the_end:
+          name: <white><bold>The End</bold></white>
+          description: <gray>Chỉ hiển thị các quần xã sinh vật cuối cùng</gray>
+        neutral:
+          name: <white><bold>Trung lập</bold></white>
+          description: <gray>Chỉ hiển thị quần xã sinh vật trung tính</gray>
+        unused:
+          name: <white><bold>Chưa sử dụng</bold></white>
+          description: <gray>Chỉ hiển thị quần xã sinh vật chưa sử dụng</gray>
+        cave:
+          name: <white><bold>hang</bold></white>
+          description: <gray>Chỉ hiển thị quần xã sinh vật hang động</gray>
+      generator-types:
+        cobblestone:
+          name: <white><bold>đá cuội</bold></white>
+          description: |-
+            <gray>Chỉ hoạt động với đá cuội
+            </gray><gray>máy phát điện.
+
+            </gray><gold><italic>Gợi ý:
+            </italic></gold><italic><gold><italic>Hình thành khi có dòng dung nham
+            </italic></gold></italic><italic><italic><gold><italic>tiếp xúc với
+            </italic></gold></italic></italic><italic><italic><italic><gold><italic>nước.</italic></gold></italic></italic></italic>
+        stone:
+          name: <white><bold>đá</bold></white>
+          description: |-
+            <gray>Chỉ hoạt động với đá
+            </gray><gray>máy phát điện.
+
+            </gray><gold><italic>Gợi ý:
+            </italic></gold><italic><gold><italic>Hình thành khi dung nham chảy
+            </italic></gold></italic><italic><italic><gold><italic>trên các khối nước.</italic></gold></italic></italic>
+        basalt:
+          name: <white><bold>bazan</bold></white>
+          description: |-
+            <gray>Chỉ hoạt động với đá bazan
+            </gray><gray>máy phát điện.
+
+            </gray><gold><italic>Gợi ý:
+            </italic></gold><italic><gold><italic>Hình thành khi dung nham chảy
+            </italic></gold></italic><italic><italic><gold><italic>trên đất linh hồn và
+            </italic></gold></italic></italic><italic><italic><italic><gold><italic>tiếp giáp với băng xanh.</italic></gold></italic></italic></italic>
+        cobblestone_or_stone:
+          name: <white><bold>Đá cuội hoặc Đá</bold></white>
+          description: |-
+            <gray>Hoạt động với đá cuội và
+            </gray><gray>máy tạo đá.</gray>
+        basalt_or_cobblestone:
+          name: <white><bold>Đá bazan hoặc Đá cuội</bold></white>
+          description: |-
+            <gray>Hoạt động với bazan và
+            </gray><gray>máy phát đá cuội.</gray>
+        basalt_or_stone:
+          name: <white><bold>đá bazan hoặc đá</bold></white>
+          description: |-
+            <gray>Hoạt động với bazan và
+            </gray><gray>máy tạo đá.</gray>
+        any:
+          name: <white><bold>Bất kỳ</bold></white>
+          description: <gray>Hoạt động với mọi trình tạo.</gray>
+      clear-height-range:
+        description: |-
+          <gray>Xóa khoảng độ cao cụ thể
+          </gray><gray>cho vật liệu này.
+          </gray><gray>Nó sẽ sử dụng khoảng độ cao
+          </gray><gray>mặc định của máy tạo thay thế.</gray>
+        name: <white><bold>Xóa Khoảng Độ Cao</bold></white>
+      exhaustion_limit:
+        default: '<aqua>Sử dụng mặc định toàn cục: </aqua><white>[number]</white>'
+        description: |-
+          <gray>Số khối tối đa mà máy tạo này
+          </gray><gray>có thể sản xuất mỗi chu kỳ trước
+          </gray><gray>khi vào thời gian hồi.</gray>
+        name: <white><bold>Giới Hạn Cạn Kiệt</bold></white>
+        unlimited: <aqua>Không giới hạn</aqua>
+        value: '<aqua>Giới hạn: [number] </aqua><gray>mỗi chu kỳ</gray>'
+      height_range:
+        description: |-
+          <gray>Khoảng độ cao mà
+          </gray><gray>máy tạo này hoạt động.</gray>
+        name: <white><bold>Khoảng Độ Cao</bold></white>
+        value: <aqua>Từ </aqua><white>[min_height] </white><aqua>đến </aqua><white>[max_height]</white>
+      max-height:
+        description: |-
+          <gray>Đặt độ cao tối đa
+          </gray><gray>cho vật liệu này.
+          </gray><gray>Giá trị hiện tại: </gray><aqua>[max_height]</aqua>
+        name: <white><bold>Độ Cao Tối Đa</bold></white>
+        value: <aqua>[max_height]</aqua>
+      max_height:
+        description: |-
+          <gray>Đặt độ cao tối đa
+          </gray><gray>cho vật liệu này.</gray>
+        name: <white><bold>Độ Cao Tối Đa</bold></white>
+        value: '<gray>Giá trị hiện tại: </gray><aqua>[max_height]</aqua>'
+      min-height:
+        description: |-
+          <gray>Đặt độ cao tối thiểu
+          </gray><gray>cho vật liệu này.
+          </gray><gray>Giá trị hiện tại: </gray><aqua>[min_height]</aqua>
+        name: <white><bold>Độ Cao Tối Thiểu</bold></white>
+        value: <aqua>[min_height]</aqua>
+      min_height:
+        description: |-
+          <gray>Đặt độ cao tối thiểu
+          </gray><gray>cho vật liệu này.</gray>
+        name: <white><bold>Độ Cao Tối Thiểu</bold></white>
+        value: '<gray>Giá trị hiện tại: </gray><aqua>[min_height]</aqua>'
+    tips:
+      click-to-previous: <yellow>Bấm </yellow><gray>để xem trang trước.</gray>
+      click-to-next: <yellow>Nhấp vào </yellow><gray>để xem trang tiếp theo.</gray>
+      click-to-cancel: <yellow>Bấm </yellow><gray>để hủy bỏ.</gray>
+      click-to-choose: <yellow>Bấm </yellow><gray>để chọn.</gray>
+      click-to-select: <yellow>Bấm </yellow><gray>để chọn.</gray>
+      click-to-deselect: <yellow>Bấm </yellow><gray>để bỏ chọn.</gray>
+      click-to-accept: <yellow>Nhấp </yellow><gray>để chấp nhận và trả lại.</gray>
+      click-to-filter-enable: <yellow>Nhấp vào </yellow><gray>để bật bộ lọc.</gray>
+      click-to-filter-disable: <yellow>Nhấp vào </yellow><gray>để tắt bộ lọc.</gray>
+      click-to-activate: <yellow>Bấm </yellow><gray>để kích hoạt.</gray>
+      click-to-deactivate: <yellow>Nhấp vào </yellow><gray>để hủy kích hoạt.</gray>
+      click-gold-to-purchase: |-
+        <yellow>Bấm </yellow><gray>vào khối vàng
+        </gray><gray>để mua hàng.</gray>
+      click-to-purchase: <yellow>Bấm </yellow><gray>để mua hàng.</gray>
+      click-to-return: <yellow>Nhấp vào </yellow><gray>để quay lại.</gray>
+      click-to-quit: <yellow>Bấm </yellow><gray>để thoát.</gray>
+      click-to-wipe: <yellow>Bấm </yellow><gray>để xóa.</gray>
+      click-to-open: <yellow>Bấm </yellow><gray>để mở.</gray>
+      click-to-export: <yellow>Nhấp vào </yellow><gray>để bắt đầu xuất.</gray>
+      click-to-change: <yellow>Bấm </yellow><gray>để thay đổi.</gray>
+      click-on-item: |-
+        <yellow>Nhấp </yellow><gray>vào mục từ
+        </gray><gray>hàng tồn kho.</gray>
+      click-to-view: <yellow>Nhấp vào </yellow><gray>để xem.</gray>
+      click-to-add: <yellow>Bấm </yellow><gray>để thêm.</gray>
+      click-to-remove: <yellow>Nhấp vào </yellow><gray>để xóa.</gray>
+      select-before: <yellow>Chọn </yellow><gray>trước khi tiếp tục.</gray>
+      click-to-create: <yellow>Bấm </yellow><gray>để tạo.</gray>
+      right-click-to-select: <yellow>Nhấp chuột phải </yellow><gray>để chọn.</gray>
+      right-click-to-deselect: <yellow>Nhấp chuột phải </yellow><gray>để bỏ chọn.</gray>
+      click-to-toggle: <yellow>Nhấp vào </yellow><gray>để chuyển đổi.</gray>
+      left-click-to-edit: <yellow>Nhấp chuột trái </yellow><gray>để chỉnh sửa.</gray>
+      right-click-to-lock: <yellow>Nhấp chuột phải </yellow><gray>để khóa.</gray>
+      right-click-to-unlock: <yellow>Nhấp chuột phải </yellow><gray>để mở khóa.</gray>
+      click-to-perform: <yellow>Bấm </yellow><gray>để thực hiện.</gray>
+      click-to-edit: <yellow>Nhấp vào </yellow><gray>để chỉnh sửa.</gray>
+      right-click-to-clear: <yellow>Nhấp chuột phải </yellow><gray>để xóa.</gray>
+      left-click-to-view: <yellow>Nhấp chuột trái </yellow><gray>để xem.</gray>
+      left-click-to-purchase: <yellow>Nhấp chuột trái </yellow><gray>để mua.</gray>
+      left-click-to-activate: <yellow>Nhấp chuột trái </yellow><gray>để kích hoạt.</gray>
+      left-click-to-deactivate: <yellow>Nhấp chuột trái </yellow><gray>để hủy kích
+        hoạt.</gray>
+      right-click-to-view: <yellow>Nhấp chuột phải </yellow><gray>để xem.</gray>
+      right-click-to-purchase: <yellow>Nhấp chuột phải </yellow><gray>để mua.</gray>
+      right-click-to-activate: <yellow>Nhấp chuột phải </yellow><gray>để kích hoạt.</gray>
+      right-click-to-deactivate: <yellow>Nhấp chuột phải </yellow><gray>để hủy kích
+        hoạt.</gray>
+      shift-click-to-view: <yellow>Shift Bấm </yellow><gray>để xem.</gray>
+      shift-click-to-purchase: <yellow>Shift Nhấp </yellow><gray>để mua.</gray>
+      shift-click-to-activate: <yellow>Shift Nhấp </yellow><gray>để kích hoạt.</gray>
+      shift-click-to-deactivate: <yellow>Shift Nhấp </yellow><gray>để hủy kích hoạt.</gray>
+      shift-click-to-reset: <yellow>Shift Nhấp </yellow><gray>để đặt lại.</gray>
+      shift-left-click-to-set-height-range: <yellow>Shift+Nhấn Trái </yellow><gray>để
+        cấu hình khoảng độ cao.</gray>
+    descriptions:
+      generator:
+        lore: |-
+          [description]
+          [blocks]
+          [treasures]
+          [type]
+          [requirements]
+          [status]
+        blocks:
+          title: <gray><bold>Khối:</bold></gray>
+          value: <dark_gray>[material] - [#.##]%</dark_gray>
+        treasures:
+          title: Kho báu <gray><bold>:</bold></gray>
+          value: <dark_gray>[material] - [#.####]%</dark_gray>
+        requirements:
+          description: |-
+            [biomes]
+            [level]
+            [missing-permissions]
+          level: '<red><bold>Cấp độ Yêu cầu: </bold></red><red>[number]</red>'
+          permission-title: <red><bold>Thiếu quyền:</bold></red>
+          permission: <red>-[permission]</red>
+          biome-title: <gray><bold>Hoạt động tại:</bold></gray>
+          biome: <dark_gray>[biome]</dark_gray>
+          any: <gray><bold>Hoạt động trong </bold></gray><bold><yellow><italic>tất
+            cả </italic></yellow></bold><gray><bold>quần xã</bold></gray>
+        status:
+          locked: <red>Đã khóa!</red>
+          undeployed: <red>Không được triển khai!</red>
+          active: <dark_green>Hoạt động</dark_green>
+          purchase-cost: '<yellow>Chi phí mua hàng: $[number]</yellow>'
+          activation-cost: '<yellow>Chi phí kích hoạt: $[number]</yellow>'
+        type:
+          title: <gray><bold>Hỗ trợ:</bold></gray>
+          cobblestone: <dark_gray>Máy tạo đá cuội</dark_gray>
+          stone: <dark_gray>máy tạo đá</dark_gray>
+          basalt: <dark_gray>máy tạo bazan</dark_gray>
+          any: <gray><bold>Hỗ trợ </bold></gray><bold><yellow><italic>tất cả các trình
+            tạo </italic></yellow></bold><gray><bold></bold></gray>
+        height-range: '<gray>Hoạt động ở độ cao: </gray><aqua>[min_height] </aqua><gray>đến
+          </gray><aqua>[max_height]</aqua>'
+      bundle-permission: |-
+        <gray>Quyền phải được
+        </gray><gray>được gán cho người chơi:
+        </gray><gray><italic>[gamemode].stone-generator.bundle.[id]</italic></gray>
+      generators: <gray>Trình tạo gói:</gray>
+      generator-list: <gray>- [generator]</gray>
+      selected: <yellow>Đã ​​chọn</yellow>
+      island-owner: đảo của [player]
+      spawn-island: <yellow><bold>Đảo sinh sản</bold></yellow>
+      unknown: không xác định
+  messages:
+    generator-loaded: <green>Trình tạo </green> '[generator]' <green>được tải vào
+      bộ nhớ cache cục bộ.</green>
+    bundle-loaded: <green>Gói </green> '[bundle]' <green>được tải vào bộ đệm cục bộ.</green>
+    generator-deactivated: <yellow>Trình tạo </yellow> '[generator]' <yellow>bị hủy
+      kích hoạt.</yellow>
+    active-generators-reached: <red>Quá nhiều trình tạo được kích hoạt. Cố gắng hủy
+      kích hoạt một số trước khi kích hoạt một cái mới.</red>
+    generator-cannot-be-unlocked: <red>Trình tạo </red> '[generator]' <red>không được
+      mở khóa.</red>
+    generator-not-unlocked: <red>Trình tạo </red> '[generator]' <red>không được mở
+      khóa.</red>
+    generator-not-purchased: <red>Trình tạo </red> '[generator]' <red>không được mua.</red>
+    no-credits: <red>Không đủ tín dụng để kích hoạt trình tạo. Kích hoạt yêu cầu [number]
+      tín dụng.</red>
+    no-credits-bank: <red>Tài khoản ngân hàng của bạn không có đủ tín dụng để kích
+      hoạt trình tạo. Kích hoạt yêu cầu [number] tín dụng.</red>
+    generator-activated: <yellow>Trình tạo </yellow> '[generator]' <yellow>được kích
+      hoạt.</yellow>
+    generator-purchased: <yellow>Trình tạo </yellow> '[generator]' <yellow>đã được
+      mua.</yellow>
+    generator-already-purchased: <red>Trình tạo </red> '[generator]' <red>đã được
+      mua.</red>
+    island-level-not-reached: <red>Trình tạo </red> '[generator]' <red>yêu cầu [number]
+      cấp độ đảo.</red>
+    missing-permission: <red>Trình tạo </red> '[generator]' <red>yêu cầu quyền `[permission]`.</red>
+    no-credits-buy: <red>Không đủ tín dụng để mua máy phát điện. Máy phát điện này
+      có giá [number] tín dụng.</red>
+    no-credits-buy-bank: <red>Tài khoản ngân hàng của bạn không có đủ tín dụng. Máy
+      phát điện này có giá [number] tín dụng.</red>
+    import-count: <yellow>Đã ​​nhập [generator] trình tạo mới và [bundle] gói mới.</yellow>
+    start-downloading: <yellow>Bắt đầu tải xuống thư viện.</yellow>
+    generator-exhausted: <red>Máy tạo </red> '[generator]' <red>đã đạt giới hạn tạo
+      và hiện đang trong thời gian hồi thêm [number] phút nữa.</red>
+  errors:
+    no-generator-data: <red>Không thể tìm thấy dữ liệu trình tạo hợp lệ</red>
+    no-island-data: <red>Dữ liệu Đảo không được tìm thấy.</red>
+    no-bundle-data: <red>Không thể tìm thấy dữ liệu gói hợp lệ</red>
+    no-library-entries: <red>Không thể tìm thấy bất kỳ mục thư viện nào!</red>
+    no-file: <red>`[tệp]` không tìm thấy tệp. Không thể thực hiện nhập.</red>
+    no-load: '<red>Không thể tải tệp `[file]`. Lỗi khi đọc: [description].</red>'
+    not-a-gamemode-world: <red>Thế giới '[world]' không phải là một thế giới Addon
+      Chế độ Trò chơi.</red>
+    file-exist: <red>Tệp `[file]` đã tồn tại. Chọn tên khác.</red>
+    generator-tier-not-found: <red>Trình tạo có id '[generator]' </red><red>không
+      tìm thấy trong [gamemode].</red>
+    no-generators-in-world: <red>Không có máy phát điện nào cho bạn ở [world]</red>
+    could-not-remove-money: <red>Đã xảy ra sự cố khi rút tiền.</red>
+    max-height-less-than-min: <red>Độ cao tối đa ([MAX]) không thể nhỏ hơn độ cao
+      tối thiểu ([MIN])!</red>
+  conversations:
+    confirm-string: đúng, trên, có, xác nhận, y, hợp lệ, chính xác
+    deny-string: sai, tắt, không, từ chối, n, không hợp lệ, không chính xác
+    cancel-string: Hủy bỏ
+    exit-string: hủy, thoát, thoát
+    cancelled: <red>Cuộc trò chuyện đã bị hủy!</red>
+    prefix: '<bold></bold><bold><gold>[BentoBox]: </gold></bold>'
+    numeric-only: <red>[value] đã cho không phải là số!</red>
+    not-valid-value: <red>Số [value] đã cho không hợp lệ. Nó phải lớn hơn [min] và
+      nhỏ hơn [max]!</red>
+    new-description: <green>Mô tả mới:</green>
+    write-search: <yellow>Vui lòng viết giá trị tìm kiếm. (viết 'cancel' để thoát)</yellow>
+    search-updated: <green>Giá trị tìm kiếm được cập nhật.</green>
+    confirm-island-data-deletion: <yellow>Xác nhận rằng bạn muốn xóa tất cả dữ liệu
+      người dùng khỏi cơ sở dữ liệu cho [gamemode].</yellow>
+    user-data-removed: <green>Thành công, tất cả dữ liệu người dùng cho [gamemode]
+      đã bị xóa!</green>
+    confirm-generator-data-deletion: <yellow>Xác nhận rằng bạn muốn xóa tất cả dữ
+      liệu trình tạo khỏi cơ sở dữ liệu cho [gamemode].</yellow>
+    generator-data-removed: <green>Thành công, tất cả dữ liệu trình tạo cho [gamemode]
+      đã bị xóa!</green>
+    exported-file-name: <yellow>Vui lòng nhập tên tệp cho tệp cơ sở dữ liệu đã xuất.
+      (viết 'hủy' để thoát)</yellow>
+    database-export-completed: <green>Thành công, quá trình xuất cơ sở dữ liệu cho
+      [thế giới] đã hoàn tất. Tệp được tạo trong thư mục addon.</green>
+    file-name-exist: <red>Đã tồn tại tệp có tên '[id]'. Không thể ghi đè lên.</red>
+    write-name: <yellow>Vui lòng nhập tên mới trong trò chuyện.</yellow>
+    name-changed: <green>Thành công, tên đã được cập nhật.</green>
+    write-description: <yellow>Vui lòng nhập mô tả mới trong trò chuyện và tự 'quit'
+      trên một dòng để hoàn tất.</yellow>
+    description-changed: <green>Thành công, mô tả đã được cập nhật.</green>
+    new-object-created: <green>Thành công, đối tượng mới được tạo trong [world].</green>
+    object-already-exists: <red>Đối tượng có `[id]` đã được xác định trong gamemode.
+      Chọn một cái khác.</red>
+    confirm-deletion: '<yellow>Xác nhận rằng bạn muốn xóa [number] đối tượng: ([value])</yellow>'
+    data-removed: <green>Thành công, dữ liệu đã được xóa!</green>
+    input-number: <yellow>Vui lòng nhập một số trong cuộc trò chuyện.</yellow>
+    write-permissions: <yellow>Vui lòng nhập các quyền cần thiết, một quyền trên mỗi
+      dòng trong trò chuyện và 'thoát' trên một dòng để hoàn tất.</yellow>
+    permissions-changed: <green>Thành công, quyền trình tạo đã được cập nhật.</green>
+    confirm-data-replacement: <yellow>Vui lòng xác nhận rằng bạn muốn thay thế bộ
+      tạo hiện tại của mình bằng bộ tạo mới.</yellow>
+    new-generators-imported: <green>Thành công, trình tạo mới cho [gamemode] đã được
+      nhập.</green>
+    click-text-to-purchase: <yellow>Bạn đã mở khóa </yellow> [generator]<yellow>!
+      Nhấn vào đây để mua nó bây giờ cho [số].</yellow>
+    click-text-to-activate-vault: <yellow>Bạn đã mở khóa </yellow> [generator]<yellow>!
+      Nhấp vào đây để kích hoạt ngay bây giờ cho [số].</yellow>
+    click-text-to-activate: <yellow>Bạn đã mở khóa </yellow> [generator]<yellow>!
+      Nhấn vào đây để kích hoạt nó ngay bây giờ.</yellow>
+    input-max-height: <white>Nhập độ cao tối đa cho vật liệu này (từ -64 đến 320):</white>
+    input-min-height: <white>Nhập độ cao tối thiểu cho vật liệu này (từ -64 đến 320):</white>
+  materials:
+    cobblestone: đá cuội
+    stone:
+      name: Cục đá
+      description: ''
+  biomes:
+    plains: đồng bằng
+    flower_forest:
+      name: rừng hoa
+      description: ''
+protection:
+  flags:
+    MAGIC_COBBLESTONE_GENERATOR:
+      name: Máy tái tạo khối
+      description: |-
+        <green>Chuyển đổi để bật hoặc tắt
+        </green><green>tất cả máy tái tạo
+        </green><green>trên toàn đảo</green>
+      hint: <yellow>Trình tạo máy tái tạo bị tắt trong cài đặt đảo</yellow>
+    MAGIC_COBBLESTONE_GENERATOR_PERMISSION:
+      name: Quyền tạo máy tái tạo
+      description: |-
+        <green>Chọn người có thể kích hoạt
+        </green><green>và hủy kích hoạt trình tạo</green>

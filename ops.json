@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "79cef359-a525-31d0-88bf-9233870d5811",
+    "name": "cutdzvc",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "79a0f340-3d65-3112-9eac-7d046e1aeead",
+    "name": "sondzvc",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  }
+]

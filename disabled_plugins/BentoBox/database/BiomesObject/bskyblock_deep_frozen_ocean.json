@@ -1,0 +1,22 @@
+{
+  "biome": "DEEP_FROZEN_OCEAN",
+  "deployed": true,
+  "friendlyName": "<white><bold> Deep Frozen Ocean",
+  "description": [
+    "<gray> A cold, deep ocean where",
+    "<gray> icebergs float and polar",
+    "<gray> bears roam the ice."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: BLUE_ICE\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_deep_frozen_ocean",
+  "unlockLevel": 55,
+  "unlockCost": 0.0,
+  "cost": 800.0,
+  "itemCost": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: BLUE_ICE\n  amount: 32\n"
+  ],
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

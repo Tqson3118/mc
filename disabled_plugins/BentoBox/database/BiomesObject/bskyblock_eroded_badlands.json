@@ -1,0 +1,23 @@
+{
+  "biome": "ERODED_BADLANDS",
+  "deployed": true,
+  "friendlyName": "<white><bold> Eroded Badlands",
+  "description": [
+    "<gray> Stunning striped cliffs with",
+    "<gray> orange and red terracotta",
+    "<gray> layers. Spectacular for",
+    "<gray> terraforming projects."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: ORANGE_TERRACOTTA\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_eroded_badlands",
+  "unlockLevel": 50,
+  "unlockCost": 0.0,
+  "unlockItems": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: TERRACOTTA\n  amount: 20\n"
+  ],
+  "cost": 700.0,
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

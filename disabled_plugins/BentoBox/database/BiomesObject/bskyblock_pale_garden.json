@@ -1,0 +1,26 @@
+{
+  "biome": "PALE_GARDEN",
+  "deployed": true,
+  "friendlyName": "<white><bold> Pale Garden",
+  "description": [
+    "<gray> A mysterious pale forest with",
+    "<gray> white-barked trees and eerie",
+    "<gray> atmosphere. Home to The",
+    "<gray> Creaking, a mob like no other."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: PALE_OAK_LOG\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_pale_garden",
+  "unlockLevel": 180,
+  "unlockCost": 0.0,
+  "unlockItems": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: PALE_OAK_LOG\n  amount: 16\n"
+  ],
+  "cost": 2000.0,
+  "itemCost": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: PALE_OAK_LOG\n  amount: 20\n"
+  ],
+  "costMode": "PER_USAGE",
+  "costIncrement": 200.0
+}

@@ -1,0 +1,209 @@
+menu_title: '&8🐾 &5&lBỘ SƯU TẬP LINH THÚ &8(&e/PETS&8) 🐾'
+open_command:
+  - pets
+  - thucung
+size: 45
+open_requirement:
+  requirements: {}
+
+items:
+  'border':
+    material: PURPLE_STAINED_GLASS_PANE
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 26
+      - 27
+      - 35
+      - 36
+      - 37
+      - 38
+      - 39
+      - 41
+      - 42
+      - 43
+      - 44
+    display_name: ' '
+
+  'info':
+    material: NETHER_STAR
+    slot: 4
+    display_name: '&d&l🐾 BỘ SƯU TẬP LINH THÚ ĐỒNG HÀNH'
+    lore:
+      - '&8━━━━━━━━━━━━━━━━━━━━━━━━━'
+      - '&7Linh thú hộ mệnh bay theo sau người chơi mang buff độc quyền.'
+      - '&f • Số dư Điểm Tinh Anh: &d%objective_score_sb_gems% Gems'
+      - '&f • &aChuột trái:&f Triệu hồi / Trang bị Linh thú'
+      - '&f • &eChuột phải:&f Nâng cấp Buff (+% chỉ số) bằng Gems'
+      - '&8━━━━━━━━━━━━━━━━━━━━━━━━━'
+
+  'pet_allay':
+    material: ALLAY_SPAWN_EGG
+    slot: 10
+    display_name: '&b&l🧚 Tinh Linh Pha Lê'
+    lore:
+      - '&7Linh thú sơ cấp tinh khôi tỏa ánh sáng lam ngọc.'
+      - ''
+      - '&f • &bHiệu ứng:&f Haste II & Tự hút đồ rơi (7m)'
+      - '&f • &aBuff kinh tế:&f +20% Giá bán quặng & nông sản'
+      - '&f • &dChi phí mở khóa:&f 50 Điểm Tinh Anh'
+      - ''
+      - '&a▶ Chuột trái: Mua / Trang bị'
+      - '&e▶ Chuột phải: Nâng cấp Buff'
+    left_click_commands:
+      - '[player] pet equip allay'
+    right_click_commands:
+      - '[player] pet upgrade allay'
+
+  'pet_fox':
+    material: FOX_SPAWN_EGG
+    slot: 12
+    display_name: '&6&l🦊 Cáo Lửa Sakura'
+    lore:
+      - '&7Hồ ly thần thoại bảo hộ vườn cây trên mây.'
+      - ''
+      - '&f • &bHiệu ứng:&f Speed II & Hồi phục sinh lực'
+      - '&f • &aBuff kinh tế:&f +25% Sản lượng Nông Trại'
+      - '&f • &dChi phí mở khóa:&f 100 Điểm Tinh Anh'
+      - ''
+      - '&a▶ Chuột trái: Mua / Trang bị'
+      - '&e▶ Chuột phải: Nâng cấp Buff'
+    left_click_commands:
+      - '[player] pet equip fox'
+    right_click_commands:
+      - '[player] pet upgrade fox'
+
+  'pet_cat':
+    material: CAT_SPAWN_EGG
+    slot: 14
+    display_name: '&e&l🐱 Mèo May Mắn Maneki'
+    lore:
+      - '&7Chiêu tài miêu mang lại vận may tột đỉnh.'
+      - ''
+      - '&f • &bHiệu ứng:&f Luck II & Hero of the Village'
+      - '&f • &aBuff may mắn:&f +30% Tỉ lệ drop vật phẩm quý'
+      - '&f • &dChi phí mở khóa:&f 150 Điểm Tinh Anh'
+      - ''
+      - '&a▶ Chuột trái: Mua / Trang bị'
+      - '&e▶ Chuột phải: Nâng cấp Buff'
+    left_click_commands:
+      - '[player] pet equip cat'
+    right_click_commands:
+      - '[player] pet upgrade cat'
+
+  'pet_wolf':
+    material: WOLF_SPAWN_EGG
+    slot: 16
+    display_name: '&f&l🐺 Sói Băng Tuyết'
+    lore:
+      - '&7Chiến thú dũng mãnh bảo hộ chiến binh MMORPG.'
+      - ''
+      - '&f • &bHiệu ứng:&f Strength II & Kháng đòn'
+      - '&f • &aBuff chiến đấu:&f +35% Sát thương Boss & Quái'
+      - '&f • &dChi phí mở khóa:&f 200 Điểm Tinh Anh'
+      - ''
+      - '&a▶ Chuột trái: Mua / Trang bị'
+      - '&e▶ Chuột phải: Nâng cấp Buff'
+    left_click_commands:
+      - '[player] pet equip wolf'
+    right_click_commands:
+      - '[player] pet upgrade wolf'
+
+  'dismiss':
+    material: LEAD
+    slot: 22
+    display_name: '&e&l🚫 THU HỒI LINH THÚ'
+    lore:
+      - '&7Thu hồi linh thú đang bay bên cạnh vào không gian linh hồn.'
+      - ''
+      - '&e▶ Nhấp để thu hồi ngay!'
+    left_click_commands:
+      - '[player] pet unequip'
+
+  'pet_bee':
+    material: BEE_SPAWN_EGG
+    slot: 28
+    display_name: '&6&l🐝 Ong Thần Hoàng Kim'
+    lore:
+      - '&7Ong chúa mang mật vàng phú quý trường thọ.'
+      - ''
+      - '&f • &bHiệu ứng:&f Speed II & Regeneration II'
+      - '&f • &aBuff kinh tế:&f +35% Giá bán nông sản & quặng'
+      - '&f • &dChi phí mở khóa:&f 300 Điểm Tinh Anh'
+      - ''
+      - '&a▶ Chuột trái: Mua / Trang bị'
+      - '&e▶ Chuột phải: Nâng cấp Buff'
+    left_click_commands:
+      - '[player] pet equip bee'
+    right_click_commands:
+      - '[player] pet upgrade bee'
+
+  'pet_turtle':
+    material: TURTLE_SPAWN_EGG
+    slot: 30
+    display_name: '&2&l🐢 Quy Lão Thần Hải'
+    lore:
+      - '&7Linh quy ngàn năm canh giữ Biển Hồ Trên Mây.'
+      - ''
+      - '&f • &bHiệu ứng:&f Resistance II & Water Breathing'
+      - '&f • &aBuff câu cá:&f +40% Tỉ lệ câu cá hiếm & Vảy Thần'
+      - '&f • &dChi phí mở khóa:&f 400 Điểm Tinh Anh'
+      - ''
+      - '&a▶ Chuột trái: Mua / Trang bị'
+      - '&e▶ Chuột phải: Nâng cấp Buff'
+    left_click_commands:
+      - '[player] pet equip turtle'
+    right_click_commands:
+      - '[player] pet upgrade turtle'
+
+  'pet_dragon':
+    material: ENDER_EYE
+    slot: 32
+    display_name: '&5&l🐉 Tiểu Hắc Long'
+    lore:
+      - '&7Rồng con nguyên tố hư không uy áp chấn nhiếp muôn loài.'
+      - ''
+      - '&f • &bHiệu ứng:&f Strength III & Resistance II'
+      - '&f • &aBuff kinh tế:&f +55% Giá bán toàn bộ vật phẩm'
+      - '&f • &dChi phí mở khóa:&f 600 Điểm Tinh Anh'
+      - ''
+      - '&a▶ Chuột trái: Mua / Trang bị'
+      - '&e▶ Chuột phải: Nâng cấp Buff'
+    left_click_commands:
+      - '[player] pet equip dragon'
+    right_click_commands:
+      - '[player] pet upgrade dragon'
+
+  'pet_phoenix':
+    material: FIRE_CHARGE
+    slot: 34
+    display_name: '&c&l🔥 Phượng Hoàng Sáng Thế'
+    lore:
+      - '&7Thần điểu niết bàn bùng cháy ngọn lửa vĩnh hằng.'
+      - ''
+      - '&f • &bHiệu ứng:&f Strength IV, Fire Res & Absorption III'
+      - '&f • &aBuff tối thượng:&f +85% Giá bán & Thưởng toàn diện'
+      - '&f • &dChi phí mở khóa:&f 1,000 Điểm Tinh Anh'
+      - ''
+      - '&a▶ Chuột trái: Mua / Trang bị'
+      - '&e▶ Chuột phải: Nâng cấp Buff'
+    left_click_commands:
+      - '[player] pet equip phoenix'
+    right_click_commands:
+      - '[player] pet upgrade phoenix'
+
+  'close':
+    material: BARRIER
+    slot: 40
+    display_name: '&c&l✕ ĐÓNG BỘ SƯU TẬP'
+    left_click_commands:
+      - '[close]'

@@ -1,0 +1,139 @@
+menu_title: '&8[&d&lBẢN VẼ&8] &0Nhà Ở & Biệt Thự &7(Trang 1/3)'
+open_command: isbuildermenu
+size: 27
+open_requirement:
+  requirements: {}
+
+items:
+  'border':
+    material: PURPLE_STAINED_GLASS_PANE
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 11
+      - 13
+      - 15
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 23
+      - 24
+      - 25
+    display_name: ' '
+
+  'info':
+    material: WRITABLE_BOOK
+    slot: 4
+    display_name: '&d&l🏛️ BẢN VẼ KIẾN TRÚC SƯ - TRANG 1/3'
+    lore:
+      - '&7Chủ đề: &d&lNhà Ở & Biệt Thự Hoàng Gia'
+      - '&7Thi công tự động các công trình thẩm mỹ cao'
+      - '&7ngay trước mặt bạn chỉ với 1 cú click chuột!'
+      - ''
+      - '&eLưu ý an toàn:'
+      - '&f • Hãy đứng quay mặt về khoảng không muốn xây'
+      - '&f • Không lo mất rương/spawner (bảo vệ tuyệt đối)'
+      - '&f • Được hoàn tác dỡ bỏ trong 3 phút (&aHoàn lại 90%&f)'
+
+  'villa':
+    material: CHERRY_PLANKS
+    slot: 10
+    display_name: '&d&l🏡 BIỆT THỰ GỖ CHERRY HIỆN ĐẠI'
+    lore:
+      - '&7Công trình biệt thự 2 tầng phong cách Nhật Bản.'
+      - ''
+      - '&eThông số kiến trúc:'
+      - '&f • Quy mô: &b13x13 x H10 blocks &7(2 Tầng)'
+      - '&f • Tiện ích: Ban công kính, phòng ngủ đôi, lò sưởi ấm'
+      - '&f • Chi phí: &6$25,000 Xu'
+      - ''
+      - '&a&l▶ NHẤP CHUỘT TRÁI ĐỂ THI CÔNG NGAY!'
+    left_click_commands:
+      - '[player] is build villa'
+      - '[close]'
+
+  'castle':
+    material: STONE_BRICKS
+    slot: 12
+    display_name: '&7&l🏰 LÂU ĐÀI ĐÁ CỔ KÍNH TRUNG CỔ'
+    lore:
+      - '&7Pháo đài kiên cố với 4 tháp canh uy nghiêm.'
+      - ''
+      - '&eThông số kiến trúc:'
+      - '&f • Quy mô: &b17x17 x H14 blocks &7(4 Tháp Canh)'
+      - '&f • Kiến trúc: Đại điện ngai vàng, thảm đỏ, đuốc hồn'
+      - '&f • Chi phí: &6$75,000 Xu'
+      - ''
+      - '&a&l▶ NHẤP CHUỘT TRÁI ĐỂ THI CÔNG NGAY!'
+    left_click_commands:
+      - '[player] is build castle'
+      - '[close]'
+
+  'modern':
+    material: QUARTZ_BLOCK
+    slot: 14
+    display_name: '&b&l🏙️ CĂN HỘ PENTHOUSE KÍNH & HỒ BƠI'
+    lore:
+      - '&7Căn hộ hiện đại siêu sang ngắm trọn hư không.'
+      - ''
+      - '&eThông số kiến trúc:'
+      - '&f • Quy mô: &b15x15 x H9 blocks &7(Skybox Đẳng Cấp)'
+      - '&f • Tiện ích: Hồ bơi vô cực ngắm mây, sàn thạch anh, sofa đôi'
+      - '&f • Chi phí: &6$50,000 Xu'
+      - ''
+      - '&a&l▶ NHẤP CHUỘT TRÁI ĐỂ THI CÔNG NGAY!'
+    left_click_commands:
+      - '[player] is build modern'
+      - '[close]'
+
+  'pagoda':
+    material: DARK_PRISMARINE
+    slot: 16
+    display_name: '&6&l🏯 ĐÌNH CỔ PHƯƠNG ĐÔNG MÁI NGÓI'
+    lore:
+      - '&7Kiến trúc đình thiền cổ truyền thống Á Đông.'
+      - ''
+      - '&eThông số kiến trúc:'
+      - '&f • Quy mô: &b13x13 x H10 blocks &7(Mái Ngói Cong)'
+      - '&f • Tiện ích: Bàn trà thiền, chuông đồng, tủ sách cổ & rương'
+      - '&f • Chi phí: &6$35,000 Xu'
+      - ''
+      - '&a&l▶ NHẤP CHUỘT TRÁI ĐỂ THI CÔNG NGAY!'
+    left_click_commands:
+      - '[player] is build pagoda'
+      - '[close]'
+
+  'undo':
+    material: SHEARS
+    slot: 22
+    display_name: '&c&l🧹 HOÀN TÁC CÔNG TRÌNH VỪA XÂY (/is undo)'
+    lore:
+      - '&7Lỡ đặt nhầm vị trí hoặc không ưng ý?'
+      - '&7Nhấp vào đây trong vòng 3 phút để:'
+      - '&a • Dọn sạch công trình trả lại không gian đảo'
+      - '&a • Nhận lại 90% chi phí vào số dư Vault!'
+      - ''
+      - '&c&l▶ NHẤP VÀO ĐÂY ĐỂ DỠ BỎ & HOÀN TIỀN'
+    left_click_commands:
+      - '[player] is undo'
+      - '[close]'
+
+  'next_page':
+    material: ARROW
+    slot: 26
+    display_name: '&a&l▶ TRANG KẾ TIẾP &7(Trang 2: Nông Trại & Kho)'
+    lore:
+      - '&7Nhấp để xem danh mục công trình Nông Trại & Kho Lưu Trữ'
+      - ''
+      - '&a&l▶ BẤM ĐỂ CHUYỂN TRANG 2'
+    left_click_commands:
+      - '[openguimenu] builder_p2'

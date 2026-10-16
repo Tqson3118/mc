@@ -1,0 +1,126 @@
+menu_title: '&8[&b&lMINIONS&8] &0Tự Động Hóa Đảo'
+open_command: isminionsmenu
+size: 27
+open_requirement:
+  requirements: {}
+
+items:
+  'border':
+    material: BLACK_STAINED_GLASS_PANE
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 23
+      - 24
+      - 25
+    display_name: ' '
+
+  'info':
+    material: NETHER_STAR
+    slot: 4
+    display_name: '&e&l🌟 HỆ THỐNG MINIONS ĐẢO HOÀNG GIA'
+    lore:
+      - '&7Trợ thủ đắc lực làm việc liên tục 24/7 trên đảo.'
+      - ''
+      - '&f • Giới hạn: &aTối đa 5 Minions/Đảo'
+      - '&f • Cấp độ: &eTier 1 - 12 (Tăng tốc & quặng quý)'
+      - '&f • Công nghệ: &bOffline Catch-Up (0% CPU Lag)'
+      - ''
+      - '&7&oNhấp vào từng Minion bên dưới để mua!'
+
+  'miner_minion':
+    material: DIAMOND_PICKAXE
+    slot: 10
+    display_name: '&b&l⛏ MINION ĐÀO KHOÁNG SẢN'
+    lore:
+      - '&7Tự động đào đá cuội, than, sắt, vàng, kim cương.'
+      - ''
+      - '&eChi tiết hoạt động:'
+      - '&f • Tốc độ: &a15s &7-> &b5s/lần &7(theo Cấp)'
+      - '&f • Kho chứa: &e128 &7-> &a1024 items'
+      - '&f • Chi phí cấp 1: &6$5,000 Xu'
+      - ''
+      - '&a&l▶ NHẤP CHUỘT TRÁI ĐỂ MUA NGAY!'
+    left_click_commands:
+      - '[player] is minion buy miner'
+      - '[close]'
+
+  'farmer_minion':
+    material: GOLDEN_HOE
+    slot: 12
+    display_name: '&a&l🌾 MINION NÔNG DÂN TRỒNG TRỌT'
+    lore:
+      - '&7Tự động gieo hạt, chăm bón và thu hoạch mùa màng.'
+      - ''
+      - '&eSản phẩm tạo ra:'
+      - '&f • Lúa mì, Cà rốt, Khoai tây, Mía, Tre, Dưa hấu'
+      - '&f • Chi phí cấp 1: &6$5,000 Xu'
+      - ''
+      - '&a&l▶ NHẤP CHUỘT TRÁI ĐỂ MUA NGAY!'
+    left_click_commands:
+      - '[player] is minion buy farmer'
+      - '[close]'
+
+  'slayer_minion':
+    material: NETHERITE_SWORD
+    slot: 14
+    display_name: '&c&l⚔ MINION CHIẾN BINH SĂN QUÁI'
+    lore:
+      - '&7Tự động chém tiêu diệt quái vật xung quanh spawner.'
+      - ''
+      - '&eChiến lợi phẩm thu thập:'
+      - '&f • Thịt thối, Xương, Tơ nhện, Que lửa, Ngọc Ender'
+      - '&f • Chi phí cấp 1: &6$7,500 Xu'
+      - ''
+      - '&a&l▶ NHẤP CHUỘT TRÁI ĐỂ MUA NGAY!'
+    left_click_commands:
+      - '[player] is minion buy slayer'
+      - '[close]'
+
+  'builder_minion':
+    material: BRICKS
+    slot: 16
+    display_name: '&6&l🔨 MINION THỢ XÂY & MỞ RỘNG ĐẢO'
+    lore:
+      - '&7Tự động lát sàn mở rộng đảo và thi công kiến trúc.'
+      - ''
+      - '&eĐặc quyền độc quyền:'
+      - '&f • Lát sàn đá mài mở rộng bán kính an toàn'
+      - '&f • Hỗ trợ mở bản vẽ kiến trúc /is builder'
+      - '&f • Chi phí cấp 1: &6$10,000 Xu'
+      - ''
+      - '&a&l▶ NHẤP CHUỘT TRÁI ĐỂ MUA NGAY!'
+    left_click_commands:
+      - '[player] is minion buy builder'
+      - '[close]'
+
+  'collect_all':
+    material: HOPPER
+    slot: 22
+    display_name: '&e&l⚡ THU HOẠCH TOÀN BỘ MINIONS'
+    lore:
+      - '&7Gom tất cả tài nguyên đang chờ nhận từ'
+      - '&7mọi Minions trên đảo vào túi đồ của bạn!'
+      - ''
+      - '&a&l▶ NHẤP ĐỂ THU HOẠCH NGAY!'
+    left_click_commands:
+      - '[player] is minion collectall'
+
+  'close':
+    material: BARRIER
+    slot: 26
+    display_name: '&c&l✕ ĐÓNG MENU'
+    left_click_commands:
+      - '[close]'

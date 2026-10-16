@@ -1,0 +1,20 @@
+{
+  "biome": "JUNGLE",
+  "deployed": true,
+  "friendlyName": "<white><bold> Jungle",
+  "description": [
+    "<gray> Dense rainforests teeming",
+    "<gray> with parrots, ocelots, and",
+    "<gray> pandas. One of the most",
+    "<gray> diverse biomes available."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: JUNGLE_SAPLING\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_jungle",
+  "unlockLevel": 50,
+  "unlockCost": 0.0,
+  "cost": 500.0,
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

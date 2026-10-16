@@ -1,0 +1,44 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+flymode: true
+muted: false
+jailed: false
+ip-address: 127.0.0.1
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1791907894939
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1791907914896
+  login: 1791905809367
+  kits:
+    daily: 1791890344959
+    color: 1791731361403
+    tools: 1791731365229
+    pvp: 1791731376229
+money: '52491070.43'
+last-account-name: sondzvc
+logoutlocation:
+  world: dd8f2722-02c1-487c-9407-8de6469b78a5
+  world-name: world
+  x: 179.16252003375374
+  y: 121.32408911704374
+  z: 212.61521135366516
+  yaw: 31.768218994140625
+  pitch: 35.651451110839844
+lastlocation:
+  world: dd8f2722-02c1-487c-9407-8de6469b78a5
+  world-name: world
+  x: -7.09892523169922
+  y: 135.58962494456586
+  z: 3.481124439219165
+  yaw: 77.8731689453125
+  pitch: 37.77180480957031

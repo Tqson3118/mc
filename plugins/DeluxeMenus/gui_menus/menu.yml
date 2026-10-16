@@ -1,0 +1,235 @@
+menu_title: '&8⚡ &6&lSKYBLOCK MMORPG &8(&e/MENU&8) ⚡'
+open_command:
+  - menu
+  - mainmenu
+size: 54
+open_requirement:
+  requirements: {}
+
+items:
+  'border':
+    material: BLACK_STAINED_GLASS_PANE
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 26
+      - 27
+      - 35
+      - 36
+      - 44
+      - 45
+      - 46
+      - 47
+      - 48
+      - 50
+      - 51
+      - 52
+      - 53
+    display_name: ' '
+
+  'profile':
+    material: PLAYER_HEAD
+    slot: 4
+    display_name: '&e&l👤 THÔNG TIN HIỆP SĨ: &a%player_name%'
+    lore:
+      - '&8━━━━━━━━━━━━━━━━━━━━━━━━━'
+      - '&f • &6Số dư Tiền Mặt: &e$%vault_balance_int%'
+      - '&f • &bĐiểm Tinh Anh: &d%objective_score_sb_gems% Gems'
+      - '&f • &cTổng Kỹ Năng: &bLv.%auraskills_power%'
+      - '&f • &dChiến Đấu: &cLv.%auraskills_fighting% &7| &aNông Trại: &2Lv.%auraskills_farming%'
+      - '&f • &bCâu Cá: &3Lv.%auraskills_fishing% &7| &eNhanh Nhẹn: &6Lv.%auraskills_agility%'
+      - '&8━━━━━━━━━━━━━━━━━━━━━━━━━'
+
+  'island':
+    material: GRASS_BLOCK
+    slot: 10
+    display_name: '&a&l🏝 ĐẢO SINH TỒN CỦA BẠN'
+    lore:
+      - '&7Trở về vương quốc trên không chính của bạn.'
+      - '&a▶ Nhấp để gõ /is!'
+    left_click_commands:
+      - '[player] is'
+      - '[close]'
+
+  'warp_gate':
+    material: COMPASS
+    slot: 12
+    display_name: '&b&l🌀 HỆ THỐNG DỊCH CHUYỂN (/WARP)'
+    lore:
+      - '&76 Thế giới chuyên biệt: Boss, Farm, Câu Cá, Parkour, Casino.'
+      - '&b▶ Nhấp để mở Menu Warp!'
+    left_click_commands:
+      - '[openguimenu] warp'
+
+  'evolution':
+    material: ANVIL
+    slot: 14
+    display_name: '&c&l⚔ ĐẠI ĐIỆN TIẾN HÓA 20 TIERS'
+    lore:
+      - '&7Rèn vũ khí, giáp trụ & công cụ tối thượng.'
+      - '&c▶ Nhấp để mở Menu Tiến Hóa!'
+    left_click_commands:
+      - '[openguimenu] nangcap'
+
+  'minions':
+    material: DISPENSER
+    slot: 16
+    display_name: '&6&l🤖 TỰ ĐỘNG HÓA MINIONS'
+    lore:
+      - '&7Quản lý 4 chủng loại Minion: Miner, Farmer, Slayer, Builder.'
+      - '&6▶ Nhấp để mở Menu Minions!'
+    left_click_commands:
+      - '[openguimenu] minion_control'
+
+  'shop':
+    material: EMERALD
+    slot: 20
+    display_name: '&a&l🏪 CỬA HÀNG HỆ THỐNG (/SHOP)'
+    lore:
+      - '&7Giao dịch 4 danh mục: Nông sản, Quặng, Hải sản, Nguyên liệu hiếm.'
+      - '&f • Chuột trái: Mua x1 | Shift-Trái: Mua x64'
+      - '&f • Chuột phải: Bán x1 | Shift-Phải: Bán hết trong túi'
+      - ''
+      - '&a▶ Nhấp để mở Cửa Hàng!'
+    left_click_commands:
+      - '[openguimenu] shop'
+
+  'auction':
+    material: GOLD_INGOT
+    slot: 22
+    display_name: '&e&l💰 CHỢ ĐẤU GIÁ TOÀN SERVER (/CHỢ, /AH)'
+    lore:
+      - '&7Sàn giao dịch buôn bán giữa các người chơi.'
+      - '&f • Đăng bán item 48h (Thuế 5%)'
+      - '&f • Hộp thư nhận lại item hết hạn (/chợ mail)'
+      - ''
+      - '&e▶ Nhấp để vào Chợ Đấu Giá!'
+    left_click_commands:
+      - '[openguimenu] auction'
+
+  'quests':
+    material: BOOK
+    slot: 24
+    display_name: '&e&l📜 NHIỆM VỤ HÀNG NGÀY (/NV)'
+    lore:
+      - '&74 Nhiệm vụ đổi mới mỗi ngày nhận Gems & Tiền Xu.'
+      - '&e▶ Nhấp để xem nhiệm vụ!'
+    left_click_commands:
+      - '[player] nv'
+      - '[close]'
+
+  'pets_unlocked':
+    material: ALLAY_SPAWN_EGG
+    slot: 28
+    priority: 0
+    view_requirement:
+      requirements:
+        gems_check:
+          type: '>='
+          input: '%objective_score_sb_gems%'
+          output: '50'
+    display_name: '&d&l🐾 BỘ SƯU TẬP LINH THÚ (/PETS) [ĐÃ MỞ]'
+    lore:
+      - '&7Linh thú bay theo sau người chơi mang buff độc quyền.'
+      - '&f • Tinh Linh, Cáo Lửa, Mèo May Mắn, Sói Băng...'
+      - '&f • Nâng cấp cấp độ Linh thú bằng Điểm Tinh Anh'
+      - ''
+      - '&a✔ Đủ điều kiện: %objective_score_sb_gems%/50 Gems'
+      - '&d▶ Nhấp để mở Bộ Sưu Tập Linh Thú!'
+    left_click_commands:
+      - '[openguimenu] pets'
+
+  'pets_locked':
+    material: BARRIER
+    slot: 28
+    priority: 1
+    display_name: '&d&l🐾 BỘ SƯU TẬP LINH THÚ [CHƯA MỞ]'
+    lore:
+      - '&7Linh thú bay theo sau người chơi mang buff độc quyền.'
+      - '&c✖ Yêu cầu mở khóa: 50 Điểm Tinh Anh (Gems)'
+      - '&7Số dư hiện tại của bạn: &d%objective_score_sb_gems% Gems'
+      - ''
+      - '&eHãy cày Điểm Tinh Anh qua Parkour/Casino/Boss để mở khóa!'
+    left_click_commands:
+      - '[message] &c⚡ Bạn cần tối thiểu 50 Điểm Tinh Anh để mở khóa tính năng Linh Thú!'
+      - '[sound] minecraft:block.chest.locked 1.0 0.8'
+
+  'boss_7_8_unlocked':
+    material: NETHERITE_SWORD
+    slot: 30
+    priority: 0
+    view_requirement:
+      requirements:
+        fighting_check:
+          type: '>='
+          input: '%auraskills_fighting%'
+          output: '60'
+    display_name: '&4&l👹 ĐẠI ĐIỆN BOSS 7 - 8 [ĐÃ MỞ KHÓA]'
+    lore:
+      - '&7Thử thách đỉnh cao MMORPG Paper 1.21.4:'
+      - '&f • &cBoss 7: Thần Vực Hư Không (Lv.60)'
+      - '&f • &4Boss 8: Chúa Tể Diệt Thế (Lv.70)'
+      - '&f • Rơi Mảnh Vỡ Thời Không rèn Ngọc Kỹ Năng!'
+      - ''
+      - '&a✔ Đủ điều kiện: Fighting Lv.%auraskills_fighting%/60'
+      - '&c▶ Nhấp để tiến vào Sảnh Boss 7-8!'
+    left_click_commands:
+      - '[player] warp boss'
+      - '[close]'
+
+  'boss_7_8_locked':
+    material: BARRIER
+    slot: 30
+    priority: 1
+    display_name: '&4&l👹 ĐẠI ĐIỆN BOSS 7 - 8 [CHƯA MỞ KHÓA]'
+    lore:
+      - '&7Thử thách đỉnh cao MMORPG Paper 1.21.4.'
+      - '&c✖ Yêu cầu Kỹ Năng Chiến Đấu: Fighting Lv.60'
+      - '&7Cấp độ hiện tại của bạn: &eLv.%auraskills_fighting%'
+      - ''
+      - '&eHãy luyện cấp tại /warp farm và vượt Boss 1-6 trước!'
+    left_click_commands:
+      - '[message] &c⚡ Bạn cần đạt Fighting Lv.60 để mở khóa Đại Điện Boss 7-8!'
+      - '[sound] minecraft:block.chest.locked 1.0 0.8'
+
+  'world_boss':
+    material: DRAGON_HEAD
+    slot: 32
+    display_name: '&5&l🌍 SỰ KIỆN WORLD BOSS TOÀN SERVER'
+    lore:
+      - '&7Xuất hiện mỗi 3-4 giờ tại thế giới world_boss.'
+      - '&f • Boss siêu cấp máu scale theo người chơi'
+      - '&f • Bảng xếp hạng sát thương realtime'
+      - '&f • Top sát thương nhận Điểm Tinh Anh & Quà Quý'
+      - ''
+      - '&5▶ Nhấp để xem thông tin & dịch chuyển!'
+    left_click_commands:
+      - '[player] warp boss'
+      - '[close]'
+
+  'guide':
+    material: ENCHANTED_BOOK
+    slot: 34
+    display_name: '&d&l🔮 CẨM NANG HƯỚNG DẪN (/HUONGDAN)'
+    lore:
+      - '&7Bách khoa toàn thư khám phá thế giới Skyblock RPG.'
+      - '&d▶ Nhấp để mở Cẩm Nang!'
+    left_click_commands:
+      - '[player] huongdan'
+      - '[close]'
+
+  'close':
+    material: BARRIER
+    slot: 49
+    display_name: '&c&l✕ ĐÓNG MENU'
+    left_click_commands:
+      - '[close]'

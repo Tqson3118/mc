@@ -1,0 +1,23 @@
+{
+  "biome": "DEEP_DARK",
+  "deployed": true,
+  "friendlyName": "<white><bold> Deep Dark",
+  "description": [
+    "<gray> Far underground where the",
+    "<gray> darkness is alive and the",
+    "<gray> Warden stalks. Only the",
+    "<gray> bravest enter here."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: SCULK\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_deep_dark",
+  "unlockLevel": 180,
+  "unlockCost": 0.0,
+  "cost": 2500.0,
+  "itemCost": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: SCULK\n  amount: 32\n"
+  ],
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

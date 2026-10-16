@@ -1,0 +1,22 @@
+{
+  "biome": "OLD_GROWTH_PINE_TAIGA",
+  "deployed": true,
+  "friendlyName": "<white><bold> Old Growth Pine Taiga",
+  "description": [
+    "<gray> An ancient forest of towering",
+    "<gray> pines where wolves howl and",
+    "<gray> podzol covers the ground."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: SPRUCE_SAPLING\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_old_growth_pine_taiga",
+  "unlockLevel": 35,
+  "unlockCost": 0.0,
+  "cost": 500.0,
+  "itemCost": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: SPRUCE_SAPLING\n  amount: 10\n"
+  ],
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

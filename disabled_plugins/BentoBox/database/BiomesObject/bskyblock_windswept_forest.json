@@ -1,0 +1,23 @@
+{
+  "biome": "WINDSWEPT_FOREST",
+  "deployed": true,
+  "friendlyName": "<white><bold> Windswept Forest",
+  "description": [
+    "<gray> Ancient forests shaped by",
+    "<gray> relentless winds. Perfect",
+    "<gray> for dramatic windswept",
+    "<gray> building themes."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: OAK_LEAVES\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_windswept_forest",
+  "unlockLevel": 45,
+  "unlockCost": 0.0,
+  "unlockItems": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: OAK_LOG\n  amount: 16\n"
+  ],
+  "cost": 600.0,
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

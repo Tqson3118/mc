@@ -1,0 +1,24 @@
+{
+  "uniqueId": "BSkyBlock_example_cropgrowth_t1",
+  "upgrade": "BSkyBlock_example_cropgrowth",
+  "name": "Crop Growth Boost",
+  "description": [],
+  "startLevel": 0,
+  "endLevel": 4,
+  "prices": [
+    {
+      "class": "MoneyPriceDB",
+      "parameters": {
+        "amountEquation": "500"
+      }
+    }
+  ],
+  "rewards": [
+    {
+      "class": "CropGrowthRewardDB",
+      "parameters": {
+        "growthBonusEquation": "0.5"
+      }
+    }
+  ]
+}

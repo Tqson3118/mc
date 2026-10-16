@@ -1,0 +1,964 @@
+stone-generator:
+  commands:
+    admin:
+      main:
+        description: Команда адміністратора Magic Cobblestone Generator
+      import:
+        description: Імпорт магічних генераторів
+        confirmation: Це видалить існуючі генератори з [gamemode] та імпортує нові
+          генератори з файлу шаблону – підтвердьте
+      why:
+        parameters: <player>
+        description: вмикає повідомлення про налагодження Magic Cobblestone Generator
+      database:
+        description: Головна команда бази даних
+      import-database:
+        parameters: <file>
+        description: імпортує файл бази даних magic generators
+        confirmation: Це видалить існуючі генератори для [gamemode] та імпортує генератори
+          з файлу бази даних – підтвердьте
+      export:
+        parameters: <file>
+        description: Експортуйте базу даних генераторів магії з ігрового режиму у
+          файл
+    player:
+      main:
+        description: відкриває GUI вибору генератора
+      view:
+        description: відкриває графічний інтерфейс із деталями генератора
+        parameters: <generator-id>
+      buy:
+        description: Купує необхідний генератор
+        parameters: <generator-id>
+      activate:
+        description: Увімкніть/вимкніть необхідний генератор
+        parameters: <generator-id> <true/false>
+  gui:
+    titles:
+      player-panel: <black><bold>Генератори</bold></black>
+      view-generator: '<black><bold>Генератор: </bold></black> [generator]'
+      admin-panel: <black><bold>Панель адміністратора</bold></black>
+      select-biome: <black><bold>Виберіть біоми</bold></black>
+      select-block: <black><bold>Виберіть Блок</bold></black>
+      select-bundle: <black><bold>Виберіть пакет</bold></black>
+      select-type: <black><bold>Виберіть тип генератора</bold></black>
+      view-bundle: '<black><bold>Комплект: </bold></black> [bundle]'
+      manage-bundles: <black><bold>Керувати пакетами</bold></black>
+      manage-generators: <black><bold>Керування генераторами</bold></black>
+      view-island: '<black><bold>Острів: [island]</bold></black>'
+      manage-islands: <black><bold>Керування даними острова</bold></black>
+      library: <black><bold>Бібліотека</bold></black>
+      settings: <black><bold>Налаштування</bold></black>
+      configure-material-height: <black><bold>Налаштування висоти матеріалу</bold></black>
+      height-range-config: '<black><bold>Діапазон висот: [material]</bold></black>'
+    buttons:
+      default:
+        name: <white><bold>Генератор за замовчуванням</bold></white>
+        description: |-
+          <gray>Типовими генераторами є завжди
+          </gray><gray>активний.</gray>
+        enabled: <aqua>Це стандартний генератор </aqua><aqua>.</aqua>
+        disabled: <aqua>Це </aqua><red>не стандартний генератор </red><aqua>.</aqua>
+      priority:
+        name: <white><bold>Пріоритет генератора</bold></white>
+        description: |-
+          <gray>Більший пріоритет
+          Номер </gray><gray>буде кращим, якщо
+          </gray><gray>Можна застосувати кілька одиниць
+          </gray><gray>до того самого місця.</gray>
+        value: '<aqua>Пріоритет: </aqua><gray>[number]</gray>'
+      type:
+        name: <white><bold>Тип генератора</bold></white>
+        description: |-
+          <gray>Визначає тип генератора
+          </gray><gray>буде застосовано до поточного
+          </gray><gray>генератор.</gray>
+        value: '<aqua>Тип: </aqua><gray>[type]</gray>'
+      required_min_level:
+        name: <white><bold>Мінімальний рівень острова</bold></white>
+        description: |-
+          <gray>Мінімальний рівень острова до
+          </gray><gray>розблокувати цей генератор.</gray>
+        value: '<aqua>Мінімальний необхідний рівень: [number]</aqua>'
+      required_permissions:
+        name: <white><bold>Необхідні дозволи</bold></white>
+        description: |-
+          <gray>Список дозволів, які
+          Для розблокування потрібні </gray><gray>
+          </gray><gray>цей генератор.</gray>
+        list: <aqua>Необхідні дозволи:</aqua>
+        value: <aqua>- [permission]</aqua>
+        none: <aqua>- немає</aqua>
+      purchase_cost:
+        name: <white><bold>Вартість покупки</bold></white>
+        description: |-
+          <gray>Необхідні кредити
+          </gray><gray>придбати цей генератор.</gray>
+        value: '<aqua>Вартість: [number]</aqua>'
+      activation_cost:
+        name: <white><bold>Вартість активації</bold></white>
+        description: |-
+          <gray>Необхідні кредити
+          </gray><gray>активувати або повторно активувати
+          </gray><gray>цей генератор.</gray>
+        value: '<aqua>Вартість: [number]</aqua>'
+      biomes:
+        name: <white><bold>Операційні біоми</bold></white>
+        description: |-
+          <gray>Список біомів, де це
+          Генератор </gray><gray>може працювати.</gray>
+        list: <aqua>Біоми:</aqua>
+        value: <aqua>- [biome]</aqua>
+        any: <aqua>- будь-який</aqua>
+      treasure_amount:
+        name: <white><bold>Сума скарбу</bold></white>
+        description: |-
+          <gray>Максимальна кількість скарбів
+          </gray><gray>, які можна скинути одразу.</gray>
+        value: '<aqua>Сума: [number]</aqua>'
+      treasure_chance:
+        name: <white><bold>Шанс отримати скарб</bold></white>
+        description: |-
+          <gray>Шанс отримати скарб
+          </gray><gray>випав під час генерації.</gray>
+        value: '<aqua>Шанс: [number]</aqua>'
+      info:
+        name: <white><bold>Загальна інформація</bold></white>
+        description: |-
+          <gray>Показує загальну інформацію
+          </gray><gray>про цей генератор.</gray>
+      blocks:
+        name: <white><bold>Список блокувань</bold></white>
+        description: |-
+          <gray>Показує список блоків і
+          </gray><gray>їхні шанси бути згенерованими.</gray>
+      treasures:
+        name: <white><bold>Список скарбів</bold></white>
+        description: |-
+          <gray>Показує список скарбів і
+          </gray><gray>шансів випадіння.
+          </gray><gray>Випадає скарб
+          </gray><gray>, коли генеруються блоки.</gray>
+        drag-and-drop: |-
+          <gray>Підтримує перетягування
+          </gray><gray>елементів на порожні місця.</gray>
+      block-icon:
+        name: <white><bold>[material]</bold></white>
+        description: '<aqua>Шанс: [#.##]</aqua>'
+        actual: '<aqua>Значення бази даних: [number]</aqua>'
+        height-range: '<gray>Діапазон висот: </gray><aqua>[min_height] </aqua><gray>до
+          </gray><aqua>[max_height]</aqua>'
+        no-height-range: <gray>Використовує стандартний діапазон висот генератора</gray>
+      treasure-icon:
+        name: <white><bold>[material]</bold></white>
+        description: '<aqua>Шанс: [#.####]</aqua>'
+        actual: '<aqua>Значення бази даних: [number]</aqua>'
+      show_cobblestone:
+        name: <white><bold>Генератори Cobblestone</bold></white>
+        description: |-
+          <gray>Відображення лише бруківки
+          </gray><gray>генераторів</gray>
+      show_stone:
+        name: <white><bold>Генератори каменів</bold></white>
+        description: |-
+          <gray>Показати лише камінь
+          </gray><gray>генераторів</gray>
+      show_basalt:
+        name: <white><bold>Базальтові генератори</bold></white>
+        description: |-
+          <gray>Показати лише базальт
+          </gray><gray>генераторів</gray>
+      toggle_visibility:
+        name: <white><bold>Розблоковані генератори</bold></white>
+        description: |-
+          <gray>Показати лише розблоковані
+          </gray><gray>генераторів</gray>
+      show_active:
+        name: <white><bold>Активні генератори</bold></white>
+        description: |-
+          <gray>Показати лише активні
+          </gray><gray>генераторів</gray>
+      return:
+        name: <white><bold>Повернутися</bold></white>
+        description: <gray>Повернення до попереднього меню</gray>
+      quit:
+        name: <white><bold>Вийти</bold></white>
+        description: <gray>Вийти з поточного меню</gray>
+      previous:
+        name: <white><bold>Попередня сторінка</bold></white>
+        description: <gray>Перейти на сторінку [number].</gray>
+      next:
+        name: <white><bold>Наступна сторінка</bold></white>
+        description: <gray>Перейти на сторінку [number].</gray>
+      manage_users:
+        name: <white><bold>Керувати даними острова</bold></white>
+        description: |-
+          <gray>Керування даними острова
+          </gray><gray>у поточному ігровому режимі.</gray>
+      manage_generator_tiers:
+        name: <white><bold>Керування генераторами</bold></white>
+        description: |-
+          <gray>Керування генераторами
+          </gray><gray>у поточному ігровому режимі.</gray>
+      manage_generator_bundles:
+        name: <white><bold>Керувати пакетами</bold></white>
+        description: |-
+          <gray>Керування пакетами
+          </gray><gray>у поточному ігровому режимі.</gray>
+      settings:
+        name: <white><bold>Налаштування</bold></white>
+        description: |-
+          <gray>Перевірте та змініть
+          </gray><gray>налаштувань аддона.</gray>
+      import_template:
+        name: <white><bold>Імпортувати шаблон</bold></white>
+        description: |-
+          <gray>Імпортувати шаблон
+          </gray><gray>файл, розташований усередині
+          </gray><gray>каталог аддонів.</gray>
+      web_library:
+        name: <white><bold>Веб-бібліотека</bold></white>
+        description: |-
+          <gray>Доступ до Інтернету
+          </gray><gray>бібліотека, яка містить
+          </gray><gray>спільних генераторів.</gray>
+      export_from_database:
+        name: <white><bold>Експорт бази даних</bold></white>
+        description: |-
+          <gray>Експорт бази даних
+          </gray><gray>в один файл, розташований у
+          </gray><gray>каталог аддонів.</gray>
+      import_to_database:
+        name: <white><bold>Імпорт бази даних</bold></white>
+        description: |-
+          <gray>Імпортувати базу даних із
+          </gray><gray>файл, розташований у додатку
+          </gray><gray>каталог.</gray>
+      wipe_user_data:
+        name: <white><bold>Очистити базу даних користувача</bold></white>
+        description: |-
+          <gray>Очистити дані користувача для
+          </gray><gray>кожен острів у
+          </gray><gray>поточний ігровий режим.</gray>
+      wipe_generator_data:
+        name: <white><bold>Очистити базу даних генератора</bold></white>
+        description: |-
+          <gray>Очистити генератор і пакет
+          </gray><gray>даних у поточному ігровому режимі.</gray>
+      bundle_name:
+        name: <white><bold>Назва пакета</bold></white>
+        description: <gray>Змініть назву пакета.</gray>
+        value: '<aqua>Назва: </aqua> [bundle]'
+      bundle_id:
+        name: <white><bold>Ідентифікатор пакета</bold></white>
+        description: <gray>Поточний ідентифікатор комплекту.</gray>
+        value: '<aqua>ID: </aqua> [id]'
+      bundle_icon:
+        name: <white><bold>Значок пакета</bold></white>
+        description: <gray>Змінити піктограму комплекту.</gray>
+      bundle_description:
+        name: <white><bold>Опис комплекту</bold></white>
+      bundle_info:
+        name: <white><bold>Загальна інформація</bold></white>
+        description: |-
+          <gray>Показати загальну інформацію
+          </gray><gray>про цей пакет.</gray>
+      bundle_generators:
+        name: <white><bold>Генератори</bold></white>
+        description: |-
+          <gray>Показати список генераторів
+          </gray><gray>призначено цьому пакету.</gray>
+      add_generator:
+        name: <white><bold>Додати генератор</bold></white>
+        description: |-
+          <gray>Призначте генератор
+          </gray><gray>до цього пакету.</gray>
+        list: <aqua>Вибрані генератори:</aqua>
+        value: <aqua>- [generator]</aqua>
+      remove_generator:
+        name: <white><bold>Видалити генератор</bold></white>
+        description: |-
+          <gray>Видаліть генератор
+          </gray><gray>із цього комплекту.</gray>
+        list: <aqua>Вибрані генератори:</aqua>
+        value: <aqua>- [generator]</aqua>
+      create_bundle:
+        name: <white><bold>Створити пакет</bold></white>
+        description: |-
+          <gray>Створіть новий пакет
+          </gray><gray>для цього ігрового режиму.</gray>
+      delete_bundle:
+        name: <white><bold>Видалити пакет</bold></white>
+        description: |-
+          <gray>Видалити групу з
+          </gray><gray>цей ігровий режим повністю.</gray>
+        list: <aqua>Вибрані набори:</aqua>
+        value: <aqua>- [bundle]</aqua>
+      name:
+        name: <white><bold>Назва генератора</bold></white>
+        description: |-
+          <gray>Назва для цього генератора.
+          </gray><gray>Підтримує кольорові коди.</gray>
+        value: '<aqua>Назва: </aqua> [generator]'
+      id:
+        name: <white><bold>Ідентифікатор генератора</bold></white>
+        description: <gray>Ідентифікатор генератора струму.</gray>
+        value: '<aqua>ID: </aqua> [id]'
+      icon:
+        name: Піктограма генератора <white><bold></bold></white>
+        description: |-
+          <gray>Елемент, який використовується для відображення цього
+          Генератор </gray><gray>у всіх GUI.</gray>
+      locked_icon:
+        name: <white><bold>Заблокований значок</bold></white>
+        description: |-
+          <gray>Елемент, який використовується для відображення цього
+          Генератор </gray><gray>у всіх GUI if
+          </gray><gray>він заблокований.</gray>
+      description:
+        name: <white><bold>Опис генератора</bold></white>
+        description: |-
+          <gray>Текст для генератора, який буде
+          </gray><gray>пишуть під заголовком.</gray>
+        value: <aqua>Опис:</aqua>
+      deployed:
+        name: <white><bold>Розгорнуто</bold></white>
+        description: |-
+          <gray>Видно розгорнуті генератори
+          </gray><gray>для гравців.
+          </gray><gray>Нерозгорнуті генератори не будуть
+          </gray><gray>генерувати блоки.</gray>
+        enabled: <aqua>Цей генератор </aqua><green>розгорнуто.</green>
+        disabled: <aqua>Цей генератор </aqua><red>не розгорнуто.</red>
+      add_material:
+        name: <white><bold>Додати матеріал</bold></white>
+        description: |-
+          <gray>Додати новий матеріал до
+          </gray><gray>поточний список матеріалів.</gray>
+      remove_material:
+        name: <white><bold>Видалити матеріали</bold></white>
+        description: |-
+          <gray>Видалити вибране
+          </gray><gray>матеріалів зі списку.</gray>
+        selected-materials: <gray>Вибрані матеріали:</gray>
+        list-value: <gray>- [number] x [value]</gray>
+      create_generator:
+        name: <white><bold>Створити генератор</bold></white>
+        description: |-
+          <gray>Створіть новий
+          </gray><gray>генератор для
+          </gray><gray>ігровий режим.</gray>
+      delete_generator:
+        name: <white><bold>Видалити генератор</bold></white>
+        description: |-
+          <gray>Видаліть генератор
+          </gray><gray>з режиму повністю.</gray>
+        list: <aqua>Вибрані генератори:</aqua>
+        value: <aqua>- [generator]</aqua>
+      island_name:
+        name: <white><bold>[name]</bold></white>
+        description: |-
+          <gray>[owner]
+          </gray><aqua>[members]
+          </aqua><aqua>ID Острова: </aqua><gray>[id]</gray>
+        owner: '<aqua>Власник: [player]</aqua>'
+        list: <aqua>Члени:</aqua>
+        value: <aqua>- [player]</aqua>
+      island_working_range:
+        name: <white><bold>Острівний робочий діапазон</bold></white>
+        description: |-
+          <gray>Робочий діапазон для генераторів
+          </gray><gray>на поточному острові.
+          </gray><gray>0 і нижче означає необмежений
+          </gray><gray>діапазон.</gray>
+        value: '<aqua>Діапазон: [number]</aqua>'
+        overwritten: |-
+          <red>Власник має дозвіл на це
+          </red><red>перезаписує робочий діапазон.</red>
+      owner_working_range:
+        name: <white><bold>Робочий діапазон власника</bold></white>
+        description: |-
+          <gray>Робочий діапазон для генераторів
+          </gray><gray>для поточного власника.
+          </gray><gray>'0' означає, що діапазон власника є
+          </gray><gray>ігнорується.
+          </gray><gray>'-1' означає, що власник має
+          </gray><gray>необмежений робочий діапазон.
+          "</gray><gray> Дозвіл користувача на призначення:"
+          "</gray><gray><italic>'[gamemode].stone-generator."
+          "</italic></gray><italic><gray><italic>максимальний діапазон.<number>'"</italic></gray></italic>
+        value: '<aqua>Діапазон: [number]</aqua>'
+      island_max_generators:
+        name: <white><bold>Макс Генератори острова</bold></white>
+        description: |-
+          <gray>Максимально активний
+          Дозволено </gray><gray>рівнів генератора
+          </gray><gray>в той же час що
+          </gray><gray>для поточного острова.
+          </gray><gray>0 і нижче означає
+          </gray><gray>без обмежень.</gray>
+        value: '<aqua>Максимальна кількість генераторів: [number]</aqua>'
+        overwritten: |-
+          <red>Власник має дозвіл на це
+          </red><red>перезаписує кількість генераторів.</red>
+      owner_max_generators:
+        name: <white><bold>Макс Генератори власника</bold></white>
+        description: |-
+          <gray>Максимальна кількість активних одночасно
+          </gray><gray>рівнів генератора, що
+          </gray><gray>власник острова дозволено.
+          </gray><gray>'0' означає суму власника
+          </gray><gray>ігнорується.
+          </gray><gray>'-1' означає, що власник має
+          </gray><gray>необмежена кількість генераторів.
+          "</gray><gray> Дозвіл користувача на призначення:"
+          "</gray><gray><italic>'[gamemode].stone-generator."
+          "</italic></gray><italic><gray><italic>активних генераторів.<number>'"</italic></gray></italic>
+        value: '<aqua>Максимальна кількість генераторів: [number]</aqua>'
+      island_bundle:
+        name: <white><bold>Острівний пакет</bold></white>
+        description: |-
+          <gray>Комплект, якому призначено
+          </gray><gray>поточний острів.
+          </gray><gray>Тільки генератори з цього
+          Пакет </gray><gray>можна використовувати на
+          </gray><gray>острів.</gray>
+        value: '<aqua>Комплект: [bundle]</aqua>'
+        overwritten: |-
+          <red>Власник має дозвіл на це
+          </red><red>перезаписує пакет.</red>
+      owner_bundle:
+        name: <white><bold>Пакет власників</bold></white>
+        description: |-
+          <gray>Пакет, якому призначено
+          </gray><gray>поточний власник острова.
+          </gray><gray>Тільки генератори з цього
+          Пакет </gray><gray>можна використовувати на
+          </gray><gray>острів.
+          "</gray><gray> Дозвіл користувача на призначення:"
+          "</gray><gray><italic>[gamemode].stone-generator."
+          "</italic></gray><italic><gray><italic>пакет.<bundle-id>'"</italic></gray></italic>
+        value: '<aqua>Комплект: [bundle]</aqua>'
+      island_info:
+        name: <white><bold>Загальна інформація</bold></white>
+        description: |-
+          <gray>Показує загальну інформацію
+          </gray><gray>про цей острів.</gray>
+      island_generators:
+        name: <white><bold>Острівні генератори</bold></white>
+        description: |-
+          <gray>Показує список усіх генераторів
+          </gray><gray>, які доступні для
+          </gray><gray>поточний острів.</gray>
+      reset_to_default:
+        name: <white><bold>Відновити значення за замовчуванням</bold></white>
+        description: |-
+          <gray>Скидає всі значення острова
+          </gray><gray>до значень за замовчуванням з
+          </gray><gray>налаштування.</gray>
+      is_online:
+        name: <white><bold>Онлайн-гравці</bold></white>
+        description: |-
+          <gray>Список онлайн гравців
+          </gray><gray>островів.</gray>
+      all_islands:
+        name: <white><bold>Усі острови</bold></white>
+        description: <gray>Список усіх островів.</gray>
+      search:
+        name: <white><bold>Пошук</bold></white>
+        description: |-
+          <gray>Пошук конкретного
+          </gray><gray>острів.</gray>
+        search: '<aqua>Значення: [value]</aqua>'
+      offline_generation:
+        name: <white><bold>Офлайн-генерація</bold></white>
+        description: |-
+          <gray>Запобігає створенню блоків
+          </gray><gray>генерується, якщо весь острів
+          </gray><gray>учасників офлайн.</gray>
+        enabled: <aqua>Офлайн-генерація </aqua><green>увімкнена </green><aqua>.</aqua>
+        disabled: <aqua>Офлайн-генерація </aqua><red>вимкнена </red><aqua>.</aqua>
+      use_physic:
+        name: <white><bold>Використовуйте фізику</bold></white>
+        description: |-
+          <gray>Використання фізики на блоці
+          </gray><gray>покоління дозволяє
+          </gray><gray>використання машин з червоного каменю,
+          </gray><gray>однак це зменшує сервер
+          </gray><gray>продуктивність трохи.</gray>
+        enabled: <aqua>Фізика </aqua><green>ввімкнена </green><aqua>.</aqua>
+        disabled: <aqua>Фізика </aqua><red>вимкнена </red><aqua>.</aqua>
+      use_bank:
+        name: <white><bold>Використовувати банк</bold></white>
+        description: |-
+          <gray>Використання острівного банківського рахунку
+          </gray><gray>для всіх покупок і
+          </gray><gray>активацій.
+          </gray><gray>Потрібен Bank Addon.</gray>
+        enabled: <aqua>Використання банку </aqua><green>ввімкнено </green><aqua>.</aqua>
+        disabled: <aqua>Використання банку </aqua><red>вимкнено </red><aqua>.</aqua>
+      working_range:
+        name: <white><bold>Робочий діапазон за умовчанням</bold></white>
+        description: |-
+          <gray>Відстань від гравців до
+          Генерація блоків </gray><gray>припиниться.
+          </gray><gray>0 і нижче означає необмежений.
+          </gray><gray>Для налаштування потрібен сервер
+          </gray><gray>перезапустіть, щоб активувати.</gray>
+        value: '<aqua>Діапазон: [number]</aqua>'
+      active_generators:
+        name: <white><bold>Активні генератори за замовчуванням</bold></white>
+        description: |-
+          <gray>Максимальна кількість за замовчуванням
+          </gray><gray>активних генераторів на
+          </gray><gray>одночасно.
+          </gray><gray>0 і нижче означає необмежений.</gray>
+        value: '<aqua>Кількість: [number]</aqua>'
+      show_filters:
+        name: <white><bold>Показати фільтри</bold></white>
+        description: |-
+          <gray>Фільтри розташовані у верхньому рядку
+          </gray><gray>Player GUI, що дозволяє
+          </gray><gray>, щоб показати лише генератори
+          </gray><gray>за типом або статусом.
+          </gray><gray>Цей параметр вимикає
+          </gray><gray>і приховує їх.</gray>
+        enabled: <aqua>Фільтри </aqua><green>увімкнено </green><aqua>.</aqua>
+        disabled: <aqua>Фільтри </aqua><red>вимкнено </red><aqua>.</aqua>
+      border_block:
+        name: <white><bold>Блок межі</bold></white>
+        description: |-
+          <gray>Блок кордону є матеріалом
+          </gray><gray>, який оточує графічний інтерфейс користувача.
+          </gray><gray>Встановлення його на повітря вимикає
+          </gray><gray>це.</gray>
+      border_block_name:
+        name: <white><bold>Назва межового блоку</bold></white>
+        description: |-
+          <gray>Ім'я для відображення рамки
+          </gray><gray>блок.
+          </gray><gray>Якщо встановлено значення пусте, тоді
+          </gray><gray>він використовуватиме назву блоку.
+          </gray><gray>Щоб встановити його як 1 порожнє місце,
+          "</gray><gray> напишіть "пусто"."</gray>
+        value: '<aqua>Назва: `</aqua>[name]<aqua>`</aqua>'
+      unlock_notify:
+        name: <white><bold>Сповіщати про розблокування</bold></white>
+        description: |-
+          <gray>Буде надіслано повідомлення
+          </gray><gray>користувачеві, коли вона розблокує
+          </gray><gray>новий генератор.</gray>
+        enabled: <aqua>Сповіщати про розблокування </aqua><green>увімкнено </green><aqua>.</aqua>
+        disabled: <aqua>Сповіщати про розблокування </aqua><red>вимкнено </red><aqua>.</aqua>
+      disable_on_activate:
+        name: <white><bold>Вимкнути під час активації</bold></white>
+        description: |-
+          <gray>Вимкнути найстаріший активний генератор
+          </gray><gray>, якщо користувач активує новий
+          </gray><gray>генератор.
+          </gray><gray>Корисно в ситуаціях, коли
+          </gray><gray>дозволяється лише один генератор.</gray>
+        enabled: <aqua>Вимкнути під час активації, якщо </aqua><green>увімкнено </green><aqua>.</aqua>
+        disabled: <aqua>Вимкнути під час активації </aqua><red>вимкнено </red><aqua>.</aqua>
+      library:
+        name: <white><bold>[name]</bold></white>
+        description: |-
+          <gray>[description]
+          </gray><gray>Автор: [author]
+          </gray><gray>Створено для [gamemode]
+          </gray><gray>Мова: [lang]
+          </gray><gray>Версія: [version]</gray>
+      accept_blocks:
+        name: <white><bold>Дозволені блоки</bold></white>
+        description: |-
+          <gray>Приймає вибрані блоки
+          </gray><gray>і повертає.</gray>
+        selected-blocks: <gray>Вибрані блоки:</gray>
+        list-value: <gray>- [value]</gray>
+      material-icon:
+        name: <white><bold>[material]</bold></white>
+        description: '<gray>ID блоку: [id]</gray>'
+      search_block:
+        name: <white><bold>Пошук</bold></white>
+        description: |-
+          <gray>Пошук конкретного
+          </gray><gray>блок.</gray>
+        search: '<aqua>Значення: [value]</aqua>'
+      accept_biome:
+        name: <white><bold>Дозволені біоми</bold></white>
+        description: |-
+          <gray>Приймає вибрані біоми
+          </gray><gray>і повертає.</gray>
+        selected-biomes: <gray>Вибрані біоми:</gray>
+        list-value: <gray>- [value]</gray>
+      biome-icon:
+        name: <white><bold>[biome]</bold></white>
+      biome-groups:
+        temperate:
+          name: <white><bold>Помірний</bold></white>
+          description: <gray>Показати лише помірні біоми</gray>
+        warm:
+          name: <white><bold>Теплий</bold></white>
+          description: <gray>Показувати лише теплі біоми</gray>
+        cold:
+          name: <white><bold>Холодний</bold></white>
+          description: <gray>Показати лише холодні біоми</gray>
+        snowy:
+          name: <white><bold>Сніжний</bold></white>
+          description: <gray>Показати лише засніжені біоми</gray>
+        ocean:
+          name: <white><bold>Океан</bold></white>
+          description: <gray>Показати лише океанські біоми</gray>
+        nether:
+          name: <white><bold>Незер</bold></white>
+          description: <gray>Показати лише незер біоми</gray>
+        the_end:
+          name: <white><bold>Енд</bold></white>
+          description: <gray>Показати лише енд біоми</gray>
+        neutral:
+          name: <white><bold>Нейтральний</bold></white>
+          description: <gray>Показувати лише нейтральні біоми</gray>
+        unused:
+          name: <white><bold>Не використовується</bold></white>
+          description: <gray>Показати лише невикористані біоми</gray>
+        cave:
+          name: <white><bold>Печери</bold></white>
+          description: <gray>Показати лише печерні біоми</gray>
+      generator-types:
+        cobblestone:
+          name: <white><bold>Кругляк </bold></white>
+          description: |-
+            <gray>Працює лише з кругляку
+            </gray><gray>генераторів.
+
+            </gray><gold><italic>Підказка:
+            </italic></gold><italic><gold><italic>Утворюється під час потоку лави
+            </italic></gold></italic><italic><italic><gold><italic>вступає в контакт з
+            </italic></gold></italic></italic><italic><italic><italic><gold><italic>вода.</italic></gold></italic></italic></italic>
+        stone:
+          name: <white><bold>Камінь</bold></white>
+          description: |-
+            <gray>Працює тільки з каменем
+            </gray><gray>генераторів.
+
+            </gray><gold><italic>Підказка:
+            </italic></gold><italic><gold><italic>Утворюється, коли тече лава
+            </italic></gold></italic><italic><italic><gold><italic>поверх води.</italic></gold></italic></italic>
+        basalt:
+          name: <white><bold>Базальт</bold></white>
+          description: |-
+            <gray>Працює тільки з базальтом
+            </gray><gray>генераторів.
+
+            </gray><gold><italic>Підказка:
+            </italic></gold><italic><gold><italic>Утворюється, коли тече лава
+            </italic></gold></italic><italic><italic><gold><italic>поверх душевного грунту і
+            </italic></gold></italic></italic><italic><italic><italic><gold><italic>прилягає до блакитного льоду.</italic></gold></italic></italic></italic>
+        cobblestone_or_stone:
+          name: <white><bold>Кругляк або камінь</bold></white>
+          description: |-
+            <gray>Працює з кругляком та
+            </gray><gray>генераторів каменів.</gray>
+        basalt_or_cobblestone:
+          name: <white><bold>Базальт або кругляк</bold></white>
+          description: |-
+            <gray>Працює з базальтом і
+            </gray><gray>генераторів кругляку.</gray>
+        basalt_or_stone:
+          name: <white><bold>Базальт або камінь</bold></white>
+          description: |-
+            <gray>Працює з базальтом і
+            </gray><gray>генераторів каменів.</gray>
+        any:
+          name: <white><bold>Будь-який</bold></white>
+          description: <gray>Працює з будь-яким генератором.</gray>
+      clear-height-range:
+        description: |-
+          <gray>Прибрати визначений діапазон висот
+          </gray><gray>для цього матеріалу.
+          </gray><gray>Замість нього буде використано
+          </gray><gray>стандартний діапазон висот генератора.</gray>
+        name: <white><bold>Скинути діапазон висот</bold></white>
+      exhaustion_limit:
+        default: '<aqua>Використовує глобальне значення за замовчуванням: </aqua><white>[number]</white>'
+        description: |-
+          <gray>Максимальна кількість блоків, яку цей
+          </gray><gray>генератор може виробити за період,
+          </gray><gray>перш ніж піти на перезарядку.</gray>
+        name: <white><bold>Ліміт виснаження</bold></white>
+        unlimited: <aqua>Без обмежень</aqua>
+        value: '<aqua>Ліміт: [number] </aqua><gray>за період</gray>'
+      height_range:
+        description: |-
+          <gray>Діапазон висот, у якому
+          </gray><gray>працює цей генератор.</gray>
+        name: <white><bold>Діапазон висот</bold></white>
+        value: <aqua>Від </aqua><white>[min_height] </white><aqua>до </aqua><white>[max_height]</white>
+      max-height:
+        description: |-
+          <gray>Задати максимальну висоту
+          </gray><gray>для цього матеріалу.
+          </gray><gray>Поточне значення: </gray><aqua>[max_height]</aqua>
+        name: <white><bold>Максимальна висота</bold></white>
+        value: <aqua>[max_height]</aqua>
+      max_height:
+        description: |-
+          <gray>Задати максимальну висоту
+          </gray><gray>для цього матеріалу.</gray>
+        name: <white><bold>Максимальна висота</bold></white>
+        value: '<gray>Поточне значення: </gray><aqua>[max_height]</aqua>'
+      min-height:
+        description: |-
+          <gray>Задати мінімальну висоту
+          </gray><gray>для цього матеріалу.
+          </gray><gray>Поточне значення: </gray><aqua>[min_height]</aqua>
+        name: <white><bold>Мінімальна висота</bold></white>
+        value: <aqua>[min_height]</aqua>
+      min_height:
+        description: |-
+          <gray>Задати мінімальну висоту
+          </gray><gray>для цього матеріалу.</gray>
+        name: <white><bold>Мінімальна висота</bold></white>
+        value: '<gray>Поточне значення: </gray><aqua>[min_height]</aqua>'
+    tips:
+      click-to-previous: <yellow>Натисніть </yellow><gray>, щоб переглянути попередню
+        сторінку.</gray>
+      click-to-next: <yellow>Натисніть </yellow><gray>, щоб переглянути наступну сторінку.</gray>
+      click-to-cancel: <yellow>Натисніть </yellow><gray>, щоб скасувати.</gray>
+      click-to-choose: <yellow>Натисніть </yellow><gray>, щоб вибрати.</gray>
+      click-to-select: <yellow>Натисніть </yellow><gray>, щоб вибрати.</gray>
+      click-to-deselect: <yellow>Натисніть </yellow><gray>, щоб скасувати вибір.</gray>
+      click-to-accept: <yellow>Натисніть </yellow><gray>, щоб прийняти та повернутися.</gray>
+      click-to-filter-enable: <yellow>Натисніть </yellow><gray>, щоб увімкнути фільтр.</gray>
+      click-to-filter-disable: <yellow>Натисніть </yellow><gray>, щоб вимкнути фільтр.</gray>
+      click-to-activate: <yellow>Натисніть </yellow><gray>, щоб активувати.</gray>
+      click-to-deactivate: <yellow>Натисніть </yellow><gray>, щоб деактивувати.</gray>
+      click-gold-to-purchase: |-
+        <yellow>Натисніть </yellow><gray>на золотий блок
+        </gray><gray>купити.</gray>
+      click-to-purchase: <yellow>Натисніть </yellow><gray>, щоб придбати.</gray>
+      click-to-return: <yellow>Натисніть </yellow><gray>, щоб повернутися.</gray>
+      click-to-quit: <yellow>Натисніть </yellow><gray>, щоб вийти.</gray>
+      click-to-wipe: <yellow>Натисніть </yellow><gray>, щоб стерти.</gray>
+      click-to-open: <yellow>Натисніть </yellow><gray>, щоб відкрити.</gray>
+      click-to-export: <yellow>Натисніть </yellow><gray>, щоб почати експорт.</gray>
+      click-to-change: <yellow>Натисніть </yellow><gray>, щоб змінити.</gray>
+      click-on-item: |-
+        <yellow>Клацніть </yellow><gray>на елементі з вашого
+        </gray><gray>інвентар.</gray>
+      click-to-view: <yellow>Натисніть </yellow><gray>, щоб переглянути.</gray>
+      click-to-add: <yellow>Натисніть </yellow><gray>, щоб додати.</gray>
+      click-to-remove: <yellow>Натисніть </yellow><gray>, щоб видалити.</gray>
+      select-before: <yellow>Виберіть </yellow><gray>перед продовженням.</gray>
+      click-to-create: <yellow>Натисніть </yellow><gray>, щоб створити.</gray>
+      right-click-to-select: <yellow>Клацніть правою кнопкою миші </yellow><gray>,
+        щоб вибрати.</gray>
+      right-click-to-deselect: <yellow>Клацніть правою кнопкою миші </yellow><gray>,
+        щоб скасувати вибір.</gray>
+      click-to-toggle: <yellow>Натисніть </yellow><gray>, щоб перемкнути.</gray>
+      left-click-to-edit: <yellow>Клацніть лівою кнопкою миші </yellow><gray>для редагування.</gray>
+      right-click-to-lock: <yellow>Клацніть правою кнопкою миші </yellow><gray>, щоб
+        заблокувати.</gray>
+      right-click-to-unlock: <yellow>Клацніть правою кнопкою миші </yellow><gray>,
+        щоб розблокувати.</gray>
+      click-to-perform: <yellow>Натисніть </yellow><gray>, щоб виконати.</gray>
+      click-to-edit: <yellow>Натисніть </yellow><gray>, щоб редагувати.</gray>
+      right-click-to-clear: <yellow>Клацніть правою кнопкою миші </yellow><gray>,
+        щоб очистити.</gray>
+      left-click-to-view: <yellow>Клацніть лівою кнопкою миші </yellow><gray>, щоб
+        переглянути.</gray>
+      left-click-to-purchase: <yellow>Клацніть лівою кнопкою миші </yellow><gray>,
+        щоб купити.</gray>
+      left-click-to-activate: <yellow>Клацніть лівою кнопкою миші </yellow><gray>,
+        щоб активувати.</gray>
+      left-click-to-deactivate: <yellow>Клацніть лівою кнопкою миші </yellow><gray>,
+        щоб деактивувати.</gray>
+      right-click-to-view: <yellow>Клацніть правою кнопкою миші </yellow><gray>, щоб
+        переглянути.</gray>
+      right-click-to-purchase: <yellow>Клацніть правою кнопкою миші </yellow><gray>,
+        щоб купити.</gray>
+      right-click-to-activate: <yellow>Клацніть правою кнопкою миші </yellow><gray>,
+        щоб активувати.</gray>
+      right-click-to-deactivate: <yellow>Клацніть правою кнопкою миші </yellow><gray>,
+        щоб деактивувати.</gray>
+      shift-click-to-view: <yellow>Shift Натисніть </yellow><gray>, щоб переглянути.</gray>
+      shift-click-to-purchase: <yellow>Shift Натисніть </yellow><gray>, щоб купити.</gray>
+      shift-click-to-activate: <yellow>Shift Натисніть </yellow><gray>, щоб активувати.</gray>
+      shift-click-to-deactivate: <yellow>Shift Натисніть </yellow><gray>, щоб деактивувати.</gray>
+      shift-click-to-reset: <yellow>Shift Натисніть </yellow><gray>, щоб скинути.</gray>
+      shift-left-click-to-set-height-range: <yellow>Shift+ЛКМ </yellow><gray>щоб налаштувати
+        діапазон висот.</gray>
+    descriptions:
+      generator:
+        lore: |-
+          [description]
+          [blocks]
+          [treasures]
+          [type]
+          [requirements]
+          [status]
+        blocks:
+          title: <gray><bold>Блоки:</bold></gray>
+          value: <dark_gray>[material] - [#.##]%</dark_gray>
+        treasures:
+          title: <gray><bold>Скарб:</bold></gray>
+          value: <dark_gray>[material] - [#.####]%</dark_gray>
+        requirements:
+          description: |-
+            [biomes]
+            [level]
+            [missing-permissions]
+          level: '<red><bold>Необхідний рівень: </bold></red><red>[number]</red>'
+          permission-title: <red><bold>Відсутні дозволи:</bold></red>
+          permission: <red> -[permission]</red>
+          biome-title: <gray><bold>Працює в:</bold></gray>
+          biome: <dark_gray>[biome]</dark_gray>
+          any: <gray><bold>Діє в </bold></gray><bold><yellow><italic>всіх </italic></yellow></bold><gray><bold>біомах</bold></gray>
+        status:
+          locked: <red>Заблоковано!</red>
+          undeployed: <red>Не розгорнуто!</red>
+          active: <dark_green>Активний</dark_green>
+          purchase-cost: '<yellow>Вартість покупки: $[number]</yellow>'
+          activation-cost: '<yellow>Вартість активації: $[number]</yellow>'
+        type:
+          title: <gray><bold>Підтримує:</bold></gray>
+          cobblestone: <dark_gray>Генератори кругляку</dark_gray>
+          stone: <dark_gray>Генератор каменів</dark_gray>
+          basalt: <dark_gray>Базальтові генератори</dark_gray>
+          any: <gray><bold>Підтримує </bold></gray><bold><yellow><italic>всі генератори
+            </italic></yellow></bold><gray><bold></bold></gray>
+        height-range: '<gray>Працює на висотах: </gray><aqua>[min_height] </aqua><gray>до
+          </gray><aqua>[max_height]</aqua>'
+      bundle-permission: |-
+        <gray>Дозвіл, який повинен бути
+        </gray><gray>призначено гравцеві:
+        </gray><gray><italic>[gamemode].stone-generator.bundle.[id]</italic></gray>
+      generators: <gray>Генераторів пакетів:</gray>
+      generator-list: <gray>- [generator]</gray>
+      selected: <yellow>Вибрано</yellow>
+      island-owner: острів [player].
+      spawn-island: <yellow><bold>Спавн острів</bold></yellow>
+      unknown: невідомий
+  messages:
+    generator-loaded: <green>Генератор </green> '[generator]' <green>завантажується
+      в локальний кеш.</green>
+    bundle-loaded: <green>Bundle </green> '[bundle]' <green>завантажується в локальний
+      кеш.</green>
+    generator-deactivated: <yellow>Генератор </yellow> '[generator]' <yellow>вимкнено.</yellow>
+    active-generators-reached: <red>Активовано забагато генераторів. Спробуйте деактивувати
+      деякі, перш ніж активувати нову.</red>
+    generator-cannot-be-unlocked: <red>Генератор </red> '[generator]' <red>не розблоковано.</red>
+    generator-not-unlocked: <red>Генератор </red> '[generator]' <red>не розблоковано.</red>
+    generator-not-purchased: <red>Генератор </red> '[generator]' <red>не купується.</red>
+    no-credits: <red>Недостатньо кредитів для активації генератора. Для активації
+      потрібно [number] кредитів.</red>
+    no-credits-bank: <red>На вашому банківському рахунку недостатньо кредитів для
+      активації генератора. Для активації потрібно [number] кредитів.</red>
+    generator-activated: <yellow>Генератор </yellow> '[generator]' <yellow>активовано.</yellow>
+    generator-purchased: <yellow>Генератор </yellow> '[generator]' <yellow>придбано.</yellow>
+    generator-already-purchased: <red>Генератор </red> '[generator]' <red>вже придбано.</red>
+    island-level-not-reached: <red>Генератор </red> '[generator]' <red>вимагає рівня
+      острова [number].</red>
+    missing-permission: <red>Генератор </red> '[generator]' <red>потребує дозволу
+      `[permission]`.</red>
+    no-credits-buy: <red>Недостатньо кредитів для покупки генератора. Цей генератор
+      коштував [number] кредитів.</red>
+    no-credits-buy-bank: <red>На вашому банківському рахунку недостатньо кредитів.
+      Цей генератор коштує [number] кредитів.</red>
+    import-count: <yellow>Імпортовано [generator] нові генератори та [bundle] нові
+      пакети.</yellow>
+    start-downloading: <yellow>Розпочати завантаження бібліотеки.</yellow>
+    generator-exhausted: <red>Генератор </red> '[generator]' <red>досяг ліміту генерації
+      і тепер на перезарядці ще [number] хвилин(и).</red>
+  errors:
+    no-generator-data: <red>Не вдалося знайти дійсні дані генератора</red>
+    no-island-data: <red>Данні острова не знайдено.</red>
+    no-bundle-data: <red>Не вдалося знайти дійсні дані пакета</red>
+    no-library-entries: <red>Не вдалося знайти жодного запису в бібліотеці!</red>
+    no-file: <red>Файл `[file]` не знайдено. Неможливо виконати імпорт.</red>
+    no-load: '<red>Не вдалося завантажити файл `[file]`. Помилка під час читання:
+      [description].</red>'
+    not-a-gamemode-world: <red>Світ '[world]' не є додатком ігрового режиму.</red>
+    file-exist: <red>Файл `[file]` вже існує. Виберіть інше ім'я.</red>
+    generator-tier-not-found: <red>Генератор з ідентифікатором '[generator]' </red><red>не
+      знайдено в [gamemode].</red>
+    no-generators-in-world: <red>Для вас немає доступних генераторів у [world]</red>
+    could-not-remove-money: <red>Щось пішло не так під час зняття грошей.</red>
+    max-height-less-than-min: <red>Максимальна висота ([MAX]) не може бути меншою
+      за мінімальну висоту ([MIN])!</red>
+  conversations:
+    confirm-string: true, on, yes, confirm, y, valid, correct
+    deny-string: false, off, no, deny, n, invalid, incorrect
+    cancel-string: cancel
+    exit-string: cancel, exit, quit
+    cancelled: <red>Розмова скасована!</red>
+    prefix: '<bold></bold><bold><gold>[BentoBox]: </gold></bold>'
+    numeric-only: <red>Дане [value] не є числом!</red>
+    not-valid-value: <red>Дане число [value] недійсне. Він має бути більшим за [min]
+      і меншим за [max]!</red>
+    new-description: '&Новий опис:'
+    write-search: <yellow>Введіть пошукове значення. (напишіть 'cancel', щоб вийти)</yellow>
+    search-updated: <green>Значення пошуку оновлено.</green>
+    confirm-island-data-deletion: <yellow>Підтвердьте, що ви бажаєте видалити всі
+      дані користувача з бази даних для [gamemode].</yellow>
+    user-data-removed: <green>Успіху, усі дані користувача для [gamemode] видалено!</green>
+    confirm-generator-data-deletion: <yellow>Підтвердьте, що ви бажаєте видалити всі
+      дані генератора з бази даних для [gamemode].</yellow>
+    generator-data-removed: <green>Успіх, усі дані генератора для [gamemode] видалено!</green>
+    exported-file-name: <yellow>Будь ласка, введіть назву файлу для експортованого
+      файлу бази даних. (напишіть 'cancel', щоб вийти)</yellow>
+    database-export-completed: <green>Успіх, експорт бази даних для [world] завершено.
+      Файл, створений у каталозі аддона.</green>
+    file-name-exist: <red>Файл із назвою '[id]' існує. Неможливо перезаписати.</red>
+    write-name: <yellow>Введіть нове ім'я в чаті.</yellow>
+    name-changed: <green>Успіх, назву оновлено.</green>
+    write-description: <yellow>Будь ласка, введіть новий опис у чаті та 'quit' у окремому
+      рядку, щоб завершити.</yellow>
+    description-changed: <green>Успіх, опис оновлено.</green>
+    new-object-created: <green>Успіх, новий об’єкт створено в [world].</green>
+    object-already-exists: <red>Об’єкт із `[id]` уже визначено в ігровому режимі.
+      Виберіть інший.</red>
+    confirm-deletion: '<yellow>Підтвердьте, що ви хочете видалити [number] об’єктів:
+      ([value])</yellow>'
+    data-removed: <green>Успіх, дані видалено!</green>
+    input-number: <yellow>Будь ласка, введіть номер у чаті.</yellow>
+    write-permissions: <yellow>Будь ласка, введіть необхідні дозволи, по одному на
+      рядок у чаті, і 'quit' на окремому рядку, щоб завершити.</yellow>
+    permissions-changed: <green>Успіх, дозволи генератора оновлено.</green>
+    confirm-data-replacement: <yellow>Будь ласка, підтвердьте, що ви бажаєте замінити
+      поточні генератори новими.</yellow>
+    new-generators-imported: <green>Успіху, нові генератори для [gamemode] імпортовано.</green>
+    click-text-to-purchase: <yellow>Ви розблокували </yellow> [generator]<yellow>!
+      Натисніть тут, щоб купити зараз за [number].</yellow>
+    click-text-to-activate-vault: <yellow>Ви розблокували </yellow> [generator]<yellow>!
+      Натисніть тут, щоб активувати його зараз для [number].</yellow>
+    click-text-to-activate: <yellow>Ви розблокували </yellow> [generator]<yellow>!
+      Натисніть тут, щоб активувати його зараз.</yellow>
+    input-max-height: <white>Введіть максимальну висоту для цього матеріалу (від -64
+      до 320):</white>
+    input-min-height: <white>Введіть мінімальну висоту для цього матеріалу (від -64
+      до 320):</white>
+  materials:
+    cobblestone: Кругляк
+    stone:
+      name: Камінь
+      description: ''
+  biomes:
+    plains: Рівнини
+    flower_forest:
+      name: Квітковий ліс
+      description: ''
+protection:
+  flags:
+    MAGIC_COBBLESTONE_GENERATOR:
+      name: Магічний генератор
+      description: |-
+        <green>Перемикач, щоб увімкнути або вимкнути
+        </green><green>всі магічні генератори
+        </green><green>на всьому острові</green>
+      hint: <yellow>Генератори магії вимкнено в налаштуваннях острова</yellow>
+    MAGIC_COBBLESTONE_GENERATOR_PERMISSION:
+      name: Дозволи Magic Generator
+      description: |-
+        <green>Виберіть, хто може активувати
+        </green><green>та вимкніть генератори</green>

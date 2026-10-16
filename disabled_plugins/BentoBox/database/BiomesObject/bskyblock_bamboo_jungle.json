@@ -1,0 +1,23 @@
+{
+  "biome": "BAMBOO_JUNGLE",
+  "deployed": true,
+  "friendlyName": "<white><bold> Bamboo Jungle",
+  "description": [
+    "<gray> Towering bamboo forests where",
+    "<gray> pandas feast endlessly. Great",
+    "<gray> for bamboo farming and panda",
+    "<gray> breeding."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: BAMBOO\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_bamboo_jungle",
+  "unlockLevel": 55,
+  "unlockCost": 0.0,
+  "cost": 700.0,
+  "itemCost": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: BAMBOO\n  amount: 20\n"
+  ],
+  "costMode": "PER_USAGE",
+  "costIncrement": 50.0
+}

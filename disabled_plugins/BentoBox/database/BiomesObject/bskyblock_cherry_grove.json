@@ -1,0 +1,22 @@
+{
+  "biome": "CHERRY_GROVE",
+  "deployed": true,
+  "friendlyName": "<white><bold> Cherry Grove",
+  "description": [
+    "<gray> A peaceful place filled with",
+    "<gray> cherry blossoms where bees",
+    "<gray> buzz and spring never ends."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: CHERRY_LOG\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_cherry_grove",
+  "unlockLevel": 20,
+  "unlockCost": 0.0,
+  "unlockItems": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: CHERRY_LOG\n  amount: 15\n"
+  ],
+  "cost": 350.0,
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

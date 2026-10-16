@@ -1,0 +1,63 @@
+warp:
+  help:
+    description: te téléporte au Warp d'un autre joueur
+    parameters: <pseudo>
+warps:
+  deactivate: <red>Ancienne pancarte de warp désactivée !</red>
+  error:
+    does-not-exist: <red>Oh ! Cette téléportation n'existe plus !</red>
+    no-permission: <red>Vous n'avez pas le droit de faire cela !</red>
+    no-remove: <red>Vous ne pouvez pas enlever cette pancarte !</red>
+    no-warps-yet: <red>Il n'y a pas encore de téléportation disponible</red>
+    not-enough-level: <red>Le niveau de votre île n'est pas assez élevé !</red>
+    not-on-island: <red>Vous devez être sur votre île pour faire cela !</red>
+    not-safe: <red>Cette téléportation n'est pas sûre !</red>
+    your-level-is: <red>Le niveau de votre île n'est que [level] et doit être supérieur
+      à [required]. Exécutez la commande level.</red>
+    not-correct-rank: <red>Vous n'avez pas le grade adéquat pour poser une chaîne
+      !</red>
+  help:
+    description: Ouvre le menu des Warps
+  player-warped: <dark_green>[name] s'est rendu à votre pancarte de téléportation
+    [gamemode] !</dark_green>
+  sign-removed: <red>Panneau de téléportation enlevé !</red>
+  success: <green>Succès !</green>
+  warpTip: <gold>Placer une pancarte de téléportation avec [text] sur le dessus</gold>
+  warpToPlayersSign: <gold>Téléportation a la pancarte de [player]</gold>
+  gui:
+    titles:
+      warp-title: <black><bold>Pancarte de téléportation</bold></black>
+    buttons:
+      previous:
+        name: <white><bold>Page précédente</bold></white>
+        description: <gray>Aller à la page [numéro].</gray>
+      next:
+        name: <white><bold>Page suivante</bold></white>
+        description: <gray>Passer à la page [numéro].</gray>
+      warp:
+        name: <white><bold>[name]</bold></white>
+        description: '[sign_text]'
+      random:
+        name: <white><bold>Téléportation aléatoire</bold></white>
+        description: <gray>Hmm, où vais-je apparaître ?</gray>
+    tips:
+      click-to-previous: <yellow>Cliquez sur </yellow><gray>pour afficher la page
+        précédente.</gray>
+      click-to-next: <yellow>Cliquez sur </yellow><gray>pour afficher la page suivante.</gray>
+      click-to-warp: <yellow>Cliquez sur </yellow><gray>pour te téléporter.</gray>
+  conversations:
+    prefix: '<gold><bold>[BentoBox]: </bold></gold><reset>'
+togglewarp:
+  help:
+    description: basculer le signe de distorsion
+  enabled: <green>Votre chaîne est maintenant visible !</green>
+  disabled: <red>Votre chaîne est maintenant cachée !</red>
+  error:
+    no-permission: <red>Vous n'avez pas la permission de faire ça !</red>
+    generic: <red>Une erreur s'est produite lors du basculement de votre chaîne.</red>
+    no-warp: <red>Vous n'avez pas de chaîne à activer !</red>
+protection:
+  flags:
+    PLACE_WARP:
+      name: Place téléportation
+      description: Autoriser le placement d'un panneau téléportation

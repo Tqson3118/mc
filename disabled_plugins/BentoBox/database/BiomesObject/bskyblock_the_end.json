@@ -1,0 +1,24 @@
+{
+  "biome": "THE_END",
+  "deployed": true,
+  "friendlyName": "<white><bold> The End",
+  "description": [
+    "<gray> The End dimension where the",
+    "<gray> dragon once ruled. A desolate",
+    "<gray> kingdom of void and stone",
+    "<gray> for ultimate builders."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: END_STONE\n",
+  "order": -1,
+  "environment": "THE_END",
+  "uniqueId": "bskyblock_the_end",
+  "unlockLevel": 200,
+  "unlockCost": 0.0,
+  "cost": 1500.0,
+  "itemCost": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: END_STONE\n  amount: 64\n",
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: PURPUR_BLOCK\n  amount: 20\n"
+  ],
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

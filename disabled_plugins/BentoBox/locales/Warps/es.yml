@@ -1,0 +1,61 @@
+warp:
+  help:
+    description: Teletransportarte hacia el warp del jugador
+    parameters: <player name>
+warps:
+  deactivate: <red>¡Antiguo cartel de teletransportación desactivado!</red>
+  error:
+    does-not-exist: <red>¡Oh, chasquido! ¡Ese teletransporte ya no existe!</red>
+    no-permission: <red>¡No tienes permisos para hacer eso!</red>
+    no-remove: <red>¡No puedes quitar ese cartel!</red>
+    no-warps-yet: <red>No hay teletransportes disponibles todavía</red>
+    not-enough-level: <red>¡Tu nivel de isla no es lo suficientemente alto!</red>
+    not-on-island: <red>¡Debes estar en tu isla para hacer eso!</red>
+    not-safe: <red>¡Ese teletransporte no es seguro!</red>
+    your-level-is: <red>Tu nivel de isla es solo [level] y debe ser mayor que [required].
+      Ejecuta el comando de nivel.</red>
+    not-correct-rank: <red>¡No tienes el rango correcto para crear un teletransporte!</red>
+  help:
+    description: Abre el panel de warps
+  player-warped: <dark_green>[name] se ha teletransportado a tu cartel de teletransportación
+    de [gamemode]!</dark_green>
+  sign-removed: <red>Cartel de teletransportación eliminado!</red>
+  success: <green>Éxito!</green>
+  warpTip: <gold>Coloca un cartel con [text] en la parte superior</gold>
+  warpToPlayersSign: <gold>Teletransportandote al cartel del jugador [player]</gold>
+  gui:
+    titles:
+      warp-title: <black><bold>Carteles de Teletransporte</bold></black>
+    buttons:
+      previous:
+        name: <white><bold>Página Anterior</bold></white>
+        description: <gray>Ir a la página [number]</gray>
+      next:
+        name: <white><bold>Siguiente Página</bold></white>
+        description: <gray>Ir a la página [number]</gray>
+      warp:
+        name: <white><bold>[name]</bold></white>
+        description: '[sign_text]'
+      random:
+        name: <white><bold>Teletransporte aleatorio</bold></white>
+        description: <gray>Hmm, ¿Dónde apareceré?</gray>
+    tips:
+      click-to-previous: <yellow>Clic </yellow><gray>para ver la página anterior.</gray>
+      click-to-next: <yellow>Clic </yellow><gray>para ver la página siguiente.</gray>
+      click-to-warp: <yellow>Clic </yellow><gray>para teletransportarse.</gray>
+  conversations:
+    prefix: '<gold><bold>[BentoBox]: </bold></gold><reset>'
+togglewarp:
+  help:
+    description: alternar el cartel de teletransporte
+  enabled: <green>¡Tu teletransporte ahora es visible!</green>
+  disabled: <red>¡Tu teletransporte ahora está oculto!</red>
+  error:
+    no-permission: <red>¡No tienes permisos para hacer eso!</red>
+    generic: <red>Ocurrió un error al alternar tu teletransporte.</red>
+    no-warp: <red>¡No tienes un teletransporte para alternar!</red>
+protection:
+  flags:
+    PLACE_WARP:
+      name: Colocar Teletransporte
+      description: Permitir colocar un cartel de teletransporte

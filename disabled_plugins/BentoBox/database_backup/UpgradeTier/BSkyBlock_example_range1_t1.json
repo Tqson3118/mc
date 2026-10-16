@@ -1,0 +1,24 @@
+{
+  "uniqueId": "BSkyBlock_example_range1_t1",
+  "upgrade": "BSkyBlock_example_range1",
+  "name": "Border Expansion I",
+  "description": [],
+  "startLevel": 0,
+  "endLevel": 4,
+  "prices": [
+    {
+      "class": "MoneyPriceDB",
+      "parameters": {
+        "amountEquation": "500"
+      }
+    }
+  ],
+  "rewards": [
+    {
+      "class": "RangeRewardDB",
+      "parameters": {
+        "rangeUpgradeEquation": "5"
+      }
+    }
+  ]
+}

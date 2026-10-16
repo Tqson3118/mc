@@ -1,0 +1,220 @@
+menu_title: '&8✨ &d&lCỬA HÀNG: NGUYÊN LIỆU HIẾM ✨'
+open_command: shop_nguyenlieu
+size: 45
+open_requirement:
+  requirements: {}
+
+items:
+  'border':
+    material: MAGENTA_STAINED_GLASS_PANE
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 26
+      - 27
+      - 35
+      - 36
+      - 37
+      - 38
+      - 39
+      - 41
+      - 42
+      - 43
+      - 44
+    display_name: ' '
+
+  'info':
+    material: NETHER_STAR
+    slot: 4
+    display_name: '&d&l✨ DANH MỤC: NGUYÊN LIỆU HIẾM'
+    lore:
+      - '&8━━━━━━━━━━━━━━━━━━━━━━━━━'
+      - '&f • &aChuột trái:&f Mua x1'
+      - '&f • &2Shift-Chuột trái:&f Mua x64'
+      - '&f • &eChuột phải:&f Bán x1'
+      - '&f • &6Shift-Chuột phải:&f Bán hết loại đó trong túi'
+      - '&8━━━━━━━━━━━━━━━━━━━━━━━━━'
+
+  'obsidian':
+    material: OBSIDIAN
+    slot: 10
+    display_name: '&5&lHắc Diện Thạch'
+    lore:
+      - '&a• Mua: $90 Xu'
+      - '&e• Bán: $45 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($90)'
+      - '&2▶ Shift-Trái: Mua x64 ($5,760)'
+      - '&e▶ Chuột phải: Bán x1 ($45)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy obsidian 1'
+    shift_left_click_commands:
+      - '[player] shop buy obsidian 64'
+    right_click_commands:
+      - '[player] shop sell obsidian 1'
+    shift_right_click_commands:
+      - '[player] shop sell obsidian all'
+
+  'crying_obsidian':
+    material: CRYING_OBSIDIAN
+    slot: 12
+    display_name: '&d&lHắc Diện Thạch Lệ'
+    lore:
+      - '&a• Mua: $180 Xu'
+      - '&e• Bán: $90 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($180)'
+      - '&2▶ Shift-Trái: Mua x64 ($11,520)'
+      - '&e▶ Chuột phải: Bán x1 ($90)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy crying_obsidian 1'
+    shift_left_click_commands:
+      - '[player] shop buy crying_obsidian 64'
+    right_click_commands:
+      - '[player] shop sell crying_obsidian 1'
+    shift_right_click_commands:
+      - '[player] shop sell crying_obsidian all'
+
+  'blaze_rod':
+    material: BLAZE_ROD
+    slot: 14
+    display_name: '&6&lQue Quỷ Lửa'
+    lore:
+      - '&a• Mua: $70 Xu'
+      - '&e• Bán: $35 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($70)'
+      - '&2▶ Shift-Trái: Mua x64 ($4,480)'
+      - '&e▶ Chuột phải: Bán x1 ($35)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy blaze_rod 1'
+    shift_left_click_commands:
+      - '[player] shop buy blaze_rod 64'
+    right_click_commands:
+      - '[player] shop sell blaze_rod 1'
+    shift_right_click_commands:
+      - '[player] shop sell blaze_rod all'
+
+  'ender_pearl':
+    material: ENDER_PEARL
+    slot: 16
+    display_name: '&3&lNgọc Ender'
+    lore:
+      - '&a• Mua: $50 Xu'
+      - '&e• Bán: $25 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($50)'
+      - '&2▶ Shift-Trái: Mua x64 ($3,200)'
+      - '&e▶ Chuột phải: Bán x1 ($25)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy ender_pearl 1'
+    shift_left_click_commands:
+      - '[player] shop buy ender_pearl 64'
+    right_click_commands:
+      - '[player] shop sell ender_pearl 1'
+    shift_right_click_commands:
+      - '[player] shop sell ender_pearl all'
+
+  'gunpowder':
+    material: GUNPOWDER
+    slot: 28
+    display_name: '&7&lThuốc Súng'
+    lore:
+      - '&a• Mua: $20 Xu'
+      - '&e• Bán: $10 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($20)'
+      - '&2▶ Shift-Trái: Mua x64 ($1,280)'
+      - '&e▶ Chuột phải: Bán x1 ($10)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy gunpowder 1'
+    shift_left_click_commands:
+      - '[player] shop buy gunpowder 64'
+    right_click_commands:
+      - '[player] shop sell gunpowder 1'
+    shift_right_click_commands:
+      - '[player] shop sell gunpowder all'
+
+  'ancient_debris':
+    material: ANCIENT_DEBRIS
+    slot: 30
+    display_name: '&4&lMảnh Vỡ Cổ Đại'
+    lore:
+      - '&a• Mua: $840 Xu'
+      - '&e• Bán: $420 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($840)'
+      - '&2▶ Shift-Trái: Mua x64 ($53,760)'
+      - '&e▶ Chuột phải: Bán x1 ($420)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy ancient_debris 1'
+    shift_left_click_commands:
+      - '[player] shop buy ancient_debris 64'
+    right_click_commands:
+      - '[player] shop sell ancient_debris 1'
+    shift_right_click_commands:
+      - '[player] shop sell ancient_debris all'
+
+  'netherite_scrap':
+    material: NETHERITE_SCRAP
+    slot: 32
+    display_name: '&8&lMảnh Netherite'
+    lore:
+      - '&a• Mua: $900 Xu'
+      - '&e• Bán: $450 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($900)'
+      - '&2▶ Shift-Trái: Mua x64 ($57,600)'
+      - '&e▶ Chuột phải: Bán x1 ($450)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy netherite_scrap 1'
+    shift_left_click_commands:
+      - '[player] shop buy netherite_scrap 64'
+    right_click_commands:
+      - '[player] shop sell netherite_scrap 1'
+    shift_right_click_commands:
+      - '[player] shop sell netherite_scrap all'
+
+  'netherite_ingot':
+    material: NETHERITE_INGOT
+    slot: 34
+    display_name: '&5&lPhôi Netherite'
+    lore:
+      - '&a• Mua: $3,900 Xu'
+      - '&e• Bán: $1,950 Xu'
+      - ''
+      - '&a▶ Chuột trái: Mua x1 ($3,900)'
+      - '&2▶ Shift-Trái: Mua x64 ($249,600)'
+      - '&e▶ Chuột phải: Bán x1 ($1,950)'
+      - '&6▶ Shift-Phải: Bán hết'
+    left_click_commands:
+      - '[player] shop buy netherite_ingot 1'
+    shift_left_click_commands:
+      - '[player] shop buy netherite_ingot 64'
+    right_click_commands:
+      - '[player] shop sell netherite_ingot 1'
+    shift_right_click_commands:
+      - '[player] shop sell netherite_ingot all'
+
+  'back':
+    material: ARROW
+    slot: 40
+    display_name: '&e&l◀ QUAY LẠI CỬA HÀNG CHÍNH'
+    left_click_commands:
+      - '[openguimenu] shop'

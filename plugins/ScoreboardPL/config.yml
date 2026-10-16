@@ -1,0 +1,35 @@
+# ── ScoreboardPL Configuration ────────────────────────────────────
+settings:
+  update-interval-ticks: 20
+  timezone: "Asia/Ho_Chi_Minh"
+  server-name: "Skyblock Việt Nam"
+
+scoreboard:
+  title: "&6&l✦ &e&lSKYBLOCK VN &6&l✦"
+  title-frames:
+    - "&6&l✦ &e&lSKYBLOCK VN &6&l✦"
+    - "&e&l✦ &f&lSKYBLOCK VN &e&l✦"
+    - "&6&l✦ &f&lSKYBLOCK VN &6&l✦"
+    - "&e&l✦ &6&lSKYBLOCK VN &e&l✦"
+  title-animation-speed: 8
+
+  lines:
+    - "&8&m-------------------"
+    - " &e👤 &fBạn&8: &a%player_name%"
+    - " &6💰 &fSố dư&8: &e$%vault_balance_int%"
+    - " &b✧ &fĐiểm Tinh Anh&8: &d%objective_score_sb_gems%"
+    - " &c⚔ &fKỹ năng&8: &bLv.%auraskills_power%"
+    - ""
+    - " &b🏝 &fĐảo&8: &d%iridiumskyblock_island_name%"
+    - " &d⭐ &fCấp đảo&8: &b%iridiumskyblock_island_level%"
+    - ""
+    - " &a👥 &fOnline&8: &a%server_online%&8/&7%server_max_players%"
+    - " &2📶 &fPing&8: &a%player_ping%ms"
+    - ""
+    - " &7Gõ: &e/is &7• &c/skills &7• &a/spawn"
+    - "&8&m-------------------"
+
+messages:
+  prefix: "&8[&6Skyblock&8] &r"
+  toggle-on: "&aBật bảng thông tin &2thành công&a!"
+  toggle-off: "&cTắt bảng thông tin &4thành công&c!"

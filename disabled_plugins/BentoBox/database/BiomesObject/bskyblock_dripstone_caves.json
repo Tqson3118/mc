@@ -1,0 +1,23 @@
+{
+  "biome": "DRIPSTONE_CAVES",
+  "deployed": true,
+  "friendlyName": "<white><bold> Dripstone Caves",
+  "description": [
+    "<gray> Underground caverns with",
+    "<gray> hanging dripstone formations.",
+    "<gray> A unique cave biome with",
+    "<gray> otherworldly atmosphere."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: POINTED_DRIPSTONE\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_dripstone_caves",
+  "unlockLevel": 65,
+  "unlockCost": 0.0,
+  "cost": 900.0,
+  "itemCost": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: POINTED_DRIPSTONE\n  amount: 32\n"
+  ],
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

@@ -1,0 +1,23 @@
+{
+  "biome": "SPARSE_JUNGLE",
+  "deployed": true,
+  "friendlyName": "<white><bold> Sparse Jungle",
+  "description": [
+    "<gray> Open jungle clearings where",
+    "<gray> bamboo and sparse trees",
+    "<gray> create unique landscapes.",
+    "<gray> A peaceful jungle variant."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: BAMBOO\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_sparse_jungle",
+  "unlockLevel": 30,
+  "unlockCost": 0.0,
+  "unlockItems": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: JUNGLE_SAPLING\n  amount: 8\n"
+  ],
+  "cost": 400.0,
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

@@ -1,0 +1,78 @@
+bank:
+  admin:
+    description: Admin-Befehl für die Insel-Bank
+    give:
+      parameters: <player> <amount>
+      description: Betrag zum Inselkonto des Spielers hinzufügen
+      success: <green> Erfolgreich! [name]'s Insel Bank Balance ist nun [number].
+    take:
+      parameters: <player> <amount>
+      description: Betrag vom Inselkonto des Spielers nehmen
+    balance:
+      parameters: <player>
+      description: Kontostand des Inselkontos des Spielers anzeigen
+    set:
+      parameters: <player> <amount>
+      description: festgelegten Betrag auf dem Inselkonto des Spielers
+      success: <green> [name]'s Konto auf [number] gesetzt.
+    statement:
+      parameters: <player>
+      description: Kontoauszug der Insel für den Spieler anzeigen
+  balance:
+    description: zeigt Ihren Kontostand auf der Insel an
+    island-balance: <green> Bankguthaben auf der Insel ist [number].
+  baltop:
+    description: Balance-Rankings anzeigen
+    description-syntax: <light_purple> [number]
+    highest: Nach Höchsten sortieren
+    lowest: Nach Niedrigster sortieren
+    name-syntax: <light_purple> [name]
+    title: Top-Balancen
+  deposit:
+    description: Betrag auf Ihr Inselkonto einzahlen
+    parameters: <amount>
+    success: <yellow>Ein Erfolg! Ihr neuer Kontostand auf der Insel beträgt [number].
+  errors:
+    bank-error: <red> Fehler beim Laden der Bankkontoinformationen - bitte versuchen
+      Sie es später erneut
+    low-balance: <red> Ihr Bankguthaben auf der Insel ist nicht hoch genug!
+    too-low: <red> Der Insel Geld ist zu niedrig.
+    must-be-a-number: <red> Betrag muss eine Zahl sein
+    no-rank: <red> Ihr Rang ist nicht hoch genug, um die Bank zu benutzen.
+    too-much: <red> Sie haben nicht genug Geld zum einzahlen.
+    value-must-be-positive: <red> Betrag muss positiv sein.
+    scientific: <red> Wissenschaftliche Notation wird nicht unterstützt.
+    too-long: <red> Wert muss kleiner als 10 Stellen sein
+  statement:
+    balance:
+      name: '<blue> Balance:'
+      description: <gold> [number]
+    deposit: Einzahlen
+    description: Zeigen Sie Ihre Inselbankgeschichte
+    give: Admin gibt
+    interest: Interesse
+    latest: Nach neusten sortieren
+    oldest: Nach Ältesten sortieren
+    set: Admin-Setzt
+    syntax: |
+      <blue> [date]
+      <blue> [time]
+      <gray> [name]
+      <gold> [number]
+    take: Admin-nimmt
+    title: Kontoverlauf
+    unknown: Unbekannter Typ
+    withdrawal: Abgezogen
+  user:
+    description: Befehl Inselbank
+  withdraw:
+    description: Betrag von Ihrem Inselkonto abheben
+    parameters: <amount>
+    success: <yellow>Ein Erfolg! Ihr neuer Kontostand auf der Insel beträgt [number].
+protection:
+  flags:
+    BANK_ACCESS:
+      description: |-
+        <white> Zugriff erlauben auf
+        <white> das Inselufer
+      name: Zugriff zur Inselbank

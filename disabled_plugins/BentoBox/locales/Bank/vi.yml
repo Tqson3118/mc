@@ -1,0 +1,80 @@
+bank:
+  admin:
+    description: lệnh quản trị cho ngân hàng đảo
+    give:
+      parameters: <người chơi> <số tiền>
+      description: thêm số tiền vào tài khoản đảo của người chơi
+      success: <green> Thành công! Số dư ngân hàng đảo của [name] hiện là [number].
+    take:
+      parameters: <người chơi> <số tiền>
+      description: lấy số tiền từ tài khoản đảo của người chơi
+    balance:
+      parameters: <người chơi>
+      description: xem số dư tài khoản đảo của người chơi
+    set:
+      parameters: <người chơi> <số lượng>
+      description: đặt số tiền trong tài khoản đảo của người chơi
+      success: ' <green> Tài khoản của [name] được đặt thành [number].'
+    statement:
+      parameters: <người chơi>
+      description: xem đảo sao kê ngân hàng cho người chơi
+  balance:
+    description: hiển thị số dư ngân hàng đảo của bạn
+    island-balance: <green> Số dư ngân hàng đảo là [number].
+  baltop:
+    description: hiển thị thứ hạng ngân hàng
+    description-syntax: <light_purple> [number]
+    highest: Sắp xếp theo Cao nhất
+    lowest: Sắp xếp theo Thấp nhất
+    name-syntax: <light_purple> [name]
+    title: Số dư hàng đầu
+  deposit:
+    description: số tiền gửi vào tài khoản đảo của bạn
+    parameters: <số tiền>
+    success: <green> Thành công! Số dư ngân hàng đảo mới của bạn là [number].
+    alert: <green> [name] đã gửi [number] vào ngân hàng của đảo.
+  errors:
+    bank-error: <red> Lỗi khi tải thông tin tài khoản ngân hàng - vui lòng thử lại
+      sau
+    low-balance: <red> Số dư ngân hàng đảo của bạn không đủ cao!
+    too-low: <red> Số tiền của đảo quá thấp.
+    must-be-a-number: <red> Số tiền phải là một số
+    no-rank: <red> Xếp hạng của bạn không đủ cao để sử dụng ngân hàng.
+    too-much: <red> Bạn không có số tiền đó để gửi.
+    value-must-be-positive: <red> Số tiền phải là số dương.
+    scientific: <red> Ký hiệu khoa học không được hỗ trợ.
+    too-long: <red> Giá trị phải nhỏ hơn 10 chữ số
+  statement:
+    balance:
+      name: '<blue> Số dư:'
+      description: <gold> [number]
+    deposit: Tiền gửi
+    description: hiển thị lịch sử ngân hàng đảo của bạn
+    give: Quản trị viên cho
+    interest: Quan tâm
+    latest: Sắp xếp theo mới nhất
+    oldest: Sắp xếp theo cũ nhất
+    set: Bộ quản trị
+    syntax: |-
+      <blue> [date]
+      <blue> [time]
+      <gray> [name]
+      <gold> [number]
+    take: quản trị viên lấy tiền
+    title: Lịch sử tài khoản
+    unknown: Loại không xác định
+    withdrawal: Rút tiền
+  user:
+    description: lệnh ngân hàng đảo
+  withdraw:
+    description: rút số tiền từ tài khoản đảo của bạn
+    parameters: <số tiền>
+    success: <green> Thành công! Số dư ngân hàng đảo mới của bạn là [number].
+    alert: <green> [name] đã rút [number] khỏi ngân hàng của đảo.
+protection:
+  flags:
+    BANK_ACCESS:
+      description: |-
+        <white> Cho phép truy cập vào
+        <white> ngân hàng của đảo
+      name: Truy cập ngân hàng đảo

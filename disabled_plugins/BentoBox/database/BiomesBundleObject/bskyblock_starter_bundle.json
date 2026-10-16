@@ -1,0 +1,18 @@
+{
+  "uniqueId": "bskyblock_starter_bundle",
+  "friendlyName": "<white><bold> Starter Bundle",
+  "description": [
+    "<gray> Everything you need to start",
+    "<gray> your island adventure. Five",
+    "<gray> essential biomes for new",
+    "<gray> players."
+  ],
+  "bundleIcon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: GRASS_BLOCK\n",
+  "biomeObjects": [
+    "BSkyBlock_fields",
+    "BSkyBlock_snowy_plains",
+    "BSkyBlock_mangrove_swamp",
+    "BSkyBlock_taiga",
+    "BSkyBlock_simple_ocean"
+  ]
+}

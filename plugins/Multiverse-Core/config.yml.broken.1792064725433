@@ -1,0 +1,17 @@
+multiverse-configuration:
+  ==: com.onarandombox.MultiverseCore.configuration.MVConfiguration
+  enforceaccess: false
+  prefixchat: false
+  teleportintercept: true
+  firstspawnoverride: true
+  displaypermerrors: true
+  globaldebug: 0
+  silentstart: false
+  messagecooldown: 5000
+  version: 5.0
+  firstspawnworld: world
+  teleportcooldown: 0
+  defaultportalsearch: true
+  portalsearchradius: 128
+  autopurge: true
+  donotkeepspawninmemory: true

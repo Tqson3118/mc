@@ -1,0 +1,26 @@
+{
+  "biome": "DARK_FOREST",
+  "deployed": true,
+  "friendlyName": "<white><bold> Dark Forest",
+  "description": [
+    "<gray> A dense, shadowy forest",
+    "<gray> shrouded in perpetual darkness.",
+    "<gray> Eerie yet rich with dark",
+    "<gray> oak and exploration."
+  ],
+  "icon": "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: DARK_OAK_LOG\n",
+  "order": -1,
+  "environment": "NORMAL",
+  "uniqueId": "bskyblock_dark_forest",
+  "unlockLevel": 35,
+  "unlockCost": 0.0,
+  "unlockItems": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: DARK_OAK_LOG\n  amount: 12\n"
+  ],
+  "cost": 800.0,
+  "itemCost": [
+    "is:\n  ==: org.bukkit.inventory.ItemStack\n  v: 4189\n  type: DARK_OAK_LOG\n  amount: 24\n"
+  ],
+  "costMode": "STATIC",
+  "costIncrement": 0.0
+}

@@ -1,0 +1,81 @@
+bank:
+  admin:
+    description: commande admin pour la banque de l'île
+    give:
+      parameters: <joueur> <montant>
+      description: ajouter un montant au compte de l'île du joueur
+      success: <green> Succès! Le solde bancaire de l'île de [name] est désormais
+        de [number].
+    take:
+      parameters: <joueur> <montant>
+      description: prendre le montant du compte de l'île du joueur
+    balance:
+      parameters: <joueur>
+      description: voir le solde du compte de l'île du joueur
+    set:
+      parameters: <joueur> <montant>
+      description: définir le montant sur le compte de l'île du joueur
+      success: <green> compte de [name] défini sur [number].
+    statement:
+      parameters: <joueur>
+      description: voir le relevé bancaire de l'île pour le joueur
+  balance:
+    description: affiche le solde bancaire de votre île
+    island-balance: <green> solde bancaire de l'île est [number].
+  baltop:
+    description: afficher les classements d'équilibre
+    description-syntax: <light_purple>[number]
+    highest: Trier par le plus élevé
+    lowest: Trier par le plus bas
+    name-syntax: <light_purple> [name]
+    title: Principaux soldes
+  deposit:
+    description: déposer le montant sur votre compte insulaire
+    parameters: <montant>
+    success: <green> Succès! Le nouveau solde bancaire de votre île est de [number].
+    alert: <green> [name] a déposé [number] à la banque de l'île.
+  errors:
+    bank-error: <red> Erreur lors du chargement des informations du compte bancaire
+      - veuillez réessayer plus tard
+    low-balance: <red> Le solde bancaire de votre île n'est pas assez élevé!
+    too-low: <red> L'équilibre de l'île est trop faible.
+    must-be-a-number: <red> Le montant doit être un nombre
+    no-rank: <red> Votre rang n'est pas assez élevé pour utiliser la banque.
+    too-much: <red> Vous n'avez pas ce montant à déposer.
+    value-must-be-positive: <red> Le montant doit être positif.
+    scientific: <red> La notation scientifique n'est pas prise en charge.
+    too-long: <red> La valeur doit être inférieure à 10 chiffres
+  statement:
+    balance:
+      name: '<blue> Le solde :'
+      description: <gold> [number]
+    deposit: Dépôt
+    description: montrer l'histoire de votre banque insulaire
+    give: Admin Donner
+    interest: Intérêt
+    latest: Trier par plus récent
+    oldest: Trier par plus ancien
+    set: Admin Valeur Définir
+    syntax: |
+      <blue> [date]
+      <blue> [time]
+      <gray> [name]
+      <gold> [number]
+    take: Admin Prend
+    title: Historique du compte
+    unknown: Type inconnu
+    withdrawal: Retrait
+  user:
+    description: commande de banque d'île
+  withdraw:
+    description: retirer le montant de votre compte insulaire
+    parameters: <montant>
+    success: <green> Succès! Le nouveau solde bancaire de votre île est de [number].
+    alert: <green> [name] a retiré [number] de la banque de l'île.
+protection:
+  flags:
+    BANK_ACCESS:
+      description: |-
+        <white> Autoriser l'accès à
+        <white> la rive de l'île
+      name: Accès à la banque de l'île
